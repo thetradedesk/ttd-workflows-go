@@ -1,0 +1,13 @@
+# CampaignWorkflowCampaignConversionReportingColumnInput
+
+
+## Fields
+
+| Field                                                                       | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `TrackingTagID`                                                             | *string*                                                                    | :heavy_check_mark:                                                          | N/A                                                                         |
+| `IncludeInCustomCPA`                                                        | *bool*                                                                      | :heavy_check_mark:                                                          | N/A                                                                         |
+| `ReportingColumnID`                                                         | *int*                                                                       | :heavy_check_mark:                                                          | N/A                                                                         |
+| `ROASConfig`                                                                | [*components.CustomROASConfig](../../models/components/customroasconfig.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `Weight`                                                                    | **float64*                                                                  | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `CrossDeviceAttributionModelID`                                             | **string*                                                                   | :heavy_minus_sign:                                                          | N/A                                                                         |

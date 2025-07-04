@@ -1,0 +1,461 @@
+lockVersion: 2.0.0
+id: 75c617ef-9432-415b-944c-cb27049cc9bc
+management:
+  docChecksum: 4fe1829c3b1d1a257e4f5681600aa295
+  docVersion: v1
+  speakeasyVersion: 1.580.1
+  generationVersion: 2.656.3
+  releaseVersion: 0.3.1
+  configChecksum: 80eb14827391e726e80c8687813ad09d
+features:
+  go:
+    additionalDependencies: 0.1.0
+    additionalProperties: 0.1.2
+    constsAndDefaults: 0.1.12
+    core: 3.8.1
+    defaultEnabledRetries: 0.2.0
+    envVarSecurityUsage: 0.3.2
+    flattening: 2.81.1
+    globalSecurity: 2.82.11
+    globalSecurityCallbacks: 0.1.0
+    globalSecurityFlattening: 0.1.0
+    globalServerURLs: 2.82.3
+    groups: 2.81.2
+    intellisenseMarkdownSupport: 0.1.0
+    methodArguments: 0.1.1
+    nameOverrides: 2.81.2
+    nullables: 0.1.1
+    responseFormat: 0.1.2
+    retries: 2.83.3
+    sdkHooks: 0.2.0
+    serverIDs: 2.81.1
+generatedFiles:
+  - .gitattributes
+  - /models/apierrors/problemdetailserror.go
+  - /models/components/adgroupassociatebidlist.go
+  - /models/components/adgroupaudiencetargeting.go
+  - /models/components/adgroupbudget.go
+  - /models/components/adgroupbulkcreateworkflowinputwithvalidation.go
+  - /models/components/adgroupbulkupdateworkflowinputwithvalidation.go
+  - /models/components/adgroupchannel.go
+  - /models/components/adgroupcomscoresettings.go
+  - /models/components/adgroupcontracttargeting.go
+  - /models/components/adgroupcreateworkflowinput.go
+  - /models/components/adgroupcreateworkflowinputwithvalidation.go
+  - /models/components/adgroupcreateworkflowprimaryinput.go
+  - /models/components/adgroupflight.go
+  - /models/components/adgroupfunnellocation.go
+  - /models/components/adgroupkoaoptimizationsettings.go
+  - /models/components/adgroupnielsentrackingattributes.go
+  - /models/components/adgrouppayload.go
+  - /models/components/adgrouproigoal.go
+  - /models/components/adgroupupdateworkflowinput.go
+  - /models/components/adgroupupdateworkflowinputwithvalidation.go
+  - /models/components/adgroupupdateworkflowprimaryinput.go
+  - /models/components/adgroupworkflow.go
+  - /models/components/adgroupworkflowadvancedinput.go
+  - /models/components/adgroupworkflowassociatebidlistinput.go
+  - /models/components/adgroupworkflowaudiencetargetinginput.go
+  - /models/components/adgroupworkflowbudgetinput.go
+  - /models/components/adgroupworkflowcomscoresettingsinput.go
+  - /models/components/adgroupworkflowcontracttargetinginput.go
+  - /models/components/adgroupworkflowflightinput.go
+  - /models/components/adgroupworkflowkoaoptimizationsettingsinput.go
+  - /models/components/adgroupworkflownewfrequencyconfiginput.go
+  - /models/components/adgroupworkflownielsentrackingattributesinput.go
+  - /models/components/adgroupworkflowroigoalinput.go
+  - /models/components/allocationtype.go
+  - /models/components/bulkjobstatus.go
+  - /models/components/callrestapiworkflowinput.go
+  - /models/components/campaignbulkcreateworkflowinputwithvalidation.go
+  - /models/components/campaignbulkupdateworkflowinputwithvalidation.go
+  - /models/components/campaignchanneltype.go
+  - /models/components/campaigncreateworkflowadgroupadvancedinput.go
+  - /models/components/campaigncreateworkflowadgroupflightinput.go
+  - /models/components/campaigncreateworkflowadgroupinput.go
+  - /models/components/campaigncreateworkflowinput.go
+  - /models/components/campaigncreateworkflowinputwithvalidation.go
+  - /models/components/campaigncreateworkflowprimaryinput.go
+  - /models/components/campaignflightworkflow.go
+  - /models/components/campaignpacingmode.go
+  - /models/components/campaignpayload.go
+  - /models/components/campaignupdateworkflowinput.go
+  - /models/components/campaignupdateworkflowinputwithvalidation.go
+  - /models/components/campaignupdateworkflowprimaryinput.go
+  - /models/components/campaignversionworkflow.go
+  - /models/components/campaignworkflow.go
+  - /models/components/campaignworkflowadvancedinput.go
+  - /models/components/campaignworkflowbudgetinput.go
+  - /models/components/campaignworkflowcampaignconversionreportingcolumninput.go
+  - /models/components/campaignworkflowflightinput.go
+  - /models/components/campaignworkflowroigoalinput.go
+  - /models/components/customcpatype.go
+  - /models/components/customroasconfig.go
+  - /models/components/dimensionalbiddingdimensions.go
+  - /models/components/enhancednielsenreportingoptions.go
+  - /models/components/firstpartydatainput.go
+  - /models/components/graphqljobcallbackinput.go
+  - /models/components/graphqlqueryjob.go
+  - /models/components/graphqlqueryjoberror.go
+  - /models/components/graphqlqueryjobinput.go
+  - /models/components/graphqlqueryjobpayload.go
+  - /models/components/graphqlqueryjobresponse.go
+  - /models/components/graphqlqueryjobretrievalresponse.go
+  - /models/components/graphqlrequestinput.go
+  - /models/components/httpmetadata.go
+  - /models/components/keyvaluepairofstringandstringinput.go
+  - /models/components/problemdetails.go
+  - /models/components/restapimethodtype.go
+  - /models/components/security.go
+  - /models/components/standardjobstatusresponse.go
+  - /models/components/standardjobsubmitresponse.go
+  - /models/components/targetingendage.go
+  - /models/components/targetinggender.go
+  - /models/components/targetingstartage.go
+  - /models/components/thirdpartydatainput.go
+  - /models/components/workflowcallbackinput.go
+  - /models/components/workflowstatus.go
+  - /models/operations/archiveadgroups.go
+  - /models/operations/archivecampaigns.go
+  - /models/operations/createadgroup.go
+  - /models/operations/createadgroupsjob.go
+  - /models/operations/createcampaign.go
+  - /models/operations/createcampaignsjob.go
+  - /models/operations/getcampaignversion.go
+  - /models/operations/getfirstpartydatajob.go
+  - /models/operations/getgraphqlqueryjobstatus.go
+  - /models/operations/getjobstatus.go
+  - /models/operations/getthirdpartydatajob.go
+  - /models/operations/submitgraphqlqueryjob.go
+  - /models/operations/submitgraphqlrequest.go
+  - /models/operations/submitrestrequest.go
+  - /models/operations/updateadgroup.go
+  - /models/operations/updateadgroupsjob.go
+  - /models/operations/updatecampaign.go
+  - /models/operations/updatecampaignsjob.go
+  - USAGE.md
+  - adgroups.go
+  - campaigns.go
+  - dmps.go
+  - docs/models/apierrors/problemdetailserror.md
+  - docs/models/components/adgroupassociatebidlist.md
+  - docs/models/components/adgroupaudiencetargeting.md
+  - docs/models/components/adgroupbudget.md
+  - docs/models/components/adgroupbulkcreateworkflowinputwithvalidation.md
+  - docs/models/components/adgroupbulkupdateworkflowinputwithvalidation.md
+  - docs/models/components/adgroupchannel.md
+  - docs/models/components/adgroupcomscoresettings.md
+  - docs/models/components/adgroupcontracttargeting.md
+  - docs/models/components/adgroupcreateworkflowinput.md
+  - docs/models/components/adgroupcreateworkflowinputwithvalidation.md
+  - docs/models/components/adgroupcreateworkflowprimaryinput.md
+  - docs/models/components/adgroupflight.md
+  - docs/models/components/adgroupfunnellocation.md
+  - docs/models/components/adgroupkoaoptimizationsettings.md
+  - docs/models/components/adgroupnielsentrackingattributes.md
+  - docs/models/components/adgrouppayload.md
+  - docs/models/components/adgrouproigoal.md
+  - docs/models/components/adgroupupdateworkflowinput.md
+  - docs/models/components/adgroupupdateworkflowinputwithvalidation.md
+  - docs/models/components/adgroupupdateworkflowprimaryinput.md
+  - docs/models/components/adgroupworkflow.md
+  - docs/models/components/adgroupworkflowadvancedinput.md
+  - docs/models/components/adgroupworkflowassociatebidlistinput.md
+  - docs/models/components/adgroupworkflowaudiencetargetinginput.md
+  - docs/models/components/adgroupworkflowbudgetinput.md
+  - docs/models/components/adgroupworkflowcomscoresettingsinput.md
+  - docs/models/components/adgroupworkflowcontracttargetinginput.md
+  - docs/models/components/adgroupworkflowflightinput.md
+  - docs/models/components/adgroupworkflowkoaoptimizationsettingsinput.md
+  - docs/models/components/adgroupworkflownewfrequencyconfiginput.md
+  - docs/models/components/adgroupworkflownielsentrackingattributesinput.md
+  - docs/models/components/adgroupworkflowroigoalinput.md
+  - docs/models/components/allocationtype.md
+  - docs/models/components/bulkjobstatus.md
+  - docs/models/components/callrestapiworkflowinput.md
+  - docs/models/components/campaignbulkcreateworkflowinputwithvalidation.md
+  - docs/models/components/campaignbulkupdateworkflowinputwithvalidation.md
+  - docs/models/components/campaignchanneltype.md
+  - docs/models/components/campaigncreateworkflowadgroupadvancedinput.md
+  - docs/models/components/campaigncreateworkflowadgroupflightinput.md
+  - docs/models/components/campaigncreateworkflowadgroupinput.md
+  - docs/models/components/campaigncreateworkflowinput.md
+  - docs/models/components/campaigncreateworkflowinputwithvalidation.md
+  - docs/models/components/campaigncreateworkflowprimaryinput.md
+  - docs/models/components/campaignflightworkflow.md
+  - docs/models/components/campaignpacingmode.md
+  - docs/models/components/campaignpayload.md
+  - docs/models/components/campaignupdateworkflowinput.md
+  - docs/models/components/campaignupdateworkflowinputwithvalidation.md
+  - docs/models/components/campaignupdateworkflowprimaryinput.md
+  - docs/models/components/campaignversionworkflow.md
+  - docs/models/components/campaignworkflow.md
+  - docs/models/components/campaignworkflowadvancedinput.md
+  - docs/models/components/campaignworkflowbudgetinput.md
+  - docs/models/components/campaignworkflowcampaignconversionreportingcolumninput.md
+  - docs/models/components/campaignworkflowflightinput.md
+  - docs/models/components/campaignworkflowroigoalinput.md
+  - docs/models/components/customcpatype.md
+  - docs/models/components/customroasconfig.md
+  - docs/models/components/dimensionalbiddingdimensions.md
+  - docs/models/components/enhancednielsenreportingoptions.md
+  - docs/models/components/firstpartydatainput.md
+  - docs/models/components/graphqljobcallbackinput.md
+  - docs/models/components/graphqlqueryjob.md
+  - docs/models/components/graphqlqueryjoberror.md
+  - docs/models/components/graphqlqueryjobinput.md
+  - docs/models/components/graphqlqueryjobpayload.md
+  - docs/models/components/graphqlqueryjobresponse.md
+  - docs/models/components/graphqlqueryjobretrievalresponse.md
+  - docs/models/components/graphqlrequestinput.md
+  - docs/models/components/httpmetadata.md
+  - docs/models/components/keyvaluepairofstringandstringinput.md
+  - docs/models/components/problemdetails.md
+  - docs/models/components/restapimethodtype.md
+  - docs/models/components/security.md
+  - docs/models/components/standardjobstatusresponse.md
+  - docs/models/components/standardjobsubmitresponse.md
+  - docs/models/components/targetingendage.md
+  - docs/models/components/targetinggender.md
+  - docs/models/components/targetingstartage.md
+  - docs/models/components/thirdpartydatainput.md
+  - docs/models/components/variables.md
+  - docs/models/components/workflowcallbackinput.md
+  - docs/models/components/workflowstatus.md
+  - docs/models/operations/archiveadgroupsrequest.md
+  - docs/models/operations/archiveadgroupsresponse.md
+  - docs/models/operations/archivecampaignsrequest.md
+  - docs/models/operations/archivecampaignsresponse.md
+  - docs/models/operations/createadgroupresponse.md
+  - docs/models/operations/createadgroupsjobresponse.md
+  - docs/models/operations/createcampaignresponse.md
+  - docs/models/operations/createcampaignsjobresponse.md
+  - docs/models/operations/getcampaignversionrequest.md
+  - docs/models/operations/getcampaignversionresponse.md
+  - docs/models/operations/getfirstpartydatajobresponse.md
+  - docs/models/operations/getgraphqlqueryjobstatusrequest.md
+  - docs/models/operations/getgraphqlqueryjobstatusresponse.md
+  - docs/models/operations/getjobstatusrequest.md
+  - docs/models/operations/getjobstatusresponse.md
+  - docs/models/operations/getthirdpartydatajobresponse.md
+  - docs/models/operations/option.md
+  - docs/models/operations/submitgraphqlqueryjobresponse.md
+  - docs/models/operations/submitgraphqlrequestresponse.md
+  - docs/models/operations/submitgraphqlrequestresponsebody.md
+  - docs/models/operations/submitrestrequestresponse.md
+  - docs/models/operations/submitrestrequestresponsebody.md
+  - docs/models/operations/updateadgroupresponse.md
+  - docs/models/operations/updateadgroupsjobresponse.md
+  - docs/models/operations/updatecampaignresponse.md
+  - docs/models/operations/updatecampaignsjobresponse.md
+  - docs/sdks/adgroups/README.md
+  - docs/sdks/campaigns/README.md
+  - docs/sdks/dmps/README.md
+  - docs/sdks/graphqlrequests/README.md
+  - docs/sdks/jobs/README.md
+  - docs/sdks/jobstatus/README.md
+  - docs/sdks/restrequests/README.md
+  - docs/sdks/workflows/README.md
+  - go.mod
+  - graphqlrequests.go
+  - internal/config/sdkconfiguration.go
+  - internal/hooks/hooks.go
+  - internal/utils/contenttype.go
+  - internal/utils/env.go
+  - internal/utils/form.go
+  - internal/utils/headers.go
+  - internal/utils/json.go
+  - internal/utils/pathparams.go
+  - internal/utils/queryparams.go
+  - internal/utils/requestbody.go
+  - internal/utils/retries.go
+  - internal/utils/security.go
+  - internal/utils/utils.go
+  - jobs.go
+  - jobstatus.go
+  - models/apierrors/apierror.go
+  - models/operations/options.go
+  - restrequests.go
+  - retry/config.go
+  - types/bigint.go
+  - types/date.go
+  - types/datetime.go
+  - types/decimal.go
+  - types/pointers.go
+  - workflows.go
+examples:
+  createAdGroup:
+    speakeasy-default-create-ad-group:
+      requestBody:
+        application/json: {"primaryInput": {"isEnabled": false, "description": "twine from gosh poor safely editor astride vice lost and", "budget": {"allocationType": "Maximum", "budgetInAdvertiserCurrency": 3786.02, "budgetInImpressions": 783190, "dailyTargetInAdvertiserCurrency": 9747.02, "dailyTargetInImpressions": 985999}, "baseBidCPMInAdvertiserCurrency": 3785.04, "maxBidCPMInAdvertiserCurrency": 7447.3, "audienceTargeting": {"audienceId": "<id>", "audienceAcceleratorExclusionsEnabled": true, "audienceBoosterEnabled": true, "audienceExcluderEnabled": true, "audiencePredictorEnabled": false, "crossDeviceVendorListForAudience": [107263], "recencyExclusionWindowInMinutes": 90062, "targetTrackableUsersEnabled": true, "useMcIdAsPrimary": true}, "roiGoal": {"maximizeReach": true, "maximizeLtvIncrementalReach": false, "cpcInAdvertiserCurrency": 2280.31, "ctrInPercent": null, "nielsenOTPInPercent": 5175.21, "cpaInAdvertiserCurrency": 2544.37, "returnOnAdSpendPercent": 8201.47, "vcrInPercent": 4846.08, "viewabilityInPercent": null, "vcpmInAdvertiserCurrency": 4649.53, "cpcvInAdvertiserCurrency": 313.95, "miaozhenOTPInPercent": 4704.1}, "creativeIds": null, "associatedBidLists": [{"bidListId": "<id>", "isEnabled": false, "isDefaultForDimension": true}], "name": "<value>", "channel": "Display", "funnelLocation": "Consideration", "programmaticGuaranteedPrivateContractId": "<id>"}, "campaignId": "<id>", "advancedInput": {"koaOptimizationSettings": {"areFutureKoaFeaturesEnabled": false, "predictiveClearingEnabled": false}, "comscoreSettings": {"isEnabled": false, "populationId": null, "demographicMemberIds": [959580, 236376], "mobileDemographicMemberIds": [664689, 827980, 21321]}, "contractTargeting": {"allowOpenMarketBiddingWhenTargetingContracts": true}, "dimensionalBiddingAutoOptimizationSettings": [[], []], "isUseClicksAsConversionsEnabled": false, "isUseSecondaryConversionsEnabled": false, "nielsenTrackingAttributes": {"enhancedReportingOption": "Site", "gender": "Male", "startAge": "TwentyFive", "endAge": "Seventeen", "countries": ["<value 1>", "<value 2>", "<value 3>"]}, "newFrequencyConfigs": [{"counterName": null, "frequencyCap": 375286, "frequencyGoal": 534735, "resetIntervalInMinutes": 788122}], "flights": [{"allocationType": "Maximum", "budgetInAdvertiserCurrency": 4070.96, "budgetInImpressions": 901477, "dailyTargetInAdvertiserCurrency": 5847.35, "dailyTargetInImpressions": 257517, "campaignFlightId": 874887}]}, "validateInputOnly": true}
+      responses:
+        "201":
+          application/json: {"adGroup": {"id": "<id>", "name": "<value>", "campaignId": "<id>", "isEnabled": true, "description": null, "programmaticGuaranteedPrivateContractId": "<id>", "channel": "Video", "funnelLocation": "Consideration", "budget": {"allocationType": "Fixed", "budgetInAdvertiserCurrency": 6595.23, "budgetInImpressions": 380358, "dailyTargetInAdvertiserCurrency": 6780.84, "dailyTargetInImpressions": 934353}, "baseBidCPMInAdvertiserCurrency": 1998.1, "maxBidCPMInAdvertiserCurrency": 7702.29, "audienceTargeting": {"audienceId": "<id>", "audienceAcceleratorExclusionsEnabled": false, "audienceBoosterEnabled": true, "audienceExcluderEnabled": true, "audiencePredictorEnabled": false, "crossDeviceVendorListForAudience": [], "recencyExclusionWindowInMinutes": 455695, "targetTrackableUsersEnabled": true, "useMcIdAsPrimary": true}, "roiGoal": {"maximizeReach": false, "maximizeLtvIncrementalReach": true, "cpcInAdvertiserCurrency": 7001.93, "ctrInPercent": 8182.44, "nielsenOTPInPercent": 1402.81, "cpaInAdvertiserCurrency": 5101.03, "returnOnAdSpendPercent": 9286.84, "vcrInPercent": null, "viewabilityInPercent": 3948.02, "vcpmInAdvertiserCurrency": 9934.57, "cpcvInAdvertiserCurrency": 7587.03, "miaozhenOTPInPercent": 1875.25}, "creativeIds": ["<value 1>", "<value 2>"], "associatedBidLists": [{"bidListId": "<id>", "isEnabled": true, "isDefaultForDimension": true}], "flights": [], "koaOptimizationSettings": {"areFutureKoaFeaturesEnabled": false, "predictiveClearingEnabled": false}, "comscoreSettings": {"isEnabled": false, "populationId": 264730, "demographicMemberIds": [], "mobileDemographicMemberIds": []}, "contractTargeting": {"allowOpenMarketBiddingWhenTargetingContracts": false}, "dimensionalBiddingAutoOptimizationSettings": [["HasSupplyVendorId"], []], "isUseClicksAsConversionsEnabled": false, "isUseSecondaryConversionsEnabled": false, "nielsenTrackingAttributes": {"enhancedReportingOption": "None", "gender": "Both", "startAge": "Thirteen", "endAge": "FortyFour", "countries": []}}}
+        "400":
+          application/json: {"type": "<value>", "title": "<value>", "status": 243149, "detail": "<value>", "instance": "<value>"}
+  updateAdGroup:
+    speakeasy-default-update-ad-group:
+      requestBody:
+        application/json: {"id": "<id>", "primaryInput": {"isEnabled": null, "description": "likely upliftingly league that finally after owlishly when furthermore brush", "budget": {"allocationType": "Maximum", "budgetInAdvertiserCurrency": 2166.43, "budgetInImpressions": 508947, "dailyTargetInAdvertiserCurrency": 5830.53, "dailyTargetInImpressions": 377823}, "baseBidCPMInAdvertiserCurrency": 1710.9, "maxBidCPMInAdvertiserCurrency": 1926.83, "audienceTargeting": {"audienceId": "<id>", "audienceAcceleratorExclusionsEnabled": false, "audienceBoosterEnabled": true, "audienceExcluderEnabled": true, "audiencePredictorEnabled": true, "crossDeviceVendorListForAudience": [774064, 165155, 542528], "recencyExclusionWindowInMinutes": 740341, "targetTrackableUsersEnabled": false, "useMcIdAsPrimary": true}, "roiGoal": {"maximizeReach": false, "maximizeLtvIncrementalReach": false, "cpcInAdvertiserCurrency": 1146.61, "ctrInPercent": 3063.1, "nielsenOTPInPercent": 411.57, "cpaInAdvertiserCurrency": null, "returnOnAdSpendPercent": 7161.01, "vcrInPercent": 5983.85, "viewabilityInPercent": 9094.92, "vcpmInAdvertiserCurrency": 1135.94, "cpcvInAdvertiserCurrency": 6372.45, "miaozhenOTPInPercent": 8405.28}, "creativeIds": ["<value 1>", "<value 2>", "<value 3>"], "associatedBidLists": [{"bidListId": "<id>", "isEnabled": true, "isDefaultForDimension": true}], "name": "<value>", "channel": "Native", "funnelLocation": "Conversion"}, "advancedInput": {"koaOptimizationSettings": {"areFutureKoaFeaturesEnabled": false, "predictiveClearingEnabled": true}, "comscoreSettings": {"isEnabled": false, "populationId": 935670, "demographicMemberIds": [873274, 940674, 350994], "mobileDemographicMemberIds": [572403, 872508, 141651]}, "contractTargeting": {"allowOpenMarketBiddingWhenTargetingContracts": true}, "dimensionalBiddingAutoOptimizationSettings": [["HasContentLivestream"]], "isUseClicksAsConversionsEnabled": false, "isUseSecondaryConversionsEnabled": false, "nielsenTrackingAttributes": {"enhancedReportingOption": "None", "gender": "Female", "startAge": "FiftyFive", "endAge": "SixtyFourPlus", "countries": ["<value 1>", "<value 2>"]}, "newFrequencyConfigs": [{"counterName": "<value>", "frequencyCap": 685969, "frequencyGoal": 448470, "resetIntervalInMinutes": 577492}], "flights": [{"allocationType": "Minimum", "budgetInAdvertiserCurrency": 5325.23, "budgetInImpressions": 876101, "dailyTargetInAdvertiserCurrency": 44.58, "dailyTargetInImpressions": 815686, "campaignFlightId": 528311}]}, "validateInputOnly": false}
+      responses:
+        "200":
+          application/json: {"adGroup": {"id": "<id>", "name": "<value>", "campaignId": null, "isEnabled": true, "description": null, "programmaticGuaranteedPrivateContractId": "<id>", "channel": "Other", "funnelLocation": "Consideration", "budget": {"allocationType": "Fixed", "budgetInAdvertiserCurrency": 1639.57, "budgetInImpressions": null, "dailyTargetInAdvertiserCurrency": 501.01, "dailyTargetInImpressions": null}, "baseBidCPMInAdvertiserCurrency": 5346.53, "maxBidCPMInAdvertiserCurrency": null, "audienceTargeting": {"audienceId": null, "audienceAcceleratorExclusionsEnabled": false, "audienceBoosterEnabled": false, "audienceExcluderEnabled": false, "audiencePredictorEnabled": false, "crossDeviceVendorListForAudience": [741479], "recencyExclusionWindowInMinutes": 773620, "targetTrackableUsersEnabled": false, "useMcIdAsPrimary": true}, "roiGoal": {"maximizeReach": false, "maximizeLtvIncrementalReach": true, "cpcInAdvertiserCurrency": 3032.86, "ctrInPercent": 5100.96, "nielsenOTPInPercent": null, "cpaInAdvertiserCurrency": 3710.43, "returnOnAdSpendPercent": null, "vcrInPercent": 6055.75, "viewabilityInPercent": 1235.47, "vcpmInAdvertiserCurrency": 7609.52, "cpcvInAdvertiserCurrency": 1915.49, "miaozhenOTPInPercent": 8131.48}, "creativeIds": null, "associatedBidLists": [{"bidListId": "<id>", "isEnabled": true, "isDefaultForDimension": false}], "flights": [{"allocationType": "Minimum", "budgetInAdvertiserCurrency": 4082.99, "budgetInImpressions": 497146, "dailyTargetInAdvertiserCurrency": 3391.02, "dailyTargetInImpressions": 637987, "campaignFlightId": 315704, "adGroupId": "<id>"}], "koaOptimizationSettings": {"areFutureKoaFeaturesEnabled": true, "predictiveClearingEnabled": false}, "comscoreSettings": {"isEnabled": false, "populationId": 16979, "demographicMemberIds": [616321], "mobileDemographicMemberIds": [164686, 325659, 357053]}, "contractTargeting": {"allowOpenMarketBiddingWhenTargetingContracts": false}, "dimensionalBiddingAutoOptimizationSettings": [["HasLanguageId"], []], "isUseClicksAsConversionsEnabled": true, "isUseSecondaryConversionsEnabled": true, "nielsenTrackingAttributes": {"enhancedReportingOption": "Audience", "gender": "Both", "startAge": "Thirty", "endAge": "ThirtyNine", "countries": ["<value 1>"]}}}
+        "400":
+          application/json: {"type": "<value>", "title": "<value>", "status": 861713, "detail": "<value>", "instance": "<value>"}
+  archiveAdGroups:
+    speakeasy-default-archive-ad-groups:
+      parameters:
+        query:
+          forceArchive: false
+      requestBody:
+        application/json: ["<value 1>", "<value 2>"]
+      responses:
+        "200":
+          application/json: ["<value 1>", "<value 2>"]
+        "400":
+          application/json: {"type": "<value>", "title": "<value>", "status": null, "detail": "<value>", "instance": "<value>"}
+  createAdGroupsJob:
+    speakeasy-default-create-ad-groups-job:
+      requestBody:
+        application/json: {"input": [], "validateInputOnly": false, "callbackInput": {"callbackUrl": "https://fantastic-daughter.biz/", "callbackHeaders": {"key": "<value>", "key1": "<value>", "key2": "<value>"}}}
+      responses:
+        "202":
+          application/json: {"id": 521413}
+        "400":
+          application/json: {"type": "<value>", "title": "<value>", "status": 936307, "detail": "<value>", "instance": "<value>"}
+  updateAdGroupsJob:
+    speakeasy-default-update-ad-groups-job:
+      requestBody:
+        application/json: {"input": [{"id": "<id>", "primaryInput": {"isEnabled": false, "description": "stealthily miserable imaginary er since athwart er blah marten", "budget": {"allocationType": "Minimum", "budgetInAdvertiserCurrency": 5440.47, "budgetInImpressions": null, "dailyTargetInAdvertiserCurrency": 6251.13, "dailyTargetInImpressions": 931411}, "baseBidCPMInAdvertiserCurrency": 188.02, "maxBidCPMInAdvertiserCurrency": 6077.98, "audienceTargeting": {"audienceId": "<id>", "audienceAcceleratorExclusionsEnabled": true, "audienceBoosterEnabled": true, "audienceExcluderEnabled": false, "audiencePredictorEnabled": false, "crossDeviceVendorListForAudience": [27262], "recencyExclusionWindowInMinutes": 676417, "targetTrackableUsersEnabled": true, "useMcIdAsPrimary": true}, "roiGoal": {"maximizeReach": false, "maximizeLtvIncrementalReach": true, "cpcInAdvertiserCurrency": null, "ctrInPercent": 2972.79, "nielsenOTPInPercent": 4206.38, "cpaInAdvertiserCurrency": null, "returnOnAdSpendPercent": 842.94, "vcrInPercent": 6307.13, "viewabilityInPercent": 9286.78, "vcpmInAdvertiserCurrency": 8251.2, "cpcvInAdvertiserCurrency": 4502.77, "miaozhenOTPInPercent": 2362.43}, "creativeIds": ["<value 1>"], "associatedBidLists": [{"bidListId": "<id>", "isEnabled": true, "isDefaultForDimension": true}], "name": "<value>", "channel": "TV", "funnelLocation": "None"}, "advancedInput": {"koaOptimizationSettings": {"areFutureKoaFeaturesEnabled": true, "predictiveClearingEnabled": false}, "comscoreSettings": {"isEnabled": true, "populationId": 907569, "demographicMemberIds": null, "mobileDemographicMemberIds": [169306, 568551]}, "contractTargeting": {"allowOpenMarketBiddingWhenTargetingContracts": true}, "dimensionalBiddingAutoOptimizationSettings": [["HasFrequencyAdjustmentId"]], "isUseClicksAsConversionsEnabled": true, "isUseSecondaryConversionsEnabled": true, "nielsenTrackingAttributes": {"enhancedReportingOption": "Audience", "gender": "Female", "startAge": "FortyFive", "endAge": "ThirtyFour", "countries": ["<value 1>", "<value 2>"]}, "newFrequencyConfigs": [{"counterName": "<value>", "frequencyCap": 25438, "frequencyGoal": 637221, "resetIntervalInMinutes": 375296}], "flights": null}}], "validateInputOnly": true, "callbackInput": {"callbackUrl": "https://winged-bathhouse.net", "callbackHeaders": null}}
+      responses:
+        "202":
+          application/json: {"id": 179974}
+        "400":
+          application/json: {"type": "<value>", "title": "<value>", "status": 247855, "detail": "<value>", "instance": null}
+  createCampaign:
+    speakeasy-default-create-campaign:
+      requestBody:
+        application/json: {"primaryInput": {"description": "woot furthermore mentor", "timeZone": "Europe/Ulyanovsk", "customCPAClickWeight": 2561.01, "customCPAViewthroughWeight": 5604.35, "customCPAType": "ClickViewthroughWeighting", "impressionsOnlyBudgetingCpm": 1502.33, "budget": {"pacingMode": "PaceAsSoonAsPossible", "budgetInAdvertiserCurrency": 6363.35, "budgetInImpressions": 836518, "dailyTargetInAdvertiserCurrency": 7814.79, "dailyTargetInImpressions": 784985}, "endDateInUtc": null, "seedId": null, "campaignConversionReportingColumns": [{"trackingTagId": "<id>", "includeInCustomCPA": false, "reportingColumnId": 888649, "ROASConfig": {"includeInCustomROAS": false, "customROASWeight": 4766.9, "customROASClickWeight": 3310.24, "customROASViewthroughWeight": 2919.37}, "weight": 5369.43, "crossDeviceAttributionModelId": "<id>"}], "advertiserId": "<id>", "name": "<value>", "primaryChannel": "DOOH", "primaryGoal": {"maximizeReach": false, "maximizeLtvIncrementalReach": null, "cpcInAdvertiserCurrency": 6678.34, "ctrInPercent": 5357.4, "nielsenOTPInPercent": 2741.6, "cpaInAdvertiserCurrency": 4220.63, "returnOnAdSpendPercent": 8572.83, "vcrInPercent": 8294.92, "viewabilityInPercent": 8592.21, "vcpmInAdvertiserCurrency": 8388.8, "cpcvInAdvertiserCurrency": null, "miaozhenOTPInPercent": 3033.14}, "startDateInUtc": null}, "advancedInput": {"flights": [{"startDateInclusiveUTC": "2024-07-08T10:52:56.944Z", "endDateExclusiveUTC": "2023-05-12T16:41:56.386Z", "budgetInAdvertiserCurrency": 5904.11, "budgetInImpressions": null, "dailyTargetInAdvertiserCurrency": 6112.24, "dailyTargetInImpressions": 333131}], "purchaseOrderNumber": null}, "adGroups": [{"primaryInput": {"isEnabled": false, "description": "quash lightly rot bashfully slope", "budget": {"allocationType": "Minimum", "budgetInAdvertiserCurrency": 4043.98, "budgetInImpressions": 907414, "dailyTargetInAdvertiserCurrency": 49.95, "dailyTargetInImpressions": 62363}, "baseBidCPMInAdvertiserCurrency": 1136.89, "maxBidCPMInAdvertiserCurrency": 6950.27, "audienceTargeting": {"audienceId": "<id>", "audienceAcceleratorExclusionsEnabled": false, "audienceBoosterEnabled": true, "audienceExcluderEnabled": false, "audiencePredictorEnabled": true, "crossDeviceVendorListForAudience": [458524, 284141], "recencyExclusionWindowInMinutes": 982426, "targetTrackableUsersEnabled": false, "useMcIdAsPrimary": true}, "roiGoal": {"maximizeReach": null, "maximizeLtvIncrementalReach": true, "cpcInAdvertiserCurrency": 8782.74, "ctrInPercent": null, "nielsenOTPInPercent": 7930.85, "cpaInAdvertiserCurrency": 4606.89, "returnOnAdSpendPercent": 2522.83, "vcrInPercent": 5828.49, "viewabilityInPercent": 6824.44, "vcpmInAdvertiserCurrency": 7123.95, "cpcvInAdvertiserCurrency": 6233.72, "miaozhenOTPInPercent": 8437.22}, "creativeIds": ["<value 1>"], "associatedBidLists": [{"bidListId": "<id>", "isEnabled": true, "isDefaultForDimension": false}], "name": "<value>", "channel": "NativeVideo", "funnelLocation": "None", "programmaticGuaranteedPrivateContractId": "<id>"}, "advancedInput": {"koaOptimizationSettings": {"areFutureKoaFeaturesEnabled": true, "predictiveClearingEnabled": true}, "comscoreSettings": {"isEnabled": false, "populationId": 523753, "demographicMemberIds": null, "mobileDemographicMemberIds": null}, "contractTargeting": {"allowOpenMarketBiddingWhenTargetingContracts": true}, "dimensionalBiddingAutoOptimizationSettings": [["HasFullReferrerUrl"], ["HasPublisherId"]], "isUseClicksAsConversionsEnabled": null, "isUseSecondaryConversionsEnabled": true, "nielsenTrackingAttributes": {"enhancedReportingOption": "Site", "gender": "Female", "startAge": "ThirtyFive", "endAge": "FortyNine", "countries": []}, "newFrequencyConfigs": [{"counterName": "<value>", "frequencyCap": 391231, "frequencyGoal": 499235, "resetIntervalInMinutes": 587736}], "flights": [{"allocationType": "Fixed", "budgetInAdvertiserCurrency": 5340.32, "budgetInImpressions": 492382, "dailyTargetInAdvertiserCurrency": 5622.5, "dailyTargetInImpressions": 398919}]}}], "validateInputOnly": false}
+      responses:
+        "201":
+          application/json: {"campaign": {"id": "<id>", "name": "<value>", "description": "commandeer following afore ghost schematise lest understated brr happily lined", "startDate": "2025-05-13T19:59:29.421Z", "endDate": "2025-09-17T08:16:44.433Z", "timeZone": "Africa/Lome", "customCPAClickWeight": 1725.54, "customCPAViewthroughWeight": 418.34, "customCPAType": "PixelWeighting", "impressionsOnlyBudgetingCpm": 3266.9, "primaryChannel": "Display", "primaryGoal": "<value>", "seedId": "<id>", "conversionReportingColumnsCount": 748798, "flights": [{"id": "<id>", "startDateInclusiveUTC": "2024-03-12T14:53:08.741Z", "endDateExclusiveUTC": "2024-07-12T11:11:36.420Z", "budgetInAdvertiserCurrency": 6585.86, "budgetInImpressions": 83962, "dailyTargetInAdvertiserCurrency": 2584.64, "dailyTargetInImpressions": 910113}]}, "adGroups": [{"id": "<id>", "name": "<value>", "campaignId": "<id>", "isEnabled": false, "description": "hence questioningly punctual austere beard around circumnavigate behind aboard", "programmaticGuaranteedPrivateContractId": null, "channel": "NativeVideo", "funnelLocation": "Consideration", "budget": {"allocationType": "Maximum", "budgetInAdvertiserCurrency": 4437.6, "budgetInImpressions": 663120, "dailyTargetInAdvertiserCurrency": 3765.21, "dailyTargetInImpressions": 111869}, "baseBidCPMInAdvertiserCurrency": 9802.01, "maxBidCPMInAdvertiserCurrency": 1646.69, "audienceTargeting": {"audienceId": "<id>", "audienceAcceleratorExclusionsEnabled": false, "audienceBoosterEnabled": false, "audienceExcluderEnabled": false, "audiencePredictorEnabled": false, "crossDeviceVendorListForAudience": [502213, 470177, 420897], "recencyExclusionWindowInMinutes": 4504, "targetTrackableUsersEnabled": true, "useMcIdAsPrimary": true}, "roiGoal": {"maximizeReach": false, "maximizeLtvIncrementalReach": false, "cpcInAdvertiserCurrency": 6741.01, "ctrInPercent": 982.47, "nielsenOTPInPercent": 7021.23, "cpaInAdvertiserCurrency": 7395.27, "returnOnAdSpendPercent": 744.23, "vcrInPercent": 3686.93, "viewabilityInPercent": 3897.27, "vcpmInAdvertiserCurrency": 4522.49, "cpcvInAdvertiserCurrency": 2016.93, "miaozhenOTPInPercent": 3516.78}, "creativeIds": ["<value 1>"], "associatedBidLists": [{"bidListId": null, "isEnabled": false, "isDefaultForDimension": true}], "flights": null, "koaOptimizationSettings": {"areFutureKoaFeaturesEnabled": false, "predictiveClearingEnabled": false}, "comscoreSettings": {"isEnabled": false, "populationId": null, "demographicMemberIds": [339950, 676551], "mobileDemographicMemberIds": []}, "contractTargeting": {"allowOpenMarketBiddingWhenTargetingContracts": false}, "dimensionalBiddingAutoOptimizationSettings": [["HasTVQualityIndexRange"], [], ["HasDoubleVerifyBotAvoidanceCategoryId"]], "isUseClicksAsConversionsEnabled": true, "isUseSecondaryConversionsEnabled": true, "nielsenTrackingAttributes": {"enhancedReportingOption": "Audience", "gender": "Female", "startAge": "TwentyOne", "endAge": "SixtyFour", "countries": ["<value 1>", "<value 2>"]}}]}
+        "400":
+          application/json: {"type": "<value>", "title": "<value>", "status": 395871, "detail": "<value>", "instance": "<value>"}
+  updateCampaign:
+    speakeasy-default-update-campaign:
+      requestBody:
+        application/json: {"id": "<id>", "primaryInput": {"description": "yahoo whether frail but into form sway neck notwithstanding", "timeZone": "Asia/Amman", "customCPAClickWeight": 1380.93, "customCPAViewthroughWeight": 3991.98, "customCPAType": "ClickViewthroughWeighting", "impressionsOnlyBudgetingCpm": 126.57, "budget": {"pacingMode": "PaceAsSoonAsPossible", "budgetInAdvertiserCurrency": 6974.82, "budgetInImpressions": 834352, "dailyTargetInAdvertiserCurrency": 8583.49, "dailyTargetInImpressions": 746941}, "endDateInUtc": "2024-07-09T17:14:23.542Z", "seedId": "<id>", "campaignConversionReportingColumns": [{"trackingTagId": "<id>", "includeInCustomCPA": false, "reportingColumnId": 716444, "ROASConfig": {"includeInCustomROAS": true, "customROASWeight": 8307.9, "customROASClickWeight": 129.65, "customROASViewthroughWeight": 2890.82}, "weight": 5187.48, "crossDeviceAttributionModelId": null}], "name": "<value>", "primaryChannel": "Display", "primaryGoal": {"maximizeReach": false, "maximizeLtvIncrementalReach": true, "cpcInAdvertiserCurrency": 8835.54, "ctrInPercent": 4975.78, "nielsenOTPInPercent": 6033.78, "cpaInAdvertiserCurrency": null, "returnOnAdSpendPercent": 5696.08, "vcrInPercent": 8315.31, "viewabilityInPercent": 1059.68, "vcpmInAdvertiserCurrency": 4588.07, "cpcvInAdvertiserCurrency": 2202.71, "miaozhenOTPInPercent": 2682.12}, "startDateInUtc": "2024-02-29T10:31:50.069Z"}, "advancedInput": {"flights": [{"startDateInclusiveUTC": "2025-11-09T04:11:39.432Z", "endDateExclusiveUTC": "2025-09-10T20:38:51.701Z", "budgetInAdvertiserCurrency": 6534.57, "budgetInImpressions": 865481, "dailyTargetInAdvertiserCurrency": 1033.72, "dailyTargetInImpressions": null}], "purchaseOrderNumber": "<value>"}, "validateInputOnly": true}
+      responses:
+        "200":
+          application/json: {"campaign": {"id": "<id>", "name": "<value>", "description": "yuppify primary lest nutritious whoa likewise bookcase traduce seriously", "startDate": "2024-06-18T22:41:27.089Z", "endDate": "2023-09-28T10:30:24.825Z", "timeZone": "Africa/Brazzaville", "customCPAClickWeight": 1420.08, "customCPAViewthroughWeight": 3419.03, "customCPAType": "Disabled", "impressionsOnlyBudgetingCpm": null, "primaryChannel": "Display", "primaryGoal": "<value>", "seedId": "<id>", "conversionReportingColumnsCount": 10946, "flights": [{"id": "<id>", "startDateInclusiveUTC": "2024-06-26T03:24:17.236Z", "endDateExclusiveUTC": "2025-07-01T04:11:25.573Z", "budgetInAdvertiserCurrency": 6644.31, "budgetInImpressions": 164310, "dailyTargetInAdvertiserCurrency": 4555.64, "dailyTargetInImpressions": null}]}, "adGroups": [{"id": "<id>", "name": null, "campaignId": "<id>", "isEnabled": false, "description": "er palatable clonk against noon blacken though", "programmaticGuaranteedPrivateContractId": "<id>", "channel": "Display", "funnelLocation": "None", "budget": {"allocationType": "Maximum", "budgetInAdvertiserCurrency": 4400.5, "budgetInImpressions": 252235, "dailyTargetInAdvertiserCurrency": 3360.49, "dailyTargetInImpressions": 82960}, "baseBidCPMInAdvertiserCurrency": 4115.19, "maxBidCPMInAdvertiserCurrency": 9043, "audienceTargeting": {"audienceId": "<id>", "audienceAcceleratorExclusionsEnabled": true, "audienceBoosterEnabled": false, "audienceExcluderEnabled": true, "audiencePredictorEnabled": false, "crossDeviceVendorListForAudience": [706430], "recencyExclusionWindowInMinutes": 773547, "targetTrackableUsersEnabled": true, "useMcIdAsPrimary": false}, "roiGoal": {"maximizeReach": null, "maximizeLtvIncrementalReach": false, "cpcInAdvertiserCurrency": 8439.61, "ctrInPercent": 3120.58, "nielsenOTPInPercent": 7464.3, "cpaInAdvertiserCurrency": 6205.02, "returnOnAdSpendPercent": 9077.31, "vcrInPercent": 9134.53, "viewabilityInPercent": 7809.01, "vcpmInAdvertiserCurrency": null, "cpcvInAdvertiserCurrency": 9297.05, "miaozhenOTPInPercent": 330.19}, "creativeIds": ["<value 1>", "<value 2>"], "associatedBidLists": [], "flights": null, "koaOptimizationSettings": {"areFutureKoaFeaturesEnabled": false, "predictiveClearingEnabled": false}, "comscoreSettings": {"isEnabled": true, "populationId": 34197, "demographicMemberIds": [], "mobileDemographicMemberIds": [172582, 373780]}, "contractTargeting": {"allowOpenMarketBiddingWhenTargetingContracts": true}, "dimensionalBiddingAutoOptimizationSettings": [[], []], "isUseClicksAsConversionsEnabled": true, "isUseSecondaryConversionsEnabled": false, "nielsenTrackingAttributes": {"enhancedReportingOption": "Site", "gender": "Female", "startAge": "FiftyFive", "endAge": "TwentyFour", "countries": ["<value 1>"]}}]}
+        "400":
+          application/json: {"type": "<value>", "title": "<value>", "status": 432346, "detail": "<value>", "instance": "<value>"}
+  createCampaignsJob:
+    speakeasy-default-create-campaigns-job:
+      requestBody:
+        application/json: {"input": [{"primaryInput": {"description": null, "timeZone": "America/North_Dakota/Center", "customCPAClickWeight": 9662.9, "customCPAViewthroughWeight": 3558.78, "customCPAType": "ClickViewthroughWeighting", "impressionsOnlyBudgetingCpm": 4427.56, "budget": {"pacingMode": "PaceAhead", "budgetInAdvertiserCurrency": 5501.96, "budgetInImpressions": 629784, "dailyTargetInAdvertiserCurrency": 2524.41, "dailyTargetInImpressions": 726807}, "endDateInUtc": "2023-12-21T01:12:20.772Z", "seedId": "<id>", "campaignConversionReportingColumns": [{"trackingTagId": "<id>", "includeInCustomCPA": false, "reportingColumnId": 356532, "ROASConfig": {"includeInCustomROAS": false, "customROASWeight": 1483.03, "customROASClickWeight": 5286.76, "customROASViewthroughWeight": 8906.82}, "weight": null, "crossDeviceAttributionModelId": "<id>"}], "advertiserId": "<id>", "name": "<value>", "primaryChannel": "NativeVideo", "primaryGoal": {"maximizeReach": false, "maximizeLtvIncrementalReach": false, "cpcInAdvertiserCurrency": 25.32, "ctrInPercent": 4889.32, "nielsenOTPInPercent": 5258.8, "cpaInAdvertiserCurrency": 2553.01, "returnOnAdSpendPercent": 1142.91, "vcrInPercent": 1152.77, "viewabilityInPercent": 6711.38, "vcpmInAdvertiserCurrency": 4528.37, "cpcvInAdvertiserCurrency": 9833.69, "miaozhenOTPInPercent": 1951.58}, "startDateInUtc": "2025-09-26T21:06:42.946Z"}, "advancedInput": {"flights": [{"startDateInclusiveUTC": "2024-09-20T06:04:19.345Z", "endDateExclusiveUTC": "2024-01-18T07:43:56.299Z", "budgetInAdvertiserCurrency": 8219.9, "budgetInImpressions": 76925, "dailyTargetInAdvertiserCurrency": 9309.03, "dailyTargetInImpressions": 152838}], "purchaseOrderNumber": "<value>"}, "adGroups": [{"primaryInput": {"isEnabled": true, "description": "scenario dish gracefully through tame yahoo pension husband as atop", "budget": {"allocationType": "Maximum", "budgetInAdvertiserCurrency": 2283.06, "budgetInImpressions": 301691, "dailyTargetInAdvertiserCurrency": 9268.18, "dailyTargetInImpressions": 851470}, "baseBidCPMInAdvertiserCurrency": 694.78, "maxBidCPMInAdvertiserCurrency": 6084.4, "audienceTargeting": {"audienceId": "<id>", "audienceAcceleratorExclusionsEnabled": true, "audienceBoosterEnabled": false, "audienceExcluderEnabled": true, "audiencePredictorEnabled": false, "crossDeviceVendorListForAudience": [497890, 566253], "recencyExclusionWindowInMinutes": 742665, "targetTrackableUsersEnabled": true, "useMcIdAsPrimary": true}, "roiGoal": {"maximizeReach": false, "maximizeLtvIncrementalReach": true, "cpcInAdvertiserCurrency": 9062.02, "ctrInPercent": 7192.99, "nielsenOTPInPercent": 2823.22, "cpaInAdvertiserCurrency": 3140.25, "returnOnAdSpendPercent": 6857.21, "vcrInPercent": 2704.73, "viewabilityInPercent": 2247.4, "vcpmInAdvertiserCurrency": 8383.69, "cpcvInAdvertiserCurrency": 4755.8, "miaozhenOTPInPercent": 4575.86}, "creativeIds": ["<value 1>", "<value 2>"], "associatedBidLists": [{"bidListId": "<id>", "isEnabled": true, "isDefaultForDimension": false}], "name": "<value>", "channel": "Display", "funnelLocation": "Awareness", "programmaticGuaranteedPrivateContractId": "<id>"}, "advancedInput": {"koaOptimizationSettings": {"areFutureKoaFeaturesEnabled": true, "predictiveClearingEnabled": false}, "comscoreSettings": {"isEnabled": false, "populationId": 559587, "demographicMemberIds": [139340, 129935], "mobileDemographicMemberIds": null}, "contractTargeting": {"allowOpenMarketBiddingWhenTargetingContracts": true}, "dimensionalBiddingAutoOptimizationSettings": [["HasAudienceReachPercentageTierId"], []], "isUseClicksAsConversionsEnabled": false, "isUseSecondaryConversionsEnabled": true, "nielsenTrackingAttributes": {"enhancedReportingOption": "None", "gender": "Female", "startAge": "ThirtyFive", "endAge": "TwentyFour", "countries": ["<value 1>", "<value 2>"]}, "newFrequencyConfigs": null, "flights": [{"allocationType": "Maximum", "budgetInAdvertiserCurrency": 4838.47, "budgetInImpressions": 420224, "dailyTargetInAdvertiserCurrency": 1513.78, "dailyTargetInImpressions": 735500}]}}]}], "validateInputOnly": true, "callbackInput": {"callbackUrl": "https://impeccable-pick.com/", "callbackHeaders": {"key": "<value>"}}}
+      responses:
+        "202":
+          application/json: {"id": 831254}
+        "400":
+          application/json: {"type": "<value>", "title": "<value>", "status": 529932, "detail": "<value>", "instance": "<value>"}
+  updateCampaignsJob:
+    speakeasy-default-update-campaigns-job:
+      requestBody:
+        application/json: {"input": [{"id": "<id>", "primaryInput": {"description": "hmph energetically yet surprisingly swift knight swear multicolored absent", "timeZone": "America/Argentina/San_Juan", "customCPAClickWeight": null, "customCPAViewthroughWeight": 8361.84, "customCPAType": "PixelWeighting", "impressionsOnlyBudgetingCpm": 2706.4, "budget": {"pacingMode": "PaceAsSoonAsPossible", "budgetInAdvertiserCurrency": 2564.89, "budgetInImpressions": 659726, "dailyTargetInAdvertiserCurrency": 6514.48, "dailyTargetInImpressions": 892097}, "endDateInUtc": "2023-11-11T21:39:56.025Z", "seedId": "<id>", "campaignConversionReportingColumns": [{"trackingTagId": "<id>", "includeInCustomCPA": true, "reportingColumnId": 809247, "ROASConfig": {"includeInCustomROAS": false, "customROASWeight": null, "customROASClickWeight": null, "customROASViewthroughWeight": 6784.9}, "weight": 2260.69, "crossDeviceAttributionModelId": "<id>"}], "name": "<value>", "primaryChannel": "None", "primaryGoal": {"maximizeReach": true, "maximizeLtvIncrementalReach": false, "cpcInAdvertiserCurrency": 3354.68, "ctrInPercent": 7716.49, "nielsenOTPInPercent": null, "cpaInAdvertiserCurrency": 381.7, "returnOnAdSpendPercent": 8461.44, "vcrInPercent": 4170.61, "viewabilityInPercent": 5364.85, "vcpmInAdvertiserCurrency": 1107.08, "cpcvInAdvertiserCurrency": null, "miaozhenOTPInPercent": 4584.96}, "startDateInUtc": "2023-01-13T23:06:05.083Z"}, "advancedInput": {"flights": [{"startDateInclusiveUTC": "2023-08-14T13:47:31.198Z", "endDateExclusiveUTC": "2024-07-07T14:46:57.378Z", "budgetInAdvertiserCurrency": 1874.95, "budgetInImpressions": 207094, "dailyTargetInAdvertiserCurrency": 7255.71, "dailyTargetInImpressions": 760981}], "purchaseOrderNumber": "<value>"}}], "validateInputOnly": true, "callbackInput": {"callbackUrl": "https://soggy-apparatus.org/", "callbackHeaders": {"key": "<value>", "key1": "<value>", "key2": "<value>"}}}
+      responses:
+        "202":
+          application/json: {"id": 677445}
+        "400":
+          application/json: {"type": "<value>", "title": "<value>", "status": 559602, "detail": "<value>", "instance": "<value>"}
+  archiveCampaigns:
+    speakeasy-default-archive-campaigns:
+      parameters:
+        query:
+          forceArchive: false
+      requestBody:
+        application/json: ["<value 1>", "<value 2>", "<value 3>"]
+      responses:
+        "200":
+          application/json: ["<value 1>", "<value 2>", "<value 3>"]
+        "400":
+          application/json: {"type": "<value>", "title": "<value>", "status": 26599, "detail": "<value>", "instance": "<value>"}
+  getCampaignVersion:
+    speakeasy-default-get-campaign-version:
+      parameters:
+        path:
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {"Id": "<id>", "version": "<value>", "budgetingVersion": "<value>"}
+        "400":
+          application/json: {"type": null, "title": "<value>", "status": 764051, "detail": "<value>", "instance": "<value>"}
+  getFirstPartyDataJob:
+    speakeasy-default-get-first-party-data-job:
+      requestBody:
+        application/json: {"advertiserId": "<id>", "nameFilter": "<value>", "queryShape": "<value>", "callbackInput": {"callbackUrl": "https://difficult-pocket-watch.com", "callbackHeaders": {"key": "<value>", "key1": "<value>", "key2": "<value>"}}}
+      responses:
+        "202":
+          application/json: {"id": 402817}
+        "400":
+          application/json: {"type": "<value>", "title": "<value>", "status": 846141, "detail": null, "instance": "<value>"}
+  getThirdPartyDataJob:
+    speakeasy-default-get-third-party-data-job:
+      requestBody:
+        application/json: {"partnerId": "<id>", "queryShape": "<value>", "callbackInput": {"callbackUrl": "https://extroverted-intent.net", "callbackHeaders": {"key": "<value>", "key1": "<value>"}}}
+        text/json: {"partnerId": "<id>", "queryShape": "<value>", "callbackInput": {"callbackUrl": "https://extroverted-intent.net", "callbackHeaders": {"key": "<value>", "key1": "<value>"}}}
+        application/*+json: {"partnerId": "<id>", "queryShape": "<value>", "callbackInput": {"callbackUrl": "https://extroverted-intent.net", "callbackHeaders": {"key": "<value>", "key1": "<value>"}}}
+      responses:
+        "202":
+          application/json: {"id": 899821}
+        "400":
+          application/json: {"type": "<value>", "title": "<value>", "status": 808648, "detail": "<value>", "instance": "<value>"}
+  submitGraphQlRequest:
+    speakeasy-default-submit-graph-ql-request:
+      requestBody:
+        application/json: {"request": "<value>", "variables": {}}
+      responses:
+        "200":
+          application/json: {}
+        "400":
+          application/json: {"type": "<value>", "title": null, "status": 151869, "detail": "<value>", "instance": "<value>"}
+  submitGraphQlQueryJob:
+    speakeasy-default-submit-graph-ql-query-job:
+      requestBody:
+        application/json: {"query": "<value>", "callbackInput": {"callbackUrl": "https://wilted-cork.net/", "callbackHeaders": [{"key": "<key>", "value": "<value>"}]}}
+      responses:
+        "200":
+          application/json: {"payload": {"data": {"id": 512334, "completedAt": "2024-05-11T16:37:12.732Z", "completionPercentage": 6222.78, "createdAt": "2024-04-15T15:09:56.887Z", "status": "InProgress", "url": "https://whirlwind-slipper.info/", "rawResult": "<value>", "queryGqlErrors": ["<value 1>"], "runtimeErrors": ["<value 1>"]}, "errors": [{"message": "<value>", "field": ["<value 1>", "<value 2>"], "additionalData": null}]}, "errors": "<value>"}
+        "400":
+          application/json: {"type": "<value>", "title": "<value>", "status": 77071, "detail": "<value>", "instance": "<value>"}
+  getGraphQlQueryJobStatus:
+    speakeasy-default-get-graph-ql-query-job-status:
+      parameters:
+        path:
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {"job": {"id": 538179, "completedAt": "2025-03-24T07:03:20.469Z", "completionPercentage": 2374.76, "createdAt": "2024-08-26T00:26:23.894Z", "status": "InProgress", "url": null, "rawResult": "<value>", "queryGqlErrors": ["<value 1>", "<value 2>", "<value 3>"], "runtimeErrors": ["<value 1>"]}, "errors": "<value>"}
+        "400":
+          application/json: {"type": "<value>", "title": "<value>", "status": null, "detail": "<value>", "instance": "<value>"}
+  getJobStatus:
+    speakeasy-default-get-job-status:
+      parameters:
+        path:
+          id: 412651
+      responses:
+        "200":
+          application/json: {"id": 106154, "completedAtUtc": "2023-04-27T08:16:55.186Z", "completionPercentage": 8776.03, "createdAtUtc": "2023-08-05T22:05:18.570Z", "status": "ResultsExpired", "url": "https://zesty-traditionalism.net/", "rawResult": "<value>", "errors": "<value>"}
+        "400":
+          application/json: {"type": "<value>", "title": "<value>", "status": 707153, "detail": "<value>", "instance": null}
+  submitRestRequest:
+    speakeasy-default-submit-rest-request:
+      requestBody:
+        application/json: {"methodType": "GET", "endpoint": "<value>", "dataBody": "<value>"}
+      responses:
+        "200":
+          application/json: {}
+        "400":
+          application/json: {"type": "<value>", "title": "<value>", "status": 378372, "detail": "<value>", "instance": "<value>"}
+examplesVersion: 1.0.2
+generatedTests: {}

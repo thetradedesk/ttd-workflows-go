@@ -1,0 +1,2593 @@
+openapi: 3.0.4
+info:
+  title: Workflows Service
+  description: "\r\nThis service provides operations for commonly used workflows on The Trade Desk's platform.\r\nIn addition, this service provides generic operations for submitting:\r\n\r\n- GraphQL API requests\r\n- REST API requests\r\n\r\nFor further explanation on the entities encountered in this documentation (e.g.,\r\n[campaigns](https://partner.thetradedesk.com/v3/portal/api/doc/Campaigns) and\r\n[ad groups](https://partner.thetradedesk.com/v3/portal/api/doc/AdGroup)), visit the\r\n[Partner Portal](https://partner.thetradedesk.com/v3/portal/api/doc/ApiUseCases)."
+  version: v1
+paths:
+  /adgroup:
+    post:
+      tags:
+        - Ad Group
+      summary: Create a new ad group with required fields
+      operationId: createAdGroup
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AdGroupCreateWorkflowInputWithValidation'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AdGroupPayload'
+        '200':
+          description: OK
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+      x-speakeasy-group: adGroups
+      x-speakeasy-name-override: create
+    patch:
+      tags:
+        - Ad Group
+      summary: Update an ad group with specified fields
+      description: Only the fields provided in the request payload will be updated.
+      operationId: updateAdGroup
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AdGroupUpdateWorkflowInputWithValidation'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AdGroupPayload'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+      x-speakeasy-group: adGroups
+      x-speakeasy-name-override: update
+  /adgroup/archive:
+    post:
+      tags:
+        - Ad Group
+      summary: Archive multiple ad groups
+      description: '**NOTE**: Once archived, ad groups cannot be un-archived.'
+      operationId: archiveAdGroups
+      parameters:
+        - name: forceArchive
+          in: query
+          schema:
+            type: boolean
+            default: false
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+      x-speakeasy-group: adGroups
+      x-speakeasy-name-override: archive
+  /standardjob/adgroup/bulk:
+    post:
+      tags:
+        - Ad Group
+      summary: Create multiple new ad groups with required fields
+      operationId: createAdGroupsJob
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AdGroupBulkCreateWorkflowInputWithValidation'
+      responses:
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StandardJobSubmitResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '500':
+          description: Internal Server Error
+        '503':
+          description: Service Unavailable
+      x-speakeasy-group: adGroups
+      x-speakeasy-name-override: bulkCreate
+    patch:
+      tags:
+        - Ad Group
+      summary: Update multiple ad groups with specified fields
+      description: Only the fields provided in the request payload for each specific ad group will be updated.
+      operationId: updateAdGroupsJob
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AdGroupBulkUpdateWorkflowInputWithValidation'
+      responses:
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StandardJobSubmitResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '500':
+          description: Internal Server Error
+        '503':
+          description: Service Unavailable
+      x-speakeasy-group: adGroups
+      x-speakeasy-name-override: bulkUpdate
+  /campaign:
+    post:
+      tags:
+        - Campaign
+      summary: Create a new campaign with required fields
+      operationId: createCampaign
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CampaignCreateWorkflowInputWithValidation'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CampaignPayload'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+      x-speakeasy-group: campaigns
+    patch:
+      tags:
+        - Campaign
+      summary: Update a campaign with specified fields
+      description: Only the fields provided in the request payload will be updated.
+      operationId: updateCampaign
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CampaignUpdateWorkflowInputWithValidation'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CampaignPayload'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+      x-speakeasy-group: campaigns
+      x-speakeasy-name-override: update
+  /standardjob/campaign/bulk:
+    post:
+      tags:
+        - Campaign
+      summary: Create multiple new campaigns with required fields
+      operationId: createCampaignsJob
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CampaignBulkCreateWorkflowInputWithValidation'
+      responses:
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StandardJobSubmitResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '500':
+          description: Internal Server Error
+        '503':
+          description: Service Unavailable
+      x-speakeasy-group: campaigns
+      x-speakeasy-name-override: bulkCreate
+    patch:
+      tags:
+        - Campaign
+      summary: Update multiple campaigns with specified fields
+      description: Only the fields provided in the request payload for each specific campaign will be updated.
+      operationId: updateCampaignsJob
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CampaignBulkUpdateWorkflowInputWithValidation'
+      responses:
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StandardJobSubmitResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '500':
+          description: Internal Server Error
+        '503':
+          description: Service Unavailable
+      x-speakeasy-group: campaigns
+      x-speakeasy-name-override: bulkUpdate
+  /campaign/archive:
+    post:
+      tags:
+        - Campaign
+      summary: Archive multiple campaigns
+      description: '**NOTE**: Once archived, campaigns cannot be un-archived.'
+      operationId: archiveCampaigns
+      parameters:
+        - name: forceArchive
+          in: query
+          schema:
+            type: boolean
+            default: false
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+      x-speakeasy-group: campaigns
+      x-speakeasy-name-override: archive
+  '/campaign/{id}/version':
+    get:
+      tags:
+        - Campaign
+      summary: Get a campaign's version
+      operationId: getCampaignVersion
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CampaignVersionWorkflow'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '500':
+          description: Internal Server Error
+      x-speakeasy-group: campaigns
+  /standardjob/firstpartydata:
+    post:
+      tags:
+        - DMP
+      summary: Submit a job for first-party data retrieval for an advertiser
+      description: "When a first-party data query is submitted, a job ID is returned.\nThis job ID can be used to poll for the job's status using the associated operation under \"Job Status\"."
+      operationId: getFirstPartyDataJob
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FirstPartyDataInput'
+      responses:
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StandardJobSubmitResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '500':
+          description: Internal Server Error
+        '503':
+          description: Service Unavailable
+      x-speakeasy-group: dmps
+  /graphqlrequest:
+    post:
+      tags:
+        - GraphQL Request
+      summary: Submit a valid GraphQL query or mutation
+      description: "This generic operation can be used to execute any valid GraphQL request.\nTo explore the available GraphQL operations, see the [GraphQL Schema Explorer](https://partner.thetradedesk.com/v3/portal/api/graphql-schema)."
+      operationId: submitGraphQlRequest
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GraphQLRequestInput'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '500':
+          description: Internal Server Error
+        '503':
+          description: Service Unavailable
+      x-speakeasy-group: graphQlRequests
+      x-speakeasy-name-override: submit
+  /graphqlqueryjob:
+    post:
+      tags:
+        - GraphQL Request
+      summary: Submit a valid bulk GraphQL query
+      description: "This generic operation can be used to execute any valid bulk GraphQL query.\nFor information on bulk GraphQL query syntax, see [GraphQL API Bulk Operations](https://partner.thetradedesk.com/v3/portal/api/doc/GqlBulkOperations)."
+      operationId: submitGraphQlQueryJob
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GraphQlQueryJobInput'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GraphQlQueryJobResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '500':
+          description: Internal Server Error
+        '503':
+          description: Service Unavailable
+      x-speakeasy-group: graphQlRequests
+      x-speakeasy-name-override: submitBulkQueryJob
+  '/graphqlqueryjob/{id}':
+    get:
+      tags:
+        - Job Status
+      summary: Get the status of a previously submitted GraphQL query job.
+      description: "Use this operation to get a previously submitted GraphQL query job's status and completion percentage.\nOnce a job is complete, this operation will return the URL from which to download the job results."
+      operationId: getGraphQlQueryJobStatus
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GraphQLQueryJobRetrievalResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '500':
+          description: Internal Server Error
+        '503':
+          description: Service Unavailable
+      x-speakeasy-group: jobs
+      x-speakeasy-name-override: getStatus
+  /restrequest:
+    post:
+      tags:
+        - REST Request
+      summary: Submit a valid REST request
+      description: "This generic operation can be used to execute any valid REST request.\nTo explore the available REST operations, see the [REST API Reference](https://partner.thetradedesk.com/v3/portal/api/doc/ApiReferencePlatform)."
+      operationId: submitRestRequest
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CallRestApiWorkflowInput'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '500':
+          description: Internal Server Error
+      x-speakeasy-group: restRequests
+      x-speakeasy-name-override: submit
+  '/standardjob/{id}/status':
+    get:
+      tags:
+        - Job Status
+      summary: Get the status of a previously submitted job
+      description: "Use this operation to get a previously submitted job's status and completion percentage.\nOnce a job is complete, this operation will return the URL from which to download the job results.\n            \nJob results expire after 24 hours, at which point you will need to submit a new job."
+      operationId: getJobStatus
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StandardJobStatusResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '500':
+          description: Internal Server Error
+        '503':
+          description: Service Unavailable
+      x-speakeasy-group: jobStatus
+      x-speakeasy-name-override: get
+  /standardjob/thirdpartydata:
+    post:
+      tags:
+        - DMP
+      summary: Submit a job for third-party data retrieval for a partner
+      description: "When a third-party data query is submitted, a job ID is returned.\nThis job ID can be used to poll for the job's status, and when complete, the results download link,\nusing the associated operation under \"Job Status\"."
+      operationId: getThirdPartyDataJob
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ThirdPartyDataInput'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/ThirdPartyDataInput'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/ThirdPartyDataInput'
+      responses:
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StandardJobSubmitResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '500':
+          description: Internal Server Error
+        '503':
+          description: Service Unavailable
+      x-speakeasy-group: dmps
+components:
+  schemas:
+    AdGroupAssociateBidList:
+      required:
+        - bidListId
+        - isDefaultForDimension
+        - isEnabled
+      type: object
+      properties:
+        bidListId:
+          type: string
+          nullable: true
+        isEnabled:
+          type: boolean
+        isDefaultForDimension:
+          type: boolean
+      additionalProperties: false
+    AdGroupAudienceTargeting:
+      required:
+        - audienceAcceleratorExclusionsEnabled
+        - audienceBoosterEnabled
+        - audienceExcluderEnabled
+        - audiencePredictorEnabled
+        - crossDeviceVendorListForAudience
+        - recencyExclusionWindowInMinutes
+        - targetTrackableUsersEnabled
+        - useMcIdAsPrimary
+      type: object
+      properties:
+        audienceId:
+          type: string
+          nullable: true
+        audienceAcceleratorExclusionsEnabled:
+          type: boolean
+        audienceBoosterEnabled:
+          type: boolean
+        audienceExcluderEnabled:
+          type: boolean
+        audiencePredictorEnabled:
+          type: boolean
+        crossDeviceVendorListForAudience:
+          type: array
+          items:
+            type: integer
+            format: int32
+          nullable: true
+        recencyExclusionWindowInMinutes:
+          type: integer
+          format: int32
+        targetTrackableUsersEnabled:
+          type: boolean
+        useMcIdAsPrimary:
+          type: boolean
+      additionalProperties: false
+    AdGroupBudget:
+      required:
+        - allocationType
+        - budgetInAdvertiserCurrency
+      type: object
+      properties:
+        allocationType:
+          $ref: '#/components/schemas/AllocationType'
+        budgetInAdvertiserCurrency:
+          type: number
+          format: double
+        budgetInImpressions:
+          type: integer
+          format: int64
+          nullable: true
+        dailyTargetInAdvertiserCurrency:
+          type: number
+          format: double
+          nullable: true
+        dailyTargetInImpressions:
+          type: integer
+          format: int64
+          nullable: true
+      additionalProperties: false
+    AdGroupBulkCreateWorkflowInputWithValidation:
+      required:
+        - input
+      type: object
+      properties:
+        input:
+          type: array
+          items:
+            $ref: '#/components/schemas/AdGroupCreateWorkflowInput'
+          nullable: true
+        validateInputOnly:
+          type: boolean
+          nullable: true
+        callbackInput:
+          $ref: '#/components/schemas/WorkflowCallbackInput'
+      additionalProperties: false
+    AdGroupBulkUpdateWorkflowInputWithValidation:
+      required:
+        - input
+      type: object
+      properties:
+        input:
+          type: array
+          items:
+            $ref: '#/components/schemas/AdGroupUpdateWorkflowInput'
+          nullable: true
+        validateInputOnly:
+          type: boolean
+          nullable: true
+        callbackInput:
+          $ref: '#/components/schemas/WorkflowCallbackInput'
+      additionalProperties: false
+    AdGroupChannel:
+      enum:
+        - Other
+        - Display
+        - Video
+        - Audio
+        - Native
+        - NativeDisplay
+        - NativeVideo
+        - TV
+        - OutOfHome
+      type: string
+    AdGroupComscoreSettings:
+      required:
+        - demographicMemberIds
+        - isEnabled
+        - mobileDemographicMemberIds
+      type: object
+      properties:
+        isEnabled:
+          type: boolean
+        populationId:
+          type: integer
+          format: int32
+          nullable: true
+        demographicMemberIds:
+          type: array
+          items:
+            type: integer
+            format: int32
+          nullable: true
+        mobileDemographicMemberIds:
+          type: array
+          items:
+            type: integer
+            format: int32
+          nullable: true
+      additionalProperties: false
+    AdGroupContractTargeting:
+      required:
+        - allowOpenMarketBiddingWhenTargetingContracts
+      type: object
+      properties:
+        allowOpenMarketBiddingWhenTargetingContracts:
+          type: boolean
+      additionalProperties: false
+    AdGroupCreateWorkflowInput:
+      required:
+        - campaignId
+        - primaryInput
+      type: object
+      properties:
+        primaryInput:
+          $ref: '#/components/schemas/AdGroupCreateWorkflowPrimaryInput'
+        campaignId:
+          type: string
+          nullable: true
+        advancedInput:
+          $ref: '#/components/schemas/AdGroupWorkflowAdvancedInput'
+      additionalProperties: false
+    AdGroupCreateWorkflowInputWithValidation:
+      required:
+        - campaignId
+        - primaryInput
+      type: object
+      properties:
+        primaryInput:
+          $ref: '#/components/schemas/AdGroupCreateWorkflowPrimaryInput'
+        campaignId:
+          type: string
+          nullable: true
+        advancedInput:
+          $ref: '#/components/schemas/AdGroupWorkflowAdvancedInput'
+        validateInputOnly:
+          type: boolean
+          nullable: true
+      additionalProperties: false
+    AdGroupCreateWorkflowPrimaryInput:
+      required:
+        - channel
+        - funnelLocation
+        - name
+      type: object
+      properties:
+        isEnabled:
+          type: boolean
+          nullable: true
+        description:
+          type: string
+          nullable: true
+        budget:
+          $ref: '#/components/schemas/AdGroupWorkflowBudgetInput'
+        baseBidCPMInAdvertiserCurrency:
+          type: number
+          format: double
+          nullable: true
+        maxBidCPMInAdvertiserCurrency:
+          type: number
+          format: double
+          nullable: true
+        audienceTargeting:
+          $ref: '#/components/schemas/AdGroupWorkflowAudienceTargetingInput'
+        roiGoal:
+          $ref: '#/components/schemas/AdGroupWorkflowROIGoalInput'
+        creativeIds:
+          type: array
+          items:
+            type: string
+          nullable: true
+        associatedBidLists:
+          type: array
+          items:
+            $ref: '#/components/schemas/AdGroupWorkflowAssociateBidListInput'
+          nullable: true
+        name:
+          type: string
+          nullable: true
+        channel:
+          $ref: '#/components/schemas/AdGroupChannel'
+        funnelLocation:
+          $ref: '#/components/schemas/AdGroupFunnelLocation'
+        programmaticGuaranteedPrivateContractId:
+          type: string
+          nullable: true
+      additionalProperties: false
+    AdGroupFlight:
+      required:
+        - adGroupId
+        - allocationType
+        - budgetInAdvertiserCurrency
+        - campaignFlightId
+      type: object
+      properties:
+        allocationType:
+          $ref: '#/components/schemas/AllocationType'
+        budgetInAdvertiserCurrency:
+          type: number
+          format: double
+        budgetInImpressions:
+          type: integer
+          format: int64
+          nullable: true
+        dailyTargetInAdvertiserCurrency:
+          type: number
+          format: double
+          nullable: true
+        dailyTargetInImpressions:
+          type: integer
+          format: int64
+          nullable: true
+        campaignFlightId:
+          type: integer
+          format: int64
+        adGroupId:
+          type: string
+          nullable: true
+      additionalProperties: false
+    AdGroupFunnelLocation:
+      enum:
+        - None
+        - Awareness
+        - Consideration
+        - Conversion
+      type: string
+    AdGroupKoaOptimizationSettings:
+      type: object
+      properties:
+        areFutureKoaFeaturesEnabled:
+          type: boolean
+        predictiveClearingEnabled:
+          type: boolean
+      additionalProperties: false
+    AdGroupNielsenTrackingAttributes:
+      required:
+        - countries
+        - endAge
+        - enhancedReportingOption
+        - gender
+        - startAge
+      type: object
+      properties:
+        enhancedReportingOption:
+          $ref: '#/components/schemas/EnhancedNielsenReportingOptions'
+        gender:
+          $ref: '#/components/schemas/TargetingGender'
+        startAge:
+          $ref: '#/components/schemas/TargetingStartAge'
+        endAge:
+          $ref: '#/components/schemas/TargetingEndAge'
+        countries:
+          type: array
+          items:
+            type: string
+          nullable: true
+      additionalProperties: false
+    AdGroupPayload:
+      type: object
+      properties:
+        adGroup:
+          $ref: '#/components/schemas/AdGroupWorkflow'
+      additionalProperties: false
+    AdGroupROIGoal:
+      type: object
+      properties:
+        maximizeReach:
+          type: boolean
+          nullable: true
+        maximizeLtvIncrementalReach:
+          type: boolean
+          nullable: true
+        cpcInAdvertiserCurrency:
+          type: number
+          format: double
+          nullable: true
+        ctrInPercent:
+          type: number
+          format: double
+          nullable: true
+        nielsenOTPInPercent:
+          type: number
+          format: double
+          nullable: true
+        cpaInAdvertiserCurrency:
+          type: number
+          format: double
+          nullable: true
+        returnOnAdSpendPercent:
+          type: number
+          format: double
+          nullable: true
+        vcrInPercent:
+          type: number
+          format: double
+          nullable: true
+        viewabilityInPercent:
+          type: number
+          format: double
+          nullable: true
+        vcpmInAdvertiserCurrency:
+          type: number
+          format: double
+          nullable: true
+        cpcvInAdvertiserCurrency:
+          type: number
+          format: double
+          nullable: true
+        miaozhenOTPInPercent:
+          type: number
+          format: double
+          nullable: true
+      additionalProperties: false
+    AdGroupUpdateWorkflowInput:
+      required:
+        - id
+      type: object
+      properties:
+        id:
+          type: string
+          nullable: true
+        primaryInput:
+          $ref: '#/components/schemas/AdGroupUpdateWorkflowPrimaryInput'
+        advancedInput:
+          $ref: '#/components/schemas/AdGroupWorkflowAdvancedInput'
+      additionalProperties: false
+    AdGroupUpdateWorkflowInputWithValidation:
+      required:
+        - id
+      type: object
+      properties:
+        id:
+          type: string
+          nullable: true
+        primaryInput:
+          $ref: '#/components/schemas/AdGroupUpdateWorkflowPrimaryInput'
+        advancedInput:
+          $ref: '#/components/schemas/AdGroupWorkflowAdvancedInput'
+        validateInputOnly:
+          type: boolean
+          nullable: true
+      additionalProperties: false
+    AdGroupUpdateWorkflowPrimaryInput:
+      type: object
+      properties:
+        isEnabled:
+          type: boolean
+          nullable: true
+        description:
+          type: string
+          nullable: true
+        budget:
+          $ref: '#/components/schemas/AdGroupWorkflowBudgetInput'
+        baseBidCPMInAdvertiserCurrency:
+          type: number
+          format: double
+          nullable: true
+        maxBidCPMInAdvertiserCurrency:
+          type: number
+          format: double
+          nullable: true
+        audienceTargeting:
+          $ref: '#/components/schemas/AdGroupWorkflowAudienceTargetingInput'
+        roiGoal:
+          $ref: '#/components/schemas/AdGroupWorkflowROIGoalInput'
+        creativeIds:
+          type: array
+          items:
+            type: string
+          nullable: true
+        associatedBidLists:
+          type: array
+          items:
+            $ref: '#/components/schemas/AdGroupWorkflowAssociateBidListInput'
+          nullable: true
+        name:
+          type: string
+          nullable: true
+        channel:
+          $ref: '#/components/schemas/AdGroupChannel'
+        funnelLocation:
+          $ref: '#/components/schemas/AdGroupFunnelLocation'
+      additionalProperties: false
+    AdGroupWorkflow:
+      required:
+        - associatedBidLists
+        - budget
+        - campaignId
+        - channel
+        - comscoreSettings
+        - contractTargeting
+        - creativeIds
+        - dimensionalBiddingAutoOptimizationSettings
+        - flights
+        - funnelLocation
+        - id
+        - isEnabled
+        - isUseClicksAsConversionsEnabled
+        - isUseSecondaryConversionsEnabled
+        - name
+        - roiGoal
+      type: object
+      properties:
+        id:
+          type: string
+          nullable: true
+        name:
+          type: string
+          nullable: true
+        campaignId:
+          type: string
+          nullable: true
+        isEnabled:
+          type: boolean
+        description:
+          type: string
+          nullable: true
+        programmaticGuaranteedPrivateContractId:
+          type: string
+          nullable: true
+        channel:
+          $ref: '#/components/schemas/AdGroupChannel'
+        funnelLocation:
+          $ref: '#/components/schemas/AdGroupFunnelLocation'
+        budget:
+          $ref: '#/components/schemas/AdGroupBudget'
+        baseBidCPMInAdvertiserCurrency:
+          type: number
+          format: double
+          nullable: true
+        maxBidCPMInAdvertiserCurrency:
+          type: number
+          format: double
+          nullable: true
+        audienceTargeting:
+          $ref: '#/components/schemas/AdGroupAudienceTargeting'
+        roiGoal:
+          $ref: '#/components/schemas/AdGroupROIGoal'
+        creativeIds:
+          type: array
+          items:
+            type: string
+          nullable: true
+        associatedBidLists:
+          type: array
+          items:
+            $ref: '#/components/schemas/AdGroupAssociateBidList'
+          nullable: true
+        flights:
+          type: array
+          items:
+            $ref: '#/components/schemas/AdGroupFlight'
+          nullable: true
+        koaOptimizationSettings:
+          $ref: '#/components/schemas/AdGroupKoaOptimizationSettings'
+        comscoreSettings:
+          $ref: '#/components/schemas/AdGroupComscoreSettings'
+        contractTargeting:
+          $ref: '#/components/schemas/AdGroupContractTargeting'
+        dimensionalBiddingAutoOptimizationSettings:
+          type: array
+          items:
+            type: array
+            items:
+              $ref: '#/components/schemas/DimensionalBiddingDimensions'
+          nullable: true
+        isUseClicksAsConversionsEnabled:
+          type: boolean
+        isUseSecondaryConversionsEnabled:
+          type: boolean
+        nielsenTrackingAttributes:
+          $ref: '#/components/schemas/AdGroupNielsenTrackingAttributes'
+      additionalProperties: false
+    AdGroupWorkflowAdvancedInput:
+      type: object
+      properties:
+        koaOptimizationSettings:
+          $ref: '#/components/schemas/AdGroupWorkflowKoaOptimizationSettingsInput'
+        comscoreSettings:
+          $ref: '#/components/schemas/AdGroupWorkflowComscoreSettingsInput'
+        contractTargeting:
+          $ref: '#/components/schemas/AdGroupWorkflowContractTargetingInput'
+        dimensionalBiddingAutoOptimizationSettings:
+          type: array
+          items:
+            type: array
+            items:
+              $ref: '#/components/schemas/DimensionalBiddingDimensions'
+          nullable: true
+        isUseClicksAsConversionsEnabled:
+          type: boolean
+          nullable: true
+        isUseSecondaryConversionsEnabled:
+          type: boolean
+          nullable: true
+        nielsenTrackingAttributes:
+          $ref: '#/components/schemas/AdGroupWorkflowNielsenTrackingAttributesInput'
+        newFrequencyConfigs:
+          type: array
+          items:
+            $ref: '#/components/schemas/AdGroupWorkflowNewFrequencyConfigInput'
+          nullable: true
+        flights:
+          type: array
+          items:
+            $ref: '#/components/schemas/AdGroupWorkflowFlightInput'
+          nullable: true
+      additionalProperties: false
+    AdGroupWorkflowAssociateBidListInput:
+      required:
+        - bidListId
+      type: object
+      properties:
+        bidListId:
+          minLength: 1
+          type: string
+        isEnabled:
+          type: boolean
+          nullable: true
+        isDefaultForDimension:
+          type: boolean
+          nullable: true
+      additionalProperties: false
+    AdGroupWorkflowAudienceTargetingInput:
+      type: object
+      properties:
+        audienceId:
+          type: string
+          nullable: true
+        audienceAcceleratorExclusionsEnabled:
+          type: boolean
+          nullable: true
+        audienceBoosterEnabled:
+          type: boolean
+          nullable: true
+        audienceExcluderEnabled:
+          type: boolean
+          nullable: true
+        audiencePredictorEnabled:
+          type: boolean
+          nullable: true
+        crossDeviceVendorListForAudience:
+          type: array
+          items:
+            type: integer
+            format: int32
+          nullable: true
+        recencyExclusionWindowInMinutes:
+          type: integer
+          format: int32
+          nullable: true
+        targetTrackableUsersEnabled:
+          type: boolean
+          nullable: true
+        useMcIdAsPrimary:
+          type: boolean
+          nullable: true
+      additionalProperties: false
+    AdGroupWorkflowBudgetInput:
+      type: object
+      properties:
+        allocationType:
+          $ref: '#/components/schemas/AllocationType'
+        budgetInAdvertiserCurrency:
+          type: number
+          format: double
+          nullable: true
+        budgetInImpressions:
+          type: integer
+          format: int64
+          nullable: true
+        dailyTargetInAdvertiserCurrency:
+          type: number
+          format: double
+          nullable: true
+        dailyTargetInImpressions:
+          type: integer
+          format: int64
+          nullable: true
+      additionalProperties: false
+    AdGroupWorkflowComscoreSettingsInput:
+      required:
+        - isEnabled
+      type: object
+      properties:
+        isEnabled:
+          type: boolean
+        populationId:
+          type: integer
+          format: int32
+          nullable: true
+        demographicMemberIds:
+          type: array
+          items:
+            type: integer
+            format: int32
+          nullable: true
+        mobileDemographicMemberIds:
+          type: array
+          items:
+            type: integer
+            format: int32
+          nullable: true
+      additionalProperties: false
+    AdGroupWorkflowContractTargetingInput:
+      type: object
+      properties:
+        allowOpenMarketBiddingWhenTargetingContracts:
+          type: boolean
+          nullable: true
+      additionalProperties: false
+    AdGroupWorkflowFlightInput:
+      required:
+        - campaignFlightId
+      type: object
+      properties:
+        allocationType:
+          $ref: '#/components/schemas/AllocationType'
+        budgetInAdvertiserCurrency:
+          type: number
+          format: double
+          nullable: true
+        budgetInImpressions:
+          type: integer
+          format: int64
+          nullable: true
+        dailyTargetInAdvertiserCurrency:
+          type: number
+          format: double
+          nullable: true
+        dailyTargetInImpressions:
+          type: integer
+          format: int64
+          nullable: true
+        campaignFlightId:
+          type: integer
+          format: int64
+      additionalProperties: false
+    AdGroupWorkflowKoaOptimizationSettingsInput:
+      type: object
+      properties:
+        areFutureKoaFeaturesEnabled:
+          type: boolean
+          nullable: true
+        predictiveClearingEnabled:
+          type: boolean
+          nullable: true
+      additionalProperties: false
+    AdGroupWorkflowNewFrequencyConfigInput:
+      required:
+        - counterName
+      type: object
+      properties:
+        counterName:
+          type: string
+          nullable: true
+        frequencyCap:
+          type: integer
+          format: int32
+          nullable: true
+        frequencyGoal:
+          type: integer
+          format: int32
+          nullable: true
+        resetIntervalInMinutes:
+          type: integer
+          format: int32
+      additionalProperties: false
+    AdGroupWorkflowNielsenTrackingAttributesInput:
+      required:
+        - countries
+        - endAge
+        - gender
+        - startAge
+      type: object
+      properties:
+        enhancedReportingOption:
+          $ref: '#/components/schemas/EnhancedNielsenReportingOptions'
+        gender:
+          $ref: '#/components/schemas/TargetingGender'
+        startAge:
+          $ref: '#/components/schemas/TargetingStartAge'
+        endAge:
+          $ref: '#/components/schemas/TargetingEndAge'
+        countries:
+          type: array
+          items:
+            type: string
+          nullable: true
+      additionalProperties: false
+    AdGroupWorkflowROIGoalInput:
+      type: object
+      properties:
+        maximizeReach:
+          type: boolean
+          nullable: true
+        maximizeLtvIncrementalReach:
+          type: boolean
+          nullable: true
+        cpcInAdvertiserCurrency:
+          type: number
+          format: double
+          nullable: true
+        ctrInPercent:
+          type: number
+          format: double
+          nullable: true
+        nielsenOTPInPercent:
+          type: number
+          format: double
+          nullable: true
+        cpaInAdvertiserCurrency:
+          type: number
+          format: double
+          nullable: true
+        returnOnAdSpendPercent:
+          type: number
+          format: double
+          nullable: true
+        vcrInPercent:
+          type: number
+          format: double
+          nullable: true
+        viewabilityInPercent:
+          type: number
+          format: double
+          nullable: true
+        vcpmInAdvertiserCurrency:
+          type: number
+          format: double
+          nullable: true
+        cpcvInAdvertiserCurrency:
+          type: number
+          format: double
+          nullable: true
+        miaozhenOTPInPercent:
+          type: number
+          format: double
+          nullable: true
+      additionalProperties: false
+    AllocationType:
+      enum:
+        - Minimum
+        - Fixed
+        - Maximum
+      type: string
+    BulkJobStatus:
+      enum:
+        - Queued
+        - InProgress
+        - PartialSuccess
+        - Failure
+        - Success
+        - Cancelled
+      type: string
+    CallRestApiWorkflowInput:
+      required:
+        - endpoint
+        - methodType
+      type: object
+      properties:
+        methodType:
+          $ref: '#/components/schemas/RestApiMethodType'
+        endpoint:
+          type: string
+          nullable: true
+        dataBody:
+          type: string
+          nullable: true
+      additionalProperties: false
+    CampaignBulkCreateWorkflowInputWithValidation:
+      required:
+        - input
+      type: object
+      properties:
+        input:
+          type: array
+          items:
+            $ref: '#/components/schemas/CampaignCreateWorkflowInput'
+          nullable: true
+        validateInputOnly:
+          type: boolean
+          nullable: true
+        callbackInput:
+          $ref: '#/components/schemas/WorkflowCallbackInput'
+      additionalProperties: false
+    CampaignBulkUpdateWorkflowInputWithValidation:
+      required:
+        - input
+      type: object
+      properties:
+        input:
+          type: array
+          items:
+            $ref: '#/components/schemas/CampaignUpdateWorkflowInput'
+          nullable: true
+        validateInputOnly:
+          type: boolean
+          nullable: true
+        callbackInput:
+          $ref: '#/components/schemas/WorkflowCallbackInput'
+      additionalProperties: false
+    CampaignChannelType:
+      enum:
+        - None
+        - Display
+        - Video
+        - Audio
+        - TV
+        - NativeDisplay
+        - NativeVideo
+        - DOOH
+      type: string
+    CampaignCreateWorkflowAdGroupAdvancedInput:
+      type: object
+      properties:
+        koaOptimizationSettings:
+          $ref: '#/components/schemas/AdGroupWorkflowKoaOptimizationSettingsInput'
+        comscoreSettings:
+          $ref: '#/components/schemas/AdGroupWorkflowComscoreSettingsInput'
+        contractTargeting:
+          $ref: '#/components/schemas/AdGroupWorkflowContractTargetingInput'
+        dimensionalBiddingAutoOptimizationSettings:
+          type: array
+          items:
+            type: array
+            items:
+              $ref: '#/components/schemas/DimensionalBiddingDimensions'
+          nullable: true
+        isUseClicksAsConversionsEnabled:
+          type: boolean
+          nullable: true
+        isUseSecondaryConversionsEnabled:
+          type: boolean
+          nullable: true
+        nielsenTrackingAttributes:
+          $ref: '#/components/schemas/AdGroupWorkflowNielsenTrackingAttributesInput'
+        newFrequencyConfigs:
+          type: array
+          items:
+            $ref: '#/components/schemas/AdGroupWorkflowNewFrequencyConfigInput'
+          nullable: true
+        flights:
+          type: array
+          items:
+            $ref: '#/components/schemas/CampaignCreateWorkflowAdGroupFlightInput'
+          nullable: true
+      additionalProperties: false
+    CampaignCreateWorkflowAdGroupFlightInput:
+      type: object
+      properties:
+        allocationType:
+          $ref: '#/components/schemas/AllocationType'
+        budgetInAdvertiserCurrency:
+          type: number
+          format: double
+          nullable: true
+        budgetInImpressions:
+          type: integer
+          format: int64
+          nullable: true
+        dailyTargetInAdvertiserCurrency:
+          type: number
+          format: double
+          nullable: true
+        dailyTargetInImpressions:
+          type: integer
+          format: int64
+          nullable: true
+      additionalProperties: false
+    CampaignCreateWorkflowAdGroupInput:
+      required:
+        - primaryInput
+      type: object
+      properties:
+        primaryInput:
+          $ref: '#/components/schemas/AdGroupCreateWorkflowPrimaryInput'
+        advancedInput:
+          $ref: '#/components/schemas/CampaignCreateWorkflowAdGroupAdvancedInput'
+      additionalProperties: false
+    CampaignCreateWorkflowInput:
+      required:
+        - primaryInput
+      type: object
+      properties:
+        primaryInput:
+          $ref: '#/components/schemas/CampaignCreateWorkflowPrimaryInput'
+        advancedInput:
+          $ref: '#/components/schemas/CampaignWorkflowAdvancedInput'
+        adGroups:
+          type: array
+          items:
+            $ref: '#/components/schemas/CampaignCreateWorkflowAdGroupInput'
+          nullable: true
+      additionalProperties: false
+    CampaignCreateWorkflowInputWithValidation:
+      required:
+        - primaryInput
+      type: object
+      properties:
+        primaryInput:
+          $ref: '#/components/schemas/CampaignCreateWorkflowPrimaryInput'
+        advancedInput:
+          $ref: '#/components/schemas/CampaignWorkflowAdvancedInput'
+        adGroups:
+          type: array
+          items:
+            $ref: '#/components/schemas/CampaignCreateWorkflowAdGroupInput'
+          nullable: true
+        validateInputOnly:
+          type: boolean
+          nullable: true
+      additionalProperties: false
+    CampaignCreateWorkflowPrimaryInput:
+      required:
+        - advertiserId
+        - name
+        - primaryChannel
+        - primaryGoal
+      type: object
+      properties:
+        description:
+          type: string
+          nullable: true
+        timeZone:
+          type: string
+          nullable: true
+        customCPAClickWeight:
+          type: number
+          format: double
+          nullable: true
+        customCPAViewthroughWeight:
+          type: number
+          format: double
+          nullable: true
+        customCPAType:
+          $ref: '#/components/schemas/CustomCPAType'
+        impressionsOnlyBudgetingCpm:
+          type: number
+          format: double
+          nullable: true
+        budget:
+          $ref: '#/components/schemas/CampaignWorkflowBudgetInput'
+        endDateInUtc:
+          type: string
+          format: date-time
+          nullable: true
+        seedId:
+          type: string
+          nullable: true
+        campaignConversionReportingColumns:
+          type: array
+          items:
+            $ref: '#/components/schemas/CampaignWorkflowCampaignConversionReportingColumnInput'
+          nullable: true
+        advertiserId:
+          minLength: 1
+          type: string
+        name:
+          minLength: 1
+          type: string
+        primaryChannel:
+          $ref: '#/components/schemas/CampaignChannelType'
+        primaryGoal:
+          $ref: '#/components/schemas/CampaignWorkflowROIGoalInput'
+        startDateInUtc:
+          type: string
+          format: date-time
+          nullable: true
+      additionalProperties: false
+    CampaignFlightWorkflow:
+      required:
+        - budgetInAdvertiserCurrency
+        - id
+        - startDateInclusiveUTC
+      type: object
+      properties:
+        id:
+          type: string
+          nullable: true
+        startDateInclusiveUTC:
+          type: string
+          format: date-time
+        endDateExclusiveUTC:
+          type: string
+          format: date-time
+          nullable: true
+        budgetInAdvertiserCurrency:
+          type: number
+          format: double
+        budgetInImpressions:
+          type: integer
+          format: int64
+          nullable: true
+        dailyTargetInAdvertiserCurrency:
+          type: number
+          format: double
+          nullable: true
+        dailyTargetInImpressions:
+          type: integer
+          format: int64
+          nullable: true
+      additionalProperties: false
+    CampaignPacingMode:
+      enum:
+        - PaceAhead
+        - PaceEvenly
+        - PaceToDailyCap
+        - PaceAsSoonAsPossible
+      type: string
+    CampaignPayload:
+      type: object
+      properties:
+        campaign:
+          $ref: '#/components/schemas/CampaignWorkflow'
+        adGroups:
+          type: array
+          items:
+            $ref: '#/components/schemas/AdGroupWorkflow'
+          nullable: true
+      additionalProperties: false
+    CampaignUpdateWorkflowInput:
+      required:
+        - id
+      type: object
+      properties:
+        id:
+          type: string
+          nullable: true
+        primaryInput:
+          $ref: '#/components/schemas/CampaignUpdateWorkflowPrimaryInput'
+        advancedInput:
+          $ref: '#/components/schemas/CampaignWorkflowAdvancedInput'
+      additionalProperties: false
+    CampaignUpdateWorkflowInputWithValidation:
+      required:
+        - id
+      type: object
+      properties:
+        id:
+          type: string
+          nullable: true
+        primaryInput:
+          $ref: '#/components/schemas/CampaignUpdateWorkflowPrimaryInput'
+        advancedInput:
+          $ref: '#/components/schemas/CampaignWorkflowAdvancedInput'
+        validateInputOnly:
+          type: boolean
+          nullable: true
+      additionalProperties: false
+    CampaignUpdateWorkflowPrimaryInput:
+      type: object
+      properties:
+        description:
+          type: string
+          nullable: true
+        timeZone:
+          type: string
+          nullable: true
+        customCPAClickWeight:
+          type: number
+          format: double
+          nullable: true
+        customCPAViewthroughWeight:
+          type: number
+          format: double
+          nullable: true
+        customCPAType:
+          $ref: '#/components/schemas/CustomCPAType'
+        impressionsOnlyBudgetingCpm:
+          type: number
+          format: double
+          nullable: true
+        budget:
+          $ref: '#/components/schemas/CampaignWorkflowBudgetInput'
+        endDateInUtc:
+          type: string
+          format: date-time
+          nullable: true
+        seedId:
+          type: string
+          nullable: true
+        campaignConversionReportingColumns:
+          type: array
+          items:
+            $ref: '#/components/schemas/CampaignWorkflowCampaignConversionReportingColumnInput'
+          nullable: true
+        name:
+          type: string
+          nullable: true
+        primaryChannel:
+          $ref: '#/components/schemas/CampaignChannelType'
+        primaryGoal:
+          $ref: '#/components/schemas/CampaignWorkflowROIGoalInput'
+        startDateInUtc:
+          type: string
+          format: date-time
+          nullable: true
+      additionalProperties: false
+    CampaignVersionWorkflow:
+      required:
+        - Id
+      type: object
+      properties:
+        Id:
+          type: string
+          nullable: true
+        version:
+          type: string
+          nullable: true
+        budgetingVersion:
+          type: string
+          nullable: true
+      additionalProperties: false
+    CampaignWorkflow:
+      required:
+        - id
+      type: object
+      properties:
+        id:
+          type: string
+          nullable: true
+        name:
+          type: string
+          nullable: true
+        description:
+          type: string
+          nullable: true
+        startDate:
+          type: string
+          format: date-time
+          nullable: true
+        endDate:
+          type: string
+          format: date-time
+          nullable: true
+        timeZone:
+          type: string
+          nullable: true
+        customCPAClickWeight:
+          type: number
+          format: double
+          nullable: true
+        customCPAViewthroughWeight:
+          type: number
+          format: double
+          nullable: true
+        customCPAType:
+          $ref: '#/components/schemas/CustomCPAType'
+        impressionsOnlyBudgetingCpm:
+          type: number
+          format: double
+          nullable: true
+        primaryChannel:
+          $ref: '#/components/schemas/CampaignChannelType'
+        primaryGoal:
+          type: string
+          nullable: true
+        seedId:
+          type: string
+          nullable: true
+        conversionReportingColumnsCount:
+          type: integer
+          format: int32
+          nullable: true
+        flights:
+          type: array
+          items:
+            $ref: '#/components/schemas/CampaignFlightWorkflow'
+          nullable: true
+      additionalProperties: false
+    CampaignWorkflowAdvancedInput:
+      type: object
+      properties:
+        flights:
+          type: array
+          items:
+            $ref: '#/components/schemas/CampaignWorkflowFlightInput'
+          nullable: true
+        purchaseOrderNumber:
+          type: string
+          nullable: true
+      additionalProperties: false
+    CampaignWorkflowBudgetInput:
+      required:
+        - budgetInAdvertiserCurrency
+        - pacingMode
+      type: object
+      properties:
+        pacingMode:
+          $ref: '#/components/schemas/CampaignPacingMode'
+        budgetInAdvertiserCurrency:
+          type: number
+          format: double
+        budgetInImpressions:
+          type: integer
+          format: int64
+          nullable: true
+        dailyTargetInAdvertiserCurrency:
+          type: number
+          format: double
+          nullable: true
+        dailyTargetInImpressions:
+          type: integer
+          format: int64
+          nullable: true
+      additionalProperties: false
+    CampaignWorkflowCampaignConversionReportingColumnInput:
+      required:
+        - includeInCustomCPA
+        - reportingColumnId
+        - trackingTagId
+      type: object
+      properties:
+        trackingTagId:
+          minLength: 1
+          type: string
+        includeInCustomCPA:
+          type: boolean
+        reportingColumnId:
+          type: integer
+          format: int32
+        ROASConfig:
+          $ref: '#/components/schemas/CustomROASConfig'
+        weight:
+          type: number
+          format: double
+          nullable: true
+        crossDeviceAttributionModelId:
+          type: string
+          nullable: true
+      additionalProperties: false
+    CampaignWorkflowFlightInput:
+      required:
+        - budgetInAdvertiserCurrency
+        - startDateInclusiveUTC
+      type: object
+      properties:
+        startDateInclusiveUTC:
+          type: string
+          format: date-time
+        endDateExclusiveUTC:
+          type: string
+          format: date-time
+          nullable: true
+        budgetInAdvertiserCurrency:
+          type: number
+          format: double
+        budgetInImpressions:
+          type: integer
+          format: int64
+          nullable: true
+        dailyTargetInAdvertiserCurrency:
+          type: number
+          format: double
+          nullable: true
+        dailyTargetInImpressions:
+          type: integer
+          format: int64
+          nullable: true
+      additionalProperties: false
+    CampaignWorkflowROIGoalInput:
+      type: object
+      properties:
+        maximizeReach:
+          type: boolean
+          nullable: true
+        maximizeLtvIncrementalReach:
+          type: boolean
+          nullable: true
+        cpcInAdvertiserCurrency:
+          type: number
+          format: double
+          nullable: true
+        ctrInPercent:
+          type: number
+          format: double
+          nullable: true
+        nielsenOTPInPercent:
+          type: number
+          format: double
+          nullable: true
+        cpaInAdvertiserCurrency:
+          type: number
+          format: double
+          nullable: true
+        returnOnAdSpendPercent:
+          type: number
+          format: double
+          nullable: true
+        vcrInPercent:
+          type: number
+          format: double
+          nullable: true
+        viewabilityInPercent:
+          type: number
+          format: double
+          nullable: true
+        vcpmInAdvertiserCurrency:
+          type: number
+          format: double
+          nullable: true
+        cpcvInAdvertiserCurrency:
+          type: number
+          format: double
+          nullable: true
+        miaozhenOTPInPercent:
+          type: number
+          format: double
+          nullable: true
+      additionalProperties: false
+    CustomCPAType:
+      enum:
+        - Disabled
+        - PixelWeighting
+        - ClickViewthroughWeighting
+      type: string
+    CustomROASConfig:
+      required:
+        - includeInCustomROAS
+      type: object
+      properties:
+        includeInCustomROAS:
+          type: boolean
+        customROASWeight:
+          type: number
+          format: double
+          nullable: true
+        customROASClickWeight:
+          type: number
+          format: double
+          nullable: true
+        customROASViewthroughWeight:
+          type: number
+          format: double
+          nullable: true
+      additionalProperties: false
+    DimensionalBiddingDimensions:
+      enum:
+        - UnknownDimension
+        - HasAdFormatId
+        - HasDomainFragmentId
+        - HasUniversalCategoryTaxonomyId
+        - HasPlacementPositionRelativeToFoldId
+        - HasAdvertiserTargetingDataId
+        - HasBrowserId
+        - HasCarrierId
+        - HasDeviceModelId
+        - HasDeviceTypeId
+        - HasGeoSegmentId
+        - HasHourOfWeek
+        - HasLanguageId
+        - HasOsId
+        - HasPrivateContractId
+        - HasRecencyWindowInMinutes
+        - HasRenderingContextId
+        - HasFactualGeostoreTargetingDataId
+        - HasSupplyVendorId
+        - HasTemperatureBucketInCelsius
+        - HasThirdPartyData
+        - HasAdsTxtSellerTypeId
+        - HasVideoMutedStateId
+        - HasVideoPlaybackTypeId
+        - HasVideoPlayerSizeId
+        - HasVideoQualityId
+        - HasVideoSkippabilityId
+        - HasFactualProximityDataId
+        - HasImpressionPlacementId
+        - HasVideoTruthScoreRange
+        - HasVideoViewabilityScoreRange
+        - HasDisplayViewabilityScoreRange
+        - HasPeer39LanguageId
+        - HasIntegralContextualCategoryId
+        - HasPeer39ContextualCategoryId
+        - HasDoubleVerifyContextualCategoryId
+        - HasIntegralBrandSafetyCategoryId
+        - HasIntegralVideoBrandSafetyCategoryId
+        - HasPeer39BrandSafetyCategoryId
+        - HasDoubleVerifyBrandSafetyCategoryId
+        - HasIntegralPageQualityCategoryId
+        - HasIntegralVideoPageQualityCategoryId
+        - HasPeer39PageQualityCategoryId
+        - HasDoubleVerifyBotAvoidanceCategoryId
+        - HasContextualAppCategoryId
+        - HasPublisherId
+        - HasIntegralViewabilityCategoryId
+        - HasIntegralVideoViewabilityCategoryId
+        - HasDoubleVerifyViewabilityCategoryId
+        - HasDoubleVerifyVideoViewabilityCategoryId
+        - HasFrequencyAdjustmentId
+        - HasPeer39ViewabilityCategoryId
+        - HasVideoCompletionRateScoreRange
+        - HasInternetConnectionTypeId
+        - HasAdBugPageQualityCategoryId
+        - HasAdBugVideoPageQualityCategoryId
+        - HasRTBAsiaPageQualityCategoryId
+        - HasRTBAsiaVideoPageQualityCategoryId
+        - HasTTDContextualCategoryId
+        - HasSupplyPathOptimizationListId
+        - HasMarketTypeId
+        - HasContextualSupplyVendorGenreId
+        - HasContextualSupplyVendorCategoryId
+        - HasWeatherConditionId
+        - HasFrequencyV2AdjustmentId
+        - HasSemasioContextualCategoryId
+        - HasSellerId
+        - HasDigitalOutOfHomeVenueTypeId
+        - HasNativePlacementTypeId
+        - HasTTDNativeContextTypeId
+        - HasDomainClassId
+        - HasGeofenceThirdPartyDataAndBrand
+        - HasPreBidContextualCategoryId
+        - HasMiaozhenPageQualityCategoryId
+        - HasMiaozhenVideoPageQualityCategoryId
+        - HasTencentPageQualityCategoryId
+        - HasContentGenre
+        - HasContentLivestream
+        - HasContentProductionQuality
+        - HasContentRating
+        - HasContentDuration
+        - HasTVQualityIndexRange
+        - HasAtmosphericCondition
+        - HasMarketplaceId
+        - HasAudienceReachPercentageTierId
+        - HasAdLoadCategory
+        - HasFullReferrerUrl
+        - HasLikelyRefreshRate
+        - HasContentTransparency
+        - HasIdiosyncraticSegmentId
+      type: string
+    EnhancedNielsenReportingOptions:
+      enum:
+        - None
+        - Audience
+        - Site
+      type: string
+    FirstPartyDataInput:
+      required:
+        - advertiserId
+      type: object
+      properties:
+        advertiserId:
+          minLength: 1
+          type: string
+          description: The advertiser ID to query for.
+        nameFilter:
+          type: string
+          description: "The name to filter by in the query. This filter will be applied to the results for the advertiser.\nIf there are no nodes which match the filter, a response with empty nodes with no first-party data will be returned."
+          nullable: true
+        queryShape:
+          type: string
+          description: " The shape of the query with the fields being asked for, which is sent downstream.\n This determines what the response will look like.\n\n For example, a query shape equal to `\"nodes {id name}\"` will return the `id` and `name` fields only.\n\n If this is not provided the default query shape will be used:\n\n ```graphql\n nodes {\n    name\n    id\n    activeUniques {\n       householdCount\n       idsConnectedTvCount\n       idsCount\n       idsInAppCount\n       idsWebCount\n       personsCount\n    }\n }\n```"
+          nullable: true
+        callbackInput:
+          $ref: '#/components/schemas/WorkflowCallbackInput'
+      additionalProperties: false
+      description: Required fields for submitting a bulk job for first-party data.
+    GraphQLQueryJobError:
+      required:
+        - message
+      type: object
+      properties:
+        message:
+          type: string
+          nullable: true
+        field:
+          type: array
+          items:
+            type: string
+          nullable: true
+        additionalData:
+          type: object
+          additionalProperties:
+            type: string
+          nullable: true
+      additionalProperties: false
+      description: Represents an error type returned by the inner data on a mutation response
+    GraphQLQueryJobRetrievalResponse:
+      type: object
+      properties:
+        job:
+          $ref: '#/components/schemas/GraphQlQueryJob'
+        errors:
+          type: string
+          nullable: true
+      additionalProperties: false
+      description: This is the top level class returned to a user when they retrieve a query job
+    GraphQLRequestInput:
+      required:
+        - request
+      type: object
+      properties:
+        request:
+          minLength: 1
+          type: string
+          description: The GraphQL query to execute.
+        variables:
+          type: object
+          description: Variables to substitute into the query.
+          nullable: true
+      additionalProperties: false
+      description: Required fields for executing a GraphQL query
+    GraphQlJobCallbackInput:
+      required:
+        - callbackUrl
+      type: object
+      properties:
+        callbackUrl:
+          minLength: 1
+          type: string
+        callbackHeaders:
+          type: array
+          items:
+            $ref: '#/components/schemas/KeyValuePairOfStringAndStringInput'
+          nullable: true
+      additionalProperties: false
+      description: Input class for providing a callback's url and any headers needed for the callback.
+    GraphQlQueryJob:
+      required:
+        - createdAt
+        - id
+        - runtimeErrors
+        - status
+      type: object
+      properties:
+        id:
+          type: integer
+          description: The ID of the job.
+          format: int64
+        completedAt:
+          type: string
+          description: The UTC data and time that the job completed.
+          format: date-time
+          nullable: true
+        completionPercentage:
+          type: number
+          description: The job completion percentage.
+          format: float
+          nullable: true
+        createdAt:
+          type: string
+          description: Time of creation for that bulk job in UTC.
+          format: date-time
+        status:
+          $ref: '#/components/schemas/BulkJobStatus'
+        url:
+          type: string
+          description: The URL from which the job result can be downloaded.
+          nullable: true
+        rawResult:
+          type: string
+          description: "The raw job result if the response is less than or equal to 20MB in size.\nIf the job result is larger than 20MB, then null is returned."
+          nullable: true
+        queryGqlErrors:
+          type: array
+          items:
+            type: string
+          description: 'If the GQL requests within the job hard failed (such as from an authorization error or an internal server error), the causes encountered during execution'
+          nullable: true
+        runtimeErrors:
+          type: array
+          items:
+            type: string
+          description: Errors encountered while executing the job
+          nullable: true
+      additionalProperties: false
+      description: This is the response model that mirrors the GQL bulkjob
+    GraphQlQueryJobInput:
+      required:
+        - query
+      type: object
+      properties:
+        query:
+          minLength: 1
+          type: string
+          description: The GraphQL query to execute
+        callbackInput:
+          $ref: '#/components/schemas/GraphQlJobCallbackInput'
+      additionalProperties: false
+      description: Required fields for executing a GraphQL query job
+    GraphQlQueryJobPayload:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/GraphQlQueryJob'
+        errors:
+          type: array
+          items:
+            $ref: '#/components/schemas/GraphQLQueryJobError'
+          nullable: true
+      additionalProperties: false
+    GraphQlQueryJobResponse:
+      type: object
+      properties:
+        payload:
+          $ref: '#/components/schemas/GraphQlQueryJobPayload'
+        errors:
+          type: string
+          nullable: true
+      additionalProperties: false
+      description: This is the top level class returned to a user when a query job is created.
+    KeyValuePairOfStringAndStringInput:
+      required:
+        - key
+        - value
+      type: object
+      properties:
+        key:
+          type: string
+          nullable: true
+        value:
+          type: string
+          nullable: true
+      additionalProperties: false
+      description: Type that specifies the key value association of a callback header.
+    ProblemDetails:
+      type: object
+      properties:
+        type:
+          type: string
+          nullable: true
+        title:
+          type: string
+          nullable: true
+        status:
+          type: integer
+          format: int32
+          nullable: true
+        detail:
+          type: string
+          nullable: true
+        instance:
+          type: string
+          nullable: true
+      additionalProperties:
+        type: object
+    RestApiMethodType:
+      enum:
+        - POST
+        - PUT
+        - GET
+        - DELETE
+      type: string
+    StandardJobStatusResponse:
+      required:
+        - createdAtUtc
+        - id
+        - status
+      type: object
+      properties:
+        id:
+          type: integer
+          description: The ID of the job.
+          format: int64
+        completedAtUtc:
+          type: string
+          description: The UTC data and time that the job completed.
+          format: date-time
+          nullable: true
+        completionPercentage:
+          type: number
+          description: The job completion percentage.
+          format: double
+          nullable: true
+        createdAtUtc:
+          type: string
+          description: The UTC date and time that the job was created.
+          format: date-time
+        status:
+          $ref: '#/components/schemas/WorkflowStatus'
+        url:
+          type: string
+          description: The URL from which the job result can be downloaded.
+          nullable: true
+        rawResult:
+          type: string
+          description: "The raw job result if the response is less than or equal to 20MB in size.\nIf the job result is larger than 20MB, then null is returned."
+          nullable: true
+        errors:
+          type: string
+          description: A list of errors encountered during workflow processing.
+          nullable: true
+      additionalProperties: false
+    StandardJobSubmitResponse:
+      required:
+        - id
+      type: object
+      properties:
+        id:
+          type: integer
+          description: The ID of the job.
+          format: int64
+      additionalProperties: false
+    TargetingEndAge:
+      enum:
+        - Seventeen
+        - Twenty
+        - TwentyFour
+        - TwentyNine
+        - ThirtyFour
+        - ThirtyNine
+        - FortyFour
+        - FortyNine
+        - FiftyFour
+        - SixtyFour
+        - SixtyFourPlus
+      type: string
+    TargetingGender:
+      enum:
+        - Male
+        - Female
+        - Both
+      type: string
+    TargetingStartAge:
+      enum:
+        - Two
+        - Thirteen
+        - Eighteen
+        - TwentyOne
+        - TwentyFive
+        - Thirty
+        - ThirtyFive
+        - Forty
+        - FortyFive
+        - Fifty
+        - FiftyFive
+        - SixtyFive
+      type: string
+    ThirdPartyDataInput:
+      required:
+        - partnerId
+      type: object
+      properties:
+        partnerId:
+          minLength: 1
+          type: string
+          description: The partner ID to query for.
+        queryShape:
+          type: string
+          description: " The shape of the query with the fields being asked for, which is sent downstream.\n This determines what the response will look like.\n\n For example, a query shape equal to `\"nodes {id name}\"` will return the `id` and `name` fields only.\n\n If this is not provided the default query shape will be used:\n\n ```graphql\n nodes {\n     id\n     name\n     providerId\n     providerElementId\n     description\n     buyable\n     fullPath\n     activeUniques {\n         householdCount\n         idsConnectedTvCount\n         idsInAppCount\n         idsWebCount\n         personsCount\n         thirdPartyDataOverlapCount\n         lastUpdated\n     }\n }\n```"
+          nullable: true
+        callbackInput:
+          $ref: '#/components/schemas/WorkflowCallbackInput'
+      additionalProperties: false
+      description: Required fields for submitting a bulk job for third-party data.
+    WorkflowCallbackInput:
+      required:
+        - callbackUrl
+      type: object
+      properties:
+        callbackUrl:
+          minLength: 1
+          type: string
+        callbackHeaders:
+          type: object
+          additionalProperties:
+            type: string
+          nullable: true
+      additionalProperties: false
+    WorkflowStatus:
+      enum:
+        - InProgress
+        - Failure
+        - Success
+        - PartialSuccess
+        - ResultsExpired
+      type: string
+  securitySchemes:
+    TTD-Auth:
+      type: apiKey
+      description: TTD security token
+      name: TTD-Auth
+      in: header
+security:
+  - TTD-Auth: []
+servers:
+  - url: https://api.thetradedesk.com/workflows
+    description: "The production environment."
+    x-speakeasy-server-id: prod
+  - url: https://ext-api.sb.thetradedesk.com/workflows
+    description: "The sandbox environment for testing."
+    x-speakeasy-server-id: sandbox
+x-speakeasy-retries:
+  strategy: backoff
+  backoff:
+    initialInterval: 500
+    maxInterval: 60000
+    maxElapsedTime: 3600000
+    exponent: 1.5
+  statusCodes:
+    - 5XX
+  retryConnectionErrors: true

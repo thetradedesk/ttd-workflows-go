@@ -1,0 +1,186 @@
+overlay: 1.0.0
+x-speakeasy-jsonpath: rfc9535
+info:
+  title: Speakeasy Modifications
+  version: 0.0.2
+  x-speakeasy-metadata:
+    after: ""
+    before: ""
+    type: speakeasy-modifications
+actions:
+  - target: $["paths"]["/graphqlqueryjob/{id}"]["get"]
+    update:
+      x-speakeasy-group: jobs
+      x-speakeasy-name-override: getStatus
+    x-speakeasy-metadata:
+      after: sdk.jobs.getStatus()
+      before: sdk.Job Status.getGraphQlQueryJobStatus()
+      created_at: 1752016766068
+      reviewed_at: 1752016891683
+      type: method-name
+  - target: $["paths"]["/campaign/{id}/version"]["get"]
+    update:
+      x-speakeasy-group: campaigns
+    x-speakeasy-metadata:
+      after: sdk.campaigns.getVersion()
+      before: sdk.Campaign.getVersion()
+      created_at: 1752016766068
+      reviewed_at: 1752016891683
+      type: method-name
+  - target: $["paths"]["/standardjob/campaign/bulk"]["post"]
+    update:
+      x-speakeasy-group: campaigns
+      x-speakeasy-name-override: bulkCreate
+    x-speakeasy-metadata:
+      after: sdk.campaigns.bulkCreate()
+      before: sdk.Campaign.createCampaignsJob()
+      created_at: 1752016766068
+      reviewed_at: 1752016891683
+      type: method-name
+  - target: $["paths"]["/adgroup"]["patch"]
+    update:
+      x-speakeasy-group: adGroups
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.adGroups.update()
+      before: sdk.Ad Group.updateAdGroup()
+      created_at: 1752016766068
+      reviewed_at: 1752016891683
+      type: method-name
+  - target: $["paths"]["/standardjob/thirdpartydata"]["post"]
+    update:
+      x-speakeasy-group: dmps
+    x-speakeasy-metadata:
+      after: sdk.dmps.getThirdPartyDataJob()
+      before: sdk.DMP.getThirdPartyDataJob()
+      created_at: 1752016766068
+      reviewed_at: 1752016891683
+      type: method-name
+  - target: $["paths"]["/standardjob/adgroup/bulk"]["post"]
+    update:
+      x-speakeasy-group: adGroups
+      x-speakeasy-name-override: bulkCreate
+    x-speakeasy-metadata:
+      after: sdk.adGroups.bulkCreate()
+      before: sdk.Ad Group.createAdGroupsJob()
+      created_at: 1752016766068
+      reviewed_at: 1752016891683
+      type: method-name
+  - target: $["paths"]["/standardjob/adgroup/bulk"]["patch"]
+    update:
+      x-speakeasy-group: adGroups
+      x-speakeasy-name-override: bulkUpdate
+    x-speakeasy-metadata:
+      after: sdk.adGroups.bulkUpdate()
+      before: sdk.Ad Group.updateAdGroupsJob()
+      created_at: 1752016766068
+      reviewed_at: 1752016891683
+      type: method-name
+  - target: $["paths"]["/adgroup/archive"]["post"]
+    update:
+      x-speakeasy-group: adGroups
+      x-speakeasy-name-override: archive
+    x-speakeasy-metadata:
+      after: sdk.adGroups.archive()
+      before: sdk.Ad Group.archiveAdGroups()
+      created_at: 1752016766068
+      reviewed_at: 1752016891683
+      type: method-name
+  - target: $["paths"]["/campaign"]["post"]
+    update:
+      x-speakeasy-group: campaigns
+    x-speakeasy-metadata:
+      after: sdk.campaigns.create()
+      before: sdk.Campaign.create()
+      created_at: 1752016766068
+      reviewed_at: 1752016891683
+      type: method-name
+  - target: $["paths"]["/standardjob/{id}/status"]["get"]
+    update:
+      x-speakeasy-group: jobStatus
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.jobStatus.get()
+      before: sdk.Job Status.getJobStatus()
+      created_at: 1752016766068
+      reviewed_at: 1752016891683
+      type: method-name
+  - target: $["paths"]["/restrequest"]["post"]
+    update:
+      x-speakeasy-group: restRequests
+      x-speakeasy-name-override: submit
+    x-speakeasy-metadata:
+      after: sdk.restRequests.submit()
+      before: sdk.REST Request.submitRestRequest()
+      created_at: 1752016766068
+      reviewed_at: 1752016891683
+      type: method-name
+  - target: $["paths"]["/campaign/archive"]["post"]
+    update:
+      x-speakeasy-group: campaigns
+      x-speakeasy-name-override: archive
+    x-speakeasy-metadata:
+      after: sdk.campaigns.archive()
+      before: sdk.Campaign.archiveCampaigns()
+      created_at: 1752016766068
+      reviewed_at: 1752016891683
+      type: method-name
+  - target: $["paths"]["/campaign"]["patch"]
+    update:
+      x-speakeasy-group: campaigns
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.campaigns.update()
+      before: sdk.Campaign.updateCampaign()
+      created_at: 1752016766068
+      reviewed_at: 1752016891683
+      type: method-name
+  - target: $["paths"]["/adgroup"]["post"]
+    update:
+      x-speakeasy-group: adGroups
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.adGroups.create()
+      before: sdk.Ad Group.createAdGroup()
+      created_at: 1752016766068
+      reviewed_at: 1752016891683
+      type: method-name
+  - target: $["paths"]["/standardjob/campaign/bulk"]["patch"]
+    update:
+      x-speakeasy-group: campaigns
+      x-speakeasy-name-override: bulkUpdate
+    x-speakeasy-metadata:
+      after: sdk.campaigns.bulkUpdate()
+      before: sdk.Campaign.updateCampaignsJob()
+      created_at: 1752016766068
+      reviewed_at: 1752016891683
+      type: method-name
+  - target: $["paths"]["/standardjob/firstpartydata"]["post"]
+    update:
+      x-speakeasy-group: dmps
+    x-speakeasy-metadata:
+      after: sdk.dmps.getFirstPartyDataJob()
+      before: sdk.DMP.getFirstPartyDataJob()
+      created_at: 1752016766068
+      reviewed_at: 1752016891683
+      type: method-name
+  - target: $["paths"]["/graphqlrequest"]["post"]
+    update:
+      x-speakeasy-group: graphQlRequests
+      x-speakeasy-name-override: submit
+    x-speakeasy-metadata:
+      after: sdk.graphQlRequests.submit()
+      before: sdk.GraphQL Request.submitGraphQlRequest()
+      created_at: 1752016766068
+      reviewed_at: 1752016891683
+      type: method-name
+  - target: $["paths"]["/graphqlqueryjob"]["post"]
+    update:
+      x-speakeasy-group: graphQlRequests
+      x-speakeasy-name-override: submitBulkQueryJob
+    x-speakeasy-metadata:
+      after: sdk.graphQlRequests.submitBulkQueryJob()
+      before: sdk.GraphQL Request.submitGraphQlQueryJob()
+      created_at: 1752016766068
+      reviewed_at: 1752016891683
+      type: method-name

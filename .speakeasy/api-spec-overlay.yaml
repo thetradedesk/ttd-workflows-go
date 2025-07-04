@@ -1,0 +1,10 @@
+overlay: 1.0.0
+info:
+  title: API Spec Modifications
+  version: 0.0.1
+actions:
+  - target: $["paths"]["/graphql-request"]["post"]["responses"]["200"]["content"]["application/json"]["schema"]
+    update:
+      additionalProperties: true
+  - target: $["paths"]["/bulkjob/callback"]
+    remove: true
