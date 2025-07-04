@@ -1,0 +1,19 @@
+overlay: 1.0.0
+info:
+  title: API Spec Modifications
+  version: 0.0.1
+actions:
+  - target: $["paths"]["/graphqlrequest"]["post"]["responses"]["200"]["content"]["application/json"]["schema"]
+    update:
+      additionalProperties: true
+  - target: $["components"]["schemas"]["GraphQLRequestInput"]["properties"]["variables"]
+    update:
+      additionalProperties: true
+  - target: $["paths"]["/restrequest"]["post"]["responses"]["200"]["content"]["application/json"]["schema"]
+    update:
+      additionalProperties: true
+  - target: $["components"]["schemas"]["CallRestApiWorkflowInput"]["properties"]["dataBody"]
+    update:
+      additionalProperties: true
+  - target: $["paths"]["/bulkjob/callback"]
+    remove: true

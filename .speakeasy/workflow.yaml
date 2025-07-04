@@ -1,0 +1,24 @@
+workflowVersion: 1.0.0
+speakeasyVersion: latest
+sources:
+    Workflows API:
+        inputs:
+            - location: https://api.thetradedesk.com/workflows/swagger/v1/swagger.yaml
+              authHeader: TTD-Auth
+              authSecret: $openapi_doc_auth_token
+        overlays:
+            - location: .speakeasy/speakeasy-modifications-overlay.yaml
+            - location: .speakeasy/speakeasy-config-overlay.yaml
+            - location: .speakeasy/api-spec-overlay.yaml
+        registry:
+            location: registry.speakeasyapi.dev/thetradedesk/workflows/workflows-api
+targets:
+    ttd-workflows:
+        target: go
+        source: Workflows API
+        codeSamples:
+            registry:
+                location: registry.speakeasyapi.dev/thetradedesk/workflows/workflows-api-go-code-samples
+            labelOverride:
+                fixedValue: Go (SDK)
+            blocking: false

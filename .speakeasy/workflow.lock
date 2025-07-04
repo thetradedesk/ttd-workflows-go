@@ -1,0 +1,49 @@
+speakeasyVersion: 1.582.0
+sources:
+    Workflows API:
+        sourceNamespace: workflows-api
+        sourceRevisionDigest: sha256:a82b3d8a8c2c4ff09fbdf3c6f2223db60bb57550e16090d7058fc1964f8bde3c
+        sourceBlobDigest: sha256:08bd2d3127f06afe9a11e6c53b9bc2d86399c891318e7758a1378fc7b8dfd78c
+        tags:
+            - latest
+            - speakeasy-sdk-regen-1752682068
+            - v1
+    ttd-workflows-OAS:
+        sourceNamespace: workflows-api
+        sourceRevisionDigest: sha256:72a69861830d48e8ed68add0cc6298263fedefd6867a9ec5b5e5dbc2eaefbc5d
+        sourceBlobDigest: sha256:e1f942cc4a809a6a8094348f0e76de995d053a7bc509d0d38942781b56a4c8fb
+        tags:
+            - latest
+targets:
+    ttd-workflows:
+        source: Workflows API
+        sourceNamespace: workflows-api
+        sourceRevisionDigest: sha256:a82b3d8a8c2c4ff09fbdf3c6f2223db60bb57550e16090d7058fc1964f8bde3c
+        sourceBlobDigest: sha256:08bd2d3127f06afe9a11e6c53b9bc2d86399c891318e7758a1378fc7b8dfd78c
+        codeSamplesNamespace: workflows-api-go-code-samples
+        codeSamplesRevisionDigest: sha256:41256cd04d213c5adc18c5ca1ac504e4c633822399eb1f3ddf8def30cf496fc1
+workflow:
+    workflowVersion: 1.0.0
+    speakeasyVersion: latest
+    sources:
+        Workflows API:
+            inputs:
+                - location: https://api.thetradedesk.com/workflows/swagger/v1/swagger.yaml
+                  authHeader: TTD-Auth
+                  authSecret: $openapi_doc_auth_token
+            overlays:
+                - location: .speakeasy/speakeasy-modifications-overlay.yaml
+                - location: .speakeasy/speakeasy-config-overlay.yaml
+                - location: .speakeasy/api-spec-overlay.yaml
+            registry:
+                location: registry.speakeasyapi.dev/thetradedesk/workflows/workflows-api
+    targets:
+        ttd-workflows:
+            target: go
+            source: Workflows API
+            codeSamples:
+                registry:
+                    location: registry.speakeasyapi.dev/thetradedesk/workflows/workflows-api-go-code-samples
+                labelOverride:
+                    fixedValue: Go (SDK)
+                blocking: false

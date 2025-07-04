@@ -1,0 +1,50 @@
+configVersion: 2.0.0
+generation:
+  sdkClassName: Workflows
+  maintainOpenAPIOrder: true
+  usageSnippets:
+    optionalPropertyRendering: always
+    sdkInitStyle: constructor
+  useClassNamesForArrayFields: true
+  fixes:
+    nameResolutionDec2023: true
+    nameResolutionFeb2025: true
+    parameterOrderingFeb2024: true
+    requestResponseComponentNamesFeb2024: true
+    securityFeb2025: true
+    sharedErrorComponentsApr2025: true
+  auth:
+    oAuth2ClientCredentialsEnabled: true
+    oAuth2PasswordEnabled: true
+  sdkHooksConfigAccess: true
+  tests:
+    generateTests: true
+    generateNewTests: false
+    skipResponseBodyAssertions: false
+go:
+  version: 0.9.1
+  additionalDependencies: {}
+  allowUnknownFieldsInWeakUnions: false
+  baseErrorName: WorkflowsError
+  clientServerStatusCodesAsErrors: true
+  defaultErrorName: APIError
+  envVarPrefix: WORKFLOWS
+  flattenGlobalSecurity: true
+  imports:
+    option: openapi
+    paths:
+      callbacks: models/callbacks
+      errors: models/apierrors
+      operations: models/operations
+      shared: models/components
+      webhooks: models/webhooks
+  inputModelSuffix: input
+  license:
+    name: The MIT License (MIT)
+    shortName: MIT
+    url: https://mit-license.org/
+  maxMethodParams: 999
+  methodArguments: infer-optional-args
+  outputModelSuffix: output
+  packageName: ttd-workflows
+  responseFormat: envelope-http
