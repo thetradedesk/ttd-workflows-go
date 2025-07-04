@@ -31,7 +31,6 @@ go:
   defaultErrorName: APIError
   envVarPrefix: WORKFLOWS
   flattenGlobalSecurity: true
-  githubURL: github.com/thetradedesk/ttd-workflows-go
   imports:
     option: openapi
     paths:
