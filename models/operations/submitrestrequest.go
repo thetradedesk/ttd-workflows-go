@@ -6,14 +6,10 @@ import (
 	"ttd-workflows/models/components"
 )
 
-// SubmitRestRequestResponseBody - OK
-type SubmitRestRequestResponseBody struct {
-}
-
 type SubmitRestRequestResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	// OK
-	Object *SubmitRestRequestResponseBody
+	Object map[string]any
 }
 
 func (o *SubmitRestRequestResponse) GetHTTPMeta() components.HTTPMetadata {
@@ -23,7 +19,7 @@ func (o *SubmitRestRequestResponse) GetHTTPMeta() components.HTTPMetadata {
 	return o.HTTPMeta
 }
 
-func (o *SubmitRestRequestResponse) GetObject() *SubmitRestRequestResponseBody {
+func (o *SubmitRestRequestResponse) GetObject() map[string]any {
 	if o == nil {
 		return nil
 	}

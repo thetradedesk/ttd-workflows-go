@@ -1,12 +1,14 @@
 lockVersion: 2.0.0
 id: 75c617ef-9432-415b-944c-cb27049cc9bc
 management:
-  docChecksum: 4fe1829c3b1d1a257e4f5681600aa295
+  docChecksum: c092545eda296e5089415df8c3b460f8
   docVersion: v1
   speakeasyVersion: 1.580.1
   generationVersion: 2.656.3
-  releaseVersion: 0.3.1
-  configChecksum: 80eb14827391e726e80c8687813ad09d
+  releaseVersion: 0.8.3
+  configChecksum: 74eaad83994bd5e510a19655ac3f20eb
+  repoURL: https://github.com/thetradedesk/ttd-workflows-go.git
+  installationURL: https://github.com/thetradedesk/ttd-workflows-go
 features:
   go:
     additionalDependencies: 0.1.0
@@ -219,7 +221,6 @@ generatedFiles:
   - docs/models/components/targetinggender.md
   - docs/models/components/targetingstartage.md
   - docs/models/components/thirdpartydatainput.md
-  - docs/models/components/variables.md
   - docs/models/components/workflowcallbackinput.md
   - docs/models/components/workflowstatus.md
   - docs/models/operations/archiveadgroupsrequest.md
@@ -241,9 +242,7 @@ generatedFiles:
   - docs/models/operations/option.md
   - docs/models/operations/submitgraphqlqueryjobresponse.md
   - docs/models/operations/submitgraphqlrequestresponse.md
-  - docs/models/operations/submitgraphqlrequestresponsebody.md
   - docs/models/operations/submitrestrequestresponse.md
-  - docs/models/operations/submitrestrequestresponsebody.md
   - docs/models/operations/updateadgroupresponse.md
   - docs/models/operations/updateadgroupsjobresponse.md
   - docs/models/operations/updatecampaignresponse.md

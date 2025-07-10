@@ -2,16 +2,12 @@
 
 package components
 
-// Variables to substitute into the query.
-type Variables struct {
-}
-
 // GraphQLRequestInput - Required fields for executing a GraphQL query
 type GraphQLRequestInput struct {
 	// The GraphQL query to execute.
 	Request string `json:"request"`
 	// Variables to substitute into the query.
-	Variables *Variables `json:"variables,omitempty"`
+	Variables map[string]any `json:"variables,omitempty"`
 }
 
 func (o *GraphQLRequestInput) GetRequest() string {
@@ -21,7 +17,7 @@ func (o *GraphQLRequestInput) GetRequest() string {
 	return o.Request
 }
 
-func (o *GraphQLRequestInput) GetVariables() *Variables {
+func (o *GraphQLRequestInput) GetVariables() map[string]any {
 	if o == nil {
 		return nil
 	}

@@ -214,12 +214,12 @@ func (s *GraphQlRequests) Submit(ctx context.Context, request *components.GraphQ
 				return nil, err
 			}
 
-			var out operations.SubmitGraphQlRequestResponseBody
+			var out map[string]any
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.Object = &out
+			res.Object = out
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
