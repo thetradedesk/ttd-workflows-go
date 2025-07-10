@@ -2,7 +2,7 @@
 
 package ttdworkflows
 
-// Generated from OpenAPI doc version v1 and generator version 2.656.3
+// Generated from OpenAPI doc version v1 and generator version 2.656.5
 
 import (
 	"context"
@@ -152,9 +152,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *Workflows {
 	sdk := &Workflows{
-		SDKVersion: "0.8.3",
+		SDKVersion: "0.9.0",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.8.3 2.656.3 v1 ttd-workflows",
+			UserAgent:  "speakeasy-sdk/go 0.9.0 2.656.5 v1 ttd-workflows",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
