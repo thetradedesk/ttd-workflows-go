@@ -6,14 +6,10 @@ import (
 	"ttd-workflows/models/components"
 )
 
-// SubmitGraphQlRequestResponseBody - OK
-type SubmitGraphQlRequestResponseBody struct {
-}
-
 type SubmitGraphQlRequestResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	// OK
-	Object *SubmitGraphQlRequestResponseBody
+	Object map[string]any
 }
 
 func (o *SubmitGraphQlRequestResponse) GetHTTPMeta() components.HTTPMetadata {
@@ -23,7 +19,7 @@ func (o *SubmitGraphQlRequestResponse) GetHTTPMeta() components.HTTPMetadata {
 	return o.HTTPMeta
 }
 
-func (o *SubmitGraphQlRequestResponse) GetObject() *SubmitGraphQlRequestResponseBody {
+func (o *SubmitGraphQlRequestResponse) GetObject() map[string]any {
 	if o == nil {
 		return nil
 	}
