@@ -35,7 +35,9 @@ func main() {
 
     res, err := s.GraphQlRequests.Submit(ctx, &components.GraphQLRequestInput{
         Request: "<value>",
-        Variables: &components.Variables{},
+        Variables: map[string]any{
+
+        },
     })
     if err != nil {
         log.Fatal(err)

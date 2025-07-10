@@ -53,7 +53,7 @@ For further explanation on the entities encountered in this documentation (e.g.,
 
 To add the SDK as a dependency to your project:
 ```bash
-go get ttd-workflows
+go get github.com/thetradedesk/ttd-workflows-go
 ```
 <!-- End SDK Installation [installation] -->
 
