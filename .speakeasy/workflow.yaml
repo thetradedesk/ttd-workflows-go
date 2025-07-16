@@ -10,7 +10,6 @@ sources:
             - location: .speakeasy/speakeasy-modifications-overlay.yaml
             - location: .speakeasy/speakeasy-config-overlay.yaml
             - location: .speakeasy/api-spec-overlay.yaml
-        output: combined_api_spec.yaml
         registry:
             location: registry.speakeasyapi.dev/thetradedesk/workflows/workflows-api
 targets:
