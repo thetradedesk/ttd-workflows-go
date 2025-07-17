@@ -4,7 +4,7 @@ package apierrors
 
 import (
 	"encoding/json"
-	"ttd-workflows/models/components"
+	"github.com/thetradedesk/ttd-workflows-go/models/components"
 )
 
 type ProblemDetailsError struct {

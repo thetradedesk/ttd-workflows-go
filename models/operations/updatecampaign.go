@@ -3,7 +3,7 @@
 package operations
 
 import (
-	"ttd-workflows/models/components"
+	"github.com/thetradedesk/ttd-workflows-go/models/components"
 )
 
 type UpdateCampaignResponse struct {

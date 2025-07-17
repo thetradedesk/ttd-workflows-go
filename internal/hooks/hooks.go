@@ -5,8 +5,8 @@ package hooks
 import (
 	"context"
 	"errors"
+	"github.com/thetradedesk/ttd-workflows-go/internal/config"
 	"net/http"
-	"ttd-workflows/internal/config"
 )
 
 type FailEarly struct {

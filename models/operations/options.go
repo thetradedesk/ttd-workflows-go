@@ -4,9 +4,9 @@ package operations
 
 import (
 	"errors"
+	"github.com/thetradedesk/ttd-workflows-go/internal/utils"
+	"github.com/thetradedesk/ttd-workflows-go/retry"
 	"time"
-	"ttd-workflows/internal/utils"
-	"ttd-workflows/retry"
 )
 
 var ErrUnsupportedOption = errors.New("unsupported option")

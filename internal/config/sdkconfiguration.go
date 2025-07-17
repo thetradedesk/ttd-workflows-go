@@ -4,9 +4,9 @@ package config
 
 import (
 	"context"
+	"github.com/thetradedesk/ttd-workflows-go/retry"
 	"net/http"
 	"time"
-	"ttd-workflows/retry"
 )
 
 type HTTPClient interface {

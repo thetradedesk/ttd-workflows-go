@@ -1,4 +1,4 @@
-module ttd-workflows
+module github.com/thetradedesk/ttd-workflows-go
 
 go 1.22
 

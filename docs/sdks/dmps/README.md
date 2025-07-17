@@ -21,22 +21,22 @@ package main
 import(
 	"context"
 	"os"
-	ttdworkflows "ttd-workflows"
-	"ttd-workflows/models/components"
+	ttdworkflowsgo "github.com/thetradedesk/ttd-workflows-go"
+	"github.com/thetradedesk/ttd-workflows-go/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := ttdworkflows.New(
-        ttdworkflows.WithSecurity(os.Getenv("WORKFLOWS_TTD_AUTH")),
+    s := ttdworkflowsgo.New(
+        ttdworkflowsgo.WithSecurity(os.Getenv("WORKFLOWS_TTD_AUTH")),
     )
 
     res, err := s.Dmps.GetFirstPartyDataJob(ctx, &components.FirstPartyDataInput{
         AdvertiserID: "<id>",
-        NameFilter: ttdworkflows.String("<value>"),
-        QueryShape: ttdworkflows.String("<value>"),
+        NameFilter: ttdworkflowsgo.String("<value>"),
+        QueryShape: ttdworkflowsgo.String("<value>"),
         CallbackInput: &components.WorkflowCallbackInput{
             CallbackURL: "https://difficult-pocket-watch.com",
             CallbackHeaders: map[string]string{
@@ -88,21 +88,21 @@ package main
 import(
 	"context"
 	"os"
-	ttdworkflows "ttd-workflows"
-	"ttd-workflows/models/components"
+	ttdworkflowsgo "github.com/thetradedesk/ttd-workflows-go"
+	"github.com/thetradedesk/ttd-workflows-go/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := ttdworkflows.New(
-        ttdworkflows.WithSecurity(os.Getenv("WORKFLOWS_TTD_AUTH")),
+    s := ttdworkflowsgo.New(
+        ttdworkflowsgo.WithSecurity(os.Getenv("WORKFLOWS_TTD_AUTH")),
     )
 
     res, err := s.Dmps.GetThirdPartyDataJob(ctx, &components.ThirdPartyDataInput{
         PartnerID: "<id>",
-        QueryShape: ttdworkflows.String("<value>"),
+        QueryShape: ttdworkflowsgo.String("<value>"),
         CallbackInput: &components.WorkflowCallbackInput{
             CallbackURL: "https://extroverted-intent.net",
             CallbackHeaders: map[string]string{

@@ -3,8 +3,8 @@
 package components
 
 import (
+	"github.com/thetradedesk/ttd-workflows-go/internal/utils"
 	"time"
-	"ttd-workflows/internal/utils"
 )
 
 type CampaignFlightWorkflow struct {

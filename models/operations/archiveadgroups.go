@@ -3,8 +3,8 @@
 package operations
 
 import (
-	"ttd-workflows/internal/utils"
-	"ttd-workflows/models/components"
+	"github.com/thetradedesk/ttd-workflows-go/internal/utils"
+	"github.com/thetradedesk/ttd-workflows-go/models/components"
 )
 
 type ArchiveAdGroupsRequest struct {
