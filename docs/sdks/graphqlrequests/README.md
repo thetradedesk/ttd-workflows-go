@@ -21,16 +21,16 @@ package main
 import(
 	"context"
 	"os"
-	ttdworkflows "ttd-workflows"
-	"ttd-workflows/models/components"
+	ttdworkflowsgo "github.com/thetradedesk/ttd-workflows-go"
+	"github.com/thetradedesk/ttd-workflows-go/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := ttdworkflows.New(
-        ttdworkflows.WithSecurity(os.Getenv("WORKFLOWS_TTD_AUTH")),
+    s := ttdworkflowsgo.New(
+        ttdworkflowsgo.WithSecurity(os.Getenv("WORKFLOWS_TTD_AUTH")),
     )
 
     res, err := s.GraphQlRequests.Submit(ctx, &components.GraphQLRequestInput{
@@ -80,16 +80,16 @@ package main
 import(
 	"context"
 	"os"
-	ttdworkflows "ttd-workflows"
-	"ttd-workflows/models/components"
+	ttdworkflowsgo "github.com/thetradedesk/ttd-workflows-go"
+	"github.com/thetradedesk/ttd-workflows-go/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := ttdworkflows.New(
-        ttdworkflows.WithSecurity(os.Getenv("WORKFLOWS_TTD_AUTH")),
+    s := ttdworkflowsgo.New(
+        ttdworkflowsgo.WithSecurity(os.Getenv("WORKFLOWS_TTD_AUTH")),
     )
 
     res, err := s.GraphQlRequests.SubmitBulkQueryJob(ctx, &components.GraphQlQueryJobInput{
@@ -98,8 +98,8 @@ func main() {
             CallbackURL: "https://wilted-cork.net/",
             CallbackHeaders: []components.KeyValuePairOfStringAndStringInput{
                 components.KeyValuePairOfStringAndStringInput{
-                    Key: ttdworkflows.String("<key>"),
-                    Value: ttdworkflows.String("<value>"),
+                    Key: ttdworkflowsgo.String("<key>"),
+                    Value: ttdworkflowsgo.String("<value>"),
                 },
             },
         },

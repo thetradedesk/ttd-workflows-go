@@ -13,7 +13,7 @@ import (
 
 	"github.com/ericlagergren/decimal"
 
-	"ttd-workflows/types"
+	"github.com/thetradedesk/ttd-workflows-go/types"
 )
 
 func GenerateURL(_ context.Context, serverURL, path string, pathParams interface{}, globals interface{}) (string, error) {

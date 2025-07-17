@@ -6,6 +6,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"github.com/thetradedesk/ttd-workflows-go/retry"
 	"math"
 	"math/rand"
 	"net/http"
@@ -13,7 +14,6 @@ import (
 	"strconv"
 	"strings"
 	"time"
-	"ttd-workflows/retry"
 )
 
 // Deprecated: Use retry.BackoffStrategy instead.

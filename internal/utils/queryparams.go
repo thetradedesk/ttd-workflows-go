@@ -14,7 +14,7 @@ import (
 
 	"github.com/ericlagergren/decimal"
 
-	"ttd-workflows/types"
+	"github.com/thetradedesk/ttd-workflows-go/types"
 )
 
 func PopulateQueryParams(_ context.Context, req *http.Request, queryParams interface{}, globals interface{}) error {

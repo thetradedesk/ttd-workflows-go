@@ -20,22 +20,22 @@ package main
 import(
 	"context"
 	"os"
-	ttdworkflows "ttd-workflows"
-	"ttd-workflows/models/components"
+	ttdworkflowsgo "github.com/thetradedesk/ttd-workflows-go"
+	"github.com/thetradedesk/ttd-workflows-go/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := ttdworkflows.New(
-        ttdworkflows.WithSecurity(os.Getenv("WORKFLOWS_TTD_AUTH")),
+    s := ttdworkflowsgo.New(
+        ttdworkflowsgo.WithSecurity(os.Getenv("WORKFLOWS_TTD_AUTH")),
     )
 
     res, err := s.RestRequests.Submit(ctx, &components.CallRestAPIWorkflowInput{
         MethodType: components.RestAPIMethodTypeGet,
-        Endpoint: ttdworkflows.String("<value>"),
-        DataBody: ttdworkflows.String("<value>"),
+        Endpoint: ttdworkflowsgo.String("<value>"),
+        DataBody: ttdworkflowsgo.String("<value>"),
     })
     if err != nil {
         log.Fatal(err)

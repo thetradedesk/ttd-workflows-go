@@ -13,7 +13,7 @@ import (
 	"time"
 	"unsafe"
 
-	"ttd-workflows/types"
+	"github.com/thetradedesk/ttd-workflows-go/types"
 
 	"github.com/ericlagergren/decimal"
 )

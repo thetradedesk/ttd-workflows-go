@@ -5,8 +5,8 @@ management:
   docVersion: v1
   speakeasyVersion: 1.582.0
   generationVersion: 2.657.1
-  releaseVersion: 0.9.1
-  configChecksum: 19940ebf9c68add8ead352083615189d
+  releaseVersion: 0.9.2
+  configChecksum: 26257e605fc60ede4eba295173951328
   repoURL: https://github.com/thetradedesk/ttd-workflows-go.git
   installationURL: https://github.com/thetradedesk/ttd-workflows-go
 features:

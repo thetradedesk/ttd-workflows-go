@@ -20,15 +20,15 @@ package main
 import(
 	"context"
 	"os"
-	ttdworkflows "ttd-workflows"
+	ttdworkflowsgo "github.com/thetradedesk/ttd-workflows-go"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := ttdworkflows.New(
-        ttdworkflows.WithSecurity(os.Getenv("WORKFLOWS_TTD_AUTH")),
+    s := ttdworkflowsgo.New(
+        ttdworkflowsgo.WithSecurity(os.Getenv("WORKFLOWS_TTD_AUTH")),
     )
 
     res, err := s.Jobs.GetStatus(ctx, "<id>")
