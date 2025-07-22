@@ -69,24 +69,116 @@ import (
 )
 
 func main() {
-    ctx := context.Background()
+	ctx := context.Background()
 
-    s := ttdworkflowsgo.New(
-        ttdworkflowsgo.WithSecurity(os.Getenv("WORKFLOWS_TTD_AUTH")),
-    )
-    res, err := s.Dmps.GetThirdPartyDataJob(ctx, &components.ThirdPartyDataInput{
-        PartnerID: "<partner_id>",
-        QueryShape: ttdworkflowsgo.String("nodes {id name}"),
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.StandardJobSubmitResponse != nil {
-        if jobPtr := res.StandardJobSubmitResponse.GetID(); jobPtr != 0 {
-            fmt.Println("Submitted job ID:", jobPtr)
-        } else {
-            fmt.Println("Job ID is nil")
-        }
+	s := ttdworkflowsgo.New(
+		ttdworkflowsgo.WithServer("sandbox"),
+		ttdworkflowsgo.WithSecurity(os.Getenv("WORKFLOWS_TTD_AUTH")),
+	)
+	res, err := s.Dmps.GetThirdPartyDataJob(ctx, &components.ThirdPartyDataInput{
+		PartnerID: "<id>",
+		QueryShape: ttdworkflowsgo.String("nodes {id name}"),
+	})
+	if err != nil {
+		log.Fatal(err)
+	}
+	if res.StandardJobSubmitResponse != nil {
+		if jobPtr := res.StandardJobSubmitResponse.GetID(); jobPtr != 0 {
+			fmt.Println("Submitted job ID:", jobPtr)
+		} else {
+			fmt.Println("Job ID is nil")
+		}
+	} else {
+		fmt.Println("Job submission failed")
+	}
+}
+```
+
+### Example: Check status for third-party data retrieval job using job ID returned from submit job
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"log"
+	"os"
+	ttdworkflowsgo "github.com/thetradedesk/ttd-workflows-go"
+)
+
+func main() {
+	ctx := context.Background()
+
+	s := ttdworkflowsgo.New(
+		ttdworkflowsgo.WithServer("sandbox"),
+		ttdworkflowsgo.WithSecurity(os.Getenv("WORKFLOWS_TTD_AUTH")),
+	)
+
+	res, err := s.JobStatus.Get(ctx, <id>)
+	if err != nil {
+		log.Fatal(err)
+	}
+	if res.StandardJobStatusResponse != nil {
+		if completionPtr := res.StandardJobStatusResponse.CompletionPercentage; completionPtr != nil {
+			fmt.Println("Job completion percentage:", *completionPtr)
+			} else {
+			fmt.Println("Job completion percentage is nil")
+		}
+	} else {
+		fmt.Println("Getting job completion status failed")
+	}
+}
+```
+
+### Example: Create campaign with minimal configuration
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"log"
+	"os"
+	ttdworkflowsgo "github.com/thetradedesk/ttd-workflows-go"
+	"github.com/thetradedesk/ttd-workflows-go/models/components"
+	"github.com/thetradedesk/ttd-workflows-go/types"
+)
+
+func main() {
+	ctx := context.Background()
+
+	s := ttdworkflowsgo.New(
+		ttdworkflowsgo.WithServer("sandbox"),
+		ttdworkflowsgo.WithSecurity(os.Getenv("WORKFLOWS_TTD_AUTH")),
+	)
+
+	var seedID = "<id>"
+
+	res, err := s.Campaigns.CreateCampaign(ctx, &components.CampaignCreateWorkflowInputWithValidation{
+		PrimaryInput: components.CampaignCreateWorkflowPrimaryInput{
+			Name: "<value>",
+			AdvertiserID: "<id>",
+			SeedID: &seedID, // required, unless the advertiser has a default seed defined
+			StartDateInUtc: types.MustNewTimeFromString("2026-07-08T10:52:56.944Z"),
+			PrimaryChannel: components.CampaignChannelTypeDooh,
+			PrimaryGoal: components.CampaignWorkflowROIGoalInput{
+				MaximizeReach: ttdworkflowsgo.Bool(true),
+			},
+		},
+	})
+	if err != nil {
+		log.Fatal(err)
+	}
+	if res.CampaignPayload != nil {
+		if idPtr := res.CampaignPayload.GetCampaign().ID; idPtr != nil {
+			fmt.Println("Campaign ID: ", *idPtr)
+		} else {
+			fmt.Println("Campaign ID is nil")
+		}
+	} else {
+		fmt.Println("Campaign creation failed")
 	}
 }
 ```
