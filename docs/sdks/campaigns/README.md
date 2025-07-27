@@ -40,6 +40,7 @@ func main() {
     res, err := s.Campaigns.CreateCampaign(ctx, &components.CampaignCreateWorkflowInputWithValidation{
         PrimaryInput: components.CampaignCreateWorkflowPrimaryInput{
             Description: ttdworkflowsgo.String("woot furthermore mentor"),
+            CampaignGroupID: ttdworkflowsgo.Int64(86586),
             TimeZone: ttdworkflowsgo.String("Europe/Ulyanovsk"),
             CustomCPAClickWeight: ttdworkflowsgo.Float64(2561.01),
             CustomCPAViewthroughWeight: ttdworkflowsgo.Float64(5604.35),
@@ -268,6 +269,7 @@ func main() {
         ID: ttdworkflowsgo.String("<id>"),
         PrimaryInput: &components.CampaignUpdateWorkflowPrimaryInput{
             Description: ttdworkflowsgo.String("yahoo whether frail but into form sway neck notwithstanding"),
+            CampaignGroupID: ttdworkflowsgo.Int64(760468),
             TimeZone: ttdworkflowsgo.String("Asia/Amman"),
             CustomCPAClickWeight: ttdworkflowsgo.Float64(1380.93),
             CustomCPAViewthroughWeight: ttdworkflowsgo.Float64(3991.98),
@@ -388,6 +390,7 @@ func main() {
             components.CampaignCreateWorkflowInput{
                 PrimaryInput: components.CampaignCreateWorkflowPrimaryInput{
                     Description: nil,
+                    CampaignGroupID: ttdworkflowsgo.Int64(657704),
                     TimeZone: ttdworkflowsgo.String("America/North_Dakota/Center"),
                     CustomCPAClickWeight: ttdworkflowsgo.Float64(9662.9),
                     CustomCPAViewthroughWeight: ttdworkflowsgo.Float64(3558.78),
@@ -624,6 +627,7 @@ func main() {
                 ID: ttdworkflowsgo.String("<id>"),
                 PrimaryInput: &components.CampaignUpdateWorkflowPrimaryInput{
                     Description: ttdworkflowsgo.String("hmph energetically yet surprisingly swift knight swear multicolored absent"),
+                    CampaignGroupID: ttdworkflowsgo.Int64(645576),
                     TimeZone: ttdworkflowsgo.String("America/Argentina/San_Juan"),
                     CustomCPAClickWeight: nil,
                     CustomCPAViewthroughWeight: ttdworkflowsgo.Float64(8361.84),
