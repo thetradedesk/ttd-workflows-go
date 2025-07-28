@@ -9,6 +9,7 @@ import (
 
 type CampaignCreateWorkflowPrimaryInput struct {
 	Description                        *string                                                  `json:"description,omitempty"`
+	CampaignGroupID                    *int64                                                   `json:"campaignGroupId,omitempty"`
 	TimeZone                           *string                                                  `json:"timeZone,omitempty"`
 	CustomCPAClickWeight               *float64                                                 `json:"customCPAClickWeight,omitempty"`
 	CustomCPAViewthroughWeight         *float64                                                 `json:"customCPAViewthroughWeight,omitempty"`
@@ -41,6 +42,13 @@ func (o *CampaignCreateWorkflowPrimaryInput) GetDescription() *string {
 		return nil
 	}
 	return o.Description
+}
+
+func (o *CampaignCreateWorkflowPrimaryInput) GetCampaignGroupID() *int64 {
+	if o == nil {
+		return nil
+	}
+	return o.CampaignGroupID
 }
 
 func (o *CampaignCreateWorkflowPrimaryInput) GetTimeZone() *string {

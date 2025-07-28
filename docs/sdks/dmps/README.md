@@ -15,6 +15,7 @@ This job ID can be used to poll for the job's status using the associated operat
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getFirstPartyDataJob" method="post" path="/standardjob/firstpartydata" -->
 ```go
 package main
 
@@ -82,6 +83,7 @@ using the associated operation under "Job Status".
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getThirdPartyDataJob" method="post" path="/standardjob/thirdpartydata" -->
 ```go
 package main
 

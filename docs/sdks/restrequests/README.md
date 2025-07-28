@@ -14,6 +14,7 @@ To explore the available REST operations, see the [REST API Reference](https://p
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="submitRestRequest" method="post" path="/restrequest" -->
 ```go
 package main
 

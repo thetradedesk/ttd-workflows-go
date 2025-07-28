@@ -10,6 +10,7 @@ import (
 type CampaignWorkflow struct {
 	ID                              *string                  `json:"id"`
 	Name                            *string                  `json:"name,omitempty"`
+	CampaignGroupID                 *int64                   `json:"campaignGroupId,omitempty"`
 	Description                     *string                  `json:"description,omitempty"`
 	StartDate                       *time.Time               `json:"startDate,omitempty"`
 	EndDate                         *time.Time               `json:"endDate,omitempty"`
@@ -48,6 +49,13 @@ func (o *CampaignWorkflow) GetName() *string {
 		return nil
 	}
 	return o.Name
+}
+
+func (o *CampaignWorkflow) GetCampaignGroupID() *int64 {
+	if o == nil {
+		return nil
+	}
+	return o.CampaignGroupID
 }
 
 func (o *CampaignWorkflow) GetDescription() *string {
