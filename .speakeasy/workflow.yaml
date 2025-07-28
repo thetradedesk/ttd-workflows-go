@@ -8,8 +8,8 @@ sources:
               authSecret: $openapi_doc_auth_token
         overlays:
             - location: .speakeasy/speakeasy-modifications-overlay.yaml
-            - location: .speakeasy/speakeasy-config-overlay.yaml
-            - location: .speakeasy/api-spec-overlay.yaml
+            - location: https://raw.githubusercontent.com/thetradedesk/ttd-workflows-config/refs/heads/main/overlays/speakeasy-config-overlay.yaml
+            - location: https://raw.githubusercontent.com/thetradedesk/ttd-workflows-config/refs/heads/main/overlays/api-spec-overlay.yaml
         registry:
             location: registry.speakeasyapi.dev/thetradedesk/workflows/workflows-api
 targets:
