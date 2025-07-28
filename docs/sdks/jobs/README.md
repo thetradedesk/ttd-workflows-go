@@ -14,6 +14,7 @@ Once a job is complete, this operation will return the URL from which to downloa
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getGraphQlQueryJobStatus" method="get" path="/graphqlqueryjob/{id}" -->
 ```go
 package main
 

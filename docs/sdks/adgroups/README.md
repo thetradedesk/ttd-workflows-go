@@ -17,6 +17,7 @@ Create a new ad group with required fields
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAdGroup" method="post" path="/adgroup" -->
 ```go
 package main
 
@@ -182,6 +183,7 @@ Only the fields provided in the request payload will be updated.
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAdGroup" method="patch" path="/adgroup" -->
 ```go
 package main
 
@@ -353,6 +355,7 @@ func main() {
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="archiveAdGroups" method="post" path="/adgroup/archive" -->
 ```go
 package main
 
@@ -409,6 +412,7 @@ Create multiple new ad groups with required fields
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAdGroupsJob" method="post" path="/standardjob/adgroup/bulk" -->
 ```go
 package main
 
@@ -473,6 +477,7 @@ Only the fields provided in the request payload for each specific ad group will 
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAdGroupsJob" method="patch" path="/standardjob/adgroup/bulk" -->
 ```go
 package main
 

@@ -16,6 +16,7 @@ Job results expire after 24 hours, at which point you will need to submit a new 
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getJobStatus" method="get" path="/standardjob/{id}/status" -->
 ```go
 package main
 

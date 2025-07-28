@@ -18,6 +18,7 @@ Create a new campaign with required fields
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createCampaign" method="post" path="/campaign" -->
 ```go
 package main
 
@@ -40,6 +41,7 @@ func main() {
     res, err := s.Campaigns.CreateCampaign(ctx, &components.CampaignCreateWorkflowInputWithValidation{
         PrimaryInput: components.CampaignCreateWorkflowPrimaryInput{
             Description: ttdworkflowsgo.String("woot furthermore mentor"),
+            CampaignGroupID: ttdworkflowsgo.Int64(86586),
             TimeZone: ttdworkflowsgo.String("Europe/Ulyanovsk"),
             CustomCPAClickWeight: ttdworkflowsgo.Float64(2561.01),
             CustomCPAViewthroughWeight: ttdworkflowsgo.Float64(5604.35),
@@ -245,6 +247,7 @@ Only the fields provided in the request payload will be updated.
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateCampaign" method="patch" path="/campaign" -->
 ```go
 package main
 
@@ -268,6 +271,7 @@ func main() {
         ID: ttdworkflowsgo.String("<id>"),
         PrimaryInput: &components.CampaignUpdateWorkflowPrimaryInput{
             Description: ttdworkflowsgo.String("yahoo whether frail but into form sway neck notwithstanding"),
+            CampaignGroupID: ttdworkflowsgo.Int64(760468),
             TimeZone: ttdworkflowsgo.String("Asia/Amman"),
             CustomCPAClickWeight: ttdworkflowsgo.Float64(1380.93),
             CustomCPAViewthroughWeight: ttdworkflowsgo.Float64(3991.98),
@@ -364,6 +368,7 @@ Create multiple new campaigns with required fields
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createCampaignsJob" method="post" path="/standardjob/campaign/bulk" -->
 ```go
 package main
 
@@ -388,6 +393,7 @@ func main() {
             components.CampaignCreateWorkflowInput{
                 PrimaryInput: components.CampaignCreateWorkflowPrimaryInput{
                     Description: nil,
+                    CampaignGroupID: ttdworkflowsgo.Int64(657704),
                     TimeZone: ttdworkflowsgo.String("America/North_Dakota/Center"),
                     CustomCPAClickWeight: ttdworkflowsgo.Float64(9662.9),
                     CustomCPAViewthroughWeight: ttdworkflowsgo.Float64(3558.78),
@@ -599,6 +605,7 @@ Only the fields provided in the request payload for each specific campaign will 
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateCampaignsJob" method="patch" path="/standardjob/campaign/bulk" -->
 ```go
 package main
 
@@ -624,6 +631,7 @@ func main() {
                 ID: ttdworkflowsgo.String("<id>"),
                 PrimaryInput: &components.CampaignUpdateWorkflowPrimaryInput{
                     Description: ttdworkflowsgo.String("hmph energetically yet surprisingly swift knight swear multicolored absent"),
+                    CampaignGroupID: ttdworkflowsgo.Int64(645576),
                     TimeZone: ttdworkflowsgo.String("America/Argentina/San_Juan"),
                     CustomCPAClickWeight: nil,
                     CustomCPAViewthroughWeight: ttdworkflowsgo.Float64(8361.84),
@@ -730,6 +738,7 @@ func main() {
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="archiveCampaigns" method="post" path="/campaign/archive" -->
 ```go
 package main
 
@@ -787,6 +796,7 @@ Get a campaign's version
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getCampaignVersion" method="get" path="/campaign/{id}/version" -->
 ```go
 package main
 
