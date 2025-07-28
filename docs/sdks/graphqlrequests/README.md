@@ -15,6 +15,7 @@ To explore the available GraphQL operations, see the [GraphQL Schema Explorer](h
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="submitGraphQlRequest" method="post" path="/graphqlrequest" -->
 ```go
 package main
 
@@ -74,6 +75,7 @@ For information on bulk GraphQL query syntax, see [GraphQL API Bulk Operations](
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="submitGraphQlQueryJob" method="post" path="/graphqlqueryjob" -->
 ```go
 package main
 
