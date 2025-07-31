@@ -94,6 +94,8 @@ func main() {
 }
 ```
 
+([Reference](https://ttd-workflows.apidocumentation.com/reference#tag/dmp/post/standardjob/thirdpartydata))
+
 ### Example: Check status for third-party data retrieval job using job ID returned from submit job
 
 ```go
@@ -130,6 +132,8 @@ func main() {
 	}
 }
 ```
+
+([Reference](https://ttd-workflows.apidocumentation.com/reference#tag/job-status/get/standardjob/{id}/status))
 
 ### Example: Create campaign with minimal configuration
 
@@ -182,6 +186,181 @@ func main() {
 	}
 }
 ```
+
+([Reference](https://ttd-workflows.apidocumentation.com/reference#tag/campaign/post/campaign))
+
+### Example: Submit GraphQL request
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"log"
+	"os"
+
+	ttdworkflowsgo "github.com/thetradedesk/ttd-workflows-go"
+	"github.com/thetradedesk/ttd-workflows-go/models/components"
+)
+
+func main() {
+	ctx := context.Background()
+
+	s := ttdworkflowsgo.New(
+		ttdworkflowsgo.WithServer("sandbox"),
+		ttdworkflowsgo.WithSecurity(os.Getenv("WORKFLOWS_TTD_AUTH")),
+	)
+
+	query := `
+query Advertiser($id: ID!) {
+	advertiser(id: $id) {
+		name
+		totalCampaignChannelCount
+		totalFunnelLocationCount
+		useImpressionsOnlyBudgeting
+		vettingStatus
+		suggestedMeasurementProviderCategories
+	}
+}
+`
+
+	res, err := s.GraphQlRequests.Submit(ctx, &components.GraphQLRequestInput{
+		Request: query,
+		Variables: map[string]any{
+			"id": "<id>",
+		},
+	})
+	if err != nil {
+		log.Fatal(err)
+	}
+	if res.Object != nil {
+		fmt.Println(res.Object)
+	}
+}
+```
+
+([Reference](https://ttd-workflows.apidocumentation.com/reference#tag/graphql-request/post/graphqlrequest))
+
+### Example: Submit bulk GraphQL query job
+
+Note: If you submit a GraphQL bulk query job (instead of a standard GraphQL request as shown above), any paginated and nested data is fully iterated and returned in a single output file.
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"log"
+	"os"
+
+	ttdworkflowsgo "github.com/thetradedesk/ttd-workflows-go"
+	"github.com/thetradedesk/ttd-workflows-go/models/components"
+)
+
+func main() {
+	ctx := context.Background()
+
+	s := ttdworkflowsgo.New(
+		ttdworkflowsgo.WithServer("sandbox"),
+		ttdworkflowsgo.WithSecurity(os.Getenv("WORKFLOWS_TTD_AUTH")),
+	)
+
+	query := `
+query AudiencesAcrossAdvertisers {
+  partner(id: "<id>") {
+	id
+	name
+	advertisers {
+	  nodes {
+		id
+		name
+		adGroups {
+		  nodes {
+			id
+			name
+			audience {
+			  id
+			  name
+			  activeUniques {
+				householdCount
+				idsConnectedTvCount
+				idsCount
+				idsInAppCount
+				idsWebCount
+				lastUpdated
+				personsCount
+			  }
+			}
+		  }
+		}
+	  }
+	}
+  }
+}
+`
+
+	res, err := s.GraphQlRequests.SubmitBulkQueryJob(ctx, &components.GraphQlQueryJobInput{
+		Query: query,
+	})
+	if err != nil {
+		log.Fatal(err)
+	}
+	if res.GraphQlQueryJobResponse != nil {
+		if jobPtr := res.GraphQlQueryJobResponse.GetPayload(); jobPtr != nil {
+			fmt.Println(jobPtr.Data.ID);
+		} else {
+			fmt.Println("Job ID is nil")
+		}
+	} else {
+		fmt.Println("Job submission failed")
+	}
+}
+```
+
+([Reference](https://ttd-workflows.apidocumentation.com/reference#tag/graphql-request/post/graphqlqueryjob))
+
+### Example: Check status for bulk GraphQL query job
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"log"
+	"os"
+
+	ttdworkflowsgo "github.com/thetradedesk/ttd-workflows-go"
+)
+
+func main() {
+	ctx := context.Background()
+
+	s := ttdworkflowsgo.New(
+		ttdworkflowsgo.WithServer("sandbox"),
+		ttdworkflowsgo.WithSecurity(os.Getenv("WORKFLOWS_TTD_AUTH")),
+	)
+
+	res, err := s.Jobs.GetStatus(ctx, "<id>")
+	if err != nil {
+		log.Fatal(err)
+	}
+	if res.GraphQLQueryJobRetrievalResponse != nil {
+		if jobPtr := res.GraphQLQueryJobRetrievalResponse.GetJob(); jobPtr != nil {
+			fmt.Printf("Job completion: %.1f%%\n", *jobPtr.CompletionPercentage)
+			if *jobPtr.CompletionPercentage == 100 {
+				fmt.Println("\nResult URL:", *jobPtr.URL)
+				fmt.Println("\nRaw result:", *jobPtr.RawResult)
+			}
+		}
+	}
+}
+```
+
+([Reference](https://ttd-workflows.apidocumentation.com/reference#tag/job-status/get/graphqlqueryjob/{id}))
+
 <!-- No SDK Example Usage [usage] -->
 
 <!-- Start Authentication [security] -->
