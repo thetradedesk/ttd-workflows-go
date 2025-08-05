@@ -4,7 +4,7 @@ package main
 
 import (
 	"context"
-	ttdworkflowsgo "github.com/thetradedesk/ttd-workflows-go"
+	ttdworkflows "github.com/thetradedesk/ttd-workflows-go"
 	"github.com/thetradedesk/ttd-workflows-go/models/components"
 	"log"
 	"os"
@@ -13,68 +13,68 @@ import (
 func main() {
 	ctx := context.Background()
 
-	s := ttdworkflowsgo.New(
-		ttdworkflowsgo.WithSecurity(os.Getenv("WORKFLOWS_TTD_AUTH")),
+	s := ttdworkflows.New(
+		ttdworkflows.WithSecurity(os.Getenv("WORKFLOWS_TTD_AUTH")),
 	)
 
 	res, err := s.AdGroups.Create(ctx, &components.AdGroupCreateWorkflowInputWithValidation{
 		PrimaryInput: components.AdGroupCreateWorkflowPrimaryInput{
-			IsEnabled:   ttdworkflowsgo.Bool(false),
-			Description: ttdworkflowsgo.String("twine from gosh poor safely editor astride vice lost and"),
+			IsEnabled:   ttdworkflows.Bool(false),
+			Description: ttdworkflows.String("twine from gosh poor safely editor astride vice lost and"),
 			Budget: &components.AdGroupWorkflowBudgetInput{
 				AllocationType:                  components.AllocationTypeMaximum.ToPointer(),
-				BudgetInAdvertiserCurrency:      ttdworkflowsgo.Float64(3786.02),
-				BudgetInImpressions:             ttdworkflowsgo.Int64(783190),
-				DailyTargetInAdvertiserCurrency: ttdworkflowsgo.Float64(9747.02),
-				DailyTargetInImpressions:        ttdworkflowsgo.Int64(985999),
+				BudgetInAdvertiserCurrency:      ttdworkflows.Float64(3786.02),
+				BudgetInImpressions:             ttdworkflows.Int64(783190),
+				DailyTargetInAdvertiserCurrency: ttdworkflows.Float64(9747.02),
+				DailyTargetInImpressions:        ttdworkflows.Int64(985999),
 			},
-			BaseBidCPMInAdvertiserCurrency: ttdworkflowsgo.Float64(3785.04),
-			MaxBidCPMInAdvertiserCurrency:  ttdworkflowsgo.Float64(7447.3),
+			BaseBidCPMInAdvertiserCurrency: ttdworkflows.Float64(3785.04),
+			MaxBidCPMInAdvertiserCurrency:  ttdworkflows.Float64(7447.3),
 			AudienceTargeting: &components.AdGroupWorkflowAudienceTargetingInput{
-				AudienceID:                           ttdworkflowsgo.String("<id>"),
-				AudienceAcceleratorExclusionsEnabled: ttdworkflowsgo.Bool(true),
-				AudienceBoosterEnabled:               ttdworkflowsgo.Bool(true),
-				AudienceExcluderEnabled:              ttdworkflowsgo.Bool(true),
-				AudiencePredictorEnabled:             ttdworkflowsgo.Bool(false),
+				AudienceID:                           ttdworkflows.String("<id>"),
+				AudienceAcceleratorExclusionsEnabled: ttdworkflows.Bool(true),
+				AudienceBoosterEnabled:               ttdworkflows.Bool(true),
+				AudienceExcluderEnabled:              ttdworkflows.Bool(true),
+				AudiencePredictorEnabled:             ttdworkflows.Bool(false),
 				CrossDeviceVendorListForAudience: []int{
 					107263,
 				},
-				RecencyExclusionWindowInMinutes: ttdworkflowsgo.Int(90062),
-				TargetTrackableUsersEnabled:     ttdworkflowsgo.Bool(true),
-				UseMcIDAsPrimary:                ttdworkflowsgo.Bool(true),
+				RecencyExclusionWindowInMinutes: ttdworkflows.Int(90062),
+				TargetTrackableUsersEnabled:     ttdworkflows.Bool(true),
+				UseMcIDAsPrimary:                ttdworkflows.Bool(true),
 			},
 			RoiGoal: &components.AdGroupWorkflowROIGoalInput{
-				MaximizeReach:               ttdworkflowsgo.Bool(true),
-				MaximizeLtvIncrementalReach: ttdworkflowsgo.Bool(false),
-				CpcInAdvertiserCurrency:     ttdworkflowsgo.Float64(2280.31),
+				MaximizeReach:               ttdworkflows.Bool(true),
+				MaximizeLtvIncrementalReach: ttdworkflows.Bool(false),
+				CpcInAdvertiserCurrency:     ttdworkflows.Float64(2280.31),
 				CtrInPercent:                nil,
-				NielsenOTPInPercent:         ttdworkflowsgo.Float64(5175.21),
-				CpaInAdvertiserCurrency:     ttdworkflowsgo.Float64(2544.37),
-				ReturnOnAdSpendPercent:      ttdworkflowsgo.Float64(8201.47),
-				VcrInPercent:                ttdworkflowsgo.Float64(4846.08),
+				NielsenOTPInPercent:         ttdworkflows.Float64(5175.21),
+				CpaInAdvertiserCurrency:     ttdworkflows.Float64(2544.37),
+				ReturnOnAdSpendPercent:      ttdworkflows.Float64(8201.47),
+				VcrInPercent:                ttdworkflows.Float64(4846.08),
 				ViewabilityInPercent:        nil,
-				VcpmInAdvertiserCurrency:    ttdworkflowsgo.Float64(4649.53),
-				CpcvInAdvertiserCurrency:    ttdworkflowsgo.Float64(313.95),
-				MiaozhenOTPInPercent:        ttdworkflowsgo.Float64(4704.1),
+				VcpmInAdvertiserCurrency:    ttdworkflows.Float64(4649.53),
+				CpcvInAdvertiserCurrency:    ttdworkflows.Float64(313.95),
+				MiaozhenOTPInPercent:        ttdworkflows.Float64(4704.1),
 			},
 			CreativeIds: nil,
 			AssociatedBidLists: []components.AdGroupWorkflowAssociateBidListInput{
 				components.AdGroupWorkflowAssociateBidListInput{
 					BidListID:             "<id>",
-					IsEnabled:             ttdworkflowsgo.Bool(false),
-					IsDefaultForDimension: ttdworkflowsgo.Bool(true),
+					IsEnabled:             ttdworkflows.Bool(false),
+					IsDefaultForDimension: ttdworkflows.Bool(true),
 				},
 			},
-			Name:                                    ttdworkflowsgo.String("<value>"),
+			Name:                                    ttdworkflows.String("<value>"),
 			Channel:                                 components.AdGroupChannelDisplay,
 			FunnelLocation:                          components.AdGroupFunnelLocationConsideration,
-			ProgrammaticGuaranteedPrivateContractID: ttdworkflowsgo.String("<id>"),
+			ProgrammaticGuaranteedPrivateContractID: ttdworkflows.String("<id>"),
 		},
-		CampaignID: ttdworkflowsgo.String("<id>"),
+		CampaignID: ttdworkflows.String("<id>"),
 		AdvancedInput: &components.AdGroupWorkflowAdvancedInput{
 			KoaOptimizationSettings: &components.AdGroupWorkflowKoaOptimizationSettingsInput{
-				AreFutureKoaFeaturesEnabled: ttdworkflowsgo.Bool(false),
-				PredictiveClearingEnabled:   ttdworkflowsgo.Bool(false),
+				AreFutureKoaFeaturesEnabled: ttdworkflows.Bool(false),
+				PredictiveClearingEnabled:   ttdworkflows.Bool(false),
 			},
 			ComscoreSettings: &components.AdGroupWorkflowComscoreSettingsInput{
 				IsEnabled:    false,
@@ -90,14 +90,14 @@ func main() {
 				},
 			},
 			ContractTargeting: &components.AdGroupWorkflowContractTargetingInput{
-				AllowOpenMarketBiddingWhenTargetingContracts: ttdworkflowsgo.Bool(true),
+				AllowOpenMarketBiddingWhenTargetingContracts: ttdworkflows.Bool(true),
 			},
 			DimensionalBiddingAutoOptimizationSettings: [][]components.DimensionalBiddingDimensions{
 				[]components.DimensionalBiddingDimensions{},
 				[]components.DimensionalBiddingDimensions{},
 			},
-			IsUseClicksAsConversionsEnabled:  ttdworkflowsgo.Bool(false),
-			IsUseSecondaryConversionsEnabled: ttdworkflowsgo.Bool(false),
+			IsUseClicksAsConversionsEnabled:  ttdworkflows.Bool(false),
+			IsUseSecondaryConversionsEnabled: ttdworkflows.Bool(false),
 			NielsenTrackingAttributes: &components.AdGroupWorkflowNielsenTrackingAttributesInput{
 				EnhancedReportingOption: components.EnhancedNielsenReportingOptionsSite.ToPointer(),
 				Gender:                  components.TargetingGenderMale,
@@ -112,23 +112,23 @@ func main() {
 			NewFrequencyConfigs: []components.AdGroupWorkflowNewFrequencyConfigInput{
 				components.AdGroupWorkflowNewFrequencyConfigInput{
 					CounterName:            nil,
-					FrequencyCap:           ttdworkflowsgo.Int(375286),
-					FrequencyGoal:          ttdworkflowsgo.Int(534735),
-					ResetIntervalInMinutes: ttdworkflowsgo.Int(788122),
+					FrequencyCap:           ttdworkflows.Int(375286),
+					FrequencyGoal:          ttdworkflows.Int(534735),
+					ResetIntervalInMinutes: ttdworkflows.Int(788122),
 				},
 			},
 			Flights: []components.AdGroupWorkflowFlightInput{
 				components.AdGroupWorkflowFlightInput{
 					AllocationType:                  components.AllocationTypeMaximum.ToPointer(),
-					BudgetInAdvertiserCurrency:      ttdworkflowsgo.Float64(4070.96),
-					BudgetInImpressions:             ttdworkflowsgo.Int64(901477),
-					DailyTargetInAdvertiserCurrency: ttdworkflowsgo.Float64(5847.35),
-					DailyTargetInImpressions:        ttdworkflowsgo.Int64(257517),
+					BudgetInAdvertiserCurrency:      ttdworkflows.Float64(4070.96),
+					BudgetInImpressions:             ttdworkflows.Int64(901477),
+					DailyTargetInAdvertiserCurrency: ttdworkflows.Float64(5847.35),
+					DailyTargetInImpressions:        ttdworkflows.Int64(257517),
 					CampaignFlightID:                874887,
 				},
 			},
 		},
-		ValidateInputOnly: ttdworkflowsgo.Bool(true),
+		ValidateInputOnly: ttdworkflows.Bool(true),
 	})
 	if err != nil {
 		log.Fatal(err)
