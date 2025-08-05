@@ -63,7 +63,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	ttdworkflowsgo "github.com/thetradedesk/ttd-workflows-go"
+	ttdworkflows "github.com/thetradedesk/ttd-workflows-go"
 	"github.com/thetradedesk/ttd-workflows-go/models/components"
 	"log"
 )
@@ -71,13 +71,13 @@ import (
 func main() {
 	ctx := context.Background()
 
-	s := ttdworkflowsgo.New(
-		ttdworkflowsgo.WithServer("sandbox"),
-		ttdworkflowsgo.WithSecurity(os.Getenv("WORKFLOWS_TTD_AUTH")),
+	s := ttdworkflows.New(
+		ttdworkflows.WithServer("sandbox"),
+		ttdworkflows.WithSecurity(os.Getenv("WORKFLOWS_TTD_AUTH")),
 	)
 	res, err := s.Dmps.GetThirdPartyDataJob(ctx, &components.ThirdPartyDataInput{
 		PartnerID: "<id>",
-		QueryShape: ttdworkflowsgo.String("nodes {id name}"),
+		QueryShape: ttdworkflows.String("nodes {id name}"),
 	})
 	if err != nil {
 		log.Fatal(err)
@@ -106,15 +106,15 @@ import (
 	"fmt"
 	"log"
 	"os"
-	ttdworkflowsgo "github.com/thetradedesk/ttd-workflows-go"
+	ttdworkflows "github.com/thetradedesk/ttd-workflows-go"
 )
 
 func main() {
 	ctx := context.Background()
 
-	s := ttdworkflowsgo.New(
-		ttdworkflowsgo.WithServer("sandbox"),
-		ttdworkflowsgo.WithSecurity(os.Getenv("WORKFLOWS_TTD_AUTH")),
+	s := ttdworkflows.New(
+		ttdworkflows.WithServer("sandbox"),
+		ttdworkflows.WithSecurity(os.Getenv("WORKFLOWS_TTD_AUTH")),
 	)
 
 	res, err := s.JobStatus.Get(ctx, <id>)
@@ -145,7 +145,7 @@ import (
 	"fmt"
 	"log"
 	"os"
-	ttdworkflowsgo "github.com/thetradedesk/ttd-workflows-go"
+	ttdworkflows "github.com/thetradedesk/ttd-workflows-go"
 	"github.com/thetradedesk/ttd-workflows-go/models/components"
 	"github.com/thetradedesk/ttd-workflows-go/types"
 )
@@ -153,9 +153,9 @@ import (
 func main() {
 	ctx := context.Background()
 
-	s := ttdworkflowsgo.New(
-		ttdworkflowsgo.WithServer("sandbox"),
-		ttdworkflowsgo.WithSecurity(os.Getenv("WORKFLOWS_TTD_AUTH")),
+	s := ttdworkflows.New(
+		ttdworkflows.WithServer("sandbox"),
+		ttdworkflows.WithSecurity(os.Getenv("WORKFLOWS_TTD_AUTH")),
 	)
 
 	var seedID = "<id>"
@@ -168,7 +168,7 @@ func main() {
 			StartDateInUtc: types.MustNewTimeFromString("2026-07-08T10:52:56.944Z"),
 			PrimaryChannel: components.CampaignChannelTypeDooh,
 			PrimaryGoal: components.CampaignWorkflowROIGoalInput{
-				MaximizeReach: ttdworkflowsgo.Bool(true),
+				MaximizeReach: ttdworkflows.Bool(true),
 			},
 		},
 	})
@@ -200,16 +200,16 @@ import (
 	"log"
 	"os"
 
-	ttdworkflowsgo "github.com/thetradedesk/ttd-workflows-go"
+	ttdworkflows "github.com/thetradedesk/ttd-workflows-go"
 	"github.com/thetradedesk/ttd-workflows-go/models/components"
 )
 
 func main() {
 	ctx := context.Background()
 
-	s := ttdworkflowsgo.New(
-		ttdworkflowsgo.WithServer("sandbox"),
-		ttdworkflowsgo.WithSecurity(os.Getenv("WORKFLOWS_TTD_AUTH")),
+	s := ttdworkflows.New(
+		ttdworkflows.WithServer("sandbox"),
+		ttdworkflows.WithSecurity(os.Getenv("WORKFLOWS_TTD_AUTH")),
 	)
 
 	query := `
@@ -255,16 +255,16 @@ import (
 	"log"
 	"os"
 
-	ttdworkflowsgo "github.com/thetradedesk/ttd-workflows-go"
+	ttdworkflows "github.com/thetradedesk/ttd-workflows-go"
 	"github.com/thetradedesk/ttd-workflows-go/models/components"
 )
 
 func main() {
 	ctx := context.Background()
 
-	s := ttdworkflowsgo.New(
-		ttdworkflowsgo.WithServer("sandbox"),
-		ttdworkflowsgo.WithSecurity(os.Getenv("WORKFLOWS_TTD_AUTH")),
+	s := ttdworkflows.New(
+		ttdworkflows.WithServer("sandbox"),
+		ttdworkflows.WithSecurity(os.Getenv("WORKFLOWS_TTD_AUTH")),
 	)
 
 	query := `
@@ -332,15 +332,15 @@ import (
 	"log"
 	"os"
 
-	ttdworkflowsgo "github.com/thetradedesk/ttd-workflows-go"
+	ttdworkflows "github.com/thetradedesk/ttd-workflows-go"
 )
 
 func main() {
 	ctx := context.Background()
 
-	s := ttdworkflowsgo.New(
-		ttdworkflowsgo.WithServer("sandbox"),
-		ttdworkflowsgo.WithSecurity(os.Getenv("WORKFLOWS_TTD_AUTH")),
+	s := ttdworkflows.New(
+		ttdworkflows.WithServer("sandbox"),
+		ttdworkflows.WithSecurity(os.Getenv("WORKFLOWS_TTD_AUTH")),
 	)
 
 	res, err := s.Jobs.GetStatus(ctx, "<id>")
