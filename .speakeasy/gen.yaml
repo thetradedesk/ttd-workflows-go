@@ -22,7 +22,7 @@ generation:
     generateNewTests: false
     skipResponseBodyAssertions: false
 go:
-  version: 0.9.3
+  version: 0.10.0
   additionalDependencies: {}
   allowUnknownFieldsInWeakUnions: false
   baseErrorName: WorkflowsError
@@ -45,7 +45,7 @@ go:
     url: https://mit-license.org/
   maxMethodParams: 999
   methodArguments: infer-optional-args
-  modulePath: "github.com/thetradedesk/ttd-workflows-go"
+  modulePath: github.com/thetradedesk/ttd-workflows-go
   outputModelSuffix: output
   responseFormat: envelope-http
-  sdkPackageName: "ttdworkflows"
+  sdkPackageName: ttdworkflows
