@@ -3,10 +3,10 @@ id: 75c617ef-9432-415b-944c-cb27049cc9bc
 management:
   docChecksum: 567044baaec3794690ca2c1f6094829c
   docVersion: v1
-  speakeasyVersion: 1.592.1
-  generationVersion: 2.667.0
-  releaseVersion: 0.9.3
-  configChecksum: 7c8f0c727abceca8c6ca9854042c64aa
+  speakeasyVersion: 1.597.0
+  generationVersion: 2.673.2
+  releaseVersion: 0.10.0
+  configChecksum: aeb7c213136aa89a57608e0bae41fd9d
   repoURL: https://github.com/thetradedesk/ttd-workflows-go.git
   installationURL: https://github.com/thetradedesk/ttd-workflows-go
 features:
@@ -14,7 +14,7 @@ features:
     additionalDependencies: 0.1.0
     additionalProperties: 0.1.2
     constsAndDefaults: 0.1.12
-    core: 3.9.1
+    core: 3.9.3
     defaultEnabledRetries: 0.2.0
     envVarSecurityUsage: 0.3.2
     flattening: 2.81.1
@@ -28,7 +28,7 @@ features:
     nameOverrides: 2.81.2
     nullables: 0.1.1
     responseFormat: 0.1.2
-    retries: 2.83.3
+    retries: 2.84.0
     sdkHooks: 0.2.0
     serverIDs: 2.81.1
 generatedFiles:
