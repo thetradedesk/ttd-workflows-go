@@ -45,8 +45,7 @@ go:
     url: https://mit-license.org/
   maxMethodParams: 999
   methodArguments: infer-optional-args
-  modulePath: ""
+  modulePath: "github.com/thetradedesk/ttd-workflows-go"
   outputModelSuffix: output
-  packageName: github.com/thetradedesk/ttd-workflows-go
   responseFormat: envelope-http
-  sdkPackageName: ""
+  sdkPackageName: "ttdworkflows"
