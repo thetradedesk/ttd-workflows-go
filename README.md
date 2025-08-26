@@ -552,7 +552,7 @@ func main() {
 
 ### [Jobs](docs/sdks/jobs/README.md)
 
-* [GetStatus](docs/sdks/jobs/README.md#getstatus) - Get the status of a previously submitted GraphQL query job.
+* [GetStatus](docs/sdks/jobs/README.md#getstatus) - Get the status of a previously submitted GraphQL query job
 
 ### [JobStatus](docs/sdks/jobstatus/README.md)
 

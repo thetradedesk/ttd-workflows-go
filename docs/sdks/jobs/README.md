@@ -5,7 +5,7 @@
 
 ### Available Operations
 
-* [GetStatus](#getstatus) - Get the status of a previously submitted GraphQL query job.
+* [GetStatus](#getstatus) - Get the status of a previously submitted GraphQL query job
 
 ## GetStatus
 
