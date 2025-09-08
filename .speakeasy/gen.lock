@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 75c617ef-9432-415b-944c-cb27049cc9bc
 management:
-  docChecksum: 567044baaec3794690ca2c1f6094829c
+  docChecksum: 6c8466dd53469823b9c09b1da5c90506
   docVersion: v1
-  speakeasyVersion: 1.597.0
-  generationVersion: 2.673.2
-  releaseVersion: 0.10.0
-  configChecksum: aeb7c213136aa89a57608e0bae41fd9d
+  speakeasyVersion: 1.611.1
+  generationVersion: 2.694.1
+  releaseVersion: 0.10.1
+  configChecksum: 881c3c75acf754239446d06358a5128a
   repoURL: https://github.com/thetradedesk/ttd-workflows-go.git
   installationURL: https://github.com/thetradedesk/ttd-workflows-go
 features:
@@ -14,7 +14,7 @@ features:
     additionalDependencies: 0.1.0
     additionalProperties: 0.1.2
     constsAndDefaults: 0.1.12
-    core: 3.9.3
+    core: 3.9.6
     defaultEnabledRetries: 0.2.0
     envVarSecurityUsage: 0.3.2
     flattening: 2.81.1
@@ -28,7 +28,7 @@ features:
     nameOverrides: 2.81.2
     nullables: 0.1.1
     responseFormat: 0.1.2
-    retries: 2.84.0
+    retries: 2.84.2
     sdkHooks: 0.2.0
     serverIDs: 2.81.1
 generatedFiles:
@@ -340,6 +340,8 @@ examples:
           application/json: {"campaign": {"id": "<id>", "name": "<value>", "campaignGroupId": 960101, "description": "commandeer following afore ghost schematise lest understated brr happily lined", "startDate": "2025-05-13T19:59:29.421Z", "endDate": "2025-09-17T08:16:44.433Z", "timeZone": "Africa/Lome", "customCPAClickWeight": 1725.54, "customCPAViewthroughWeight": 418.34, "customCPAType": "PixelWeighting", "impressionsOnlyBudgetingCpm": 3266.9, "primaryChannel": "Display", "primaryGoal": "<value>", "seedId": "<id>", "conversionReportingColumnsCount": 748798, "flights": [{"id": "<id>", "startDateInclusiveUTC": "2024-03-12T14:53:08.741Z", "endDateExclusiveUTC": "2024-07-12T11:11:36.420Z", "budgetInAdvertiserCurrency": 6585.86, "budgetInImpressions": 83962, "dailyTargetInAdvertiserCurrency": 2584.64, "dailyTargetInImpressions": 910113}]}, "adGroups": [{"id": "<id>", "name": "<value>", "campaignId": "<id>", "isEnabled": false, "description": "hence questioningly punctual austere beard around circumnavigate behind aboard", "programmaticGuaranteedPrivateContractId": null, "channel": "NativeVideo", "funnelLocation": "Consideration", "budget": {"allocationType": "Maximum", "budgetInAdvertiserCurrency": 4437.6, "budgetInImpressions": 663120, "dailyTargetInAdvertiserCurrency": 3765.21, "dailyTargetInImpressions": 111869}, "baseBidCPMInAdvertiserCurrency": 9802.01, "maxBidCPMInAdvertiserCurrency": 1646.69, "audienceTargeting": {"audienceId": "<id>", "audienceAcceleratorExclusionsEnabled": false, "audienceBoosterEnabled": false, "audienceExcluderEnabled": false, "audiencePredictorEnabled": false, "crossDeviceVendorListForAudience": [502213, 470177, 420897], "recencyExclusionWindowInMinutes": 4504, "targetTrackableUsersEnabled": true, "useMcIdAsPrimary": true}, "roiGoal": {"maximizeReach": false, "maximizeLtvIncrementalReach": false, "cpcInAdvertiserCurrency": 6741.01, "ctrInPercent": 982.47, "nielsenOTPInPercent": 7021.23, "cpaInAdvertiserCurrency": 7395.27, "returnOnAdSpendPercent": 744.23, "vcrInPercent": 3686.93, "viewabilityInPercent": 3897.27, "vcpmInAdvertiserCurrency": 4522.49, "cpcvInAdvertiserCurrency": 2016.93, "miaozhenOTPInPercent": 3516.78}, "creativeIds": ["<value 1>"], "associatedBidLists": [{"bidListId": null, "isEnabled": false, "isDefaultForDimension": true}], "flights": null, "koaOptimizationSettings": {"areFutureKoaFeaturesEnabled": false, "predictiveClearingEnabled": false}, "comscoreSettings": {"isEnabled": false, "populationId": null, "demographicMemberIds": [339950, 676551], "mobileDemographicMemberIds": []}, "contractTargeting": {"allowOpenMarketBiddingWhenTargetingContracts": false}, "dimensionalBiddingAutoOptimizationSettings": [["HasTVQualityIndexRange"], [], ["HasDoubleVerifyBotAvoidanceCategoryId"]], "isUseClicksAsConversionsEnabled": true, "isUseSecondaryConversionsEnabled": true, "nielsenTrackingAttributes": {"enhancedReportingOption": "Audience", "gender": "Female", "startAge": "TwentyOne", "endAge": "SixtyFour", "countries": ["<value 1>", "<value 2>"]}}]}
         "400":
           application/json: {"type": "<value>", "title": "<value>", "status": 395871, "detail": "<value>", "instance": "<value>"}
+        "200":
+          application/json: {"campaign": {"id": "<id>", "name": null, "campaignGroupId": 960101, "description": "authorized equate pfft that bathrobe now monumental", "startDate": "2023-05-29T12:37:28.754Z", "endDate": "2023-01-31T12:57:12.401Z", "timeZone": "Asia/Thimphu", "customCPAClickWeight": 5357.4, "customCPAViewthroughWeight": 2741.6, "customCPAType": "PixelWeighting", "impressionsOnlyBudgetingCpm": 6819.46, "primaryChannel": "NativeVideo", "primaryGoal": "<value>", "seedId": "<id>", "conversionReportingColumnsCount": 859221, "flights": [{"id": "<id>", "startDateInclusiveUTC": "2023-03-22T18:44:52.808Z", "endDateExclusiveUTC": "2023-11-29T10:22:14.197Z", "budgetInAdvertiserCurrency": 296.01, "budgetInImpressions": 505888, "dailyTargetInAdvertiserCurrency": 1201.6, "dailyTargetInImpressions": 69520}]}, "adGroups": [{"id": "<id>", "name": "<value>", "campaignId": "<id>", "isEnabled": true, "description": "chip schematise hydrant tabletop", "programmaticGuaranteedPrivateContractId": "<id>", "channel": "Audio", "funnelLocation": "None", "budget": {"allocationType": "Fixed", "budgetInAdvertiserCurrency": 2122.11, "budgetInImpressions": 14421, "dailyTargetInAdvertiserCurrency": 6819.33, "dailyTargetInImpressions": 236683}, "baseBidCPMInAdvertiserCurrency": 4043.98, "maxBidCPMInAdvertiserCurrency": 9074.14, "audienceTargeting": {"audienceId": "<id>", "audienceAcceleratorExclusionsEnabled": true, "audienceBoosterEnabled": true, "audienceExcluderEnabled": true, "audiencePredictorEnabled": false, "crossDeviceVendorListForAudience": [695027, 701346, 714268], "recencyExclusionWindowInMinutes": 551180, "targetTrackableUsersEnabled": true, "useMcIdAsPrimary": true}, "roiGoal": {"maximizeReach": false, "maximizeLtvIncrementalReach": true, "cpcInAdvertiserCurrency": 5473.9, "ctrInPercent": 2841.41, "nielsenOTPInPercent": 9824.26, "cpaInAdvertiserCurrency": 9094.99, "returnOnAdSpendPercent": 878.85, "vcrInPercent": null, "viewabilityInPercent": 683.62, "vcpmInAdvertiserCurrency": 8782.74, "cpcvInAdvertiserCurrency": null, "miaozhenOTPInPercent": 7930.85}, "creativeIds": ["<value 1>"], "associatedBidLists": [], "flights": [{"allocationType": "Fixed", "budgetInAdvertiserCurrency": 6824.44, "budgetInImpressions": 712395, "dailyTargetInAdvertiserCurrency": 6233.72, "dailyTargetInImpressions": 843722, "campaignFlightId": 570475, "adGroupId": null}], "koaOptimizationSettings": {"areFutureKoaFeaturesEnabled": false, "predictiveClearingEnabled": true}, "comscoreSettings": {"isEnabled": true, "populationId": 612763, "demographicMemberIds": [46343, 170673, 930570], "mobileDemographicMemberIds": null}, "contractTargeting": {"allowOpenMarketBiddingWhenTargetingContracts": true}, "dimensionalBiddingAutoOptimizationSettings": [["HasIntegralVideoViewabilityCategoryId"], []], "isUseClicksAsConversionsEnabled": true, "isUseSecondaryConversionsEnabled": false, "nielsenTrackingAttributes": {"enhancedReportingOption": "Audience", "gender": "Female", "startAge": "Thirty", "endAge": "ThirtyNine", "countries": ["<value 1>", "<value 2>"]}}]}
   updateCampaign:
     speakeasy-default-update-campaign:
       requestBody:
@@ -367,6 +369,8 @@ examples:
           application/json: {"id": 677445}
         "400":
           application/json: {"type": "<value>", "title": "<value>", "status": 559602, "detail": "<value>", "instance": "<value>"}
+        "200":
+          application/json: {"campaign": {"id": "<id>", "name": "<value>", "campaignGroupId": 201033, "description": "saloon yesterday artistic doing esteemed that over apt partially", "startDate": "2023-02-25T02:45:30.882Z", "endDate": "2025-07-05T10:58:57.755Z", "timeZone": "Asia/Barnaul", "customCPAClickWeight": 7722.13, "customCPAViewthroughWeight": 1971.14, "customCPAType": "PixelWeighting", "impressionsOnlyBudgetingCpm": 6514.48, "primaryChannel": "NativeVideo", "primaryGoal": "<value>", "seedId": "<id>", "conversionReportingColumnsCount": 434209, "flights": [{"id": "<id>", "startDateInclusiveUTC": "2025-06-05T22:25:11.463Z", "endDateExclusiveUTC": "2023-01-11T11:01:46.801Z", "budgetInAdvertiserCurrency": 81.58, "budgetInImpressions": 678490, "dailyTargetInAdvertiserCurrency": 2260.69, "dailyTargetInImpressions": 945903}]}, "adGroups": [{"id": "<id>", "name": "<value>", "campaignId": "<id>", "isEnabled": false, "description": "unabashedly analyse gladly convalesce ascertain", "programmaticGuaranteedPrivateContractId": "<id>", "channel": "NativeDisplay", "funnelLocation": "Conversion", "budget": {"allocationType": "Maximum", "budgetInAdvertiserCurrency": 8509.65, "budgetInImpressions": 559602, "dailyTargetInAdvertiserCurrency": 6000.32, "dailyTargetInImpressions": 480090}, "baseBidCPMInAdvertiserCurrency": 7022.03, "maxBidCPMInAdvertiserCurrency": 3492.85, "audienceTargeting": {"audienceId": "<id>", "audienceAcceleratorExclusionsEnabled": true, "audienceBoosterEnabled": true, "audienceExcluderEnabled": true, "audiencePredictorEnabled": true, "crossDeviceVendorListForAudience": null, "recencyExclusionWindowInMinutes": 641872, "targetTrackableUsersEnabled": false, "useMcIdAsPrimary": true}, "roiGoal": {"maximizeReach": true, "maximizeLtvIncrementalReach": false, "cpcInAdvertiserCurrency": 8789.29, "ctrInPercent": 6097.83, "nielsenOTPInPercent": 97.94, "cpaInAdvertiserCurrency": 4920.96, "returnOnAdSpendPercent": 6036.6, "vcrInPercent": 7367.66, "viewabilityInPercent": 5682.26, "vcpmInAdvertiserCurrency": 2158.66, "cpcvInAdvertiserCurrency": 2909.06, "miaozhenOTPInPercent": null}, "creativeIds": ["<value 1>", "<value 2>", "<value 3>"], "associatedBidLists": [{"bidListId": "<id>", "isEnabled": true, "isDefaultForDimension": false}], "flights": [{"allocationType": "Fixed", "budgetInAdvertiserCurrency": 9067.5, "budgetInImpressions": 116224, "dailyTargetInAdvertiserCurrency": 5091.83, "dailyTargetInImpressions": 932776, "campaignFlightId": 942771, "adGroupId": "<id>"}], "koaOptimizationSettings": {"areFutureKoaFeaturesEnabled": false, "predictiveClearingEnabled": false}, "comscoreSettings": {"isEnabled": false, "populationId": 784781, "demographicMemberIds": [], "mobileDemographicMemberIds": [138240, 326531]}, "contractTargeting": {"allowOpenMarketBiddingWhenTargetingContracts": true}, "dimensionalBiddingAutoOptimizationSettings": [["HasSellerId"], []], "isUseClicksAsConversionsEnabled": true, "isUseSecondaryConversionsEnabled": false, "nielsenTrackingAttributes": {"enhancedReportingOption": "Audience", "gender": "Male", "startAge": "SixtyFive", "endAge": "Twenty", "countries": ["<value 1>", "<value 2>", "<value 3>"]}}]}
   archiveCampaigns:
     speakeasy-default-archive-campaigns:
       parameters:
@@ -458,3 +462,7 @@ examples:
           application/json: {"type": "<value>", "title": "<value>", "status": 378372, "detail": "<value>", "instance": "<value>"}
 examplesVersion: 1.0.2
 generatedTests: {}
+releaseNotes: |
+  ## Go SDK Changes Detected:
+  * `Workflows.Campaigns.CreateCampaign()`:  `response.status[200]` **Added** **Breaking** :warning:
+  * `Workflows.Campaigns.BulkUpdate()`:  `response.status[200]` **Added** **Breaking** :warning:

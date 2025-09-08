@@ -30,7 +30,7 @@ func (c CampaignUpdateWorkflowPrimaryInput) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CampaignUpdateWorkflowPrimaryInput) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &c, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &c, "", false, nil); err != nil {
 		return err
 	}
 	return nil

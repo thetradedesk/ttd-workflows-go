@@ -34,7 +34,7 @@ func (g GraphQlQueryJob) MarshalJSON() ([]byte, error) {
 }
 
 func (g *GraphQlQueryJob) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &g, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &g, "", false, []string{"id", "createdAt", "status", "runtimeErrors"}); err != nil {
 		return err
 	}
 	return nil

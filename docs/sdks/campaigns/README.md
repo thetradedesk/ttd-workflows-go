@@ -707,7 +707,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-    if res.StandardJobSubmitResponse != nil {
+    if res.CampaignPayload != nil {
         // handle response
     }
 }

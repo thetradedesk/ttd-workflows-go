@@ -22,7 +22,7 @@ generation:
     generateNewTests: false
     skipResponseBodyAssertions: false
 go:
-  version: 0.10.0
+  version: 0.10.1
   additionalDependencies: {}
   allowUnknownFieldsInWeakUnions: false
   baseErrorName: WorkflowsError
@@ -47,5 +47,6 @@ go:
   methodArguments: infer-optional-args
   modulePath: github.com/thetradedesk/ttd-workflows-go
   outputModelSuffix: output
+  respectRequiredFields: false
   responseFormat: envelope-http
   sdkPackageName: ttdworkflows
