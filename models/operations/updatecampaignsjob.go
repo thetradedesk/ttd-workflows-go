@@ -10,6 +10,8 @@ type UpdateCampaignsJobResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	// Accepted
 	StandardJobSubmitResponse *components.StandardJobSubmitResponse
+	// OK
+	CampaignPayload *components.CampaignPayload
 }
 
 func (o *UpdateCampaignsJobResponse) GetHTTPMeta() components.HTTPMetadata {
@@ -24,4 +26,11 @@ func (o *UpdateCampaignsJobResponse) GetStandardJobSubmitResponse() *components.
 		return nil
 	}
 	return o.StandardJobSubmitResponse
+}
+
+func (o *UpdateCampaignsJobResponse) GetCampaignPayload() *components.CampaignPayload {
+	if o == nil {
+		return nil
+	}
+	return o.CampaignPayload
 }

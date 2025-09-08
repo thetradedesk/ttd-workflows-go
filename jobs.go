@@ -30,7 +30,7 @@ func newJobs(rootSDK *Workflows, sdkConfig config.SDKConfiguration, hooks *hooks
 	}
 }
 
-// GetStatus - Get the status of a previously submitted GraphQL query job.
+// GetStatus - Get the status of a previously submitted GraphQL query job
 // Use this operation to get a previously submitted GraphQL query job's status and completion percentage.
 // Once a job is complete, this operation will return the URL from which to download the job results.
 func (s *Jobs) GetStatus(ctx context.Context, id string, opts ...operations.Option) (*operations.GetGraphQlQueryJobStatusResponse, error) {

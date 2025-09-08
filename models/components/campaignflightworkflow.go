@@ -22,7 +22,7 @@ func (c CampaignFlightWorkflow) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CampaignFlightWorkflow) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &c, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &c, "", false, []string{"id", "startDateInclusiveUTC", "budgetInAdvertiserCurrency"}); err != nil {
 		return err
 	}
 	return nil
