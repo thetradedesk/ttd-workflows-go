@@ -14,23 +14,23 @@ type UpdateCampaignsJobResponse struct {
 	CampaignPayload *components.CampaignPayload
 }
 
-func (o *UpdateCampaignsJobResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (u *UpdateCampaignsJobResponse) GetHTTPMeta() components.HTTPMetadata {
+	if u == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return u.HTTPMeta
 }
 
-func (o *UpdateCampaignsJobResponse) GetStandardJobSubmitResponse() *components.StandardJobSubmitResponse {
-	if o == nil {
+func (u *UpdateCampaignsJobResponse) GetStandardJobSubmitResponse() *components.StandardJobSubmitResponse {
+	if u == nil {
 		return nil
 	}
-	return o.StandardJobSubmitResponse
+	return u.StandardJobSubmitResponse
 }
 
-func (o *UpdateCampaignsJobResponse) GetCampaignPayload() *components.CampaignPayload {
-	if o == nil {
+func (u *UpdateCampaignsJobResponse) GetCampaignPayload() *components.CampaignPayload {
+	if u == nil {
 		return nil
 	}
-	return o.CampaignPayload
+	return u.CampaignPayload
 }

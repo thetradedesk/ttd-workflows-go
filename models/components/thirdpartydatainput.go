@@ -37,23 +37,23 @@ type ThirdPartyDataInput struct {
 	CallbackInput *WorkflowCallbackInput `json:"callbackInput,omitempty"`
 }
 
-func (o *ThirdPartyDataInput) GetPartnerID() string {
-	if o == nil {
+func (t *ThirdPartyDataInput) GetPartnerID() string {
+	if t == nil {
 		return ""
 	}
-	return o.PartnerID
+	return t.PartnerID
 }
 
-func (o *ThirdPartyDataInput) GetQueryShape() *string {
-	if o == nil {
+func (t *ThirdPartyDataInput) GetQueryShape() *string {
+	if t == nil {
 		return nil
 	}
-	return o.QueryShape
+	return t.QueryShape
 }
 
-func (o *ThirdPartyDataInput) GetCallbackInput() *WorkflowCallbackInput {
-	if o == nil {
+func (t *ThirdPartyDataInput) GetCallbackInput() *WorkflowCallbackInput {
+	if t == nil {
 		return nil
 	}
-	return o.CallbackInput
+	return t.CallbackInput
 }

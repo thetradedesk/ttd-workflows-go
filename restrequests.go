@@ -32,8 +32,9 @@ func newRestRequests(rootSDK *Workflows, sdkConfig config.SDKConfiguration, hook
 }
 
 // Submit a valid REST request
-// This generic operation can be used to execute any valid REST request.
-// To explore the available REST operations, see the [REST API Reference](https://partner.thetradedesk.com/v3/portal/api/doc/ApiReferencePlatform).
+// This generic operation can be used to execute any valid REST request. The results are returned
+// directly when the request is complete. To explore the available REST operations, see the
+// [REST API Reference](https://partner.thetradedesk.com/v3/portal/api/doc/ApiReferencePlatform).
 func (s *RestRequests) Submit(ctx context.Context, request *components.CallRestAPIWorkflowInput, opts ...operations.Option) (*operations.SubmitRestRequestResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -64,7 +65,7 @@ func (s *RestRequests) Submit(ctx context.Context, request *components.CallRestA
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "submitRestRequest",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Request", "json", `request:"mediaType=application/json"`)

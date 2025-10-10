@@ -6,9 +6,9 @@ type Security struct {
 	TTDAuth *string `security:"scheme,type=apiKey,subtype=header,name=TTD-Auth,env=workflows_ttd_auth"`
 }
 
-func (o *Security) GetTTDAuth() *string {
-	if o == nil {
+func (s *Security) GetTTDAuth() *string {
+	if s == nil {
 		return nil
 	}
-	return o.TTDAuth
+	return s.TTDAuth
 }

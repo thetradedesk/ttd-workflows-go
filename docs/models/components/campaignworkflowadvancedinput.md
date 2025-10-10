@@ -1,9 +1,0 @@
-# CampaignWorkflowAdvancedInput
-
-
-## Fields
-
-| Field                                                                                              | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `Flights`                                                                                          | [][components.CampaignWorkflowFlightInput](../../models/components/campaignworkflowflightinput.md) | :heavy_minus_sign:                                                                                 | N/A                                                                                                |
-| `PurchaseOrderNumber`                                                                              | **string*                                                                                          | :heavy_minus_sign:                                                                                 | N/A                                                                                                |

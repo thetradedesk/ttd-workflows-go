@@ -12,16 +12,16 @@ type UpdateAdGroupsJobResponse struct {
 	StandardJobSubmitResponse *components.StandardJobSubmitResponse
 }
 
-func (o *UpdateAdGroupsJobResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (u *UpdateAdGroupsJobResponse) GetHTTPMeta() components.HTTPMetadata {
+	if u == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return u.HTTPMeta
 }
 
-func (o *UpdateAdGroupsJobResponse) GetStandardJobSubmitResponse() *components.StandardJobSubmitResponse {
-	if o == nil {
+func (u *UpdateAdGroupsJobResponse) GetStandardJobSubmitResponse() *components.StandardJobSubmitResponse {
+	if u == nil {
 		return nil
 	}
-	return o.StandardJobSubmitResponse
+	return u.StandardJobSubmitResponse
 }

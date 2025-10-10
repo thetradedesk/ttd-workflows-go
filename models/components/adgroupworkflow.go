@@ -28,163 +28,163 @@ type AdGroupWorkflow struct {
 	NielsenTrackingAttributes                  *AdGroupNielsenTrackingAttributes `json:"nielsenTrackingAttributes,omitempty"`
 }
 
-func (o *AdGroupWorkflow) GetID() *string {
-	if o == nil {
+func (a *AdGroupWorkflow) GetID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AdGroupWorkflow) GetName() *string {
-	if o == nil {
+func (a *AdGroupWorkflow) GetName() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Name
+	return a.Name
 }
 
-func (o *AdGroupWorkflow) GetCampaignID() *string {
-	if o == nil {
+func (a *AdGroupWorkflow) GetCampaignID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.CampaignID
+	return a.CampaignID
 }
 
-func (o *AdGroupWorkflow) GetIsEnabled() bool {
-	if o == nil {
+func (a *AdGroupWorkflow) GetIsEnabled() bool {
+	if a == nil {
 		return false
 	}
-	return o.IsEnabled
+	return a.IsEnabled
 }
 
-func (o *AdGroupWorkflow) GetDescription() *string {
-	if o == nil {
+func (a *AdGroupWorkflow) GetDescription() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Description
+	return a.Description
 }
 
-func (o *AdGroupWorkflow) GetProgrammaticGuaranteedPrivateContractID() *string {
-	if o == nil {
+func (a *AdGroupWorkflow) GetProgrammaticGuaranteedPrivateContractID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ProgrammaticGuaranteedPrivateContractID
+	return a.ProgrammaticGuaranteedPrivateContractID
 }
 
-func (o *AdGroupWorkflow) GetChannel() AdGroupChannel {
-	if o == nil {
+func (a *AdGroupWorkflow) GetChannel() AdGroupChannel {
+	if a == nil {
 		return AdGroupChannel("")
 	}
-	return o.Channel
+	return a.Channel
 }
 
-func (o *AdGroupWorkflow) GetFunnelLocation() AdGroupFunnelLocation {
-	if o == nil {
+func (a *AdGroupWorkflow) GetFunnelLocation() AdGroupFunnelLocation {
+	if a == nil {
 		return AdGroupFunnelLocation("")
 	}
-	return o.FunnelLocation
+	return a.FunnelLocation
 }
 
-func (o *AdGroupWorkflow) GetBudget() AdGroupBudget {
-	if o == nil {
+func (a *AdGroupWorkflow) GetBudget() AdGroupBudget {
+	if a == nil {
 		return AdGroupBudget{}
 	}
-	return o.Budget
+	return a.Budget
 }
 
-func (o *AdGroupWorkflow) GetBaseBidCPMInAdvertiserCurrency() *float64 {
-	if o == nil {
+func (a *AdGroupWorkflow) GetBaseBidCPMInAdvertiserCurrency() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.BaseBidCPMInAdvertiserCurrency
+	return a.BaseBidCPMInAdvertiserCurrency
 }
 
-func (o *AdGroupWorkflow) GetMaxBidCPMInAdvertiserCurrency() *float64 {
-	if o == nil {
+func (a *AdGroupWorkflow) GetMaxBidCPMInAdvertiserCurrency() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.MaxBidCPMInAdvertiserCurrency
+	return a.MaxBidCPMInAdvertiserCurrency
 }
 
-func (o *AdGroupWorkflow) GetAudienceTargeting() *AdGroupAudienceTargeting {
-	if o == nil {
+func (a *AdGroupWorkflow) GetAudienceTargeting() *AdGroupAudienceTargeting {
+	if a == nil {
 		return nil
 	}
-	return o.AudienceTargeting
+	return a.AudienceTargeting
 }
 
-func (o *AdGroupWorkflow) GetRoiGoal() AdGroupROIGoal {
-	if o == nil {
+func (a *AdGroupWorkflow) GetRoiGoal() AdGroupROIGoal {
+	if a == nil {
 		return AdGroupROIGoal{}
 	}
-	return o.RoiGoal
+	return a.RoiGoal
 }
 
-func (o *AdGroupWorkflow) GetCreativeIds() []string {
-	if o == nil {
+func (a *AdGroupWorkflow) GetCreativeIds() []string {
+	if a == nil {
 		return nil
 	}
-	return o.CreativeIds
+	return a.CreativeIds
 }
 
-func (o *AdGroupWorkflow) GetAssociatedBidLists() []AdGroupAssociateBidList {
-	if o == nil {
+func (a *AdGroupWorkflow) GetAssociatedBidLists() []AdGroupAssociateBidList {
+	if a == nil {
 		return nil
 	}
-	return o.AssociatedBidLists
+	return a.AssociatedBidLists
 }
 
-func (o *AdGroupWorkflow) GetFlights() []AdGroupFlight {
-	if o == nil {
+func (a *AdGroupWorkflow) GetFlights() []AdGroupFlight {
+	if a == nil {
 		return nil
 	}
-	return o.Flights
+	return a.Flights
 }
 
-func (o *AdGroupWorkflow) GetKoaOptimizationSettings() *AdGroupKoaOptimizationSettings {
-	if o == nil {
+func (a *AdGroupWorkflow) GetKoaOptimizationSettings() *AdGroupKoaOptimizationSettings {
+	if a == nil {
 		return nil
 	}
-	return o.KoaOptimizationSettings
+	return a.KoaOptimizationSettings
 }
 
-func (o *AdGroupWorkflow) GetComscoreSettings() AdGroupComscoreSettings {
-	if o == nil {
+func (a *AdGroupWorkflow) GetComscoreSettings() AdGroupComscoreSettings {
+	if a == nil {
 		return AdGroupComscoreSettings{}
 	}
-	return o.ComscoreSettings
+	return a.ComscoreSettings
 }
 
-func (o *AdGroupWorkflow) GetContractTargeting() AdGroupContractTargeting {
-	if o == nil {
+func (a *AdGroupWorkflow) GetContractTargeting() AdGroupContractTargeting {
+	if a == nil {
 		return AdGroupContractTargeting{}
 	}
-	return o.ContractTargeting
+	return a.ContractTargeting
 }
 
-func (o *AdGroupWorkflow) GetDimensionalBiddingAutoOptimizationSettings() [][]DimensionalBiddingDimensions {
-	if o == nil {
+func (a *AdGroupWorkflow) GetDimensionalBiddingAutoOptimizationSettings() [][]DimensionalBiddingDimensions {
+	if a == nil {
 		return nil
 	}
-	return o.DimensionalBiddingAutoOptimizationSettings
+	return a.DimensionalBiddingAutoOptimizationSettings
 }
 
-func (o *AdGroupWorkflow) GetIsUseClicksAsConversionsEnabled() bool {
-	if o == nil {
+func (a *AdGroupWorkflow) GetIsUseClicksAsConversionsEnabled() bool {
+	if a == nil {
 		return false
 	}
-	return o.IsUseClicksAsConversionsEnabled
+	return a.IsUseClicksAsConversionsEnabled
 }
 
-func (o *AdGroupWorkflow) GetIsUseSecondaryConversionsEnabled() bool {
-	if o == nil {
+func (a *AdGroupWorkflow) GetIsUseSecondaryConversionsEnabled() bool {
+	if a == nil {
 		return false
 	}
-	return o.IsUseSecondaryConversionsEnabled
+	return a.IsUseSecondaryConversionsEnabled
 }
 
-func (o *AdGroupWorkflow) GetNielsenTrackingAttributes() *AdGroupNielsenTrackingAttributes {
-	if o == nil {
+func (a *AdGroupWorkflow) GetNielsenTrackingAttributes() *AdGroupNielsenTrackingAttributes {
+	if a == nil {
 		return nil
 	}
-	return o.NielsenTrackingAttributes
+	return a.NielsenTrackingAttributes
 }

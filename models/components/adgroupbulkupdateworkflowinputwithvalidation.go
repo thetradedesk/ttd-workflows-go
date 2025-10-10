@@ -8,23 +8,23 @@ type AdGroupBulkUpdateWorkflowInputWithValidation struct {
 	CallbackInput     *WorkflowCallbackInput       `json:"callbackInput,omitempty"`
 }
 
-func (o *AdGroupBulkUpdateWorkflowInputWithValidation) GetInput() []AdGroupUpdateWorkflowInput {
-	if o == nil {
+func (a *AdGroupBulkUpdateWorkflowInputWithValidation) GetInput() []AdGroupUpdateWorkflowInput {
+	if a == nil {
 		return nil
 	}
-	return o.Input
+	return a.Input
 }
 
-func (o *AdGroupBulkUpdateWorkflowInputWithValidation) GetValidateInputOnly() *bool {
-	if o == nil {
+func (a *AdGroupBulkUpdateWorkflowInputWithValidation) GetValidateInputOnly() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.ValidateInputOnly
+	return a.ValidateInputOnly
 }
 
-func (o *AdGroupBulkUpdateWorkflowInputWithValidation) GetCallbackInput() *WorkflowCallbackInput {
-	if o == nil {
+func (a *AdGroupBulkUpdateWorkflowInputWithValidation) GetCallbackInput() *WorkflowCallbackInput {
+	if a == nil {
 		return nil
 	}
-	return o.CallbackInput
+	return a.CallbackInput
 }

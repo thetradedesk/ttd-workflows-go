@@ -17,86 +17,86 @@ type AdGroupROIGoal struct {
 	MiaozhenOTPInPercent        *float64 `json:"miaozhenOTPInPercent,omitempty"`
 }
 
-func (o *AdGroupROIGoal) GetMaximizeReach() *bool {
-	if o == nil {
+func (a *AdGroupROIGoal) GetMaximizeReach() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.MaximizeReach
+	return a.MaximizeReach
 }
 
-func (o *AdGroupROIGoal) GetMaximizeLtvIncrementalReach() *bool {
-	if o == nil {
+func (a *AdGroupROIGoal) GetMaximizeLtvIncrementalReach() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.MaximizeLtvIncrementalReach
+	return a.MaximizeLtvIncrementalReach
 }
 
-func (o *AdGroupROIGoal) GetCpcInAdvertiserCurrency() *float64 {
-	if o == nil {
+func (a *AdGroupROIGoal) GetCpcInAdvertiserCurrency() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.CpcInAdvertiserCurrency
+	return a.CpcInAdvertiserCurrency
 }
 
-func (o *AdGroupROIGoal) GetCtrInPercent() *float64 {
-	if o == nil {
+func (a *AdGroupROIGoal) GetCtrInPercent() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.CtrInPercent
+	return a.CtrInPercent
 }
 
-func (o *AdGroupROIGoal) GetNielsenOTPInPercent() *float64 {
-	if o == nil {
+func (a *AdGroupROIGoal) GetNielsenOTPInPercent() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.NielsenOTPInPercent
+	return a.NielsenOTPInPercent
 }
 
-func (o *AdGroupROIGoal) GetCpaInAdvertiserCurrency() *float64 {
-	if o == nil {
+func (a *AdGroupROIGoal) GetCpaInAdvertiserCurrency() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.CpaInAdvertiserCurrency
+	return a.CpaInAdvertiserCurrency
 }
 
-func (o *AdGroupROIGoal) GetReturnOnAdSpendPercent() *float64 {
-	if o == nil {
+func (a *AdGroupROIGoal) GetReturnOnAdSpendPercent() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.ReturnOnAdSpendPercent
+	return a.ReturnOnAdSpendPercent
 }
 
-func (o *AdGroupROIGoal) GetVcrInPercent() *float64 {
-	if o == nil {
+func (a *AdGroupROIGoal) GetVcrInPercent() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.VcrInPercent
+	return a.VcrInPercent
 }
 
-func (o *AdGroupROIGoal) GetViewabilityInPercent() *float64 {
-	if o == nil {
+func (a *AdGroupROIGoal) GetViewabilityInPercent() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.ViewabilityInPercent
+	return a.ViewabilityInPercent
 }
 
-func (o *AdGroupROIGoal) GetVcpmInAdvertiserCurrency() *float64 {
-	if o == nil {
+func (a *AdGroupROIGoal) GetVcpmInAdvertiserCurrency() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.VcpmInAdvertiserCurrency
+	return a.VcpmInAdvertiserCurrency
 }
 
-func (o *AdGroupROIGoal) GetCpcvInAdvertiserCurrency() *float64 {
-	if o == nil {
+func (a *AdGroupROIGoal) GetCpcvInAdvertiserCurrency() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.CpcvInAdvertiserCurrency
+	return a.CpcvInAdvertiserCurrency
 }
 
-func (o *AdGroupROIGoal) GetMiaozhenOTPInPercent() *float64 {
-	if o == nil {
+func (a *AdGroupROIGoal) GetMiaozhenOTPInPercent() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.MiaozhenOTPInPercent
+	return a.MiaozhenOTPInPercent
 }

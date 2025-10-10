@@ -14,65 +14,65 @@ type AdGroupAudienceTargeting struct {
 	UseMcIDAsPrimary                     bool    `json:"useMcIdAsPrimary"`
 }
 
-func (o *AdGroupAudienceTargeting) GetAudienceID() *string {
-	if o == nil {
+func (a *AdGroupAudienceTargeting) GetAudienceID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.AudienceID
+	return a.AudienceID
 }
 
-func (o *AdGroupAudienceTargeting) GetAudienceAcceleratorExclusionsEnabled() bool {
-	if o == nil {
+func (a *AdGroupAudienceTargeting) GetAudienceAcceleratorExclusionsEnabled() bool {
+	if a == nil {
 		return false
 	}
-	return o.AudienceAcceleratorExclusionsEnabled
+	return a.AudienceAcceleratorExclusionsEnabled
 }
 
-func (o *AdGroupAudienceTargeting) GetAudienceBoosterEnabled() bool {
-	if o == nil {
+func (a *AdGroupAudienceTargeting) GetAudienceBoosterEnabled() bool {
+	if a == nil {
 		return false
 	}
-	return o.AudienceBoosterEnabled
+	return a.AudienceBoosterEnabled
 }
 
-func (o *AdGroupAudienceTargeting) GetAudienceExcluderEnabled() bool {
-	if o == nil {
+func (a *AdGroupAudienceTargeting) GetAudienceExcluderEnabled() bool {
+	if a == nil {
 		return false
 	}
-	return o.AudienceExcluderEnabled
+	return a.AudienceExcluderEnabled
 }
 
-func (o *AdGroupAudienceTargeting) GetAudiencePredictorEnabled() bool {
-	if o == nil {
+func (a *AdGroupAudienceTargeting) GetAudiencePredictorEnabled() bool {
+	if a == nil {
 		return false
 	}
-	return o.AudiencePredictorEnabled
+	return a.AudiencePredictorEnabled
 }
 
-func (o *AdGroupAudienceTargeting) GetCrossDeviceVendorListForAudience() []int {
-	if o == nil {
+func (a *AdGroupAudienceTargeting) GetCrossDeviceVendorListForAudience() []int {
+	if a == nil {
 		return nil
 	}
-	return o.CrossDeviceVendorListForAudience
+	return a.CrossDeviceVendorListForAudience
 }
 
-func (o *AdGroupAudienceTargeting) GetRecencyExclusionWindowInMinutes() int {
-	if o == nil {
+func (a *AdGroupAudienceTargeting) GetRecencyExclusionWindowInMinutes() int {
+	if a == nil {
 		return 0
 	}
-	return o.RecencyExclusionWindowInMinutes
+	return a.RecencyExclusionWindowInMinutes
 }
 
-func (o *AdGroupAudienceTargeting) GetTargetTrackableUsersEnabled() bool {
-	if o == nil {
+func (a *AdGroupAudienceTargeting) GetTargetTrackableUsersEnabled() bool {
+	if a == nil {
 		return false
 	}
-	return o.TargetTrackableUsersEnabled
+	return a.TargetTrackableUsersEnabled
 }
 
-func (o *AdGroupAudienceTargeting) GetUseMcIDAsPrimary() bool {
-	if o == nil {
+func (a *AdGroupAudienceTargeting) GetUseMcIDAsPrimary() bool {
+	if a == nil {
 		return false
 	}
-	return o.UseMcIDAsPrimary
+	return a.UseMcIDAsPrimary
 }

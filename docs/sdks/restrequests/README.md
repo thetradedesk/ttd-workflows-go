@@ -9,8 +9,9 @@
 
 ## Submit
 
-This generic operation can be used to execute any valid REST request.
-To explore the available REST operations, see the [REST API Reference](https://partner.thetradedesk.com/v3/portal/api/doc/ApiReferencePlatform).
+This generic operation can be used to execute any valid REST request. The results are returned
+directly when the request is complete. To explore the available REST operations, see the
+[REST API Reference](https://partner.thetradedesk.com/v3/portal/api/doc/ApiReferencePlatform).
 
 ### Example Usage
 
@@ -35,8 +36,8 @@ func main() {
 
     res, err := s.RestRequests.Submit(ctx, &components.CallRestAPIWorkflowInput{
         MethodType: components.RestAPIMethodTypeGet,
-        Endpoint: ttdworkflows.String("<value>"),
-        DataBody: ttdworkflows.String("<value>"),
+        Endpoint: ttdworkflows.Pointer("<value>"),
+        DataBody: ttdworkflows.Pointer("<value>"),
     })
     if err != nil {
         log.Fatal(err)

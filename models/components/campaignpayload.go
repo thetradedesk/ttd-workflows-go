@@ -7,16 +7,16 @@ type CampaignPayload struct {
 	AdGroups []AdGroupWorkflow `json:"adGroups,omitempty"`
 }
 
-func (o *CampaignPayload) GetCampaign() *CampaignWorkflow {
-	if o == nil {
+func (c *CampaignPayload) GetCampaign() *CampaignWorkflow {
+	if c == nil {
 		return nil
 	}
-	return o.Campaign
+	return c.Campaign
 }
 
-func (o *CampaignPayload) GetAdGroups() []AdGroupWorkflow {
-	if o == nil {
+func (c *CampaignPayload) GetAdGroups() []AdGroupWorkflow {
+	if c == nil {
 		return nil
 	}
-	return o.AdGroups
+	return c.AdGroups
 }

@@ -24,6 +24,8 @@ type CampaignWorkflow struct {
 	SeedID                          *string                  `json:"seedId,omitempty"`
 	ConversionReportingColumnsCount *int                     `json:"conversionReportingColumnsCount,omitempty"`
 	Flights                         []CampaignFlightWorkflow `json:"flights,omitempty"`
+	SecondaryGoal                   *string                  `json:"secondaryGoal,omitempty"`
+	TertiaryGoal                    *string                  `json:"tertiaryGoal,omitempty"`
 }
 
 func (c CampaignWorkflow) MarshalJSON() ([]byte, error) {
@@ -31,120 +33,134 @@ func (c CampaignWorkflow) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CampaignWorkflow) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &c, "", false, []string{"id"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &c, "", false, nil); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *CampaignWorkflow) GetID() *string {
-	if o == nil {
+func (c *CampaignWorkflow) GetID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ID
+	return c.ID
 }
 
-func (o *CampaignWorkflow) GetName() *string {
-	if o == nil {
+func (c *CampaignWorkflow) GetName() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Name
+	return c.Name
 }
 
-func (o *CampaignWorkflow) GetCampaignGroupID() *int64 {
-	if o == nil {
+func (c *CampaignWorkflow) GetCampaignGroupID() *int64 {
+	if c == nil {
 		return nil
 	}
-	return o.CampaignGroupID
+	return c.CampaignGroupID
 }
 
-func (o *CampaignWorkflow) GetDescription() *string {
-	if o == nil {
+func (c *CampaignWorkflow) GetDescription() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Description
+	return c.Description
 }
 
-func (o *CampaignWorkflow) GetStartDate() *time.Time {
-	if o == nil {
+func (c *CampaignWorkflow) GetStartDate() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.StartDate
+	return c.StartDate
 }
 
-func (o *CampaignWorkflow) GetEndDate() *time.Time {
-	if o == nil {
+func (c *CampaignWorkflow) GetEndDate() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.EndDate
+	return c.EndDate
 }
 
-func (o *CampaignWorkflow) GetTimeZone() *string {
-	if o == nil {
+func (c *CampaignWorkflow) GetTimeZone() *string {
+	if c == nil {
 		return nil
 	}
-	return o.TimeZone
+	return c.TimeZone
 }
 
-func (o *CampaignWorkflow) GetCustomCPAClickWeight() *float64 {
-	if o == nil {
+func (c *CampaignWorkflow) GetCustomCPAClickWeight() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.CustomCPAClickWeight
+	return c.CustomCPAClickWeight
 }
 
-func (o *CampaignWorkflow) GetCustomCPAViewthroughWeight() *float64 {
-	if o == nil {
+func (c *CampaignWorkflow) GetCustomCPAViewthroughWeight() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.CustomCPAViewthroughWeight
+	return c.CustomCPAViewthroughWeight
 }
 
-func (o *CampaignWorkflow) GetCustomCPAType() *CustomCPAType {
-	if o == nil {
+func (c *CampaignWorkflow) GetCustomCPAType() *CustomCPAType {
+	if c == nil {
 		return nil
 	}
-	return o.CustomCPAType
+	return c.CustomCPAType
 }
 
-func (o *CampaignWorkflow) GetImpressionsOnlyBudgetingCpm() *float64 {
-	if o == nil {
+func (c *CampaignWorkflow) GetImpressionsOnlyBudgetingCpm() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.ImpressionsOnlyBudgetingCpm
+	return c.ImpressionsOnlyBudgetingCpm
 }
 
-func (o *CampaignWorkflow) GetPrimaryChannel() *CampaignChannelType {
-	if o == nil {
+func (c *CampaignWorkflow) GetPrimaryChannel() *CampaignChannelType {
+	if c == nil {
 		return nil
 	}
-	return o.PrimaryChannel
+	return c.PrimaryChannel
 }
 
-func (o *CampaignWorkflow) GetPrimaryGoal() *string {
-	if o == nil {
+func (c *CampaignWorkflow) GetPrimaryGoal() *string {
+	if c == nil {
 		return nil
 	}
-	return o.PrimaryGoal
+	return c.PrimaryGoal
 }
 
-func (o *CampaignWorkflow) GetSeedID() *string {
-	if o == nil {
+func (c *CampaignWorkflow) GetSeedID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.SeedID
+	return c.SeedID
 }
 
-func (o *CampaignWorkflow) GetConversionReportingColumnsCount() *int {
-	if o == nil {
+func (c *CampaignWorkflow) GetConversionReportingColumnsCount() *int {
+	if c == nil {
 		return nil
 	}
-	return o.ConversionReportingColumnsCount
+	return c.ConversionReportingColumnsCount
 }
 
-func (o *CampaignWorkflow) GetFlights() []CampaignFlightWorkflow {
-	if o == nil {
+func (c *CampaignWorkflow) GetFlights() []CampaignFlightWorkflow {
+	if c == nil {
 		return nil
 	}
-	return o.Flights
+	return c.Flights
+}
+
+func (c *CampaignWorkflow) GetSecondaryGoal() *string {
+	if c == nil {
+		return nil
+	}
+	return c.SecondaryGoal
+}
+
+func (c *CampaignWorkflow) GetTertiaryGoal() *string {
+	if c == nil {
+		return nil
+	}
+	return c.TertiaryGoal
 }

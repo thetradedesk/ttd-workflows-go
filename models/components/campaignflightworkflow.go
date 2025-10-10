@@ -22,57 +22,57 @@ func (c CampaignFlightWorkflow) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CampaignFlightWorkflow) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &c, "", false, []string{"id", "startDateInclusiveUTC", "budgetInAdvertiserCurrency"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &c, "", false, []string{"startDateInclusiveUTC", "budgetInAdvertiserCurrency"}); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *CampaignFlightWorkflow) GetID() *string {
-	if o == nil {
+func (c *CampaignFlightWorkflow) GetID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ID
+	return c.ID
 }
 
-func (o *CampaignFlightWorkflow) GetStartDateInclusiveUTC() time.Time {
-	if o == nil {
+func (c *CampaignFlightWorkflow) GetStartDateInclusiveUTC() time.Time {
+	if c == nil {
 		return time.Time{}
 	}
-	return o.StartDateInclusiveUTC
+	return c.StartDateInclusiveUTC
 }
 
-func (o *CampaignFlightWorkflow) GetEndDateExclusiveUTC() *time.Time {
-	if o == nil {
+func (c *CampaignFlightWorkflow) GetEndDateExclusiveUTC() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.EndDateExclusiveUTC
+	return c.EndDateExclusiveUTC
 }
 
-func (o *CampaignFlightWorkflow) GetBudgetInAdvertiserCurrency() float64 {
-	if o == nil {
+func (c *CampaignFlightWorkflow) GetBudgetInAdvertiserCurrency() float64 {
+	if c == nil {
 		return 0.0
 	}
-	return o.BudgetInAdvertiserCurrency
+	return c.BudgetInAdvertiserCurrency
 }
 
-func (o *CampaignFlightWorkflow) GetBudgetInImpressions() *int64 {
-	if o == nil {
+func (c *CampaignFlightWorkflow) GetBudgetInImpressions() *int64 {
+	if c == nil {
 		return nil
 	}
-	return o.BudgetInImpressions
+	return c.BudgetInImpressions
 }
 
-func (o *CampaignFlightWorkflow) GetDailyTargetInAdvertiserCurrency() *float64 {
-	if o == nil {
+func (c *CampaignFlightWorkflow) GetDailyTargetInAdvertiserCurrency() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.DailyTargetInAdvertiserCurrency
+	return c.DailyTargetInAdvertiserCurrency
 }
 
-func (o *CampaignFlightWorkflow) GetDailyTargetInImpressions() *int64 {
-	if o == nil {
+func (c *CampaignFlightWorkflow) GetDailyTargetInImpressions() *int64 {
+	if c == nil {
 		return nil
 	}
-	return o.DailyTargetInImpressions
+	return c.DailyTargetInImpressions
 }

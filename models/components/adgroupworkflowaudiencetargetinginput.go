@@ -14,65 +14,65 @@ type AdGroupWorkflowAudienceTargetingInput struct {
 	UseMcIDAsPrimary                     *bool   `json:"useMcIdAsPrimary,omitempty"`
 }
 
-func (o *AdGroupWorkflowAudienceTargetingInput) GetAudienceID() *string {
-	if o == nil {
+func (a *AdGroupWorkflowAudienceTargetingInput) GetAudienceID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.AudienceID
+	return a.AudienceID
 }
 
-func (o *AdGroupWorkflowAudienceTargetingInput) GetAudienceAcceleratorExclusionsEnabled() *bool {
-	if o == nil {
+func (a *AdGroupWorkflowAudienceTargetingInput) GetAudienceAcceleratorExclusionsEnabled() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.AudienceAcceleratorExclusionsEnabled
+	return a.AudienceAcceleratorExclusionsEnabled
 }
 
-func (o *AdGroupWorkflowAudienceTargetingInput) GetAudienceBoosterEnabled() *bool {
-	if o == nil {
+func (a *AdGroupWorkflowAudienceTargetingInput) GetAudienceBoosterEnabled() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.AudienceBoosterEnabled
+	return a.AudienceBoosterEnabled
 }
 
-func (o *AdGroupWorkflowAudienceTargetingInput) GetAudienceExcluderEnabled() *bool {
-	if o == nil {
+func (a *AdGroupWorkflowAudienceTargetingInput) GetAudienceExcluderEnabled() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.AudienceExcluderEnabled
+	return a.AudienceExcluderEnabled
 }
 
-func (o *AdGroupWorkflowAudienceTargetingInput) GetAudiencePredictorEnabled() *bool {
-	if o == nil {
+func (a *AdGroupWorkflowAudienceTargetingInput) GetAudiencePredictorEnabled() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.AudiencePredictorEnabled
+	return a.AudiencePredictorEnabled
 }
 
-func (o *AdGroupWorkflowAudienceTargetingInput) GetCrossDeviceVendorListForAudience() []int {
-	if o == nil {
+func (a *AdGroupWorkflowAudienceTargetingInput) GetCrossDeviceVendorListForAudience() []int {
+	if a == nil {
 		return nil
 	}
-	return o.CrossDeviceVendorListForAudience
+	return a.CrossDeviceVendorListForAudience
 }
 
-func (o *AdGroupWorkflowAudienceTargetingInput) GetRecencyExclusionWindowInMinutes() *int {
-	if o == nil {
+func (a *AdGroupWorkflowAudienceTargetingInput) GetRecencyExclusionWindowInMinutes() *int {
+	if a == nil {
 		return nil
 	}
-	return o.RecencyExclusionWindowInMinutes
+	return a.RecencyExclusionWindowInMinutes
 }
 
-func (o *AdGroupWorkflowAudienceTargetingInput) GetTargetTrackableUsersEnabled() *bool {
-	if o == nil {
+func (a *AdGroupWorkflowAudienceTargetingInput) GetTargetTrackableUsersEnabled() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.TargetTrackableUsersEnabled
+	return a.TargetTrackableUsersEnabled
 }
 
-func (o *AdGroupWorkflowAudienceTargetingInput) GetUseMcIDAsPrimary() *bool {
-	if o == nil {
+func (a *AdGroupWorkflowAudienceTargetingInput) GetUseMcIDAsPrimary() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.UseMcIDAsPrimary
+	return a.UseMcIDAsPrimary
 }

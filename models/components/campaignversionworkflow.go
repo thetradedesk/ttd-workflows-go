@@ -8,23 +8,23 @@ type CampaignVersionWorkflow struct {
 	BudgetingVersion *string `json:"budgetingVersion,omitempty"`
 }
 
-func (o *CampaignVersionWorkflow) GetID() *string {
-	if o == nil {
+func (c *CampaignVersionWorkflow) GetID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ID
+	return c.ID
 }
 
-func (o *CampaignVersionWorkflow) GetVersion() *string {
-	if o == nil {
+func (c *CampaignVersionWorkflow) GetVersion() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Version
+	return c.Version
 }
 
-func (o *CampaignVersionWorkflow) GetBudgetingVersion() *string {
-	if o == nil {
+func (c *CampaignVersionWorkflow) GetBudgetingVersion() *string {
+	if c == nil {
 		return nil
 	}
-	return o.BudgetingVersion
+	return c.BudgetingVersion
 }

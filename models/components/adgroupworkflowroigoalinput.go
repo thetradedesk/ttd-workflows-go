@@ -17,86 +17,86 @@ type AdGroupWorkflowROIGoalInput struct {
 	MiaozhenOTPInPercent        *float64 `json:"miaozhenOTPInPercent,omitempty"`
 }
 
-func (o *AdGroupWorkflowROIGoalInput) GetMaximizeReach() *bool {
-	if o == nil {
+func (a *AdGroupWorkflowROIGoalInput) GetMaximizeReach() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.MaximizeReach
+	return a.MaximizeReach
 }
 
-func (o *AdGroupWorkflowROIGoalInput) GetMaximizeLtvIncrementalReach() *bool {
-	if o == nil {
+func (a *AdGroupWorkflowROIGoalInput) GetMaximizeLtvIncrementalReach() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.MaximizeLtvIncrementalReach
+	return a.MaximizeLtvIncrementalReach
 }
 
-func (o *AdGroupWorkflowROIGoalInput) GetCpcInAdvertiserCurrency() *float64 {
-	if o == nil {
+func (a *AdGroupWorkflowROIGoalInput) GetCpcInAdvertiserCurrency() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.CpcInAdvertiserCurrency
+	return a.CpcInAdvertiserCurrency
 }
 
-func (o *AdGroupWorkflowROIGoalInput) GetCtrInPercent() *float64 {
-	if o == nil {
+func (a *AdGroupWorkflowROIGoalInput) GetCtrInPercent() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.CtrInPercent
+	return a.CtrInPercent
 }
 
-func (o *AdGroupWorkflowROIGoalInput) GetNielsenOTPInPercent() *float64 {
-	if o == nil {
+func (a *AdGroupWorkflowROIGoalInput) GetNielsenOTPInPercent() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.NielsenOTPInPercent
+	return a.NielsenOTPInPercent
 }
 
-func (o *AdGroupWorkflowROIGoalInput) GetCpaInAdvertiserCurrency() *float64 {
-	if o == nil {
+func (a *AdGroupWorkflowROIGoalInput) GetCpaInAdvertiserCurrency() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.CpaInAdvertiserCurrency
+	return a.CpaInAdvertiserCurrency
 }
 
-func (o *AdGroupWorkflowROIGoalInput) GetReturnOnAdSpendPercent() *float64 {
-	if o == nil {
+func (a *AdGroupWorkflowROIGoalInput) GetReturnOnAdSpendPercent() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.ReturnOnAdSpendPercent
+	return a.ReturnOnAdSpendPercent
 }
 
-func (o *AdGroupWorkflowROIGoalInput) GetVcrInPercent() *float64 {
-	if o == nil {
+func (a *AdGroupWorkflowROIGoalInput) GetVcrInPercent() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.VcrInPercent
+	return a.VcrInPercent
 }
 
-func (o *AdGroupWorkflowROIGoalInput) GetViewabilityInPercent() *float64 {
-	if o == nil {
+func (a *AdGroupWorkflowROIGoalInput) GetViewabilityInPercent() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.ViewabilityInPercent
+	return a.ViewabilityInPercent
 }
 
-func (o *AdGroupWorkflowROIGoalInput) GetVcpmInAdvertiserCurrency() *float64 {
-	if o == nil {
+func (a *AdGroupWorkflowROIGoalInput) GetVcpmInAdvertiserCurrency() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.VcpmInAdvertiserCurrency
+	return a.VcpmInAdvertiserCurrency
 }
 
-func (o *AdGroupWorkflowROIGoalInput) GetCpcvInAdvertiserCurrency() *float64 {
-	if o == nil {
+func (a *AdGroupWorkflowROIGoalInput) GetCpcvInAdvertiserCurrency() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.CpcvInAdvertiserCurrency
+	return a.CpcvInAdvertiserCurrency
 }
 
-func (o *AdGroupWorkflowROIGoalInput) GetMiaozhenOTPInPercent() *float64 {
-	if o == nil {
+func (a *AdGroupWorkflowROIGoalInput) GetMiaozhenOTPInPercent() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.MiaozhenOTPInPercent
+	return a.MiaozhenOTPInPercent
 }

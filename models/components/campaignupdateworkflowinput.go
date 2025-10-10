@@ -3,28 +3,28 @@
 package components
 
 type CampaignUpdateWorkflowInput struct {
-	ID            *string                             `json:"id"`
-	PrimaryInput  *CampaignUpdateWorkflowPrimaryInput `json:"primaryInput,omitempty"`
-	AdvancedInput *CampaignWorkflowAdvancedInput      `json:"advancedInput,omitempty"`
+	ID            *string                              `json:"id"`
+	PrimaryInput  *CampaignUpdateWorkflowPrimaryInput  `json:"primaryInput,omitempty"`
+	AdvancedInput *CampaignUpdateWorkflowAdvancedInput `json:"advancedInput,omitempty"`
 }
 
-func (o *CampaignUpdateWorkflowInput) GetID() *string {
-	if o == nil {
+func (c *CampaignUpdateWorkflowInput) GetID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ID
+	return c.ID
 }
 
-func (o *CampaignUpdateWorkflowInput) GetPrimaryInput() *CampaignUpdateWorkflowPrimaryInput {
-	if o == nil {
+func (c *CampaignUpdateWorkflowInput) GetPrimaryInput() *CampaignUpdateWorkflowPrimaryInput {
+	if c == nil {
 		return nil
 	}
-	return o.PrimaryInput
+	return c.PrimaryInput
 }
 
-func (o *CampaignUpdateWorkflowInput) GetAdvancedInput() *CampaignWorkflowAdvancedInput {
-	if o == nil {
+func (c *CampaignUpdateWorkflowInput) GetAdvancedInput() *CampaignUpdateWorkflowAdvancedInput {
+	if c == nil {
 		return nil
 	}
-	return o.AdvancedInput
+	return c.AdvancedInput
 }

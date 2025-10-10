@@ -7,16 +7,16 @@ type WorkflowCallbackInput struct {
 	CallbackHeaders map[string]string `json:"callbackHeaders,omitempty"`
 }
 
-func (o *WorkflowCallbackInput) GetCallbackURL() string {
-	if o == nil {
+func (w *WorkflowCallbackInput) GetCallbackURL() string {
+	if w == nil {
 		return ""
 	}
-	return o.CallbackURL
+	return w.CallbackURL
 }
 
-func (o *WorkflowCallbackInput) GetCallbackHeaders() map[string]string {
-	if o == nil {
+func (w *WorkflowCallbackInput) GetCallbackHeaders() map[string]string {
+	if w == nil {
 		return nil
 	}
-	return o.CallbackHeaders
+	return w.CallbackHeaders
 }

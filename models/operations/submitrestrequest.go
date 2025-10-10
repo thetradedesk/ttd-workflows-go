@@ -12,16 +12,16 @@ type SubmitRestRequestResponse struct {
 	Object map[string]any
 }
 
-func (o *SubmitRestRequestResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *SubmitRestRequestResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *SubmitRestRequestResponse) GetObject() map[string]any {
-	if o == nil {
+func (s *SubmitRestRequestResponse) GetObject() map[string]any {
+	if s == nil {
 		return nil
 	}
-	return o.Object
+	return s.Object
 }

@@ -18,93 +18,93 @@ type AdGroupCreateWorkflowPrimaryInput struct {
 	ProgrammaticGuaranteedPrivateContractID *string                                `json:"programmaticGuaranteedPrivateContractId,omitempty"`
 }
 
-func (o *AdGroupCreateWorkflowPrimaryInput) GetIsEnabled() *bool {
-	if o == nil {
+func (a *AdGroupCreateWorkflowPrimaryInput) GetIsEnabled() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.IsEnabled
+	return a.IsEnabled
 }
 
-func (o *AdGroupCreateWorkflowPrimaryInput) GetDescription() *string {
-	if o == nil {
+func (a *AdGroupCreateWorkflowPrimaryInput) GetDescription() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Description
+	return a.Description
 }
 
-func (o *AdGroupCreateWorkflowPrimaryInput) GetBudget() *AdGroupWorkflowBudgetInput {
-	if o == nil {
+func (a *AdGroupCreateWorkflowPrimaryInput) GetBudget() *AdGroupWorkflowBudgetInput {
+	if a == nil {
 		return nil
 	}
-	return o.Budget
+	return a.Budget
 }
 
-func (o *AdGroupCreateWorkflowPrimaryInput) GetBaseBidCPMInAdvertiserCurrency() *float64 {
-	if o == nil {
+func (a *AdGroupCreateWorkflowPrimaryInput) GetBaseBidCPMInAdvertiserCurrency() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.BaseBidCPMInAdvertiserCurrency
+	return a.BaseBidCPMInAdvertiserCurrency
 }
 
-func (o *AdGroupCreateWorkflowPrimaryInput) GetMaxBidCPMInAdvertiserCurrency() *float64 {
-	if o == nil {
+func (a *AdGroupCreateWorkflowPrimaryInput) GetMaxBidCPMInAdvertiserCurrency() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.MaxBidCPMInAdvertiserCurrency
+	return a.MaxBidCPMInAdvertiserCurrency
 }
 
-func (o *AdGroupCreateWorkflowPrimaryInput) GetAudienceTargeting() *AdGroupWorkflowAudienceTargetingInput {
-	if o == nil {
+func (a *AdGroupCreateWorkflowPrimaryInput) GetAudienceTargeting() *AdGroupWorkflowAudienceTargetingInput {
+	if a == nil {
 		return nil
 	}
-	return o.AudienceTargeting
+	return a.AudienceTargeting
 }
 
-func (o *AdGroupCreateWorkflowPrimaryInput) GetRoiGoal() *AdGroupWorkflowROIGoalInput {
-	if o == nil {
+func (a *AdGroupCreateWorkflowPrimaryInput) GetRoiGoal() *AdGroupWorkflowROIGoalInput {
+	if a == nil {
 		return nil
 	}
-	return o.RoiGoal
+	return a.RoiGoal
 }
 
-func (o *AdGroupCreateWorkflowPrimaryInput) GetCreativeIds() []string {
-	if o == nil {
+func (a *AdGroupCreateWorkflowPrimaryInput) GetCreativeIds() []string {
+	if a == nil {
 		return nil
 	}
-	return o.CreativeIds
+	return a.CreativeIds
 }
 
-func (o *AdGroupCreateWorkflowPrimaryInput) GetAssociatedBidLists() []AdGroupWorkflowAssociateBidListInput {
-	if o == nil {
+func (a *AdGroupCreateWorkflowPrimaryInput) GetAssociatedBidLists() []AdGroupWorkflowAssociateBidListInput {
+	if a == nil {
 		return nil
 	}
-	return o.AssociatedBidLists
+	return a.AssociatedBidLists
 }
 
-func (o *AdGroupCreateWorkflowPrimaryInput) GetName() *string {
-	if o == nil {
+func (a *AdGroupCreateWorkflowPrimaryInput) GetName() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Name
+	return a.Name
 }
 
-func (o *AdGroupCreateWorkflowPrimaryInput) GetChannel() AdGroupChannel {
-	if o == nil {
+func (a *AdGroupCreateWorkflowPrimaryInput) GetChannel() AdGroupChannel {
+	if a == nil {
 		return AdGroupChannel("")
 	}
-	return o.Channel
+	return a.Channel
 }
 
-func (o *AdGroupCreateWorkflowPrimaryInput) GetFunnelLocation() AdGroupFunnelLocation {
-	if o == nil {
+func (a *AdGroupCreateWorkflowPrimaryInput) GetFunnelLocation() AdGroupFunnelLocation {
+	if a == nil {
 		return AdGroupFunnelLocation("")
 	}
-	return o.FunnelLocation
+	return a.FunnelLocation
 }
 
-func (o *AdGroupCreateWorkflowPrimaryInput) GetProgrammaticGuaranteedPrivateContractID() *string {
-	if o == nil {
+func (a *AdGroupCreateWorkflowPrimaryInput) GetProgrammaticGuaranteedPrivateContractID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ProgrammaticGuaranteedPrivateContractID
+	return a.ProgrammaticGuaranteedPrivateContractID
 }

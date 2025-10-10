@@ -8,23 +8,23 @@ type AdGroupCreateWorkflowInput struct {
 	AdvancedInput *AdGroupWorkflowAdvancedInput     `json:"advancedInput,omitempty"`
 }
 
-func (o *AdGroupCreateWorkflowInput) GetPrimaryInput() AdGroupCreateWorkflowPrimaryInput {
-	if o == nil {
+func (a *AdGroupCreateWorkflowInput) GetPrimaryInput() AdGroupCreateWorkflowPrimaryInput {
+	if a == nil {
 		return AdGroupCreateWorkflowPrimaryInput{}
 	}
-	return o.PrimaryInput
+	return a.PrimaryInput
 }
 
-func (o *AdGroupCreateWorkflowInput) GetCampaignID() *string {
-	if o == nil {
+func (a *AdGroupCreateWorkflowInput) GetCampaignID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.CampaignID
+	return a.CampaignID
 }
 
-func (o *AdGroupCreateWorkflowInput) GetAdvancedInput() *AdGroupWorkflowAdvancedInput {
-	if o == nil {
+func (a *AdGroupCreateWorkflowInput) GetAdvancedInput() *AdGroupWorkflowAdvancedInput {
+	if a == nil {
 		return nil
 	}
-	return o.AdvancedInput
+	return a.AdvancedInput
 }

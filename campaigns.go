@@ -62,7 +62,7 @@ func (s *Campaigns) CreateCampaign(ctx context.Context, request *components.Camp
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "createCampaign",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Request", "json", `request:"mediaType=application/json"`)
@@ -310,7 +310,7 @@ func (s *Campaigns) Update(ctx context.Context, request *components.CampaignUpda
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "updateCampaign",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Request", "json", `request:"mediaType=application/json"`)
@@ -553,7 +553,7 @@ func (s *Campaigns) BulkCreate(ctx context.Context, request *components.Campaign
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "createCampaignsJob",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Request", "json", `request:"mediaType=application/json"`)
@@ -803,7 +803,7 @@ func (s *Campaigns) BulkUpdate(ctx context.Context, request *components.Campaign
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "updateCampaignsJob",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Request", "json", `request:"mediaType=application/json"`)
@@ -1079,7 +1079,7 @@ func (s *Campaigns) Archive(ctx context.Context, forceArchive *bool, requestBody
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "archiveCampaigns",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -1332,7 +1332,7 @@ func (s *Campaigns) GetCampaignVersion(ctx context.Context, id string, opts ...o
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "getCampaignVersion",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

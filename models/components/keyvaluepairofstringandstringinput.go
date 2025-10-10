@@ -8,16 +8,16 @@ type KeyValuePairOfStringAndStringInput struct {
 	Value *string `json:"value"`
 }
 
-func (o *KeyValuePairOfStringAndStringInput) GetKey() *string {
-	if o == nil {
+func (k *KeyValuePairOfStringAndStringInput) GetKey() *string {
+	if k == nil {
 		return nil
 	}
-	return o.Key
+	return k.Key
 }
 
-func (o *KeyValuePairOfStringAndStringInput) GetValue() *string {
-	if o == nil {
+func (k *KeyValuePairOfStringAndStringInput) GetValue() *string {
+	if k == nil {
 		return nil
 	}
-	return o.Value
+	return k.Value
 }

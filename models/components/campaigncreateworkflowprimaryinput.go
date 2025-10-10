@@ -14,16 +14,21 @@ type CampaignCreateWorkflowPrimaryInput struct {
 	CustomCPAClickWeight               *float64                                                 `json:"customCPAClickWeight,omitempty"`
 	CustomCPAViewthroughWeight         *float64                                                 `json:"customCPAViewthroughWeight,omitempty"`
 	CustomCPAType                      *CustomCPAType                                           `json:"customCPAType,omitempty"`
+	CustomRoasType                     *CustomROASType                                          `json:"customRoasType,omitempty"`
 	ImpressionsOnlyBudgetingCpm        *float64                                                 `json:"impressionsOnlyBudgetingCpm,omitempty"`
 	Budget                             *CampaignWorkflowBudgetInput                             `json:"budget,omitempty"`
 	EndDateInUtc                       *time.Time                                               `json:"endDateInUtc,omitempty"`
 	SeedID                             *string                                                  `json:"seedId,omitempty"`
 	CampaignConversionReportingColumns []CampaignWorkflowCampaignConversionReportingColumnInput `json:"campaignConversionReportingColumns,omitempty"`
+	IsManagedByTTD                     *bool                                                    `json:"isManagedByTTD,omitempty"`
+	SecondaryGoal                      *CampaignWorkflowROIGoalInput                            `json:"secondaryGoal,omitempty"`
+	TertiaryGoal                       *CampaignWorkflowROIGoalInput                            `json:"tertiaryGoal,omitempty"`
 	AdvertiserID                       string                                                   `json:"advertiserId"`
 	Name                               string                                                   `json:"name"`
 	PrimaryChannel                     CampaignChannelType                                      `json:"primaryChannel"`
 	PrimaryGoal                        CampaignWorkflowROIGoalInput                             `json:"primaryGoal"`
 	StartDateInUtc                     *time.Time                                               `json:"startDateInUtc,omitempty"`
+	CampaignIncrementalReachSetting    *CampaignCreateWorkflowIncrementalReachCampaignSetting   `json:"campaignIncrementalReachSetting,omitempty"`
 }
 
 func (c CampaignCreateWorkflowPrimaryInput) MarshalJSON() ([]byte, error) {
@@ -37,114 +42,149 @@ func (c *CampaignCreateWorkflowPrimaryInput) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *CampaignCreateWorkflowPrimaryInput) GetDescription() *string {
-	if o == nil {
+func (c *CampaignCreateWorkflowPrimaryInput) GetDescription() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Description
+	return c.Description
 }
 
-func (o *CampaignCreateWorkflowPrimaryInput) GetCampaignGroupID() *int64 {
-	if o == nil {
+func (c *CampaignCreateWorkflowPrimaryInput) GetCampaignGroupID() *int64 {
+	if c == nil {
 		return nil
 	}
-	return o.CampaignGroupID
+	return c.CampaignGroupID
 }
 
-func (o *CampaignCreateWorkflowPrimaryInput) GetTimeZone() *string {
-	if o == nil {
+func (c *CampaignCreateWorkflowPrimaryInput) GetTimeZone() *string {
+	if c == nil {
 		return nil
 	}
-	return o.TimeZone
+	return c.TimeZone
 }
 
-func (o *CampaignCreateWorkflowPrimaryInput) GetCustomCPAClickWeight() *float64 {
-	if o == nil {
+func (c *CampaignCreateWorkflowPrimaryInput) GetCustomCPAClickWeight() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.CustomCPAClickWeight
+	return c.CustomCPAClickWeight
 }
 
-func (o *CampaignCreateWorkflowPrimaryInput) GetCustomCPAViewthroughWeight() *float64 {
-	if o == nil {
+func (c *CampaignCreateWorkflowPrimaryInput) GetCustomCPAViewthroughWeight() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.CustomCPAViewthroughWeight
+	return c.CustomCPAViewthroughWeight
 }
 
-func (o *CampaignCreateWorkflowPrimaryInput) GetCustomCPAType() *CustomCPAType {
-	if o == nil {
+func (c *CampaignCreateWorkflowPrimaryInput) GetCustomCPAType() *CustomCPAType {
+	if c == nil {
 		return nil
 	}
-	return o.CustomCPAType
+	return c.CustomCPAType
 }
 
-func (o *CampaignCreateWorkflowPrimaryInput) GetImpressionsOnlyBudgetingCpm() *float64 {
-	if o == nil {
+func (c *CampaignCreateWorkflowPrimaryInput) GetCustomRoasType() *CustomROASType {
+	if c == nil {
 		return nil
 	}
-	return o.ImpressionsOnlyBudgetingCpm
+	return c.CustomRoasType
 }
 
-func (o *CampaignCreateWorkflowPrimaryInput) GetBudget() *CampaignWorkflowBudgetInput {
-	if o == nil {
+func (c *CampaignCreateWorkflowPrimaryInput) GetImpressionsOnlyBudgetingCpm() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.Budget
+	return c.ImpressionsOnlyBudgetingCpm
 }
 
-func (o *CampaignCreateWorkflowPrimaryInput) GetEndDateInUtc() *time.Time {
-	if o == nil {
+func (c *CampaignCreateWorkflowPrimaryInput) GetBudget() *CampaignWorkflowBudgetInput {
+	if c == nil {
 		return nil
 	}
-	return o.EndDateInUtc
+	return c.Budget
 }
 
-func (o *CampaignCreateWorkflowPrimaryInput) GetSeedID() *string {
-	if o == nil {
+func (c *CampaignCreateWorkflowPrimaryInput) GetEndDateInUtc() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.SeedID
+	return c.EndDateInUtc
 }
 
-func (o *CampaignCreateWorkflowPrimaryInput) GetCampaignConversionReportingColumns() []CampaignWorkflowCampaignConversionReportingColumnInput {
-	if o == nil {
+func (c *CampaignCreateWorkflowPrimaryInput) GetSeedID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.CampaignConversionReportingColumns
+	return c.SeedID
 }
 
-func (o *CampaignCreateWorkflowPrimaryInput) GetAdvertiserID() string {
-	if o == nil {
+func (c *CampaignCreateWorkflowPrimaryInput) GetCampaignConversionReportingColumns() []CampaignWorkflowCampaignConversionReportingColumnInput {
+	if c == nil {
+		return nil
+	}
+	return c.CampaignConversionReportingColumns
+}
+
+func (c *CampaignCreateWorkflowPrimaryInput) GetIsManagedByTTD() *bool {
+	if c == nil {
+		return nil
+	}
+	return c.IsManagedByTTD
+}
+
+func (c *CampaignCreateWorkflowPrimaryInput) GetSecondaryGoal() *CampaignWorkflowROIGoalInput {
+	if c == nil {
+		return nil
+	}
+	return c.SecondaryGoal
+}
+
+func (c *CampaignCreateWorkflowPrimaryInput) GetTertiaryGoal() *CampaignWorkflowROIGoalInput {
+	if c == nil {
+		return nil
+	}
+	return c.TertiaryGoal
+}
+
+func (c *CampaignCreateWorkflowPrimaryInput) GetAdvertiserID() string {
+	if c == nil {
 		return ""
 	}
-	return o.AdvertiserID
+	return c.AdvertiserID
 }
 
-func (o *CampaignCreateWorkflowPrimaryInput) GetName() string {
-	if o == nil {
+func (c *CampaignCreateWorkflowPrimaryInput) GetName() string {
+	if c == nil {
 		return ""
 	}
-	return o.Name
+	return c.Name
 }
 
-func (o *CampaignCreateWorkflowPrimaryInput) GetPrimaryChannel() CampaignChannelType {
-	if o == nil {
+func (c *CampaignCreateWorkflowPrimaryInput) GetPrimaryChannel() CampaignChannelType {
+	if c == nil {
 		return CampaignChannelType("")
 	}
-	return o.PrimaryChannel
+	return c.PrimaryChannel
 }
 
-func (o *CampaignCreateWorkflowPrimaryInput) GetPrimaryGoal() CampaignWorkflowROIGoalInput {
-	if o == nil {
+func (c *CampaignCreateWorkflowPrimaryInput) GetPrimaryGoal() CampaignWorkflowROIGoalInput {
+	if c == nil {
 		return CampaignWorkflowROIGoalInput{}
 	}
-	return o.PrimaryGoal
+	return c.PrimaryGoal
 }
 
-func (o *CampaignCreateWorkflowPrimaryInput) GetStartDateInUtc() *time.Time {
-	if o == nil {
+func (c *CampaignCreateWorkflowPrimaryInput) GetStartDateInUtc() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.StartDateInUtc
+	return c.StartDateInUtc
+}
+
+func (c *CampaignCreateWorkflowPrimaryInput) GetCampaignIncrementalReachSetting() *CampaignCreateWorkflowIncrementalReachCampaignSetting {
+	if c == nil {
+		return nil
+	}
+	return c.CampaignIncrementalReachSetting
 }

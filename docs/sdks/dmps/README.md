@@ -36,8 +36,8 @@ func main() {
 
     res, err := s.Dmps.GetFirstPartyDataJob(ctx, &components.FirstPartyDataInput{
         AdvertiserID: "<id>",
-        NameFilter: ttdworkflows.String("<value>"),
-        QueryShape: ttdworkflows.String("<value>"),
+        NameFilter: ttdworkflows.Pointer("<value>"),
+        QueryShape: ttdworkflows.Pointer("<value>"),
         CallbackInput: &components.WorkflowCallbackInput{
             CallbackURL: "https://difficult-pocket-watch.com",
             CallbackHeaders: map[string]string{
@@ -104,7 +104,7 @@ func main() {
 
     res, err := s.Dmps.GetThirdPartyDataJob(ctx, &components.ThirdPartyDataInput{
         PartnerID: "<id>",
-        QueryShape: ttdworkflows.String("<value>"),
+        QueryShape: ttdworkflows.Pointer("<value>"),
         CallbackInput: &components.WorkflowCallbackInput{
             CallbackURL: "https://extroverted-intent.net",
             CallbackHeaders: map[string]string{

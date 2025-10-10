@@ -7,9 +7,9 @@ type StandardJobSubmitResponse struct {
 	ID int64 `json:"id"`
 }
 
-func (o *StandardJobSubmitResponse) GetID() int64 {
-	if o == nil {
+func (s *StandardJobSubmitResponse) GetID() int64 {
+	if s == nil {
 		return 0
 	}
-	return o.ID
+	return s.ID
 }

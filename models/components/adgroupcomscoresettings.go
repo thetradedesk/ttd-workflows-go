@@ -9,30 +9,30 @@ type AdGroupComscoreSettings struct {
 	MobileDemographicMemberIds []int `json:"mobileDemographicMemberIds"`
 }
 
-func (o *AdGroupComscoreSettings) GetIsEnabled() bool {
-	if o == nil {
+func (a *AdGroupComscoreSettings) GetIsEnabled() bool {
+	if a == nil {
 		return false
 	}
-	return o.IsEnabled
+	return a.IsEnabled
 }
 
-func (o *AdGroupComscoreSettings) GetPopulationID() *int {
-	if o == nil {
+func (a *AdGroupComscoreSettings) GetPopulationID() *int {
+	if a == nil {
 		return nil
 	}
-	return o.PopulationID
+	return a.PopulationID
 }
 
-func (o *AdGroupComscoreSettings) GetDemographicMemberIds() []int {
-	if o == nil {
+func (a *AdGroupComscoreSettings) GetDemographicMemberIds() []int {
+	if a == nil {
 		return nil
 	}
-	return o.DemographicMemberIds
+	return a.DemographicMemberIds
 }
 
-func (o *AdGroupComscoreSettings) GetMobileDemographicMemberIds() []int {
-	if o == nil {
+func (a *AdGroupComscoreSettings) GetMobileDemographicMemberIds() []int {
+	if a == nil {
 		return nil
 	}
-	return o.MobileDemographicMemberIds
+	return a.MobileDemographicMemberIds
 }

@@ -10,37 +10,37 @@ type CampaignWorkflowBudgetInput struct {
 	DailyTargetInImpressions        *int64             `json:"dailyTargetInImpressions,omitempty"`
 }
 
-func (o *CampaignWorkflowBudgetInput) GetPacingMode() CampaignPacingMode {
-	if o == nil {
+func (c *CampaignWorkflowBudgetInput) GetPacingMode() CampaignPacingMode {
+	if c == nil {
 		return CampaignPacingMode("")
 	}
-	return o.PacingMode
+	return c.PacingMode
 }
 
-func (o *CampaignWorkflowBudgetInput) GetBudgetInAdvertiserCurrency() float64 {
-	if o == nil {
+func (c *CampaignWorkflowBudgetInput) GetBudgetInAdvertiserCurrency() float64 {
+	if c == nil {
 		return 0.0
 	}
-	return o.BudgetInAdvertiserCurrency
+	return c.BudgetInAdvertiserCurrency
 }
 
-func (o *CampaignWorkflowBudgetInput) GetBudgetInImpressions() *int64 {
-	if o == nil {
+func (c *CampaignWorkflowBudgetInput) GetBudgetInImpressions() *int64 {
+	if c == nil {
 		return nil
 	}
-	return o.BudgetInImpressions
+	return c.BudgetInImpressions
 }
 
-func (o *CampaignWorkflowBudgetInput) GetDailyTargetInAdvertiserCurrency() *float64 {
-	if o == nil {
+func (c *CampaignWorkflowBudgetInput) GetDailyTargetInAdvertiserCurrency() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.DailyTargetInAdvertiserCurrency
+	return c.DailyTargetInAdvertiserCurrency
 }
 
-func (o *CampaignWorkflowBudgetInput) GetDailyTargetInImpressions() *int64 {
-	if o == nil {
+func (c *CampaignWorkflowBudgetInput) GetDailyTargetInImpressions() *int64 {
+	if c == nil {
 		return nil
 	}
-	return o.DailyTargetInImpressions
+	return c.DailyTargetInImpressions
 }

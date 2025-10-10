@@ -3,44 +3,44 @@
 package components
 
 type AdGroupWorkflowNielsenTrackingAttributesInput struct {
-	EnhancedReportingOption *EnhancedNielsenReportingOptions `json:"enhancedReportingOption,omitempty"`
-	Gender                  TargetingGender                  `json:"gender"`
-	StartAge                TargetingStartAge                `json:"startAge"`
-	EndAge                  TargetingEndAge                  `json:"endAge"`
-	Countries               []string                         `json:"countries"`
+	EnhancedReportingOption *EnhancedNielsenReportingOptionsInput `json:"enhancedReportingOption,omitempty"`
+	Gender                  TargetingGenderInput                  `json:"gender"`
+	StartAge                TargetingStartAgeInput                `json:"startAge"`
+	EndAge                  TargetingEndAgeInput                  `json:"endAge"`
+	Countries               []string                              `json:"countries"`
 }
 
-func (o *AdGroupWorkflowNielsenTrackingAttributesInput) GetEnhancedReportingOption() *EnhancedNielsenReportingOptions {
-	if o == nil {
+func (a *AdGroupWorkflowNielsenTrackingAttributesInput) GetEnhancedReportingOption() *EnhancedNielsenReportingOptionsInput {
+	if a == nil {
 		return nil
 	}
-	return o.EnhancedReportingOption
+	return a.EnhancedReportingOption
 }
 
-func (o *AdGroupWorkflowNielsenTrackingAttributesInput) GetGender() TargetingGender {
-	if o == nil {
-		return TargetingGender("")
+func (a *AdGroupWorkflowNielsenTrackingAttributesInput) GetGender() TargetingGenderInput {
+	if a == nil {
+		return TargetingGenderInput("")
 	}
-	return o.Gender
+	return a.Gender
 }
 
-func (o *AdGroupWorkflowNielsenTrackingAttributesInput) GetStartAge() TargetingStartAge {
-	if o == nil {
-		return TargetingStartAge("")
+func (a *AdGroupWorkflowNielsenTrackingAttributesInput) GetStartAge() TargetingStartAgeInput {
+	if a == nil {
+		return TargetingStartAgeInput("")
 	}
-	return o.StartAge
+	return a.StartAge
 }
 
-func (o *AdGroupWorkflowNielsenTrackingAttributesInput) GetEndAge() TargetingEndAge {
-	if o == nil {
-		return TargetingEndAge("")
+func (a *AdGroupWorkflowNielsenTrackingAttributesInput) GetEndAge() TargetingEndAgeInput {
+	if a == nil {
+		return TargetingEndAgeInput("")
 	}
-	return o.EndAge
+	return a.EndAge
 }
 
-func (o *AdGroupWorkflowNielsenTrackingAttributesInput) GetCountries() []string {
-	if o == nil {
+func (a *AdGroupWorkflowNielsenTrackingAttributesInput) GetCountries() []string {
+	if a == nil {
 		return nil
 	}
-	return o.Countries
+	return a.Countries
 }

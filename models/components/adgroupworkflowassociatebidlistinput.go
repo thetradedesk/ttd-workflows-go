@@ -8,23 +8,23 @@ type AdGroupWorkflowAssociateBidListInput struct {
 	IsDefaultForDimension *bool  `json:"isDefaultForDimension,omitempty"`
 }
 
-func (o *AdGroupWorkflowAssociateBidListInput) GetBidListID() string {
-	if o == nil {
+func (a *AdGroupWorkflowAssociateBidListInput) GetBidListID() string {
+	if a == nil {
 		return ""
 	}
-	return o.BidListID
+	return a.BidListID
 }
 
-func (o *AdGroupWorkflowAssociateBidListInput) GetIsEnabled() *bool {
-	if o == nil {
+func (a *AdGroupWorkflowAssociateBidListInput) GetIsEnabled() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.IsEnabled
+	return a.IsEnabled
 }
 
-func (o *AdGroupWorkflowAssociateBidListInput) GetIsDefaultForDimension() *bool {
-	if o == nil {
+func (a *AdGroupWorkflowAssociateBidListInput) GetIsDefaultForDimension() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.IsDefaultForDimension
+	return a.IsDefaultForDimension
 }

@@ -1,0 +1,9 @@
+# CampaignCreateWorkflowPassThroughFeeCardInput
+
+
+## Fields
+
+| Field                                                                                                            | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `StartDateUtc`                                                                                                   | [*time.Time](https://pkg.go.dev/time#Time)                                                                       | :heavy_minus_sign:                                                                                               | N/A                                                                                                              |
+| `PassThroughFees`                                                                                                | [][components.CampaignCreatePassThroughFeesInput](../../models/components/campaigncreatepassthroughfeesinput.md) | :heavy_check_mark:                                                                                               | N/A                                                                                                              |

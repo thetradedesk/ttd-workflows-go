@@ -3,100 +3,132 @@
 package components
 
 type CampaignWorkflowROIGoalInput struct {
-	MaximizeReach               *bool    `json:"maximizeReach,omitempty"`
-	MaximizeLtvIncrementalReach *bool    `json:"maximizeLtvIncrementalReach,omitempty"`
-	CpcInAdvertiserCurrency     *float64 `json:"cpcInAdvertiserCurrency,omitempty"`
-	CtrInPercent                *float64 `json:"ctrInPercent,omitempty"`
-	NielsenOTPInPercent         *float64 `json:"nielsenOTPInPercent,omitempty"`
-	CpaInAdvertiserCurrency     *float64 `json:"cpaInAdvertiserCurrency,omitempty"`
-	ReturnOnAdSpendPercent      *float64 `json:"returnOnAdSpendPercent,omitempty"`
-	VcrInPercent                *float64 `json:"vcrInPercent,omitempty"`
-	ViewabilityInPercent        *float64 `json:"viewabilityInPercent,omitempty"`
-	VcpmInAdvertiserCurrency    *float64 `json:"vcpmInAdvertiserCurrency,omitempty"`
-	CpcvInAdvertiserCurrency    *float64 `json:"cpcvInAdvertiserCurrency,omitempty"`
-	MiaozhenOTPInPercent        *float64 `json:"miaozhenOTPInPercent,omitempty"`
+	MaximizeReach                             *bool    `json:"maximizeReach,omitempty"`
+	MaximizeLtvIncrementalReach               *bool    `json:"maximizeLtvIncrementalReach,omitempty"`
+	CpcInAdvertiserCurrency                   *float64 `json:"cpcInAdvertiserCurrency,omitempty"`
+	CtrInPercent                              *float64 `json:"ctrInPercent,omitempty"`
+	NielsenOTPInPercent                       *float64 `json:"nielsenOTPInPercent,omitempty"`
+	CpaInAdvertiserCurrency                   *float64 `json:"cpaInAdvertiserCurrency,omitempty"`
+	ReturnOnAdSpendPercent                    *float64 `json:"returnOnAdSpendPercent,omitempty"`
+	VcrInPercent                              *float64 `json:"vcrInPercent,omitempty"`
+	ViewabilityInPercent                      *float64 `json:"viewabilityInPercent,omitempty"`
+	VcpmInAdvertiserCurrency                  *float64 `json:"vcpmInAdvertiserCurrency,omitempty"`
+	CpcvInAdvertiserCurrency                  *float64 `json:"cpcvInAdvertiserCurrency,omitempty"`
+	MiaozhenOTPInPercent                      *float64 `json:"miaozhenOTPInPercent,omitempty"`
+	IqviaAudienceQualityIndex                 *bool    `json:"iqviaAudienceQualityIndex,omitempty"`
+	CrossixAudienceQualityIndex               *bool    `json:"crossixAudienceQualityIndex,omitempty"`
+	IqviaAudienceQualityIndexAndCostPerTarget *bool    `json:"iqviaAudienceQualityIndexAndCostPerTarget,omitempty"`
+	CrossixCostPerTarget                      *bool    `json:"crossixCostPerTarget,omitempty"`
 }
 
-func (o *CampaignWorkflowROIGoalInput) GetMaximizeReach() *bool {
-	if o == nil {
+func (c *CampaignWorkflowROIGoalInput) GetMaximizeReach() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.MaximizeReach
+	return c.MaximizeReach
 }
 
-func (o *CampaignWorkflowROIGoalInput) GetMaximizeLtvIncrementalReach() *bool {
-	if o == nil {
+func (c *CampaignWorkflowROIGoalInput) GetMaximizeLtvIncrementalReach() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.MaximizeLtvIncrementalReach
+	return c.MaximizeLtvIncrementalReach
 }
 
-func (o *CampaignWorkflowROIGoalInput) GetCpcInAdvertiserCurrency() *float64 {
-	if o == nil {
+func (c *CampaignWorkflowROIGoalInput) GetCpcInAdvertiserCurrency() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.CpcInAdvertiserCurrency
+	return c.CpcInAdvertiserCurrency
 }
 
-func (o *CampaignWorkflowROIGoalInput) GetCtrInPercent() *float64 {
-	if o == nil {
+func (c *CampaignWorkflowROIGoalInput) GetCtrInPercent() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.CtrInPercent
+	return c.CtrInPercent
 }
 
-func (o *CampaignWorkflowROIGoalInput) GetNielsenOTPInPercent() *float64 {
-	if o == nil {
+func (c *CampaignWorkflowROIGoalInput) GetNielsenOTPInPercent() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.NielsenOTPInPercent
+	return c.NielsenOTPInPercent
 }
 
-func (o *CampaignWorkflowROIGoalInput) GetCpaInAdvertiserCurrency() *float64 {
-	if o == nil {
+func (c *CampaignWorkflowROIGoalInput) GetCpaInAdvertiserCurrency() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.CpaInAdvertiserCurrency
+	return c.CpaInAdvertiserCurrency
 }
 
-func (o *CampaignWorkflowROIGoalInput) GetReturnOnAdSpendPercent() *float64 {
-	if o == nil {
+func (c *CampaignWorkflowROIGoalInput) GetReturnOnAdSpendPercent() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.ReturnOnAdSpendPercent
+	return c.ReturnOnAdSpendPercent
 }
 
-func (o *CampaignWorkflowROIGoalInput) GetVcrInPercent() *float64 {
-	if o == nil {
+func (c *CampaignWorkflowROIGoalInput) GetVcrInPercent() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.VcrInPercent
+	return c.VcrInPercent
 }
 
-func (o *CampaignWorkflowROIGoalInput) GetViewabilityInPercent() *float64 {
-	if o == nil {
+func (c *CampaignWorkflowROIGoalInput) GetViewabilityInPercent() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.ViewabilityInPercent
+	return c.ViewabilityInPercent
 }
 
-func (o *CampaignWorkflowROIGoalInput) GetVcpmInAdvertiserCurrency() *float64 {
-	if o == nil {
+func (c *CampaignWorkflowROIGoalInput) GetVcpmInAdvertiserCurrency() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.VcpmInAdvertiserCurrency
+	return c.VcpmInAdvertiserCurrency
 }
 
-func (o *CampaignWorkflowROIGoalInput) GetCpcvInAdvertiserCurrency() *float64 {
-	if o == nil {
+func (c *CampaignWorkflowROIGoalInput) GetCpcvInAdvertiserCurrency() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.CpcvInAdvertiserCurrency
+	return c.CpcvInAdvertiserCurrency
 }
 
-func (o *CampaignWorkflowROIGoalInput) GetMiaozhenOTPInPercent() *float64 {
-	if o == nil {
+func (c *CampaignWorkflowROIGoalInput) GetMiaozhenOTPInPercent() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.MiaozhenOTPInPercent
+	return c.MiaozhenOTPInPercent
+}
+
+func (c *CampaignWorkflowROIGoalInput) GetIqviaAudienceQualityIndex() *bool {
+	if c == nil {
+		return nil
+	}
+	return c.IqviaAudienceQualityIndex
+}
+
+func (c *CampaignWorkflowROIGoalInput) GetCrossixAudienceQualityIndex() *bool {
+	if c == nil {
+		return nil
+	}
+	return c.CrossixAudienceQualityIndex
+}
+
+func (c *CampaignWorkflowROIGoalInput) GetIqviaAudienceQualityIndexAndCostPerTarget() *bool {
+	if c == nil {
+		return nil
+	}
+	return c.IqviaAudienceQualityIndexAndCostPerTarget
+}
+
+func (c *CampaignWorkflowROIGoalInput) GetCrossixCostPerTarget() *bool {
+	if c == nil {
+		return nil
+	}
+	return c.CrossixCostPerTarget
 }

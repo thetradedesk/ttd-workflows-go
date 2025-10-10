@@ -12,16 +12,16 @@ type SubmitGraphQlRequestResponse struct {
 	Object map[string]any
 }
 
-func (o *SubmitGraphQlRequestResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *SubmitGraphQlRequestResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *SubmitGraphQlRequestResponse) GetObject() map[string]any {
-	if o == nil {
+func (s *SubmitGraphQlRequestResponse) GetObject() map[string]any {
+	if s == nil {
 		return nil
 	}
-	return o.Object
+	return s.Object
 }

@@ -8,18 +8,27 @@ type GraphQLRequestInput struct {
 	Request string `json:"request"`
 	// Variables to substitute into the query.
 	Variables map[string]any `json:"variables,omitempty"`
+	// Beta features to be enabled for this GraphQL request (passed as TTD-GQL-Beta header)
+	BetaFeatures *string `json:"betaFeatures,omitempty"`
 }
 
-func (o *GraphQLRequestInput) GetRequest() string {
-	if o == nil {
+func (g *GraphQLRequestInput) GetRequest() string {
+	if g == nil {
 		return ""
 	}
-	return o.Request
+	return g.Request
 }
 
-func (o *GraphQLRequestInput) GetVariables() map[string]any {
-	if o == nil {
+func (g *GraphQLRequestInput) GetVariables() map[string]any {
+	if g == nil {
 		return nil
 	}
-	return o.Variables
+	return g.Variables
+}
+
+func (g *GraphQLRequestInput) GetBetaFeatures() *string {
+	if g == nil {
+		return nil
+	}
+	return g.BetaFeatures
 }
