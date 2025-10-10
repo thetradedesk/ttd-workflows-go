@@ -12,16 +12,16 @@ type GetThirdPartyDataJobResponse struct {
 	StandardJobSubmitResponse *components.StandardJobSubmitResponse
 }
 
-func (o *GetThirdPartyDataJobResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (g *GetThirdPartyDataJobResponse) GetHTTPMeta() components.HTTPMetadata {
+	if g == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return g.HTTPMeta
 }
 
-func (o *GetThirdPartyDataJobResponse) GetStandardJobSubmitResponse() *components.StandardJobSubmitResponse {
-	if o == nil {
+func (g *GetThirdPartyDataJobResponse) GetStandardJobSubmitResponse() *components.StandardJobSubmitResponse {
+	if g == nil {
 		return nil
 	}
-	return o.StandardJobSubmitResponse
+	return g.StandardJobSubmitResponse
 }

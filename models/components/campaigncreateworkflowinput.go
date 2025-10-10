@@ -4,27 +4,27 @@ package components
 
 type CampaignCreateWorkflowInput struct {
 	PrimaryInput  CampaignCreateWorkflowPrimaryInput   `json:"primaryInput"`
-	AdvancedInput *CampaignWorkflowAdvancedInput       `json:"advancedInput,omitempty"`
+	AdvancedInput *CampaignCreateWorkflowAdvancedInput `json:"advancedInput,omitempty"`
 	AdGroups      []CampaignCreateWorkflowAdGroupInput `json:"adGroups,omitempty"`
 }
 
-func (o *CampaignCreateWorkflowInput) GetPrimaryInput() CampaignCreateWorkflowPrimaryInput {
-	if o == nil {
+func (c *CampaignCreateWorkflowInput) GetPrimaryInput() CampaignCreateWorkflowPrimaryInput {
+	if c == nil {
 		return CampaignCreateWorkflowPrimaryInput{}
 	}
-	return o.PrimaryInput
+	return c.PrimaryInput
 }
 
-func (o *CampaignCreateWorkflowInput) GetAdvancedInput() *CampaignWorkflowAdvancedInput {
-	if o == nil {
+func (c *CampaignCreateWorkflowInput) GetAdvancedInput() *CampaignCreateWorkflowAdvancedInput {
+	if c == nil {
 		return nil
 	}
-	return o.AdvancedInput
+	return c.AdvancedInput
 }
 
-func (o *CampaignCreateWorkflowInput) GetAdGroups() []CampaignCreateWorkflowAdGroupInput {
-	if o == nil {
+func (c *CampaignCreateWorkflowInput) GetAdGroups() []CampaignCreateWorkflowAdGroupInput {
+	if c == nil {
 		return nil
 	}
-	return o.AdGroups
+	return c.AdGroups
 }

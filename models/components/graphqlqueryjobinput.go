@@ -2,24 +2,33 @@
 
 package components
 
-// GraphQlQueryJobInput - Required fields for executing a GraphQL query job
+// GraphQlQueryJobInput - Fields for executing a GraphQL query job
 type GraphQlQueryJobInput struct {
 	// The GraphQL query to execute
 	Query string `json:"query"`
 	// Input class for providing a callback's url and any headers needed for the callback.
-	CallbackInput *GraphQlJobCallbackInput `json:"callbackInput,omitempty"`
+	CallbackInput *GraphQlBulkJobCallbackInput `json:"callbackInput,omitempty"`
+	// Beta features to be enabled for this GraphQL query (passed as TTD-GQL-Beta header)
+	BetaFeatures *string `json:"betaFeatures,omitempty"`
 }
 
-func (o *GraphQlQueryJobInput) GetQuery() string {
-	if o == nil {
+func (g *GraphQlQueryJobInput) GetQuery() string {
+	if g == nil {
 		return ""
 	}
-	return o.Query
+	return g.Query
 }
 
-func (o *GraphQlQueryJobInput) GetCallbackInput() *GraphQlJobCallbackInput {
-	if o == nil {
+func (g *GraphQlQueryJobInput) GetCallbackInput() *GraphQlBulkJobCallbackInput {
+	if g == nil {
 		return nil
 	}
-	return o.CallbackInput
+	return g.CallbackInput
+}
+
+func (g *GraphQlQueryJobInput) GetBetaFeatures() *string {
+	if g == nil {
+		return nil
+	}
+	return g.BetaFeatures
 }

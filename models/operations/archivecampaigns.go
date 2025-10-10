@@ -23,18 +23,18 @@ func (a *ArchiveCampaignsRequest) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *ArchiveCampaignsRequest) GetForceArchive() *bool {
-	if o == nil {
+func (a *ArchiveCampaignsRequest) GetForceArchive() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.ForceArchive
+	return a.ForceArchive
 }
 
-func (o *ArchiveCampaignsRequest) GetRequestBody() []string {
-	if o == nil {
+func (a *ArchiveCampaignsRequest) GetRequestBody() []string {
+	if a == nil {
 		return nil
 	}
-	return o.RequestBody
+	return a.RequestBody
 }
 
 type ArchiveCampaignsResponse struct {
@@ -43,16 +43,16 @@ type ArchiveCampaignsResponse struct {
 	Strings []string
 }
 
-func (o *ArchiveCampaignsResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (a *ArchiveCampaignsResponse) GetHTTPMeta() components.HTTPMetadata {
+	if a == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return a.HTTPMeta
 }
 
-func (o *ArchiveCampaignsResponse) GetStrings() []string {
-	if o == nil {
+func (a *ArchiveCampaignsResponse) GetStrings() []string {
+	if a == nil {
 		return nil
 	}
-	return o.Strings
+	return a.Strings
 }

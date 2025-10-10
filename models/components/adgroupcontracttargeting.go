@@ -6,9 +6,9 @@ type AdGroupContractTargeting struct {
 	AllowOpenMarketBiddingWhenTargetingContracts bool `json:"allowOpenMarketBiddingWhenTargetingContracts"`
 }
 
-func (o *AdGroupContractTargeting) GetAllowOpenMarketBiddingWhenTargetingContracts() bool {
-	if o == nil {
+func (a *AdGroupContractTargeting) GetAllowOpenMarketBiddingWhenTargetingContracts() bool {
+	if a == nil {
 		return false
 	}
-	return o.AllowOpenMarketBiddingWhenTargetingContracts
+	return a.AllowOpenMarketBiddingWhenTargetingContracts
 }

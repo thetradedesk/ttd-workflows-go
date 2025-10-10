@@ -8,23 +8,23 @@ type CallRestAPIWorkflowInput struct {
 	DataBody   *string           `json:"dataBody,omitempty"`
 }
 
-func (o *CallRestAPIWorkflowInput) GetMethodType() RestAPIMethodType {
-	if o == nil {
+func (c *CallRestAPIWorkflowInput) GetMethodType() RestAPIMethodType {
+	if c == nil {
 		return RestAPIMethodType("")
 	}
-	return o.MethodType
+	return c.MethodType
 }
 
-func (o *CallRestAPIWorkflowInput) GetEndpoint() *string {
-	if o == nil {
+func (c *CallRestAPIWorkflowInput) GetEndpoint() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Endpoint
+	return c.Endpoint
 }
 
-func (o *CallRestAPIWorkflowInput) GetDataBody() *string {
-	if o == nil {
+func (c *CallRestAPIWorkflowInput) GetDataBody() *string {
+	if c == nil {
 		return nil
 	}
-	return o.DataBody
+	return c.DataBody
 }

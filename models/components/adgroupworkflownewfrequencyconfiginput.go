@@ -9,30 +9,30 @@ type AdGroupWorkflowNewFrequencyConfigInput struct {
 	ResetIntervalInMinutes *int    `json:"resetIntervalInMinutes,omitempty"`
 }
 
-func (o *AdGroupWorkflowNewFrequencyConfigInput) GetCounterName() *string {
-	if o == nil {
+func (a *AdGroupWorkflowNewFrequencyConfigInput) GetCounterName() *string {
+	if a == nil {
 		return nil
 	}
-	return o.CounterName
+	return a.CounterName
 }
 
-func (o *AdGroupWorkflowNewFrequencyConfigInput) GetFrequencyCap() *int {
-	if o == nil {
+func (a *AdGroupWorkflowNewFrequencyConfigInput) GetFrequencyCap() *int {
+	if a == nil {
 		return nil
 	}
-	return o.FrequencyCap
+	return a.FrequencyCap
 }
 
-func (o *AdGroupWorkflowNewFrequencyConfigInput) GetFrequencyGoal() *int {
-	if o == nil {
+func (a *AdGroupWorkflowNewFrequencyConfigInput) GetFrequencyGoal() *int {
+	if a == nil {
 		return nil
 	}
-	return o.FrequencyGoal
+	return a.FrequencyGoal
 }
 
-func (o *AdGroupWorkflowNewFrequencyConfigInput) GetResetIntervalInMinutes() *int {
-	if o == nil {
+func (a *AdGroupWorkflowNewFrequencyConfigInput) GetResetIntervalInMinutes() *int {
+	if a == nil {
 		return nil
 	}
-	return o.ResetIntervalInMinutes
+	return a.ResetIntervalInMinutes
 }

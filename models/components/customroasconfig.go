@@ -9,30 +9,30 @@ type CustomROASConfig struct {
 	CustomROASViewthroughWeight *float64 `json:"customROASViewthroughWeight,omitempty"`
 }
 
-func (o *CustomROASConfig) GetIncludeInCustomROAS() bool {
-	if o == nil {
+func (c *CustomROASConfig) GetIncludeInCustomROAS() bool {
+	if c == nil {
 		return false
 	}
-	return o.IncludeInCustomROAS
+	return c.IncludeInCustomROAS
 }
 
-func (o *CustomROASConfig) GetCustomROASWeight() *float64 {
-	if o == nil {
+func (c *CustomROASConfig) GetCustomROASWeight() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.CustomROASWeight
+	return c.CustomROASWeight
 }
 
-func (o *CustomROASConfig) GetCustomROASClickWeight() *float64 {
-	if o == nil {
+func (c *CustomROASConfig) GetCustomROASClickWeight() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.CustomROASClickWeight
+	return c.CustomROASClickWeight
 }
 
-func (o *CustomROASConfig) GetCustomROASViewthroughWeight() *float64 {
-	if o == nil {
+func (c *CustomROASConfig) GetCustomROASViewthroughWeight() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.CustomROASViewthroughWeight
+	return c.CustomROASViewthroughWeight
 }

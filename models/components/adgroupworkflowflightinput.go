@@ -11,44 +11,44 @@ type AdGroupWorkflowFlightInput struct {
 	CampaignFlightID                int64           `json:"campaignFlightId"`
 }
 
-func (o *AdGroupWorkflowFlightInput) GetAllocationType() *AllocationType {
-	if o == nil {
+func (a *AdGroupWorkflowFlightInput) GetAllocationType() *AllocationType {
+	if a == nil {
 		return nil
 	}
-	return o.AllocationType
+	return a.AllocationType
 }
 
-func (o *AdGroupWorkflowFlightInput) GetBudgetInAdvertiserCurrency() *float64 {
-	if o == nil {
+func (a *AdGroupWorkflowFlightInput) GetBudgetInAdvertiserCurrency() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.BudgetInAdvertiserCurrency
+	return a.BudgetInAdvertiserCurrency
 }
 
-func (o *AdGroupWorkflowFlightInput) GetBudgetInImpressions() *int64 {
-	if o == nil {
+func (a *AdGroupWorkflowFlightInput) GetBudgetInImpressions() *int64 {
+	if a == nil {
 		return nil
 	}
-	return o.BudgetInImpressions
+	return a.BudgetInImpressions
 }
 
-func (o *AdGroupWorkflowFlightInput) GetDailyTargetInAdvertiserCurrency() *float64 {
-	if o == nil {
+func (a *AdGroupWorkflowFlightInput) GetDailyTargetInAdvertiserCurrency() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.DailyTargetInAdvertiserCurrency
+	return a.DailyTargetInAdvertiserCurrency
 }
 
-func (o *AdGroupWorkflowFlightInput) GetDailyTargetInImpressions() *int64 {
-	if o == nil {
+func (a *AdGroupWorkflowFlightInput) GetDailyTargetInImpressions() *int64 {
+	if a == nil {
 		return nil
 	}
-	return o.DailyTargetInImpressions
+	return a.DailyTargetInImpressions
 }
 
-func (o *AdGroupWorkflowFlightInput) GetCampaignFlightID() int64 {
-	if o == nil {
+func (a *AdGroupWorkflowFlightInput) GetCampaignFlightID() int64 {
+	if a == nil {
 		return 0
 	}
-	return o.CampaignFlightID
+	return a.CampaignFlightID
 }

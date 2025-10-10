@@ -9,30 +9,30 @@ type AdGroupUpdateWorkflowInputWithValidation struct {
 	ValidateInputOnly *bool                              `json:"validateInputOnly,omitempty"`
 }
 
-func (o *AdGroupUpdateWorkflowInputWithValidation) GetID() *string {
-	if o == nil {
+func (a *AdGroupUpdateWorkflowInputWithValidation) GetID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AdGroupUpdateWorkflowInputWithValidation) GetPrimaryInput() *AdGroupUpdateWorkflowPrimaryInput {
-	if o == nil {
+func (a *AdGroupUpdateWorkflowInputWithValidation) GetPrimaryInput() *AdGroupUpdateWorkflowPrimaryInput {
+	if a == nil {
 		return nil
 	}
-	return o.PrimaryInput
+	return a.PrimaryInput
 }
 
-func (o *AdGroupUpdateWorkflowInputWithValidation) GetAdvancedInput() *AdGroupWorkflowAdvancedInput {
-	if o == nil {
+func (a *AdGroupUpdateWorkflowInputWithValidation) GetAdvancedInput() *AdGroupWorkflowAdvancedInput {
+	if a == nil {
 		return nil
 	}
-	return o.AdvancedInput
+	return a.AdvancedInput
 }
 
-func (o *AdGroupUpdateWorkflowInputWithValidation) GetValidateInputOnly() *bool {
-	if o == nil {
+func (a *AdGroupUpdateWorkflowInputWithValidation) GetValidateInputOnly() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.ValidateInputOnly
+	return a.ValidateInputOnly
 }

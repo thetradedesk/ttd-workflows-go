@@ -34,30 +34,30 @@ type FirstPartyDataInput struct {
 	CallbackInput *WorkflowCallbackInput `json:"callbackInput,omitempty"`
 }
 
-func (o *FirstPartyDataInput) GetAdvertiserID() string {
-	if o == nil {
+func (f *FirstPartyDataInput) GetAdvertiserID() string {
+	if f == nil {
 		return ""
 	}
-	return o.AdvertiserID
+	return f.AdvertiserID
 }
 
-func (o *FirstPartyDataInput) GetNameFilter() *string {
-	if o == nil {
+func (f *FirstPartyDataInput) GetNameFilter() *string {
+	if f == nil {
 		return nil
 	}
-	return o.NameFilter
+	return f.NameFilter
 }
 
-func (o *FirstPartyDataInput) GetQueryShape() *string {
-	if o == nil {
+func (f *FirstPartyDataInput) GetQueryShape() *string {
+	if f == nil {
 		return nil
 	}
-	return o.QueryShape
+	return f.QueryShape
 }
 
-func (o *FirstPartyDataInput) GetCallbackInput() *WorkflowCallbackInput {
-	if o == nil {
+func (f *FirstPartyDataInput) GetCallbackInput() *WorkflowCallbackInput {
+	if f == nil {
 		return nil
 	}
-	return o.CallbackInput
+	return f.CallbackInput
 }

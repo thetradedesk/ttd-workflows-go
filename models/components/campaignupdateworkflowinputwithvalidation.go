@@ -3,36 +3,36 @@
 package components
 
 type CampaignUpdateWorkflowInputWithValidation struct {
-	ID                *string                             `json:"id"`
-	PrimaryInput      *CampaignUpdateWorkflowPrimaryInput `json:"primaryInput,omitempty"`
-	AdvancedInput     *CampaignWorkflowAdvancedInput      `json:"advancedInput,omitempty"`
-	ValidateInputOnly *bool                               `json:"validateInputOnly,omitempty"`
+	ID                *string                              `json:"id"`
+	PrimaryInput      *CampaignUpdateWorkflowPrimaryInput  `json:"primaryInput,omitempty"`
+	AdvancedInput     *CampaignUpdateWorkflowAdvancedInput `json:"advancedInput,omitempty"`
+	ValidateInputOnly *bool                                `json:"validateInputOnly,omitempty"`
 }
 
-func (o *CampaignUpdateWorkflowInputWithValidation) GetID() *string {
-	if o == nil {
+func (c *CampaignUpdateWorkflowInputWithValidation) GetID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ID
+	return c.ID
 }
 
-func (o *CampaignUpdateWorkflowInputWithValidation) GetPrimaryInput() *CampaignUpdateWorkflowPrimaryInput {
-	if o == nil {
+func (c *CampaignUpdateWorkflowInputWithValidation) GetPrimaryInput() *CampaignUpdateWorkflowPrimaryInput {
+	if c == nil {
 		return nil
 	}
-	return o.PrimaryInput
+	return c.PrimaryInput
 }
 
-func (o *CampaignUpdateWorkflowInputWithValidation) GetAdvancedInput() *CampaignWorkflowAdvancedInput {
-	if o == nil {
+func (c *CampaignUpdateWorkflowInputWithValidation) GetAdvancedInput() *CampaignUpdateWorkflowAdvancedInput {
+	if c == nil {
 		return nil
 	}
-	return o.AdvancedInput
+	return c.AdvancedInput
 }
 
-func (o *CampaignUpdateWorkflowInputWithValidation) GetValidateInputOnly() *bool {
-	if o == nil {
+func (c *CampaignUpdateWorkflowInputWithValidation) GetValidateInputOnly() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.ValidateInputOnly
+	return c.ValidateInputOnly
 }

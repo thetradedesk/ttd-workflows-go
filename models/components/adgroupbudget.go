@@ -10,37 +10,37 @@ type AdGroupBudget struct {
 	DailyTargetInImpressions        *int64         `json:"dailyTargetInImpressions,omitempty"`
 }
 
-func (o *AdGroupBudget) GetAllocationType() AllocationType {
-	if o == nil {
+func (a *AdGroupBudget) GetAllocationType() AllocationType {
+	if a == nil {
 		return AllocationType("")
 	}
-	return o.AllocationType
+	return a.AllocationType
 }
 
-func (o *AdGroupBudget) GetBudgetInAdvertiserCurrency() float64 {
-	if o == nil {
+func (a *AdGroupBudget) GetBudgetInAdvertiserCurrency() float64 {
+	if a == nil {
 		return 0.0
 	}
-	return o.BudgetInAdvertiserCurrency
+	return a.BudgetInAdvertiserCurrency
 }
 
-func (o *AdGroupBudget) GetBudgetInImpressions() *int64 {
-	if o == nil {
+func (a *AdGroupBudget) GetBudgetInImpressions() *int64 {
+	if a == nil {
 		return nil
 	}
-	return o.BudgetInImpressions
+	return a.BudgetInImpressions
 }
 
-func (o *AdGroupBudget) GetDailyTargetInAdvertiserCurrency() *float64 {
-	if o == nil {
+func (a *AdGroupBudget) GetDailyTargetInAdvertiserCurrency() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.DailyTargetInAdvertiserCurrency
+	return a.DailyTargetInAdvertiserCurrency
 }
 
-func (o *AdGroupBudget) GetDailyTargetInImpressions() *int64 {
-	if o == nil {
+func (a *AdGroupBudget) GetDailyTargetInImpressions() *int64 {
+	if a == nil {
 		return nil
 	}
-	return o.DailyTargetInImpressions
+	return a.DailyTargetInImpressions
 }

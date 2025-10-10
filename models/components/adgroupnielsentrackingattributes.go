@@ -10,37 +10,37 @@ type AdGroupNielsenTrackingAttributes struct {
 	Countries               []string                        `json:"countries"`
 }
 
-func (o *AdGroupNielsenTrackingAttributes) GetEnhancedReportingOption() EnhancedNielsenReportingOptions {
-	if o == nil {
+func (a *AdGroupNielsenTrackingAttributes) GetEnhancedReportingOption() EnhancedNielsenReportingOptions {
+	if a == nil {
 		return EnhancedNielsenReportingOptions("")
 	}
-	return o.EnhancedReportingOption
+	return a.EnhancedReportingOption
 }
 
-func (o *AdGroupNielsenTrackingAttributes) GetGender() TargetingGender {
-	if o == nil {
+func (a *AdGroupNielsenTrackingAttributes) GetGender() TargetingGender {
+	if a == nil {
 		return TargetingGender("")
 	}
-	return o.Gender
+	return a.Gender
 }
 
-func (o *AdGroupNielsenTrackingAttributes) GetStartAge() TargetingStartAge {
-	if o == nil {
+func (a *AdGroupNielsenTrackingAttributes) GetStartAge() TargetingStartAge {
+	if a == nil {
 		return TargetingStartAge("")
 	}
-	return o.StartAge
+	return a.StartAge
 }
 
-func (o *AdGroupNielsenTrackingAttributes) GetEndAge() TargetingEndAge {
-	if o == nil {
+func (a *AdGroupNielsenTrackingAttributes) GetEndAge() TargetingEndAge {
+	if a == nil {
 		return TargetingEndAge("")
 	}
-	return o.EndAge
+	return a.EndAge
 }
 
-func (o *AdGroupNielsenTrackingAttributes) GetCountries() []string {
-	if o == nil {
+func (a *AdGroupNielsenTrackingAttributes) GetCountries() []string {
+	if a == nil {
 		return nil
 	}
-	return o.Countries
+	return a.Countries
 }

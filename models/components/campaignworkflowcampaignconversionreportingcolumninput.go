@@ -11,44 +11,44 @@ type CampaignWorkflowCampaignConversionReportingColumnInput struct {
 	CrossDeviceAttributionModelID *string           `json:"crossDeviceAttributionModelId,omitempty"`
 }
 
-func (o *CampaignWorkflowCampaignConversionReportingColumnInput) GetTrackingTagID() string {
-	if o == nil {
+func (c *CampaignWorkflowCampaignConversionReportingColumnInput) GetTrackingTagID() string {
+	if c == nil {
 		return ""
 	}
-	return o.TrackingTagID
+	return c.TrackingTagID
 }
 
-func (o *CampaignWorkflowCampaignConversionReportingColumnInput) GetIncludeInCustomCPA() bool {
-	if o == nil {
+func (c *CampaignWorkflowCampaignConversionReportingColumnInput) GetIncludeInCustomCPA() bool {
+	if c == nil {
 		return false
 	}
-	return o.IncludeInCustomCPA
+	return c.IncludeInCustomCPA
 }
 
-func (o *CampaignWorkflowCampaignConversionReportingColumnInput) GetReportingColumnID() int {
-	if o == nil {
+func (c *CampaignWorkflowCampaignConversionReportingColumnInput) GetReportingColumnID() int {
+	if c == nil {
 		return 0
 	}
-	return o.ReportingColumnID
+	return c.ReportingColumnID
 }
 
-func (o *CampaignWorkflowCampaignConversionReportingColumnInput) GetROASConfig() *CustomROASConfig {
-	if o == nil {
+func (c *CampaignWorkflowCampaignConversionReportingColumnInput) GetROASConfig() *CustomROASConfig {
+	if c == nil {
 		return nil
 	}
-	return o.ROASConfig
+	return c.ROASConfig
 }
 
-func (o *CampaignWorkflowCampaignConversionReportingColumnInput) GetWeight() *float64 {
-	if o == nil {
+func (c *CampaignWorkflowCampaignConversionReportingColumnInput) GetWeight() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.Weight
+	return c.Weight
 }
 
-func (o *CampaignWorkflowCampaignConversionReportingColumnInput) GetCrossDeviceAttributionModelID() *string {
-	if o == nil {
+func (c *CampaignWorkflowCampaignConversionReportingColumnInput) GetCrossDeviceAttributionModelID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.CrossDeviceAttributionModelID
+	return c.CrossDeviceAttributionModelID
 }

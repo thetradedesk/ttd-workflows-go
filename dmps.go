@@ -64,7 +64,7 @@ func (s *Dmps) GetFirstPartyDataJob(ctx context.Context, request *components.Fir
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "getFirstPartyDataJob",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Request", "json", `request:"mediaType=application/json"`)
@@ -320,7 +320,7 @@ func (s *Dmps) GetThirdPartyDataJob(ctx context.Context, request *components.Thi
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "getThirdPartyDataJob",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Request", "json", `request:"mediaType=application/json"`)

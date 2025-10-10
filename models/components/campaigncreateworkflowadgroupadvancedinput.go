@@ -14,65 +14,65 @@ type CampaignCreateWorkflowAdGroupAdvancedInput struct {
 	Flights                                    []CampaignCreateWorkflowAdGroupFlightInput     `json:"flights,omitempty"`
 }
 
-func (o *CampaignCreateWorkflowAdGroupAdvancedInput) GetKoaOptimizationSettings() *AdGroupWorkflowKoaOptimizationSettingsInput {
-	if o == nil {
+func (c *CampaignCreateWorkflowAdGroupAdvancedInput) GetKoaOptimizationSettings() *AdGroupWorkflowKoaOptimizationSettingsInput {
+	if c == nil {
 		return nil
 	}
-	return o.KoaOptimizationSettings
+	return c.KoaOptimizationSettings
 }
 
-func (o *CampaignCreateWorkflowAdGroupAdvancedInput) GetComscoreSettings() *AdGroupWorkflowComscoreSettingsInput {
-	if o == nil {
+func (c *CampaignCreateWorkflowAdGroupAdvancedInput) GetComscoreSettings() *AdGroupWorkflowComscoreSettingsInput {
+	if c == nil {
 		return nil
 	}
-	return o.ComscoreSettings
+	return c.ComscoreSettings
 }
 
-func (o *CampaignCreateWorkflowAdGroupAdvancedInput) GetContractTargeting() *AdGroupWorkflowContractTargetingInput {
-	if o == nil {
+func (c *CampaignCreateWorkflowAdGroupAdvancedInput) GetContractTargeting() *AdGroupWorkflowContractTargetingInput {
+	if c == nil {
 		return nil
 	}
-	return o.ContractTargeting
+	return c.ContractTargeting
 }
 
-func (o *CampaignCreateWorkflowAdGroupAdvancedInput) GetDimensionalBiddingAutoOptimizationSettings() [][]DimensionalBiddingDimensions {
-	if o == nil {
+func (c *CampaignCreateWorkflowAdGroupAdvancedInput) GetDimensionalBiddingAutoOptimizationSettings() [][]DimensionalBiddingDimensions {
+	if c == nil {
 		return nil
 	}
-	return o.DimensionalBiddingAutoOptimizationSettings
+	return c.DimensionalBiddingAutoOptimizationSettings
 }
 
-func (o *CampaignCreateWorkflowAdGroupAdvancedInput) GetIsUseClicksAsConversionsEnabled() *bool {
-	if o == nil {
+func (c *CampaignCreateWorkflowAdGroupAdvancedInput) GetIsUseClicksAsConversionsEnabled() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.IsUseClicksAsConversionsEnabled
+	return c.IsUseClicksAsConversionsEnabled
 }
 
-func (o *CampaignCreateWorkflowAdGroupAdvancedInput) GetIsUseSecondaryConversionsEnabled() *bool {
-	if o == nil {
+func (c *CampaignCreateWorkflowAdGroupAdvancedInput) GetIsUseSecondaryConversionsEnabled() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.IsUseSecondaryConversionsEnabled
+	return c.IsUseSecondaryConversionsEnabled
 }
 
-func (o *CampaignCreateWorkflowAdGroupAdvancedInput) GetNielsenTrackingAttributes() *AdGroupWorkflowNielsenTrackingAttributesInput {
-	if o == nil {
+func (c *CampaignCreateWorkflowAdGroupAdvancedInput) GetNielsenTrackingAttributes() *AdGroupWorkflowNielsenTrackingAttributesInput {
+	if c == nil {
 		return nil
 	}
-	return o.NielsenTrackingAttributes
+	return c.NielsenTrackingAttributes
 }
 
-func (o *CampaignCreateWorkflowAdGroupAdvancedInput) GetNewFrequencyConfigs() []AdGroupWorkflowNewFrequencyConfigInput {
-	if o == nil {
+func (c *CampaignCreateWorkflowAdGroupAdvancedInput) GetNewFrequencyConfigs() []AdGroupWorkflowNewFrequencyConfigInput {
+	if c == nil {
 		return nil
 	}
-	return o.NewFrequencyConfigs
+	return c.NewFrequencyConfigs
 }
 
-func (o *CampaignCreateWorkflowAdGroupAdvancedInput) GetFlights() []CampaignCreateWorkflowAdGroupFlightInput {
-	if o == nil {
+func (c *CampaignCreateWorkflowAdGroupAdvancedInput) GetFlights() []CampaignCreateWorkflowAdGroupFlightInput {
+	if c == nil {
 		return nil
 	}
-	return o.Flights
+	return c.Flights
 }

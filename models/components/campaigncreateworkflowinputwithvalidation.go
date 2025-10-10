@@ -4,35 +4,35 @@ package components
 
 type CampaignCreateWorkflowInputWithValidation struct {
 	PrimaryInput      CampaignCreateWorkflowPrimaryInput   `json:"primaryInput"`
-	AdvancedInput     *CampaignWorkflowAdvancedInput       `json:"advancedInput,omitempty"`
+	AdvancedInput     *CampaignCreateWorkflowAdvancedInput `json:"advancedInput,omitempty"`
 	AdGroups          []CampaignCreateWorkflowAdGroupInput `json:"adGroups,omitempty"`
 	ValidateInputOnly *bool                                `json:"validateInputOnly,omitempty"`
 }
 
-func (o *CampaignCreateWorkflowInputWithValidation) GetPrimaryInput() CampaignCreateWorkflowPrimaryInput {
-	if o == nil {
+func (c *CampaignCreateWorkflowInputWithValidation) GetPrimaryInput() CampaignCreateWorkflowPrimaryInput {
+	if c == nil {
 		return CampaignCreateWorkflowPrimaryInput{}
 	}
-	return o.PrimaryInput
+	return c.PrimaryInput
 }
 
-func (o *CampaignCreateWorkflowInputWithValidation) GetAdvancedInput() *CampaignWorkflowAdvancedInput {
-	if o == nil {
+func (c *CampaignCreateWorkflowInputWithValidation) GetAdvancedInput() *CampaignCreateWorkflowAdvancedInput {
+	if c == nil {
 		return nil
 	}
-	return o.AdvancedInput
+	return c.AdvancedInput
 }
 
-func (o *CampaignCreateWorkflowInputWithValidation) GetAdGroups() []CampaignCreateWorkflowAdGroupInput {
-	if o == nil {
+func (c *CampaignCreateWorkflowInputWithValidation) GetAdGroups() []CampaignCreateWorkflowAdGroupInput {
+	if c == nil {
 		return nil
 	}
-	return o.AdGroups
+	return c.AdGroups
 }
 
-func (o *CampaignCreateWorkflowInputWithValidation) GetValidateInputOnly() *bool {
-	if o == nil {
+func (c *CampaignCreateWorkflowInputWithValidation) GetValidateInputOnly() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.ValidateInputOnly
+	return c.ValidateInputOnly
 }

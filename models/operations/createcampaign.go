@@ -12,16 +12,16 @@ type CreateCampaignResponse struct {
 	CampaignPayload *components.CampaignPayload
 }
 
-func (o *CreateCampaignResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (c *CreateCampaignResponse) GetHTTPMeta() components.HTTPMetadata {
+	if c == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return c.HTTPMeta
 }
 
-func (o *CreateCampaignResponse) GetCampaignPayload() *components.CampaignPayload {
-	if o == nil {
+func (c *CreateCampaignResponse) GetCampaignPayload() *components.CampaignPayload {
+	if c == nil {
 		return nil
 	}
-	return o.CampaignPayload
+	return c.CampaignPayload
 }

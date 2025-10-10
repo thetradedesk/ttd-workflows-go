@@ -62,7 +62,7 @@ func (s *AdGroups) Create(ctx context.Context, request *components.AdGroupCreate
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "createAdGroup",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Request", "json", `request:"mediaType=application/json"`)
@@ -309,7 +309,7 @@ func (s *AdGroups) Update(ctx context.Context, request *components.AdGroupUpdate
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "updateAdGroup",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Request", "json", `request:"mediaType=application/json"`)
@@ -560,7 +560,7 @@ func (s *AdGroups) Archive(ctx context.Context, forceArchive *bool, requestBody 
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "archiveAdGroups",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -809,7 +809,7 @@ func (s *AdGroups) BulkCreate(ctx context.Context, request *components.AdGroupBu
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "createAdGroupsJob",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Request", "json", `request:"mediaType=application/json"`)
@@ -1059,7 +1059,7 @@ func (s *AdGroups) BulkUpdate(ctx context.Context, request *components.AdGroupBu
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "updateAdGroupsJob",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Request", "json", `request:"mediaType=application/json"`)

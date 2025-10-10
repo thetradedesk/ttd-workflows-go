@@ -16,13 +16,14 @@ generation:
   auth:
     oAuth2ClientCredentialsEnabled: true
     oAuth2PasswordEnabled: true
+    hoistGlobalSecurity: true
   sdkHooksConfigAccess: true
   tests:
     generateTests: true
     generateNewTests: false
     skipResponseBodyAssertions: false
 go:
-  version: 0.10.1
+  version: 0.11.0
   additionalDependencies: {}
   allowUnknownFieldsInWeakUnions: false
   baseErrorName: WorkflowsError
@@ -46,6 +47,7 @@ go:
   maxMethodParams: 999
   methodArguments: infer-optional-args
   modulePath: github.com/thetradedesk/ttd-workflows-go
+  nullableOptionalWrapper: false
   outputModelSuffix: output
   respectRequiredFields: false
   responseFormat: envelope-http

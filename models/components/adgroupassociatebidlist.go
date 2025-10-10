@@ -8,23 +8,23 @@ type AdGroupAssociateBidList struct {
 	IsDefaultForDimension bool    `json:"isDefaultForDimension"`
 }
 
-func (o *AdGroupAssociateBidList) GetBidListID() *string {
-	if o == nil {
+func (a *AdGroupAssociateBidList) GetBidListID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.BidListID
+	return a.BidListID
 }
 
-func (o *AdGroupAssociateBidList) GetIsEnabled() bool {
-	if o == nil {
+func (a *AdGroupAssociateBidList) GetIsEnabled() bool {
+	if a == nil {
 		return false
 	}
-	return o.IsEnabled
+	return a.IsEnabled
 }
 
-func (o *AdGroupAssociateBidList) GetIsDefaultForDimension() bool {
-	if o == nil {
+func (a *AdGroupAssociateBidList) GetIsDefaultForDimension() bool {
+	if a == nil {
 		return false
 	}
-	return o.IsDefaultForDimension
+	return a.IsDefaultForDimension
 }

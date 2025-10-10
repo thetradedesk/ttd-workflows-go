@@ -6,9 +6,9 @@ type AdGroupPayload struct {
 	AdGroup *AdGroupWorkflow `json:"adGroup,omitempty"`
 }
 
-func (o *AdGroupPayload) GetAdGroup() *AdGroupWorkflow {
-	if o == nil {
+func (a *AdGroupPayload) GetAdGroup() *AdGroupWorkflow {
+	if a == nil {
 		return nil
 	}
-	return o.AdGroup
+	return a.AdGroup
 }

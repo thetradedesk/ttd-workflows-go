@@ -7,16 +7,16 @@ type AdGroupKoaOptimizationSettings struct {
 	PredictiveClearingEnabled   *bool `json:"predictiveClearingEnabled,omitempty"`
 }
 
-func (o *AdGroupKoaOptimizationSettings) GetAreFutureKoaFeaturesEnabled() *bool {
-	if o == nil {
+func (a *AdGroupKoaOptimizationSettings) GetAreFutureKoaFeaturesEnabled() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.AreFutureKoaFeaturesEnabled
+	return a.AreFutureKoaFeaturesEnabled
 }
 
-func (o *AdGroupKoaOptimizationSettings) GetPredictiveClearingEnabled() *bool {
-	if o == nil {
+func (a *AdGroupKoaOptimizationSettings) GetPredictiveClearingEnabled() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.PredictiveClearingEnabled
+	return a.PredictiveClearingEnabled
 }

@@ -8,23 +8,23 @@ type CampaignBulkUpdateWorkflowInputWithValidation struct {
 	CallbackInput     *WorkflowCallbackInput        `json:"callbackInput,omitempty"`
 }
 
-func (o *CampaignBulkUpdateWorkflowInputWithValidation) GetInput() []CampaignUpdateWorkflowInput {
-	if o == nil {
+func (c *CampaignBulkUpdateWorkflowInputWithValidation) GetInput() []CampaignUpdateWorkflowInput {
+	if c == nil {
 		return nil
 	}
-	return o.Input
+	return c.Input
 }
 
-func (o *CampaignBulkUpdateWorkflowInputWithValidation) GetValidateInputOnly() *bool {
-	if o == nil {
+func (c *CampaignBulkUpdateWorkflowInputWithValidation) GetValidateInputOnly() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.ValidateInputOnly
+	return c.ValidateInputOnly
 }
 
-func (o *CampaignBulkUpdateWorkflowInputWithValidation) GetCallbackInput() *WorkflowCallbackInput {
-	if o == nil {
+func (c *CampaignBulkUpdateWorkflowInputWithValidation) GetCallbackInput() *WorkflowCallbackInput {
+	if c == nil {
 		return nil
 	}
-	return o.CallbackInput
+	return c.CallbackInput
 }

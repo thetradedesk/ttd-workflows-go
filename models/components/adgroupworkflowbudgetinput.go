@@ -10,37 +10,37 @@ type AdGroupWorkflowBudgetInput struct {
 	DailyTargetInImpressions        *int64          `json:"dailyTargetInImpressions,omitempty"`
 }
 
-func (o *AdGroupWorkflowBudgetInput) GetAllocationType() *AllocationType {
-	if o == nil {
+func (a *AdGroupWorkflowBudgetInput) GetAllocationType() *AllocationType {
+	if a == nil {
 		return nil
 	}
-	return o.AllocationType
+	return a.AllocationType
 }
 
-func (o *AdGroupWorkflowBudgetInput) GetBudgetInAdvertiserCurrency() *float64 {
-	if o == nil {
+func (a *AdGroupWorkflowBudgetInput) GetBudgetInAdvertiserCurrency() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.BudgetInAdvertiserCurrency
+	return a.BudgetInAdvertiserCurrency
 }
 
-func (o *AdGroupWorkflowBudgetInput) GetBudgetInImpressions() *int64 {
-	if o == nil {
+func (a *AdGroupWorkflowBudgetInput) GetBudgetInImpressions() *int64 {
+	if a == nil {
 		return nil
 	}
-	return o.BudgetInImpressions
+	return a.BudgetInImpressions
 }
 
-func (o *AdGroupWorkflowBudgetInput) GetDailyTargetInAdvertiserCurrency() *float64 {
-	if o == nil {
+func (a *AdGroupWorkflowBudgetInput) GetDailyTargetInAdvertiserCurrency() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.DailyTargetInAdvertiserCurrency
+	return a.DailyTargetInAdvertiserCurrency
 }
 
-func (o *AdGroupWorkflowBudgetInput) GetDailyTargetInImpressions() *int64 {
-	if o == nil {
+func (a *AdGroupWorkflowBudgetInput) GetDailyTargetInImpressions() *int64 {
+	if a == nil {
 		return nil
 	}
-	return o.DailyTargetInImpressions
+	return a.DailyTargetInImpressions
 }

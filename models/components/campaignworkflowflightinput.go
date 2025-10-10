@@ -27,44 +27,44 @@ func (c *CampaignWorkflowFlightInput) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *CampaignWorkflowFlightInput) GetStartDateInclusiveUTC() time.Time {
-	if o == nil {
+func (c *CampaignWorkflowFlightInput) GetStartDateInclusiveUTC() time.Time {
+	if c == nil {
 		return time.Time{}
 	}
-	return o.StartDateInclusiveUTC
+	return c.StartDateInclusiveUTC
 }
 
-func (o *CampaignWorkflowFlightInput) GetEndDateExclusiveUTC() *time.Time {
-	if o == nil {
+func (c *CampaignWorkflowFlightInput) GetEndDateExclusiveUTC() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.EndDateExclusiveUTC
+	return c.EndDateExclusiveUTC
 }
 
-func (o *CampaignWorkflowFlightInput) GetBudgetInAdvertiserCurrency() float64 {
-	if o == nil {
+func (c *CampaignWorkflowFlightInput) GetBudgetInAdvertiserCurrency() float64 {
+	if c == nil {
 		return 0.0
 	}
-	return o.BudgetInAdvertiserCurrency
+	return c.BudgetInAdvertiserCurrency
 }
 
-func (o *CampaignWorkflowFlightInput) GetBudgetInImpressions() *int64 {
-	if o == nil {
+func (c *CampaignWorkflowFlightInput) GetBudgetInImpressions() *int64 {
+	if c == nil {
 		return nil
 	}
-	return o.BudgetInImpressions
+	return c.BudgetInImpressions
 }
 
-func (o *CampaignWorkflowFlightInput) GetDailyTargetInAdvertiserCurrency() *float64 {
-	if o == nil {
+func (c *CampaignWorkflowFlightInput) GetDailyTargetInAdvertiserCurrency() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.DailyTargetInAdvertiserCurrency
+	return c.DailyTargetInAdvertiserCurrency
 }
 
-func (o *CampaignWorkflowFlightInput) GetDailyTargetInImpressions() *int64 {
-	if o == nil {
+func (c *CampaignWorkflowFlightInput) GetDailyTargetInImpressions() *int64 {
+	if c == nil {
 		return nil
 	}
-	return o.DailyTargetInImpressions
+	return c.DailyTargetInImpressions
 }

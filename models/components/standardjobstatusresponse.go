@@ -37,58 +37,58 @@ func (s *StandardJobStatusResponse) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *StandardJobStatusResponse) GetID() int64 {
-	if o == nil {
+func (s *StandardJobStatusResponse) GetID() int64 {
+	if s == nil {
 		return 0
 	}
-	return o.ID
+	return s.ID
 }
 
-func (o *StandardJobStatusResponse) GetCompletedAtUtc() *time.Time {
-	if o == nil {
+func (s *StandardJobStatusResponse) GetCompletedAtUtc() *time.Time {
+	if s == nil {
 		return nil
 	}
-	return o.CompletedAtUtc
+	return s.CompletedAtUtc
 }
 
-func (o *StandardJobStatusResponse) GetCompletionPercentage() *float64 {
-	if o == nil {
+func (s *StandardJobStatusResponse) GetCompletionPercentage() *float64 {
+	if s == nil {
 		return nil
 	}
-	return o.CompletionPercentage
+	return s.CompletionPercentage
 }
 
-func (o *StandardJobStatusResponse) GetCreatedAtUtc() time.Time {
-	if o == nil {
+func (s *StandardJobStatusResponse) GetCreatedAtUtc() time.Time {
+	if s == nil {
 		return time.Time{}
 	}
-	return o.CreatedAtUtc
+	return s.CreatedAtUtc
 }
 
-func (o *StandardJobStatusResponse) GetStatus() WorkflowStatus {
-	if o == nil {
+func (s *StandardJobStatusResponse) GetStatus() WorkflowStatus {
+	if s == nil {
 		return WorkflowStatus("")
 	}
-	return o.Status
+	return s.Status
 }
 
-func (o *StandardJobStatusResponse) GetURL() *string {
-	if o == nil {
+func (s *StandardJobStatusResponse) GetURL() *string {
+	if s == nil {
 		return nil
 	}
-	return o.URL
+	return s.URL
 }
 
-func (o *StandardJobStatusResponse) GetRawResult() *string {
-	if o == nil {
+func (s *StandardJobStatusResponse) GetRawResult() *string {
+	if s == nil {
 		return nil
 	}
-	return o.RawResult
+	return s.RawResult
 }
 
-func (o *StandardJobStatusResponse) GetErrors() *string {
-	if o == nil {
+func (s *StandardJobStatusResponse) GetErrors() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Errors
+	return s.Errors
 }

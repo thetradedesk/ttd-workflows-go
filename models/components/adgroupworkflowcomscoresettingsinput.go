@@ -9,30 +9,30 @@ type AdGroupWorkflowComscoreSettingsInput struct {
 	MobileDemographicMemberIds []int `json:"mobileDemographicMemberIds,omitempty"`
 }
 
-func (o *AdGroupWorkflowComscoreSettingsInput) GetIsEnabled() bool {
-	if o == nil {
+func (a *AdGroupWorkflowComscoreSettingsInput) GetIsEnabled() bool {
+	if a == nil {
 		return false
 	}
-	return o.IsEnabled
+	return a.IsEnabled
 }
 
-func (o *AdGroupWorkflowComscoreSettingsInput) GetPopulationID() *int {
-	if o == nil {
+func (a *AdGroupWorkflowComscoreSettingsInput) GetPopulationID() *int {
+	if a == nil {
 		return nil
 	}
-	return o.PopulationID
+	return a.PopulationID
 }
 
-func (o *AdGroupWorkflowComscoreSettingsInput) GetDemographicMemberIds() []int {
-	if o == nil {
+func (a *AdGroupWorkflowComscoreSettingsInput) GetDemographicMemberIds() []int {
+	if a == nil {
 		return nil
 	}
-	return o.DemographicMemberIds
+	return a.DemographicMemberIds
 }
 
-func (o *AdGroupWorkflowComscoreSettingsInput) GetMobileDemographicMemberIds() []int {
-	if o == nil {
+func (a *AdGroupWorkflowComscoreSettingsInput) GetMobileDemographicMemberIds() []int {
+	if a == nil {
 		return nil
 	}
-	return o.MobileDemographicMemberIds
+	return a.MobileDemographicMemberIds
 }

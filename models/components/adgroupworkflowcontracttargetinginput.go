@@ -6,9 +6,9 @@ type AdGroupWorkflowContractTargetingInput struct {
 	AllowOpenMarketBiddingWhenTargetingContracts *bool `json:"allowOpenMarketBiddingWhenTargetingContracts,omitempty"`
 }
 
-func (o *AdGroupWorkflowContractTargetingInput) GetAllowOpenMarketBiddingWhenTargetingContracts() *bool {
-	if o == nil {
+func (a *AdGroupWorkflowContractTargetingInput) GetAllowOpenMarketBiddingWhenTargetingContracts() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.AllowOpenMarketBiddingWhenTargetingContracts
+	return a.AllowOpenMarketBiddingWhenTargetingContracts
 }

@@ -10,11 +10,11 @@ type GetJobStatusRequest struct {
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *GetJobStatusRequest) GetID() int64 {
-	if o == nil {
+func (g *GetJobStatusRequest) GetID() int64 {
+	if g == nil {
 		return 0
 	}
-	return o.ID
+	return g.ID
 }
 
 type GetJobStatusResponse struct {
@@ -23,16 +23,16 @@ type GetJobStatusResponse struct {
 	StandardJobStatusResponse *components.StandardJobStatusResponse
 }
 
-func (o *GetJobStatusResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (g *GetJobStatusResponse) GetHTTPMeta() components.HTTPMetadata {
+	if g == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return g.HTTPMeta
 }
 
-func (o *GetJobStatusResponse) GetStandardJobStatusResponse() *components.StandardJobStatusResponse {
-	if o == nil {
+func (g *GetJobStatusResponse) GetStandardJobStatusResponse() *components.StandardJobStatusResponse {
+	if g == nil {
 		return nil
 	}
-	return o.StandardJobStatusResponse
+	return g.StandardJobStatusResponse
 }

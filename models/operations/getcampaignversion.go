@@ -10,11 +10,11 @@ type GetCampaignVersionRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *GetCampaignVersionRequest) GetID() string {
-	if o == nil {
+func (g *GetCampaignVersionRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
 type GetCampaignVersionResponse struct {
@@ -23,16 +23,16 @@ type GetCampaignVersionResponse struct {
 	CampaignVersionWorkflow *components.CampaignVersionWorkflow
 }
 
-func (o *GetCampaignVersionResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (g *GetCampaignVersionResponse) GetHTTPMeta() components.HTTPMetadata {
+	if g == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return g.HTTPMeta
 }
 
-func (o *GetCampaignVersionResponse) GetCampaignVersionWorkflow() *components.CampaignVersionWorkflow {
-	if o == nil {
+func (g *GetCampaignVersionResponse) GetCampaignVersionWorkflow() *components.CampaignVersionWorkflow {
+	if g == nil {
 		return nil
 	}
-	return o.CampaignVersionWorkflow
+	return g.CampaignVersionWorkflow
 }

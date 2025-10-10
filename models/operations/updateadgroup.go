@@ -12,16 +12,16 @@ type UpdateAdGroupResponse struct {
 	AdGroupPayload *components.AdGroupPayload
 }
 
-func (o *UpdateAdGroupResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (u *UpdateAdGroupResponse) GetHTTPMeta() components.HTTPMetadata {
+	if u == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return u.HTTPMeta
 }
 
-func (o *UpdateAdGroupResponse) GetAdGroupPayload() *components.AdGroupPayload {
-	if o == nil {
+func (u *UpdateAdGroupResponse) GetAdGroupPayload() *components.AdGroupPayload {
+	if u == nil {
 		return nil
 	}
-	return o.AdGroupPayload
+	return u.AdGroupPayload
 }

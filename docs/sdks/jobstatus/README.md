@@ -5,7 +5,62 @@
 
 ### Available Operations
 
+* [GetGraphQlBulkJobStatus](#getgraphqlbulkjobstatus) - Get the status of a previously submitted GraphQL bulk job
 * [Get](#get) - Get the status of a previously submitted job
+
+## GetGraphQlBulkJobStatus
+
+Use this operation to get a previously submitted GraphQL bulk job's status and completion percentage.
+Once a job is complete, this operation will return the URL from which to download the job results.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getGraphQlBulkJobStatus" method="get" path="/graphqlbulkjob/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	"os"
+	ttdworkflows "github.com/thetradedesk/ttd-workflows-go"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := ttdworkflows.New(
+        ttdworkflows.WithSecurity(os.Getenv("WORKFLOWS_TTD_AUTH")),
+    )
+
+    res, err := s.JobStatus.GetGraphQlBulkJobStatus(ctx, "<id>")
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.GraphQLBulkJobRetrievalResponse != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                | Type                                                     | Required                                                 | Description                                              |
+| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
+| `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
+| `id`                                                     | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
+| `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
+
+### Response
+
+**[*operations.GetGraphQlBulkJobStatusResponse](../../models/operations/getgraphqlbulkjobstatusresponse.md), error**
+
+### Errors
+
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| apierrors.ProblemDetailsError | 400, 401, 403, 404            | application/json              |
+| apierrors.APIError            | 4XX, 5XX                      | \*/\*                         |
 
 ## Get
 
