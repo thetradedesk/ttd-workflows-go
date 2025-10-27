@@ -7,6 +7,7 @@ type CampaignCreateWorkflowAdvancedInput struct {
 	PurchaseOrderNumber           *string                                        `json:"purchaseOrderNumber,omitempty"`
 	IncludeDefaultsFromAdvertiser *bool                                          `json:"includeDefaultsFromAdvertiser,omitempty"`
 	PassThroughFeeCard            *CampaignCreateWorkflowPassThroughFeeCardInput `json:"passThroughFeeCard,omitempty"`
+	CallerSource                  *string                                        `json:"callerSource,omitempty"`
 }
 
 func (c *CampaignCreateWorkflowAdvancedInput) GetFlights() []CampaignWorkflowFlightInput {
@@ -35,4 +36,11 @@ func (c *CampaignCreateWorkflowAdvancedInput) GetPassThroughFeeCard() *CampaignC
 		return nil
 	}
 	return c.PassThroughFeeCard
+}
+
+func (c *CampaignCreateWorkflowAdvancedInput) GetCallerSource() *string {
+	if c == nil {
+		return nil
+	}
+	return c.CallerSource
 }

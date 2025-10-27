@@ -5,15 +5,15 @@
 
 ### Available Operations
 
-* [Create](#create) - Create a new ad group with required fields
-* [Update](#update) - Update an ad group with specified fields
+* [Create](#create) - Create a new ad group
+* [Update](#update) - Update an ad group
 * [Archive](#archive) - Archive multiple ad groups
-* [BulkCreate](#bulkcreate) - Create multiple new ad groups with required fields
-* [BulkUpdate](#bulkupdate) - Update multiple ad groups with specified fields
+* [BulkCreate](#bulkcreate) - Submit a job to create multiple new ad groups
+* [BulkUpdate](#bulkupdate) - Submit a job to update multiple ad groups
 
 ## Create
 
-Create a new ad group with required fields
+Create a new ad group
 
 ### Example Usage
 
@@ -408,7 +408,7 @@ func main() {
 
 ## BulkCreate
 
-Create multiple new ad groups with required fields
+Submit a job to create multiple new ad groups
 
 ### Example Usage
 

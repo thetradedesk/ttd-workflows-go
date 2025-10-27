@@ -5,16 +5,16 @@
 
 ### Available Operations
 
-* [CreateCampaign](#createcampaign) - Create a new campaign with required fields
-* [Update](#update) - Update a campaign with specified fields
-* [BulkCreate](#bulkcreate) - Create multiple new campaigns with required fields
-* [BulkUpdate](#bulkupdate) - Update multiple campaigns with specified fields
+* [CreateCampaign](#createcampaign) - Create a new campaign
+* [Update](#update) - Update a campaign
+* [BulkCreate](#bulkcreate) - Submit a job to create multiple new campaigns
+* [BulkUpdate](#bulkupdate) - Submit a job to update multiple campaigns
 * [Archive](#archive) - Archive multiple campaigns
 * [GetCampaignVersion](#getcampaignversion) - Get a campaign's version
 
 ## CreateCampaign
 
-Create a new campaign with required fields
+Create a new campaign
 
 ### Example Usage
 
@@ -179,6 +179,7 @@ func main() {
                     },
                 },
             },
+            CallerSource: ttdworkflows.Pointer("<value>"),
         },
         AdGroups: []components.CampaignCreateWorkflowAdGroupInput{
             components.CampaignCreateWorkflowAdGroupInput{
@@ -483,7 +484,7 @@ func main() {
 
 ## BulkCreate
 
-Create multiple new campaigns with required fields
+Submit a job to create multiple new campaigns
 
 ### Example Usage
 
@@ -655,6 +656,7 @@ func main() {
                             },
                         },
                     },
+                    CallerSource: ttdworkflows.Pointer("<value>"),
                 },
                 AdGroups: []components.CampaignCreateWorkflowAdGroupInput{
                     components.CampaignCreateWorkflowAdGroupInput{
