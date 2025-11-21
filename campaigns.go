@@ -31,7 +31,7 @@ func newCampaigns(rootSDK *Workflows, sdkConfig config.SDKConfiguration, hooks *
 	}
 }
 
-// CreateCampaign - Create a new campaign with required fields
+// CreateCampaign - Create a new campaign
 func (s *Campaigns) CreateCampaign(ctx context.Context, request *components.CampaignCreateWorkflowInputWithValidation, opts ...operations.Option) (*operations.CreateCampaignResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -278,7 +278,7 @@ func (s *Campaigns) CreateCampaign(ctx context.Context, request *components.Camp
 
 }
 
-// Update a campaign with specified fields
+// Update a campaign
 // Only the fields provided in the request payload will be updated.
 func (s *Campaigns) Update(ctx context.Context, request *components.CampaignUpdateWorkflowInputWithValidation, opts ...operations.Option) (*operations.UpdateCampaignResponse, error) {
 	o := operations.Options{}
@@ -522,7 +522,7 @@ func (s *Campaigns) Update(ctx context.Context, request *components.CampaignUpda
 
 }
 
-// BulkCreate - Create multiple new campaigns with required fields
+// BulkCreate - Submit a job to create multiple new campaigns
 func (s *Campaigns) BulkCreate(ctx context.Context, request *components.CampaignBulkCreateWorkflowInputWithValidation, opts ...operations.Option) (*operations.CreateCampaignsJobResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -771,7 +771,7 @@ func (s *Campaigns) BulkCreate(ctx context.Context, request *components.Campaign
 
 }
 
-// BulkUpdate - Update multiple campaigns with specified fields
+// BulkUpdate - Submit a job to update multiple campaigns
 // Only the fields provided in the request payload for each specific campaign will be updated.
 func (s *Campaigns) BulkUpdate(ctx context.Context, request *components.CampaignBulkUpdateWorkflowInputWithValidation, opts ...operations.Option) (*operations.UpdateCampaignsJobResponse, error) {
 	o := operations.Options{}

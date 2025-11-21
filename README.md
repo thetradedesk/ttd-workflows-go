@@ -444,7 +444,9 @@ func main() {
 			Name:                                    ttdworkflows.Pointer("<value>"),
 			Channel:                                 components.AdGroupChannelDisplay,
 			FunnelLocation:                          components.AdGroupFunnelLocationConsideration,
+			MarketType:                              components.MarketTypePrivateMarketOnly.ToPointer(),
 			ProgrammaticGuaranteedPrivateContractID: ttdworkflows.Pointer("<id>"),
+			IncludeDefaultsFromCampaign:             ttdworkflows.Pointer(false),
 		},
 		CampaignID: ttdworkflows.Pointer("<id>"),
 		AdvancedInput: &components.AdGroupWorkflowAdvancedInput{
@@ -503,6 +505,7 @@ func main() {
 					CampaignFlightID:                874887,
 				},
 			},
+			CallerSource: ttdworkflows.Pointer("<value>"),
 		},
 		ValidateInputOnly: ttdworkflows.Pointer(true),
 	})
@@ -525,18 +528,18 @@ func main() {
 
 ### [AdGroups](docs/sdks/adgroups/README.md)
 
-* [Create](docs/sdks/adgroups/README.md#create) - Create a new ad group with required fields
-* [Update](docs/sdks/adgroups/README.md#update) - Update an ad group with specified fields
+* [Create](docs/sdks/adgroups/README.md#create) - Create a new ad group
+* [Update](docs/sdks/adgroups/README.md#update) - Update an ad group
 * [Archive](docs/sdks/adgroups/README.md#archive) - Archive multiple ad groups
-* [BulkCreate](docs/sdks/adgroups/README.md#bulkcreate) - Create multiple new ad groups with required fields
-* [BulkUpdate](docs/sdks/adgroups/README.md#bulkupdate) - Update multiple ad groups with specified fields
+* [BulkCreate](docs/sdks/adgroups/README.md#bulkcreate) - Submit a job to create multiple new ad groups
+* [BulkUpdate](docs/sdks/adgroups/README.md#bulkupdate) - Submit a job to update multiple ad groups
 
 ### [Campaigns](docs/sdks/campaigns/README.md)
 
-* [CreateCampaign](docs/sdks/campaigns/README.md#createcampaign) - Create a new campaign with required fields
-* [Update](docs/sdks/campaigns/README.md#update) - Update a campaign with specified fields
-* [BulkCreate](docs/sdks/campaigns/README.md#bulkcreate) - Create multiple new campaigns with required fields
-* [BulkUpdate](docs/sdks/campaigns/README.md#bulkupdate) - Update multiple campaigns with specified fields
+* [CreateCampaign](docs/sdks/campaigns/README.md#createcampaign) - Create a new campaign
+* [Update](docs/sdks/campaigns/README.md#update) - Update a campaign
+* [BulkCreate](docs/sdks/campaigns/README.md#bulkcreate) - Submit a job to create multiple new campaigns
+* [BulkUpdate](docs/sdks/campaigns/README.md#bulkupdate) - Submit a job to update multiple campaigns
 * [Archive](docs/sdks/campaigns/README.md#archive) - Archive multiple campaigns
 * [GetCampaignVersion](docs/sdks/campaigns/README.md#getcampaignversion) - Get a campaign's version
 
@@ -642,7 +645,9 @@ func main() {
 			Name:                                    ttdworkflows.Pointer("<value>"),
 			Channel:                                 components.AdGroupChannelDisplay,
 			FunnelLocation:                          components.AdGroupFunnelLocationConsideration,
+			MarketType:                              components.MarketTypePrivateMarketOnly.ToPointer(),
 			ProgrammaticGuaranteedPrivateContractID: ttdworkflows.Pointer("<id>"),
+			IncludeDefaultsFromCampaign:             ttdworkflows.Pointer(false),
 		},
 		CampaignID: ttdworkflows.Pointer("<id>"),
 		AdvancedInput: &components.AdGroupWorkflowAdvancedInput{
@@ -701,6 +706,7 @@ func main() {
 					CampaignFlightID:                874887,
 				},
 			},
+			CallerSource: ttdworkflows.Pointer("<value>"),
 		},
 		ValidateInputOnly: ttdworkflows.Pointer(true),
 	}, operations.WithRetries(
@@ -806,7 +812,9 @@ func main() {
 			Name:                                    ttdworkflows.Pointer("<value>"),
 			Channel:                                 components.AdGroupChannelDisplay,
 			FunnelLocation:                          components.AdGroupFunnelLocationConsideration,
+			MarketType:                              components.MarketTypePrivateMarketOnly.ToPointer(),
 			ProgrammaticGuaranteedPrivateContractID: ttdworkflows.Pointer("<id>"),
+			IncludeDefaultsFromCampaign:             ttdworkflows.Pointer(false),
 		},
 		CampaignID: ttdworkflows.Pointer("<id>"),
 		AdvancedInput: &components.AdGroupWorkflowAdvancedInput{
@@ -865,6 +873,7 @@ func main() {
 					CampaignFlightID:                874887,
 				},
 			},
+			CallerSource: ttdworkflows.Pointer("<value>"),
 		},
 		ValidateInputOnly: ttdworkflows.Pointer(true),
 	})
@@ -966,7 +975,9 @@ func main() {
 			Name:                                    ttdworkflows.Pointer("<value>"),
 			Channel:                                 components.AdGroupChannelDisplay,
 			FunnelLocation:                          components.AdGroupFunnelLocationConsideration,
+			MarketType:                              components.MarketTypePrivateMarketOnly.ToPointer(),
 			ProgrammaticGuaranteedPrivateContractID: ttdworkflows.Pointer("<id>"),
+			IncludeDefaultsFromCampaign:             ttdworkflows.Pointer(false),
 		},
 		CampaignID: ttdworkflows.Pointer("<id>"),
 		AdvancedInput: &components.AdGroupWorkflowAdvancedInput{
@@ -1025,6 +1036,7 @@ func main() {
 					CampaignFlightID:                874887,
 				},
 			},
+			CallerSource: ttdworkflows.Pointer("<value>"),
 		},
 		ValidateInputOnly: ttdworkflows.Pointer(true),
 	})
@@ -1076,7 +1088,7 @@ func main() {
 	ctx := context.Background()
 
 	s := ttdworkflows.New(
-		ttdworkflows.WithServer("sandbox"),
+		ttdworkflows.WithServer("prod"),
 		ttdworkflows.WithSecurity(os.Getenv("WORKFLOWS_TTD_AUTH")),
 	)
 
@@ -1131,7 +1143,9 @@ func main() {
 			Name:                                    ttdworkflows.Pointer("<value>"),
 			Channel:                                 components.AdGroupChannelDisplay,
 			FunnelLocation:                          components.AdGroupFunnelLocationConsideration,
+			MarketType:                              components.MarketTypePrivateMarketOnly.ToPointer(),
 			ProgrammaticGuaranteedPrivateContractID: ttdworkflows.Pointer("<id>"),
+			IncludeDefaultsFromCampaign:             ttdworkflows.Pointer(false),
 		},
 		CampaignID: ttdworkflows.Pointer("<id>"),
 		AdvancedInput: &components.AdGroupWorkflowAdvancedInput{
@@ -1190,6 +1204,7 @@ func main() {
 					CampaignFlightID:                874887,
 				},
 			},
+			CallerSource: ttdworkflows.Pointer("<value>"),
 		},
 		ValidateInputOnly: ttdworkflows.Pointer(true),
 	})
@@ -1276,7 +1291,9 @@ func main() {
 			Name:                                    ttdworkflows.Pointer("<value>"),
 			Channel:                                 components.AdGroupChannelDisplay,
 			FunnelLocation:                          components.AdGroupFunnelLocationConsideration,
+			MarketType:                              components.MarketTypePrivateMarketOnly.ToPointer(),
 			ProgrammaticGuaranteedPrivateContractID: ttdworkflows.Pointer("<id>"),
+			IncludeDefaultsFromCampaign:             ttdworkflows.Pointer(false),
 		},
 		CampaignID: ttdworkflows.Pointer("<id>"),
 		AdvancedInput: &components.AdGroupWorkflowAdvancedInput{
@@ -1335,6 +1352,7 @@ func main() {
 					CampaignFlightID:                874887,
 				},
 			},
+			CallerSource: ttdworkflows.Pointer("<value>"),
 		},
 		ValidateInputOnly: ttdworkflows.Pointer(true),
 	})

@@ -15,7 +15,9 @@ type AdGroupCreateWorkflowPrimaryInput struct {
 	Name                                    *string                                `json:"name"`
 	Channel                                 AdGroupChannel                         `json:"channel"`
 	FunnelLocation                          AdGroupFunnelLocation                  `json:"funnelLocation"`
+	MarketType                              *MarketType                            `json:"marketType,omitempty"`
 	ProgrammaticGuaranteedPrivateContractID *string                                `json:"programmaticGuaranteedPrivateContractId,omitempty"`
+	IncludeDefaultsFromCampaign             *bool                                  `json:"includeDefaultsFromCampaign,omitempty"`
 }
 
 func (a *AdGroupCreateWorkflowPrimaryInput) GetIsEnabled() *bool {
@@ -102,9 +104,23 @@ func (a *AdGroupCreateWorkflowPrimaryInput) GetFunnelLocation() AdGroupFunnelLoc
 	return a.FunnelLocation
 }
 
+func (a *AdGroupCreateWorkflowPrimaryInput) GetMarketType() *MarketType {
+	if a == nil {
+		return nil
+	}
+	return a.MarketType
+}
+
 func (a *AdGroupCreateWorkflowPrimaryInput) GetProgrammaticGuaranteedPrivateContractID() *string {
 	if a == nil {
 		return nil
 	}
 	return a.ProgrammaticGuaranteedPrivateContractID
+}
+
+func (a *AdGroupCreateWorkflowPrimaryInput) GetIncludeDefaultsFromCampaign() *bool {
+	if a == nil {
+		return nil
+	}
+	return a.IncludeDefaultsFromCampaign
 }

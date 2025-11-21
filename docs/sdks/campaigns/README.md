@@ -5,16 +5,16 @@
 
 ### Available Operations
 
-* [CreateCampaign](#createcampaign) - Create a new campaign with required fields
-* [Update](#update) - Update a campaign with specified fields
-* [BulkCreate](#bulkcreate) - Create multiple new campaigns with required fields
-* [BulkUpdate](#bulkupdate) - Update multiple campaigns with specified fields
+* [CreateCampaign](#createcampaign) - Create a new campaign
+* [Update](#update) - Update a campaign
+* [BulkCreate](#bulkcreate) - Submit a job to create multiple new campaigns
+* [BulkUpdate](#bulkupdate) - Submit a job to update multiple campaigns
 * [Archive](#archive) - Archive multiple campaigns
 * [GetCampaignVersion](#getcampaignversion) - Get a campaign's version
 
 ## CreateCampaign
 
-Create a new campaign with required fields
+Create a new campaign
 
 ### Example Usage
 
@@ -179,6 +179,7 @@ func main() {
                     },
                 },
             },
+            CallerSource: ttdworkflows.Pointer("<value>"),
         },
         AdGroups: []components.CampaignCreateWorkflowAdGroupInput{
             components.CampaignCreateWorkflowAdGroupInput{
@@ -235,7 +236,9 @@ func main() {
                     Name: ttdworkflows.Pointer("<value>"),
                     Channel: components.AdGroupChannelNativeVideo,
                     FunnelLocation: components.AdGroupFunnelLocationNone,
+                    MarketType: components.MarketTypeOpenMarket.ToPointer(),
                     ProgrammaticGuaranteedPrivateContractID: ttdworkflows.Pointer("<id>"),
+                    IncludeDefaultsFromCampaign: ttdworkflows.Pointer(true),
                 },
                 AdvancedInput: &components.CampaignCreateWorkflowAdGroupAdvancedInput{
                     KoaOptimizationSettings: &components.AdGroupWorkflowKoaOptimizationSettingsInput{
@@ -276,6 +279,7 @@ func main() {
                             ResetIntervalInMinutes: ttdworkflows.Pointer[int](587736),
                         },
                     },
+                    IncludeDefaultsFromCampaign: ttdworkflows.Pointer(false),
                     Flights: []components.CampaignCreateWorkflowAdGroupFlightInput{
                         components.CampaignCreateWorkflowAdGroupFlightInput{
                             AllocationType: components.AllocationTypeFixed.ToPointer(),
@@ -483,7 +487,7 @@ func main() {
 
 ## BulkCreate
 
-Create multiple new campaigns with required fields
+Submit a job to create multiple new campaigns
 
 ### Example Usage
 
@@ -655,6 +659,7 @@ func main() {
                             },
                         },
                     },
+                    CallerSource: ttdworkflows.Pointer("<value>"),
                 },
                 AdGroups: []components.CampaignCreateWorkflowAdGroupInput{
                     components.CampaignCreateWorkflowAdGroupInput{
@@ -712,7 +717,9 @@ func main() {
                             Name: ttdworkflows.Pointer("<value>"),
                             Channel: components.AdGroupChannelDisplay,
                             FunnelLocation: components.AdGroupFunnelLocationAwareness,
+                            MarketType: components.MarketTypePrivateMarketOnly.ToPointer(),
                             ProgrammaticGuaranteedPrivateContractID: ttdworkflows.Pointer("<id>"),
+                            IncludeDefaultsFromCampaign: ttdworkflows.Pointer(true),
                         },
                         AdvancedInput: &components.CampaignCreateWorkflowAdGroupAdvancedInput{
                             KoaOptimizationSettings: &components.AdGroupWorkflowKoaOptimizationSettingsInput{
@@ -750,6 +757,7 @@ func main() {
                                 },
                             },
                             NewFrequencyConfigs: nil,
+                            IncludeDefaultsFromCampaign: ttdworkflows.Pointer(true),
                             Flights: []components.CampaignCreateWorkflowAdGroupFlightInput{
                                 components.CampaignCreateWorkflowAdGroupFlightInput{
                                     AllocationType: components.AllocationTypeMaximum.ToPointer(),
