@@ -5,15 +5,15 @@
 
 ### Available Operations
 
-* [Create](#create) - Create a new ad group with required fields
-* [Update](#update) - Update an ad group with specified fields
+* [Create](#create) - Create a new ad group
+* [Update](#update) - Update an ad group
 * [Archive](#archive) - Archive multiple ad groups
-* [BulkCreate](#bulkcreate) - Create multiple new ad groups with required fields
-* [BulkUpdate](#bulkupdate) - Update multiple ad groups with specified fields
+* [BulkCreate](#bulkcreate) - Submit a job to create multiple new ad groups
+* [BulkUpdate](#bulkupdate) - Submit a job to update multiple ad groups
 
 ## Create
 
-Create a new ad group with required fields
+Create a new ad group
 
 ### Example Usage
 
@@ -87,7 +87,9 @@ func main() {
             Name: ttdworkflows.Pointer("<value>"),
             Channel: components.AdGroupChannelDisplay,
             FunnelLocation: components.AdGroupFunnelLocationConsideration,
+            MarketType: components.MarketTypePrivateMarketOnly.ToPointer(),
             ProgrammaticGuaranteedPrivateContractID: ttdworkflows.Pointer("<id>"),
+            IncludeDefaultsFromCampaign: ttdworkflows.Pointer(false),
         },
         CampaignID: ttdworkflows.Pointer("<id>"),
         AdvancedInput: &components.AdGroupWorkflowAdvancedInput{
@@ -146,6 +148,7 @@ func main() {
                     CampaignFlightID: 874887,
                 },
             },
+            CallerSource: ttdworkflows.Pointer("<value>"),
         },
         ValidateInputOnly: ttdworkflows.Pointer(true),
     })
@@ -260,6 +263,7 @@ func main() {
             Name: ttdworkflows.Pointer("<value>"),
             Channel: components.AdGroupChannelNative.ToPointer(),
             FunnelLocation: components.AdGroupFunnelLocationConversion.ToPointer(),
+            MarketType: components.MarketTypeOpenMarket.ToPointer(),
         },
         AdvancedInput: &components.AdGroupWorkflowAdvancedInput{
             KoaOptimizationSettings: &components.AdGroupWorkflowKoaOptimizationSettingsInput{
@@ -318,6 +322,7 @@ func main() {
                     CampaignFlightID: 528311,
                 },
             },
+            CallerSource: nil,
         },
         ValidateInputOnly: ttdworkflows.Pointer(false),
     })
@@ -408,7 +413,7 @@ func main() {
 
 ## BulkCreate
 
-Create multiple new ad groups with required fields
+Submit a job to create multiple new ad groups
 
 ### Example Usage
 
@@ -552,6 +557,7 @@ func main() {
                     Name: ttdworkflows.Pointer("<value>"),
                     Channel: components.AdGroupChannelTv.ToPointer(),
                     FunnelLocation: components.AdGroupFunnelLocationNone.ToPointer(),
+                    MarketType: components.MarketTypeOpenMarket.ToPointer(),
                 },
                 AdvancedInput: &components.AdGroupWorkflowAdvancedInput{
                     KoaOptimizationSettings: &components.AdGroupWorkflowKoaOptimizationSettingsInput{
@@ -596,6 +602,7 @@ func main() {
                         },
                     },
                     Flights: nil,
+                    CallerSource: ttdworkflows.Pointer("<value>"),
                 },
             },
         },

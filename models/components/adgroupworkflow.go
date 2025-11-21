@@ -14,6 +14,7 @@ type AdGroupWorkflow struct {
 	Budget                                     AdGroupBudget                     `json:"budget"`
 	BaseBidCPMInAdvertiserCurrency             *float64                          `json:"baseBidCPMInAdvertiserCurrency,omitempty"`
 	MaxBidCPMInAdvertiserCurrency              *float64                          `json:"maxBidCPMInAdvertiserCurrency,omitempty"`
+	MarketType                                 *MarketType                       `json:"marketType,omitempty"`
 	AudienceTargeting                          *AdGroupAudienceTargeting         `json:"audienceTargeting,omitempty"`
 	RoiGoal                                    AdGroupROIGoal                    `json:"roiGoal"`
 	CreativeIds                                []string                          `json:"creativeIds"`
@@ -103,6 +104,13 @@ func (a *AdGroupWorkflow) GetMaxBidCPMInAdvertiserCurrency() *float64 {
 		return nil
 	}
 	return a.MaxBidCPMInAdvertiserCurrency
+}
+
+func (a *AdGroupWorkflow) GetMarketType() *MarketType {
+	if a == nil {
+		return nil
+	}
+	return a.MarketType
 }
 
 func (a *AdGroupWorkflow) GetAudienceTargeting() *AdGroupAudienceTargeting {

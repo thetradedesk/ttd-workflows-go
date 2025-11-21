@@ -12,6 +12,7 @@ type AdGroupWorkflowAdvancedInput struct {
 	NielsenTrackingAttributes                  *AdGroupWorkflowNielsenTrackingAttributesInput `json:"nielsenTrackingAttributes,omitempty"`
 	NewFrequencyConfigs                        []AdGroupWorkflowNewFrequencyConfigInput       `json:"newFrequencyConfigs,omitempty"`
 	Flights                                    []AdGroupWorkflowFlightInput                   `json:"flights,omitempty"`
+	CallerSource                               *string                                        `json:"callerSource,omitempty"`
 }
 
 func (a *AdGroupWorkflowAdvancedInput) GetKoaOptimizationSettings() *AdGroupWorkflowKoaOptimizationSettingsInput {
@@ -75,4 +76,11 @@ func (a *AdGroupWorkflowAdvancedInput) GetFlights() []AdGroupWorkflowFlightInput
 		return nil
 	}
 	return a.Flights
+}
+
+func (a *AdGroupWorkflowAdvancedInput) GetCallerSource() *string {
+	if a == nil {
+		return nil
+	}
+	return a.CallerSource
 }

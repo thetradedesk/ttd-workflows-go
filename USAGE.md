@@ -68,7 +68,9 @@ func main() {
 			Name:                                    ttdworkflows.Pointer("<value>"),
 			Channel:                                 components.AdGroupChannelDisplay,
 			FunnelLocation:                          components.AdGroupFunnelLocationConsideration,
+			MarketType:                              components.MarketTypePrivateMarketOnly.ToPointer(),
 			ProgrammaticGuaranteedPrivateContractID: ttdworkflows.Pointer("<id>"),
+			IncludeDefaultsFromCampaign:             ttdworkflows.Pointer(false),
 		},
 		CampaignID: ttdworkflows.Pointer("<id>"),
 		AdvancedInput: &components.AdGroupWorkflowAdvancedInput{
@@ -127,6 +129,7 @@ func main() {
 					CampaignFlightID:                874887,
 				},
 			},
+			CallerSource: ttdworkflows.Pointer("<value>"),
 		},
 		ValidateInputOnly: ttdworkflows.Pointer(true),
 	})

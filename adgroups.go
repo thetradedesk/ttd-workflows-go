@@ -31,7 +31,7 @@ func newAdGroups(rootSDK *Workflows, sdkConfig config.SDKConfiguration, hooks *h
 	}
 }
 
-// Create a new ad group with required fields
+// Create a new ad group
 func (s *AdGroups) Create(ctx context.Context, request *components.AdGroupCreateWorkflowInputWithValidation, opts ...operations.Option) (*operations.CreateAdGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -277,7 +277,7 @@ func (s *AdGroups) Create(ctx context.Context, request *components.AdGroupCreate
 
 }
 
-// Update an ad group with specified fields
+// Update an ad group
 // Only the fields provided in the request payload will be updated.
 func (s *AdGroups) Update(ctx context.Context, request *components.AdGroupUpdateWorkflowInputWithValidation, opts ...operations.Option) (*operations.UpdateAdGroupResponse, error) {
 	o := operations.Options{}
@@ -778,7 +778,7 @@ func (s *AdGroups) Archive(ctx context.Context, forceArchive *bool, requestBody 
 
 }
 
-// BulkCreate - Create multiple new ad groups with required fields
+// BulkCreate - Submit a job to create multiple new ad groups
 func (s *AdGroups) BulkCreate(ctx context.Context, request *components.AdGroupBulkCreateWorkflowInputWithValidation, opts ...operations.Option) (*operations.CreateAdGroupsJobResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1027,7 +1027,7 @@ func (s *AdGroups) BulkCreate(ctx context.Context, request *components.AdGroupBu
 
 }
 
-// BulkUpdate - Update multiple ad groups with specified fields
+// BulkUpdate - Submit a job to update multiple ad groups
 // Only the fields provided in the request payload for each specific ad group will be updated.
 func (s *AdGroups) BulkUpdate(ctx context.Context, request *components.AdGroupBulkUpdateWorkflowInputWithValidation, opts ...operations.Option) (*operations.UpdateAdGroupsJobResponse, error) {
 	o := operations.Options{}

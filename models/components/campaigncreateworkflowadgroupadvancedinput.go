@@ -11,6 +11,7 @@ type CampaignCreateWorkflowAdGroupAdvancedInput struct {
 	IsUseSecondaryConversionsEnabled           *bool                                          `json:"isUseSecondaryConversionsEnabled,omitempty"`
 	NielsenTrackingAttributes                  *AdGroupWorkflowNielsenTrackingAttributesInput `json:"nielsenTrackingAttributes,omitempty"`
 	NewFrequencyConfigs                        []AdGroupWorkflowNewFrequencyConfigInput       `json:"newFrequencyConfigs,omitempty"`
+	IncludeDefaultsFromCampaign                *bool                                          `json:"includeDefaultsFromCampaign,omitempty"`
 	Flights                                    []CampaignCreateWorkflowAdGroupFlightInput     `json:"flights,omitempty"`
 }
 
@@ -68,6 +69,13 @@ func (c *CampaignCreateWorkflowAdGroupAdvancedInput) GetNewFrequencyConfigs() []
 		return nil
 	}
 	return c.NewFrequencyConfigs
+}
+
+func (c *CampaignCreateWorkflowAdGroupAdvancedInput) GetIncludeDefaultsFromCampaign() *bool {
+	if c == nil {
+		return nil
+	}
+	return c.IncludeDefaultsFromCampaign
 }
 
 func (c *CampaignCreateWorkflowAdGroupAdvancedInput) GetFlights() []CampaignCreateWorkflowAdGroupFlightInput {
