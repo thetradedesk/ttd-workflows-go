@@ -1,5 +1,4 @@
 # Campaigns
-(*Campaigns*)
 
 ## Overview
 
@@ -48,13 +47,6 @@ func main() {
             CustomCPAType: components.CustomCPATypeClickViewthroughWeighting.ToPointer(),
             CustomRoasType: components.CustomROASTypeDisabled.ToPointer(),
             ImpressionsOnlyBudgetingCpm: ttdworkflows.Pointer[float64](1502.33),
-            Budget: &components.CampaignWorkflowBudgetInput{
-                PacingMode: components.CampaignPacingModePaceAsSoonAsPossible,
-                BudgetInAdvertiserCurrency: 6363.35,
-                BudgetInImpressions: ttdworkflows.Pointer[int64](836518),
-                DailyTargetInAdvertiserCurrency: ttdworkflows.Pointer[float64](7814.79),
-                DailyTargetInImpressions: ttdworkflows.Pointer[int64](784985),
-            },
             EndDateInUtc: nil,
             SeedID: nil,
             CampaignConversionReportingColumns: []components.CampaignWorkflowCampaignConversionReportingColumnInput{
@@ -68,6 +60,7 @@ func main() {
                         CustomROASClickWeight: ttdworkflows.Pointer[float64](3310.24),
                         CustomROASViewthroughWeight: ttdworkflows.Pointer[float64](2919.37),
                     },
+                    ProductListReportingType: components.ProductListReportingTypeInputFeatured.ToPointer(),
                     Weight: ttdworkflows.Pointer[float64](5369.43),
                     CrossDeviceAttributionModelID: ttdworkflows.Pointer("<id>"),
                 },
@@ -90,6 +83,7 @@ func main() {
                 CrossixAudienceQualityIndex: ttdworkflows.Pointer(true),
                 IqviaAudienceQualityIndexAndCostPerTarget: ttdworkflows.Pointer(false),
                 CrossixCostPerTarget: ttdworkflows.Pointer(true),
+                NewBuyerTargetValue: nil,
             },
             TertiaryGoal: &components.CampaignWorkflowROIGoalInput{
                 MaximizeReach: ttdworkflows.Pointer(false),
@@ -108,9 +102,14 @@ func main() {
                 CrossixAudienceQualityIndex: ttdworkflows.Pointer(false),
                 IqviaAudienceQualityIndexAndCostPerTarget: nil,
                 CrossixCostPerTarget: ttdworkflows.Pointer(false),
+                NewBuyerTargetValue: ttdworkflows.Pointer[int](960101),
             },
             AdvertiserID: "<id>",
             Name: "<value>",
+            CustomLabelNames: []string{
+                "<value 1>",
+                "<value 2>",
+            },
             PrimaryChannel: components.CampaignChannelTypeDooh,
             PrimaryGoal: components.CampaignWorkflowROIGoalInput{
                 MaximizeReach: ttdworkflows.Pointer(false),
@@ -129,8 +128,16 @@ func main() {
                 CrossixAudienceQualityIndex: ttdworkflows.Pointer(true),
                 IqviaAudienceQualityIndexAndCostPerTarget: ttdworkflows.Pointer(true),
                 CrossixCostPerTarget: ttdworkflows.Pointer(false),
+                NewBuyerTargetValue: ttdworkflows.Pointer[int](412835),
             },
             StartDateInUtc: nil,
+            Budget: &components.CampaignCreateWorkflowBudgetInput{
+                PacingMode: components.CampaignPacingModePaceAsSoonAsPossible,
+                BudgetInAdvertiserCurrency: 6363.35,
+                BudgetInImpressions: ttdworkflows.Pointer[int64](836518),
+                DailyTargetInAdvertiserCurrency: ttdworkflows.Pointer[float64](7814.79),
+                DailyTargetInImpressions: ttdworkflows.Pointer[int64](784985),
+            },
             CampaignIncrementalReachSetting: &components.CampaignCreateWorkflowIncrementalReachCampaignSetting{
                 ISpotReachSetting: &components.IncrementalReachBrandInput{
                     ID: ttdworkflows.Pointer[int](787894),
@@ -157,6 +164,7 @@ func main() {
             },
         },
         AdvancedInput: &components.CampaignCreateWorkflowAdvancedInput{
+            PurchaseOrderNumber: nil,
             Flights: []components.CampaignWorkflowFlightInput{
                 components.CampaignWorkflowFlightInput{
                     StartDateInclusiveUTC: types.MustTimeFromString("2024-07-08T10:52:56.944Z"),
@@ -167,7 +175,6 @@ func main() {
                     DailyTargetInImpressions: ttdworkflows.Pointer[int64](333131),
                 },
             },
-            PurchaseOrderNumber: nil,
             IncludeDefaultsFromAdvertiser: ttdworkflows.Pointer(false),
             PassThroughFeeCard: &components.CampaignCreateWorkflowPassThroughFeeCardInput{
                 StartDateUtc: types.MustNewTimeFromString("2023-03-18T04:39:08.387Z"),
@@ -180,6 +187,14 @@ func main() {
                 },
             },
             CallerSource: ttdworkflows.Pointer("<value>"),
+            FrequencyConfigs: []components.FrequencyConfig{
+                components.FrequencyConfig{
+                    CounterName: ttdworkflows.Pointer("<value>"),
+                    FrequencyCap: ttdworkflows.Pointer[int](743337),
+                    FrequencyGoal: nil,
+                    ResetIntervalInMinutes: ttdworkflows.Pointer[int](520097),
+                },
+            },
         },
         AdGroups: []components.CampaignCreateWorkflowAdGroupInput{
             components.CampaignCreateWorkflowAdGroupInput{
@@ -279,6 +294,21 @@ func main() {
                             ResetIntervalInMinutes: ttdworkflows.Pointer[int](587736),
                         },
                     },
+                    InventoryTargeting: &components.AdGroupWorkflowInventoryTargetingInput{
+                        DealGroupIdsToInclude: []string{
+                            "<value 1>",
+                        },
+                        DealGroupIdsToExclude: []string{
+                            "<value 1>",
+                            "<value 2>",
+                        },
+                        DealIdsToExclude: []int64{
+                            607060,
+                        },
+                        DealIdsToInclude: nil,
+                        IncludeDefaultOnDeals: ttdworkflows.Pointer(true),
+                    },
+                    IsNonDecisioned: ttdworkflows.Pointer(true),
                     IncludeDefaultsFromCampaign: ttdworkflows.Pointer(false),
                     Flights: []components.CampaignCreateWorkflowAdGroupFlightInput{
                         components.CampaignCreateWorkflowAdGroupFlightInput{
@@ -359,13 +389,6 @@ func main() {
             CustomCPAType: components.CustomCPATypeClickViewthroughWeighting.ToPointer(),
             CustomRoasType: components.CustomROASTypeDisabled.ToPointer(),
             ImpressionsOnlyBudgetingCpm: ttdworkflows.Pointer[float64](126.57),
-            Budget: &components.CampaignWorkflowBudgetInput{
-                PacingMode: components.CampaignPacingModePaceAsSoonAsPossible,
-                BudgetInAdvertiserCurrency: 6974.82,
-                BudgetInImpressions: ttdworkflows.Pointer[int64](834352),
-                DailyTargetInAdvertiserCurrency: ttdworkflows.Pointer[float64](8583.49),
-                DailyTargetInImpressions: ttdworkflows.Pointer[int64](746941),
-            },
             EndDateInUtc: types.MustNewTimeFromString("2024-07-09T17:14:23.542Z"),
             SeedID: ttdworkflows.Pointer("<id>"),
             CampaignConversionReportingColumns: []components.CampaignWorkflowCampaignConversionReportingColumnInput{
@@ -379,6 +402,7 @@ func main() {
                         CustomROASClickWeight: ttdworkflows.Pointer[float64](129.65),
                         CustomROASViewthroughWeight: ttdworkflows.Pointer[float64](2890.82),
                     },
+                    ProductListReportingType: components.ProductListReportingTypeInputFeatured.ToPointer(),
                     Weight: ttdworkflows.Pointer[float64](5187.48),
                     CrossDeviceAttributionModelID: nil,
                 },
@@ -401,6 +425,7 @@ func main() {
                 CrossixAudienceQualityIndex: ttdworkflows.Pointer(true),
                 IqviaAudienceQualityIndexAndCostPerTarget: ttdworkflows.Pointer(true),
                 CrossixCostPerTarget: ttdworkflows.Pointer(true),
+                NewBuyerTargetValue: ttdworkflows.Pointer[int](869267),
             },
             TertiaryGoal: &components.CampaignWorkflowROIGoalInput{
                 MaximizeReach: ttdworkflows.Pointer(true),
@@ -419,6 +444,7 @@ func main() {
                 CrossixAudienceQualityIndex: ttdworkflows.Pointer(false),
                 IqviaAudienceQualityIndexAndCostPerTarget: nil,
                 CrossixCostPerTarget: ttdworkflows.Pointer(false),
+                NewBuyerTargetValue: ttdworkflows.Pointer[int](113952),
             },
             Name: ttdworkflows.Pointer("<value>"),
             PrimaryChannel: components.CampaignChannelTypeDisplay.ToPointer(),
@@ -439,20 +465,14 @@ func main() {
                 CrossixAudienceQualityIndex: ttdworkflows.Pointer(true),
                 IqviaAudienceQualityIndexAndCostPerTarget: ttdworkflows.Pointer(true),
                 CrossixCostPerTarget: ttdworkflows.Pointer(true),
+                NewBuyerTargetValue: ttdworkflows.Pointer[int](723722),
             },
             StartDateInUtc: types.MustNewTimeFromString("2024-02-29T10:31:50.069Z"),
+            Budget: &components.CampaignUpdateWorkflowBudgetInput{
+                PacingMode: components.CampaignPacingModePaceAsSoonAsPossible,
+            },
         },
         AdvancedInput: &components.CampaignUpdateWorkflowAdvancedInput{
-            Flights: []components.CampaignWorkflowFlightInput{
-                components.CampaignWorkflowFlightInput{
-                    StartDateInclusiveUTC: types.MustTimeFromString("2025-11-09T04:11:39.432Z"),
-                    EndDateExclusiveUTC: types.MustNewTimeFromString("2025-09-10T20:38:51.701Z"),
-                    BudgetInAdvertiserCurrency: 6534.57,
-                    BudgetInImpressions: ttdworkflows.Pointer[int64](865481),
-                    DailyTargetInAdvertiserCurrency: ttdworkflows.Pointer[float64](1033.72),
-                    DailyTargetInImpressions: nil,
-                },
-            },
             PurchaseOrderNumber: ttdworkflows.Pointer("<value>"),
         },
         ValidateInputOnly: ttdworkflows.Pointer(true),
@@ -523,13 +543,6 @@ func main() {
                     CustomCPAType: components.CustomCPATypeClickViewthroughWeighting.ToPointer(),
                     CustomRoasType: components.CustomROASTypeCompositeWeighting.ToPointer(),
                     ImpressionsOnlyBudgetingCpm: ttdworkflows.Pointer[float64](4427.56),
-                    Budget: &components.CampaignWorkflowBudgetInput{
-                        PacingMode: components.CampaignPacingModePaceAhead,
-                        BudgetInAdvertiserCurrency: 5501.96,
-                        BudgetInImpressions: ttdworkflows.Pointer[int64](629784),
-                        DailyTargetInAdvertiserCurrency: ttdworkflows.Pointer[float64](2524.41),
-                        DailyTargetInImpressions: ttdworkflows.Pointer[int64](726807),
-                    },
                     EndDateInUtc: types.MustNewTimeFromString("2023-12-21T01:12:20.772Z"),
                     SeedID: ttdworkflows.Pointer("<id>"),
                     CampaignConversionReportingColumns: []components.CampaignWorkflowCampaignConversionReportingColumnInput{
@@ -543,6 +556,7 @@ func main() {
                                 CustomROASClickWeight: ttdworkflows.Pointer[float64](5286.76),
                                 CustomROASViewthroughWeight: ttdworkflows.Pointer[float64](8906.82),
                             },
+                            ProductListReportingType: components.ProductListReportingTypeInputHalo.ToPointer(),
                             Weight: nil,
                             CrossDeviceAttributionModelID: ttdworkflows.Pointer("<id>"),
                         },
@@ -565,6 +579,7 @@ func main() {
                         CrossixAudienceQualityIndex: ttdworkflows.Pointer(false),
                         IqviaAudienceQualityIndexAndCostPerTarget: ttdworkflows.Pointer(false),
                         CrossixCostPerTarget: nil,
+                        NewBuyerTargetValue: ttdworkflows.Pointer[int](38368),
                     },
                     TertiaryGoal: &components.CampaignWorkflowROIGoalInput{
                         MaximizeReach: ttdworkflows.Pointer(false),
@@ -583,9 +598,15 @@ func main() {
                         CrossixAudienceQualityIndex: ttdworkflows.Pointer(false),
                         IqviaAudienceQualityIndexAndCostPerTarget: ttdworkflows.Pointer(false),
                         CrossixCostPerTarget: ttdworkflows.Pointer(true),
+                        NewBuyerTargetValue: ttdworkflows.Pointer[int](373225),
                     },
                     AdvertiserID: "<id>",
                     Name: "<value>",
+                    CustomLabelNames: []string{
+                        "<value 1>",
+                        "<value 2>",
+                        "<value 3>",
+                    },
                     PrimaryChannel: components.CampaignChannelTypeNativeVideo,
                     PrimaryGoal: components.CampaignWorkflowROIGoalInput{
                         MaximizeReach: ttdworkflows.Pointer(false),
@@ -604,8 +625,16 @@ func main() {
                         CrossixAudienceQualityIndex: nil,
                         IqviaAudienceQualityIndexAndCostPerTarget: ttdworkflows.Pointer(false),
                         CrossixCostPerTarget: ttdworkflows.Pointer(true),
+                        NewBuyerTargetValue: ttdworkflows.Pointer[int](355878),
                     },
                     StartDateInUtc: types.MustNewTimeFromString("2025-09-26T21:06:42.946Z"),
+                    Budget: &components.CampaignCreateWorkflowBudgetInput{
+                        PacingMode: components.CampaignPacingModePaceAhead,
+                        BudgetInAdvertiserCurrency: 5501.96,
+                        BudgetInImpressions: ttdworkflows.Pointer[int64](629784),
+                        DailyTargetInAdvertiserCurrency: ttdworkflows.Pointer[float64](2524.41),
+                        DailyTargetInImpressions: ttdworkflows.Pointer[int64](726807),
+                    },
                     CampaignIncrementalReachSetting: &components.CampaignCreateWorkflowIncrementalReachCampaignSetting{
                         ISpotReachSetting: &components.IncrementalReachBrandInput{
                             ID: ttdworkflows.Pointer[int](178346),
@@ -637,6 +666,7 @@ func main() {
                     },
                 },
                 AdvancedInput: &components.CampaignCreateWorkflowAdvancedInput{
+                    PurchaseOrderNumber: ttdworkflows.Pointer("<value>"),
                     Flights: []components.CampaignWorkflowFlightInput{
                         components.CampaignWorkflowFlightInput{
                             StartDateInclusiveUTC: types.MustTimeFromString("2024-09-20T06:04:19.345Z"),
@@ -647,7 +677,6 @@ func main() {
                             DailyTargetInImpressions: ttdworkflows.Pointer[int64](152838),
                         },
                     },
-                    PurchaseOrderNumber: ttdworkflows.Pointer("<value>"),
                     IncludeDefaultsFromAdvertiser: ttdworkflows.Pointer(false),
                     PassThroughFeeCard: &components.CampaignCreateWorkflowPassThroughFeeCardInput{
                         StartDateUtc: types.MustNewTimeFromString("2024-07-24T11:58:59.190Z"),
@@ -660,6 +689,14 @@ func main() {
                         },
                     },
                     CallerSource: ttdworkflows.Pointer("<value>"),
+                    FrequencyConfigs: []components.FrequencyConfig{
+                        components.FrequencyConfig{
+                            CounterName: ttdworkflows.Pointer("<value>"),
+                            FrequencyCap: ttdworkflows.Pointer[int](234925),
+                            FrequencyGoal: ttdworkflows.Pointer[int](777832),
+                            ResetIntervalInMinutes: ttdworkflows.Pointer[int](629784),
+                        },
+                    },
                 },
                 AdGroups: []components.CampaignCreateWorkflowAdGroupInput{
                     components.CampaignCreateWorkflowAdGroupInput{
@@ -757,6 +794,25 @@ func main() {
                                 },
                             },
                             NewFrequencyConfigs: nil,
+                            InventoryTargeting: &components.AdGroupWorkflowInventoryTargetingInput{
+                                DealGroupIdsToInclude: []string{
+                                    "<value 1>",
+                                },
+                                DealGroupIdsToExclude: []string{
+                                    "<value 1>",
+                                    "<value 2>",
+                                    "<value 3>",
+                                },
+                                DealIdsToExclude: []int64{
+                                    169634,
+                                },
+                                DealIdsToInclude: []int64{
+                                    356532,
+                                    584209,
+                                },
+                                IncludeDefaultOnDeals: ttdworkflows.Pointer(true),
+                            },
+                            IsNonDecisioned: ttdworkflows.Pointer(false),
                             IncludeDefaultsFromCampaign: ttdworkflows.Pointer(true),
                             Flights: []components.CampaignCreateWorkflowAdGroupFlightInput{
                                 components.CampaignCreateWorkflowAdGroupFlightInput{
@@ -847,13 +903,6 @@ func main() {
                     CustomCPAType: components.CustomCPATypePixelWeighting.ToPointer(),
                     CustomRoasType: components.CustomROASTypeClickViewthroughWeighting.ToPointer(),
                     ImpressionsOnlyBudgetingCpm: ttdworkflows.Pointer[float64](2706.4),
-                    Budget: &components.CampaignWorkflowBudgetInput{
-                        PacingMode: components.CampaignPacingModePaceAsSoonAsPossible,
-                        BudgetInAdvertiserCurrency: 2564.89,
-                        BudgetInImpressions: ttdworkflows.Pointer[int64](659726),
-                        DailyTargetInAdvertiserCurrency: ttdworkflows.Pointer[float64](6514.48),
-                        DailyTargetInImpressions: ttdworkflows.Pointer[int64](892097),
-                    },
                     EndDateInUtc: types.MustNewTimeFromString("2023-11-11T21:39:56.025Z"),
                     SeedID: ttdworkflows.Pointer("<id>"),
                     CampaignConversionReportingColumns: []components.CampaignWorkflowCampaignConversionReportingColumnInput{
@@ -867,6 +916,7 @@ func main() {
                                 CustomROASClickWeight: nil,
                                 CustomROASViewthroughWeight: ttdworkflows.Pointer[float64](6784.9),
                             },
+                            ProductListReportingType: components.ProductListReportingTypeInputHalo.ToPointer(),
                             Weight: ttdworkflows.Pointer[float64](2260.69),
                             CrossDeviceAttributionModelID: ttdworkflows.Pointer("<id>"),
                         },
@@ -889,6 +939,7 @@ func main() {
                         CrossixAudienceQualityIndex: nil,
                         IqviaAudienceQualityIndexAndCostPerTarget: ttdworkflows.Pointer(false),
                         CrossixCostPerTarget: ttdworkflows.Pointer(true),
+                        NewBuyerTargetValue: ttdworkflows.Pointer[int](178803),
                     },
                     TertiaryGoal: &components.CampaignWorkflowROIGoalInput{
                         MaximizeReach: ttdworkflows.Pointer(false),
@@ -907,6 +958,7 @@ func main() {
                         CrossixAudienceQualityIndex: ttdworkflows.Pointer(false),
                         IqviaAudienceQualityIndexAndCostPerTarget: ttdworkflows.Pointer(false),
                         CrossixCostPerTarget: ttdworkflows.Pointer(true),
+                        NewBuyerTargetValue: ttdworkflows.Pointer[int](784776),
                     },
                     Name: ttdworkflows.Pointer("<value>"),
                     PrimaryChannel: components.CampaignChannelTypeNone.ToPointer(),
@@ -927,20 +979,14 @@ func main() {
                         CrossixAudienceQualityIndex: ttdworkflows.Pointer(false),
                         IqviaAudienceQualityIndexAndCostPerTarget: ttdworkflows.Pointer(true),
                         CrossixCostPerTarget: ttdworkflows.Pointer(true),
+                        NewBuyerTargetValue: ttdworkflows.Pointer[int](785673),
                     },
                     StartDateInUtc: types.MustNewTimeFromString("2023-01-13T23:06:05.083Z"),
+                    Budget: &components.CampaignUpdateWorkflowBudgetInput{
+                        PacingMode: components.CampaignPacingModePaceAsSoonAsPossible,
+                    },
                 },
                 AdvancedInput: &components.CampaignUpdateWorkflowAdvancedInput{
-                    Flights: []components.CampaignWorkflowFlightInput{
-                        components.CampaignWorkflowFlightInput{
-                            StartDateInclusiveUTC: types.MustTimeFromString("2023-08-14T13:47:31.198Z"),
-                            EndDateExclusiveUTC: types.MustNewTimeFromString("2024-07-07T14:46:57.378Z"),
-                            BudgetInAdvertiserCurrency: 1874.95,
-                            BudgetInImpressions: ttdworkflows.Pointer[int64](207094),
-                            DailyTargetInAdvertiserCurrency: ttdworkflows.Pointer[float64](7255.71),
-                            DailyTargetInImpressions: ttdworkflows.Pointer[int64](760981),
-                        },
-                    },
                     PurchaseOrderNumber: ttdworkflows.Pointer("<value>"),
                 },
             },

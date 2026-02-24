@@ -16,7 +16,6 @@ type CampaignCreateWorkflowPrimaryInput struct {
 	CustomCPAType                      *CustomCPAType                                           `json:"customCPAType,omitempty"`
 	CustomRoasType                     *CustomROASType                                          `json:"customRoasType,omitempty"`
 	ImpressionsOnlyBudgetingCpm        *float64                                                 `json:"impressionsOnlyBudgetingCpm,omitempty"`
-	Budget                             *CampaignWorkflowBudgetInput                             `json:"budget,omitempty"`
 	EndDateInUtc                       *time.Time                                               `json:"endDateInUtc,omitempty"`
 	SeedID                             *string                                                  `json:"seedId,omitempty"`
 	CampaignConversionReportingColumns []CampaignWorkflowCampaignConversionReportingColumnInput `json:"campaignConversionReportingColumns,omitempty"`
@@ -25,9 +24,11 @@ type CampaignCreateWorkflowPrimaryInput struct {
 	TertiaryGoal                       *CampaignWorkflowROIGoalInput                            `json:"tertiaryGoal,omitempty"`
 	AdvertiserID                       string                                                   `json:"advertiserId"`
 	Name                               string                                                   `json:"name"`
+	CustomLabelNames                   []string                                                 `json:"customLabelNames,omitempty"`
 	PrimaryChannel                     CampaignChannelType                                      `json:"primaryChannel"`
 	PrimaryGoal                        CampaignWorkflowROIGoalInput                             `json:"primaryGoal"`
 	StartDateInUtc                     *time.Time                                               `json:"startDateInUtc,omitempty"`
+	Budget                             *CampaignCreateWorkflowBudgetInput                       `json:"budget,omitempty"`
 	CampaignIncrementalReachSetting    *CampaignCreateWorkflowIncrementalReachCampaignSetting   `json:"campaignIncrementalReachSetting,omitempty"`
 }
 
@@ -36,7 +37,7 @@ func (c CampaignCreateWorkflowPrimaryInput) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CampaignCreateWorkflowPrimaryInput) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &c, "", false, []string{"advertiserId", "name", "primaryChannel", "primaryGoal"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &c, "", false, nil); err != nil {
 		return err
 	}
 	return nil
@@ -98,13 +99,6 @@ func (c *CampaignCreateWorkflowPrimaryInput) GetImpressionsOnlyBudgetingCpm() *f
 	return c.ImpressionsOnlyBudgetingCpm
 }
 
-func (c *CampaignCreateWorkflowPrimaryInput) GetBudget() *CampaignWorkflowBudgetInput {
-	if c == nil {
-		return nil
-	}
-	return c.Budget
-}
-
 func (c *CampaignCreateWorkflowPrimaryInput) GetEndDateInUtc() *time.Time {
 	if c == nil {
 		return nil
@@ -161,6 +155,13 @@ func (c *CampaignCreateWorkflowPrimaryInput) GetName() string {
 	return c.Name
 }
 
+func (c *CampaignCreateWorkflowPrimaryInput) GetCustomLabelNames() []string {
+	if c == nil {
+		return nil
+	}
+	return c.CustomLabelNames
+}
+
 func (c *CampaignCreateWorkflowPrimaryInput) GetPrimaryChannel() CampaignChannelType {
 	if c == nil {
 		return CampaignChannelType("")
@@ -180,6 +181,13 @@ func (c *CampaignCreateWorkflowPrimaryInput) GetStartDateInUtc() *time.Time {
 		return nil
 	}
 	return c.StartDateInUtc
+}
+
+func (c *CampaignCreateWorkflowPrimaryInput) GetBudget() *CampaignCreateWorkflowBudgetInput {
+	if c == nil {
+		return nil
+	}
+	return c.Budget
 }
 
 func (c *CampaignCreateWorkflowPrimaryInput) GetCampaignIncrementalReachSetting() *CampaignCreateWorkflowIncrementalReachCampaignSetting {

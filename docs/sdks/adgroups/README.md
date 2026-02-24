@@ -1,5 +1,4 @@
 # AdGroups
-(*AdGroups*)
 
 ## Overview
 
@@ -138,6 +137,26 @@ func main() {
                     ResetIntervalInMinutes: ttdworkflows.Pointer[int](788122),
                 },
             },
+            InventoryTargeting: &components.AdGroupWorkflowInventoryTargetingInput{
+                DealGroupIdsToInclude: []string{
+                    "<value 1>",
+                    "<value 2>",
+                    "<value 3>",
+                },
+                DealGroupIdsToExclude: []string{
+                    "<value 1>",
+                    "<value 2>",
+                    "<value 3>",
+                },
+                DealIdsToExclude: []int64{
+                    117039,
+                    278677,
+                    217940,
+                },
+                DealIdsToInclude: nil,
+                IncludeDefaultOnDeals: ttdworkflows.Pointer(true),
+            },
+            IsNonDecisioned: ttdworkflows.Pointer(true),
             Flights: []components.AdGroupWorkflowFlightInput{
                 components.AdGroupWorkflowFlightInput{
                     AllocationType: components.AllocationTypeMaximum.ToPointer(),
@@ -312,6 +331,24 @@ func main() {
                     ResetIntervalInMinutes: ttdworkflows.Pointer[int](577492),
                 },
             },
+            InventoryTargeting: &components.AdGroupWorkflowInventoryTargetingInput{
+                DealGroupIdsToInclude: []string{
+                    "<value 1>",
+                },
+                DealGroupIdsToExclude: []string{
+                    "<value 1>",
+                    "<value 2>",
+                    "<value 3>",
+                },
+                DealIdsToExclude: []int64{
+                    624775,
+                    110078,
+                    170675,
+                },
+                DealIdsToInclude: nil,
+                IncludeDefaultOnDeals: ttdworkflows.Pointer(false),
+            },
+            IsNonDecisioned: nil,
             Flights: []components.AdGroupWorkflowFlightInput{
                 components.AdGroupWorkflowFlightInput{
                     AllocationType: components.AllocationTypeMinimum.ToPointer(),
@@ -601,6 +638,27 @@ func main() {
                             ResetIntervalInMinutes: ttdworkflows.Pointer[int](375296),
                         },
                     },
+                    InventoryTargeting: &components.AdGroupWorkflowInventoryTargetingInput{
+                        DealGroupIdsToInclude: []string{
+                            "<value 1>",
+                            "<value 2>",
+                            "<value 3>",
+                        },
+                        DealGroupIdsToExclude: []string{
+                            "<value 1>",
+                            "<value 2>",
+                        },
+                        DealIdsToExclude: []int64{
+                            849888,
+                            396688,
+                            733994,
+                        },
+                        DealIdsToInclude: []int64{
+                            690107,
+                        },
+                        IncludeDefaultOnDeals: ttdworkflows.Pointer(false),
+                    },
+                    IsNonDecisioned: ttdworkflows.Pointer(false),
                     Flights: nil,
                     CallerSource: ttdworkflows.Pointer("<value>"),
                 },

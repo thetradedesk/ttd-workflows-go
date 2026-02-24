@@ -11,6 +11,8 @@ type AdGroupWorkflowAdvancedInput struct {
 	IsUseSecondaryConversionsEnabled           *bool                                          `json:"isUseSecondaryConversionsEnabled,omitempty"`
 	NielsenTrackingAttributes                  *AdGroupWorkflowNielsenTrackingAttributesInput `json:"nielsenTrackingAttributes,omitempty"`
 	NewFrequencyConfigs                        []AdGroupWorkflowNewFrequencyConfigInput       `json:"newFrequencyConfigs,omitempty"`
+	InventoryTargeting                         *AdGroupWorkflowInventoryTargetingInput        `json:"inventoryTargeting,omitempty"`
+	IsNonDecisioned                            *bool                                          `json:"isNonDecisioned,omitempty"`
 	Flights                                    []AdGroupWorkflowFlightInput                   `json:"flights,omitempty"`
 	CallerSource                               *string                                        `json:"callerSource,omitempty"`
 }
@@ -69,6 +71,20 @@ func (a *AdGroupWorkflowAdvancedInput) GetNewFrequencyConfigs() []AdGroupWorkflo
 		return nil
 	}
 	return a.NewFrequencyConfigs
+}
+
+func (a *AdGroupWorkflowAdvancedInput) GetInventoryTargeting() *AdGroupWorkflowInventoryTargetingInput {
+	if a == nil {
+		return nil
+	}
+	return a.InventoryTargeting
+}
+
+func (a *AdGroupWorkflowAdvancedInput) GetIsNonDecisioned() *bool {
+	if a == nil {
+		return nil
+	}
+	return a.IsNonDecisioned
 }
 
 func (a *AdGroupWorkflowAdvancedInput) GetFlights() []AdGroupWorkflowFlightInput {

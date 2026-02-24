@@ -3,15 +3,7 @@
 package components
 
 type CampaignUpdateWorkflowAdvancedInput struct {
-	Flights             []CampaignWorkflowFlightInput `json:"flights,omitempty"`
-	PurchaseOrderNumber *string                       `json:"purchaseOrderNumber,omitempty"`
-}
-
-func (c *CampaignUpdateWorkflowAdvancedInput) GetFlights() []CampaignWorkflowFlightInput {
-	if c == nil {
-		return nil
-	}
-	return c.Flights
+	PurchaseOrderNumber *string `json:"purchaseOrderNumber,omitempty"`
 }
 
 func (c *CampaignUpdateWorkflowAdvancedInput) GetPurchaseOrderNumber() *string {

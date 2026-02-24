@@ -17,7 +17,7 @@ func (c CampaignCreateWorkflowPassThroughFeeCardInput) MarshalJSON() ([]byte, er
 }
 
 func (c *CampaignCreateWorkflowPassThroughFeeCardInput) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &c, "", false, []string{"passThroughFees"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &c, "", false, nil); err != nil {
 		return err
 	}
 	return nil

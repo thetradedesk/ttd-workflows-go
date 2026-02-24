@@ -13,6 +13,8 @@ generation:
     requestResponseComponentNamesFeb2024: true
     securityFeb2025: true
     sharedErrorComponentsApr2025: true
+    sharedNestedComponentsJan2026: false
+    nameOverrideFeb2026: false
   auth:
     oAuth2ClientCredentialsEnabled: true
     oAuth2PasswordEnabled: true
@@ -21,12 +23,14 @@ generation:
   schemas:
     allOfMergeStrategy: shallowMerge
   requestBodyFieldName: ""
+  versioningStrategy: automatic
+  persistentEdits: {}
   tests:
     generateTests: true
     generateNewTests: false
     skipResponseBodyAssertions: false
 go:
-  version: 0.12.0
+  version: 0.13.0
   additionalDependencies: {}
   allowUnknownFieldsInWeakUnions: false
   baseErrorName: WorkflowsError
@@ -34,6 +38,8 @@ go:
   defaultErrorName: APIError
   envVarPrefix: WORKFLOWS
   flattenGlobalSecurity: true
+  forwardCompatibleEnumsByDefault: false
+  forwardCompatibleUnionsByDefault: "false"
   imports:
     option: openapi
     paths:
@@ -43,6 +49,7 @@ go:
       shared: models/components
       webhooks: models/webhooks
   includeEmptyObjects: false
+  inferUnionDiscriminators: false
   inputModelSuffix: input
   license:
     name: The MIT License (MIT)
@@ -51,9 +58,11 @@ go:
   maxMethodParams: 999
   methodArguments: infer-optional-args
   modulePath: github.com/thetradedesk/ttd-workflows-go
+  multipartArrayFormat: legacy
   nullableOptionalWrapper: false
   outputModelSuffix: output
   respectRequiredFields: false
+  respectTitlesForPrimitiveUnionMembers: false
   responseFormat: envelope-http
   sdkPackageName: ttdworkflows
-  unionDeserializationStrategy: left-to-right
+  unionStrategy: left-to-right

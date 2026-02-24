@@ -1,5 +1,4 @@
 # JobStatus
-(*JobStatus*)
 
 ## Overview
 

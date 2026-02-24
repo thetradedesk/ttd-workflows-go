@@ -3,18 +3,12 @@
 package components
 
 type CampaignCreateWorkflowAdvancedInput struct {
-	Flights                       []CampaignWorkflowFlightInput                  `json:"flights,omitempty"`
 	PurchaseOrderNumber           *string                                        `json:"purchaseOrderNumber,omitempty"`
+	Flights                       []CampaignWorkflowFlightInput                  `json:"flights,omitempty"`
 	IncludeDefaultsFromAdvertiser *bool                                          `json:"includeDefaultsFromAdvertiser,omitempty"`
 	PassThroughFeeCard            *CampaignCreateWorkflowPassThroughFeeCardInput `json:"passThroughFeeCard,omitempty"`
 	CallerSource                  *string                                        `json:"callerSource,omitempty"`
-}
-
-func (c *CampaignCreateWorkflowAdvancedInput) GetFlights() []CampaignWorkflowFlightInput {
-	if c == nil {
-		return nil
-	}
-	return c.Flights
+	FrequencyConfigs              []FrequencyConfig                              `json:"frequencyConfigs,omitempty"`
 }
 
 func (c *CampaignCreateWorkflowAdvancedInput) GetPurchaseOrderNumber() *string {
@@ -22,6 +16,13 @@ func (c *CampaignCreateWorkflowAdvancedInput) GetPurchaseOrderNumber() *string {
 		return nil
 	}
 	return c.PurchaseOrderNumber
+}
+
+func (c *CampaignCreateWorkflowAdvancedInput) GetFlights() []CampaignWorkflowFlightInput {
+	if c == nil {
+		return nil
+	}
+	return c.Flights
 }
 
 func (c *CampaignCreateWorkflowAdvancedInput) GetIncludeDefaultsFromAdvertiser() *bool {
@@ -43,4 +44,11 @@ func (c *CampaignCreateWorkflowAdvancedInput) GetCallerSource() *string {
 		return nil
 	}
 	return c.CallerSource
+}
+
+func (c *CampaignCreateWorkflowAdvancedInput) GetFrequencyConfigs() []FrequencyConfig {
+	if c == nil {
+		return nil
+	}
+	return c.FrequencyConfigs
 }
