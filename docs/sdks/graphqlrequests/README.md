@@ -1,5 +1,4 @@
 # GraphQlRequests
-(*GraphQlRequests*)
 
 ## Overview
 

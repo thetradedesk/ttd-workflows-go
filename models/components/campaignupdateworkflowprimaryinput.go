@@ -16,7 +16,6 @@ type CampaignUpdateWorkflowPrimaryInput struct {
 	CustomCPAType                      *CustomCPAType                                           `json:"customCPAType,omitempty"`
 	CustomRoasType                     *CustomROASType                                          `json:"customRoasType,omitempty"`
 	ImpressionsOnlyBudgetingCpm        *float64                                                 `json:"impressionsOnlyBudgetingCpm,omitempty"`
-	Budget                             *CampaignWorkflowBudgetInput                             `json:"budget,omitempty"`
 	EndDateInUtc                       *time.Time                                               `json:"endDateInUtc,omitempty"`
 	SeedID                             *string                                                  `json:"seedId,omitempty"`
 	CampaignConversionReportingColumns []CampaignWorkflowCampaignConversionReportingColumnInput `json:"campaignConversionReportingColumns,omitempty"`
@@ -27,6 +26,7 @@ type CampaignUpdateWorkflowPrimaryInput struct {
 	PrimaryChannel                     *CampaignChannelType                                     `json:"primaryChannel,omitempty"`
 	PrimaryGoal                        *CampaignWorkflowROIGoalInput                            `json:"primaryGoal,omitempty"`
 	StartDateInUtc                     *time.Time                                               `json:"startDateInUtc,omitempty"`
+	Budget                             *CampaignUpdateWorkflowBudgetInput                       `json:"budget,omitempty"`
 }
 
 func (c CampaignUpdateWorkflowPrimaryInput) MarshalJSON() ([]byte, error) {
@@ -94,13 +94,6 @@ func (c *CampaignUpdateWorkflowPrimaryInput) GetImpressionsOnlyBudgetingCpm() *f
 		return nil
 	}
 	return c.ImpressionsOnlyBudgetingCpm
-}
-
-func (c *CampaignUpdateWorkflowPrimaryInput) GetBudget() *CampaignWorkflowBudgetInput {
-	if c == nil {
-		return nil
-	}
-	return c.Budget
 }
 
 func (c *CampaignUpdateWorkflowPrimaryInput) GetEndDateInUtc() *time.Time {
@@ -171,4 +164,11 @@ func (c *CampaignUpdateWorkflowPrimaryInput) GetStartDateInUtc() *time.Time {
 		return nil
 	}
 	return c.StartDateInUtc
+}
+
+func (c *CampaignUpdateWorkflowPrimaryInput) GetBudget() *CampaignUpdateWorkflowBudgetInput {
+	if c == nil {
+		return nil
+	}
+	return c.Budget
 }

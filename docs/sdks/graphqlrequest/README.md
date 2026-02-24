@@ -1,5 +1,4 @@
 # GraphQLRequest
-(*GraphQLRequest*)
 
 ## Overview
 

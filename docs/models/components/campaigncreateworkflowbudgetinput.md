@@ -1,4 +1,4 @@
-# CampaignWorkflowBudgetInput
+# CampaignCreateWorkflowBudgetInput
 
 
 ## Fields

@@ -3,12 +3,13 @@
 package components
 
 type CampaignWorkflowCampaignConversionReportingColumnInput struct {
-	TrackingTagID                 string            `json:"trackingTagId"`
-	IncludeInCustomCPA            bool              `json:"includeInCustomCPA"`
-	ReportingColumnID             int               `json:"reportingColumnId"`
-	ROASConfig                    *CustomROASConfig `json:"ROASConfig,omitempty"`
-	Weight                        *float64          `json:"weight,omitempty"`
-	CrossDeviceAttributionModelID *string           `json:"crossDeviceAttributionModelId,omitempty"`
+	TrackingTagID                 string                         `json:"trackingTagId"`
+	IncludeInCustomCPA            bool                           `json:"includeInCustomCPA"`
+	ReportingColumnID             int                            `json:"reportingColumnId"`
+	ROASConfig                    *CustomROASConfig              `json:"ROASConfig,omitempty"`
+	ProductListReportingType      *ProductListReportingTypeInput `json:"productListReportingType,omitempty"`
+	Weight                        *float64                       `json:"weight,omitempty"`
+	CrossDeviceAttributionModelID *string                        `json:"crossDeviceAttributionModelId,omitempty"`
 }
 
 func (c *CampaignWorkflowCampaignConversionReportingColumnInput) GetTrackingTagID() string {
@@ -37,6 +38,13 @@ func (c *CampaignWorkflowCampaignConversionReportingColumnInput) GetROASConfig()
 		return nil
 	}
 	return c.ROASConfig
+}
+
+func (c *CampaignWorkflowCampaignConversionReportingColumnInput) GetProductListReportingType() *ProductListReportingTypeInput {
+	if c == nil {
+		return nil
+	}
+	return c.ProductListReportingType
 }
 
 func (c *CampaignWorkflowCampaignConversionReportingColumnInput) GetWeight() *float64 {

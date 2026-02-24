@@ -21,3 +21,4 @@
 | `CrossixAudienceQualityIndex`               | **bool*                                     | :heavy_minus_sign:                          | N/A                                         |
 | `IqviaAudienceQualityIndexAndCostPerTarget` | **bool*                                     | :heavy_minus_sign:                          | N/A                                         |
 | `CrossixCostPerTarget`                      | **bool*                                     | :heavy_minus_sign:                          | N/A                                         |
+| `NewBuyerTargetValue`                       | **int*                                      | :heavy_minus_sign:                          | N/A                                         |
