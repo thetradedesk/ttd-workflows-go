@@ -932,7 +932,7 @@ func main() {
                         ReturnOnAdSpendPercent: ttdworkflows.Pointer[float64](5459.4),
                         VcrInPercent: ttdworkflows.Pointer[float64](7724.91),
                         ViewabilityInPercent: nil,
-                        VcpmInAdvertiserCurrency: ttdworkflows.Pointer[float64](9927),
+                        VcpmInAdvertiserCurrency: ttdworkflows.Pointer[float64](9927.0),
                         CpcvInAdvertiserCurrency: ttdworkflows.Pointer[float64](1852.41),
                         MiaozhenOTPInPercent: ttdworkflows.Pointer[float64](2827.93),
                         IqviaAudienceQualityIndex: ttdworkflows.Pointer(false),
@@ -1072,8 +1072,8 @@ func main() {
 | Parameter                                                | Type                                                     | Required                                                 | Description                                              |
 | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
 | `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
-| `forceArchive`                                           | **bool*                                                  | :heavy_minus_sign:                                       | N/A                                                      |
-| `requestBody`                                            | []*string*                                               | :heavy_minus_sign:                                       | N/A                                                      |
+| `forceArchive`                                           | `*bool`                                                  | :heavy_minus_sign:                                       | N/A                                                      |
+| `requestBody`                                            | []`string`                                               | :heavy_minus_sign:                                       | N/A                                                      |
 | `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
 
 ### Response
@@ -1126,7 +1126,7 @@ func main() {
 | Parameter                                                | Type                                                     | Required                                                 | Description                                              |
 | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
 | `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
-| `id`                                                     | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
+| `id`                                                     | `string`                                                 | :heavy_check_mark:                                       | N/A                                                      |
 | `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
 
 ### Response
