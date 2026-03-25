@@ -5,4 +5,4 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `TTDAuth`          | **string*          | :heavy_minus_sign: | N/A                |
+| `TTDAuth`          | `*string`          | :heavy_minus_sign: | N/A                |

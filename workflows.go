@@ -2,7 +2,7 @@
 
 package ttdworkflows
 
-// Generated from OpenAPI doc version v1 and generator version 2.836.5
+// Generated from OpenAPI doc version v1 and generator version 2.869.25
 
 import (
 	"context"
@@ -82,7 +82,7 @@ type Workflows struct {
 
 type SDKOption func(*Workflows)
 
-// WithServerURL allows the overriding of the default server URL
+// WithServerURL allows providing an alternative server URL
 func WithServerURL(serverURL string) SDKOption {
 	return func(sdk *Workflows) {
 		sdk.sdkConfiguration.ServerURL = serverURL
@@ -152,9 +152,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *Workflows {
 	sdk := &Workflows{
-		SDKVersion: "0.13.0",
+		SDKVersion: "0.13.1",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.13.0 2.836.5 v1 github.com/thetradedesk/ttd-workflows-go",
+			UserAgent:  "speakeasy-sdk/go 0.13.1 2.869.25 v1 github.com/thetradedesk/ttd-workflows-go",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
