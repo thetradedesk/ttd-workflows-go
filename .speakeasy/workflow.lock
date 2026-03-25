@@ -1,4 +1,4 @@
-speakeasyVersion: 1.725.0
+speakeasyVersion: 1.759.3
 sources:
     Workflows API:
         sourceNamespace: workflows-api
@@ -6,7 +6,6 @@ sources:
         sourceBlobDigest: sha256:6153e8405000f76ed4dc4f4bd66fcab673d2928a65a2f2855ae0498aa5935ec9
         tags:
             - latest
-            - speakeasy-sdk-regen-1765244806
             - v1
     ttd-workflows-OAS:
         sourceNamespace: workflows-api
@@ -21,7 +20,7 @@ targets:
         sourceRevisionDigest: sha256:b19547de396250d6fc63a6b06ea72c9e7c6df6beefb40c86b9d0d209c6a9dcf1
         sourceBlobDigest: sha256:6153e8405000f76ed4dc4f4bd66fcab673d2928a65a2f2855ae0498aa5935ec9
         codeSamplesNamespace: workflows-api-go-code-samples
-        codeSamplesRevisionDigest: sha256:d1a5756cea73cc2ec16b14128779a2acb63d29e1cbc97d5381e0c5a628c47030
+        codeSamplesRevisionDigest: sha256:c41ddfb29d2c53daa35088ca3f35b0a3b2ae6e052be4629a4f724d27896e3870
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
