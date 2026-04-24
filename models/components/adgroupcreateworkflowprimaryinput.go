@@ -15,7 +15,7 @@ type AdGroupCreateWorkflowPrimaryInput struct {
 	Name                                    *string                                `json:"name"`
 	Channel                                 AdGroupChannel                         `json:"channel"`
 	FunnelLocation                          AdGroupFunnelLocation                  `json:"funnelLocation"`
-	MarketType                              *MarketType                            `json:"marketType,omitempty"`
+	MarketType                              *MarketTypeInput                       `json:"marketType,omitempty"`
 	ProgrammaticGuaranteedPrivateContractID *string                                `json:"programmaticGuaranteedPrivateContractId,omitempty"`
 	IncludeDefaultsFromCampaign             *bool                                  `json:"includeDefaultsFromCampaign,omitempty"`
 }
@@ -104,7 +104,7 @@ func (a *AdGroupCreateWorkflowPrimaryInput) GetFunnelLocation() AdGroupFunnelLoc
 	return a.FunnelLocation
 }
 
-func (a *AdGroupCreateWorkflowPrimaryInput) GetMarketType() *MarketType {
+func (a *AdGroupCreateWorkflowPrimaryInput) GetMarketType() *MarketTypeInput {
 	if a == nil {
 		return nil
 	}
