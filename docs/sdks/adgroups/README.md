@@ -86,7 +86,7 @@ func main() {
             Name: ttdworkflows.Pointer("<value>"),
             Channel: components.AdGroupChannelDisplay,
             FunnelLocation: components.AdGroupFunnelLocationConsideration,
-            MarketType: components.MarketTypePrivateMarketOnly.ToPointer(),
+            MarketType: components.MarketTypeInputPrivateMarketOnly.ToPointer(),
             ProgrammaticGuaranteedPrivateContractID: ttdworkflows.Pointer("<id>"),
             IncludeDefaultsFromCampaign: ttdworkflows.Pointer(false),
         },
@@ -282,7 +282,7 @@ func main() {
             Name: ttdworkflows.Pointer("<value>"),
             Channel: components.AdGroupChannelNative.ToPointer(),
             FunnelLocation: components.AdGroupFunnelLocationConversion.ToPointer(),
-            MarketType: components.MarketTypeOpenMarket.ToPointer(),
+            MarketType: components.MarketTypeInputOpenMarket.ToPointer(),
         },
         AdvancedInput: &components.AdGroupWorkflowAdvancedInput{
             KoaOptimizationSettings: &components.AdGroupWorkflowKoaOptimizationSettingsInput{
@@ -594,7 +594,7 @@ func main() {
                     Name: ttdworkflows.Pointer("<value>"),
                     Channel: components.AdGroupChannelTv.ToPointer(),
                     FunnelLocation: components.AdGroupFunnelLocationNone.ToPointer(),
-                    MarketType: components.MarketTypeOpenMarket.ToPointer(),
+                    MarketType: components.MarketTypeInputOpenMarket.ToPointer(),
                 },
                 AdvancedInput: &components.AdGroupWorkflowAdvancedInput{
                     KoaOptimizationSettings: &components.AdGroupWorkflowKoaOptimizationSettingsInput{

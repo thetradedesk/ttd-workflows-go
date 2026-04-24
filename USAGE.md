@@ -68,7 +68,7 @@ func main() {
 			Name:                                    ttdworkflows.Pointer("<value>"),
 			Channel:                                 components.AdGroupChannelDisplay,
 			FunnelLocation:                          components.AdGroupFunnelLocationConsideration,
-			MarketType:                              components.MarketTypePrivateMarketOnly.ToPointer(),
+			MarketType:                              components.MarketTypeInputPrivateMarketOnly.ToPointer(),
 			ProgrammaticGuaranteedPrivateContractID: ttdworkflows.Pointer("<id>"),
 			IncludeDefaultsFromCampaign:             ttdworkflows.Pointer(false),
 		},

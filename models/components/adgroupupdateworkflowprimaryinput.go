@@ -15,7 +15,7 @@ type AdGroupUpdateWorkflowPrimaryInput struct {
 	Name                           *string                                `json:"name,omitempty"`
 	Channel                        *AdGroupChannel                        `json:"channel,omitempty"`
 	FunnelLocation                 *AdGroupFunnelLocation                 `json:"funnelLocation,omitempty"`
-	MarketType                     *MarketType                            `json:"marketType,omitempty"`
+	MarketType                     *MarketTypeInput                       `json:"marketType,omitempty"`
 }
 
 func (a *AdGroupUpdateWorkflowPrimaryInput) GetIsEnabled() *bool {
@@ -102,7 +102,7 @@ func (a *AdGroupUpdateWorkflowPrimaryInput) GetFunnelLocation() *AdGroupFunnelLo
 	return a.FunnelLocation
 }
 
-func (a *AdGroupUpdateWorkflowPrimaryInput) GetMarketType() *MarketType {
+func (a *AdGroupUpdateWorkflowPrimaryInput) GetMarketType() *MarketTypeInput {
 	if a == nil {
 		return nil
 	}
