@@ -237,6 +237,7 @@ func main() {
                         VcpmInAdvertiserCurrency: ttdworkflows.Pointer[float64](7123.95),
                         CpcvInAdvertiserCurrency: ttdworkflows.Pointer[float64](6233.72),
                         MiaozhenOTPInPercent: ttdworkflows.Pointer[float64](8437.22),
+                        TheProductScopeForNewBuyerGoalOptimization: ttdworkflows.Pointer[int](86586),
                     },
                     CreativeIds: []string{
                         "<value 1>",
@@ -739,6 +740,7 @@ func main() {
                                 VcpmInAdvertiserCurrency: ttdworkflows.Pointer[float64](8383.69),
                                 CpcvInAdvertiserCurrency: ttdworkflows.Pointer[float64](4755.8),
                                 MiaozhenOTPInPercent: ttdworkflows.Pointer[float64](4575.86),
+                                TheProductScopeForNewBuyerGoalOptimization: ttdworkflows.Pointer[int](657704),
                             },
                             CreativeIds: []string{
                                 "<value 1>",

@@ -3,18 +3,19 @@
 package components
 
 type AdGroupROIGoal struct {
-	MaximizeReach               *bool    `json:"maximizeReach,omitempty"`
-	MaximizeLtvIncrementalReach *bool    `json:"maximizeLtvIncrementalReach,omitempty"`
-	CpcInAdvertiserCurrency     *float64 `json:"cpcInAdvertiserCurrency,omitempty"`
-	CtrInPercent                *float64 `json:"ctrInPercent,omitempty"`
-	NielsenOTPInPercent         *float64 `json:"nielsenOTPInPercent,omitempty"`
-	CpaInAdvertiserCurrency     *float64 `json:"cpaInAdvertiserCurrency,omitempty"`
-	ReturnOnAdSpendPercent      *float64 `json:"returnOnAdSpendPercent,omitempty"`
-	VcrInPercent                *float64 `json:"vcrInPercent,omitempty"`
-	ViewabilityInPercent        *float64 `json:"viewabilityInPercent,omitempty"`
-	VcpmInAdvertiserCurrency    *float64 `json:"vcpmInAdvertiserCurrency,omitempty"`
-	CpcvInAdvertiserCurrency    *float64 `json:"cpcvInAdvertiserCurrency,omitempty"`
-	MiaozhenOTPInPercent        *float64 `json:"miaozhenOTPInPercent,omitempty"`
+	MaximizeReach                              *bool    `json:"maximizeReach,omitempty"`
+	MaximizeLtvIncrementalReach                *bool    `json:"maximizeLtvIncrementalReach,omitempty"`
+	CpcInAdvertiserCurrency                    *float64 `json:"cpcInAdvertiserCurrency,omitempty"`
+	CtrInPercent                               *float64 `json:"ctrInPercent,omitempty"`
+	NielsenOTPInPercent                        *float64 `json:"nielsenOTPInPercent,omitempty"`
+	CpaInAdvertiserCurrency                    *float64 `json:"cpaInAdvertiserCurrency,omitempty"`
+	ReturnOnAdSpendPercent                     *float64 `json:"returnOnAdSpendPercent,omitempty"`
+	VcrInPercent                               *float64 `json:"vcrInPercent,omitempty"`
+	ViewabilityInPercent                       *float64 `json:"viewabilityInPercent,omitempty"`
+	VcpmInAdvertiserCurrency                   *float64 `json:"vcpmInAdvertiserCurrency,omitempty"`
+	CpcvInAdvertiserCurrency                   *float64 `json:"cpcvInAdvertiserCurrency,omitempty"`
+	MiaozhenOTPInPercent                       *float64 `json:"miaozhenOTPInPercent,omitempty"`
+	TheProductScopeForNewBuyerGoalOptimization *int     `json:"The product scope for New Buyer goal optimization,omitempty"`
 }
 
 func (a *AdGroupROIGoal) GetMaximizeReach() *bool {
@@ -99,4 +100,11 @@ func (a *AdGroupROIGoal) GetMiaozhenOTPInPercent() *float64 {
 		return nil
 	}
 	return a.MiaozhenOTPInPercent
+}
+
+func (a *AdGroupROIGoal) GetTheProductScopeForNewBuyerGoalOptimization() *int {
+	if a == nil {
+		return nil
+	}
+	return a.TheProductScopeForNewBuyerGoalOptimization
 }

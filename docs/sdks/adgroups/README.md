@@ -74,6 +74,7 @@ func main() {
                 VcpmInAdvertiserCurrency: ttdworkflows.Pointer[float64](4649.53),
                 CpcvInAdvertiserCurrency: ttdworkflows.Pointer[float64](313.95),
                 MiaozhenOTPInPercent: ttdworkflows.Pointer[float64](4704.1),
+                TheProductScopeForNewBuyerGoalOptimization: ttdworkflows.Pointer[int](785382),
             },
             CreativeIds: nil,
             AssociatedBidLists: []components.AdGroupWorkflowAssociateBidListInput{
@@ -266,6 +267,7 @@ func main() {
                 VcpmInAdvertiserCurrency: ttdworkflows.Pointer[float64](1135.94),
                 CpcvInAdvertiserCurrency: ttdworkflows.Pointer[float64](6372.45),
                 MiaozhenOTPInPercent: ttdworkflows.Pointer[float64](8405.28),
+                TheProductScopeForNewBuyerGoalOptimization: ttdworkflows.Pointer[int](93512),
             },
             CreativeIds: []string{
                 "<value 1>",
@@ -580,6 +582,7 @@ func main() {
                         VcpmInAdvertiserCurrency: ttdworkflows.Pointer[float64](8251.2),
                         CpcvInAdvertiserCurrency: ttdworkflows.Pointer[float64](4502.77),
                         MiaozhenOTPInPercent: ttdworkflows.Pointer[float64](2362.43),
+                        TheProductScopeForNewBuyerGoalOptimization: ttdworkflows.Pointer[int](901233),
                     },
                     CreativeIds: []string{
                         "<value 1>",
