@@ -14,7 +14,6 @@ const (
 	DimensionalBiddingDimensionsHasAdFormatID                             DimensionalBiddingDimensions = "HasAdFormatId"
 	DimensionalBiddingDimensionsHasDomainFragmentID                       DimensionalBiddingDimensions = "HasDomainFragmentId"
 	DimensionalBiddingDimensionsHasUniversalCategoryTaxonomyID            DimensionalBiddingDimensions = "HasUniversalCategoryTaxonomyId"
-	DimensionalBiddingDimensionsHasPlacementPositionRelativeToFoldID      DimensionalBiddingDimensions = "HasPlacementPositionRelativeToFoldId"
 	DimensionalBiddingDimensionsHasAdvertiserTargetingDataID              DimensionalBiddingDimensions = "HasAdvertiserTargetingDataId"
 	DimensionalBiddingDimensionsHasBrowserID                              DimensionalBiddingDimensions = "HasBrowserId"
 	DimensionalBiddingDimensionsHasCarrierID                              DimensionalBiddingDimensions = "HasCarrierId"
@@ -64,8 +63,6 @@ const (
 	DimensionalBiddingDimensionsHasPeer39ViewabilityCategoryID            DimensionalBiddingDimensions = "HasPeer39ViewabilityCategoryId"
 	DimensionalBiddingDimensionsHasVideoCompletionRateScoreRange          DimensionalBiddingDimensions = "HasVideoCompletionRateScoreRange"
 	DimensionalBiddingDimensionsHasInternetConnectionTypeID               DimensionalBiddingDimensions = "HasInternetConnectionTypeId"
-	DimensionalBiddingDimensionsHasAdBugPageQualityCategoryID             DimensionalBiddingDimensions = "HasAdBugPageQualityCategoryId"
-	DimensionalBiddingDimensionsHasAdBugVideoPageQualityCategoryID        DimensionalBiddingDimensions = "HasAdBugVideoPageQualityCategoryId"
 	DimensionalBiddingDimensionsHasRtbAsiaPageQualityCategoryID           DimensionalBiddingDimensions = "HasRTBAsiaPageQualityCategoryId"
 	DimensionalBiddingDimensionsHasRtbAsiaVideoPageQualityCategoryID      DimensionalBiddingDimensions = "HasRTBAsiaVideoPageQualityCategoryId"
 	DimensionalBiddingDimensionsHasTtdContextualCategoryID                DimensionalBiddingDimensions = "HasTTDContextualCategoryId"
@@ -83,8 +80,6 @@ const (
 	DimensionalBiddingDimensionsHasDomainClassID                          DimensionalBiddingDimensions = "HasDomainClassId"
 	DimensionalBiddingDimensionsHasGeofenceThirdPartyDataAndBrand         DimensionalBiddingDimensions = "HasGeofenceThirdPartyDataAndBrand"
 	DimensionalBiddingDimensionsHasPreBidContextualCategoryID             DimensionalBiddingDimensions = "HasPreBidContextualCategoryId"
-	DimensionalBiddingDimensionsHasMiaozhenPageQualityCategoryID          DimensionalBiddingDimensions = "HasMiaozhenPageQualityCategoryId"
-	DimensionalBiddingDimensionsHasMiaozhenVideoPageQualityCategoryID     DimensionalBiddingDimensions = "HasMiaozhenVideoPageQualityCategoryId"
 	DimensionalBiddingDimensionsHasTencentPageQualityCategoryID           DimensionalBiddingDimensions = "HasTencentPageQualityCategoryId"
 	DimensionalBiddingDimensionsHasContentGenre                           DimensionalBiddingDimensions = "HasContentGenre"
 	DimensionalBiddingDimensionsHasContentLivestream                      DimensionalBiddingDimensions = "HasContentLivestream"
@@ -118,8 +113,6 @@ func (e *DimensionalBiddingDimensions) UnmarshalJSON(data []byte) error {
 	case "HasDomainFragmentId":
 		fallthrough
 	case "HasUniversalCategoryTaxonomyId":
-		fallthrough
-	case "HasPlacementPositionRelativeToFoldId":
 		fallthrough
 	case "HasAdvertiserTargetingDataId":
 		fallthrough
@@ -219,10 +212,6 @@ func (e *DimensionalBiddingDimensions) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "HasInternetConnectionTypeId":
 		fallthrough
-	case "HasAdBugPageQualityCategoryId":
-		fallthrough
-	case "HasAdBugVideoPageQualityCategoryId":
-		fallthrough
 	case "HasRTBAsiaPageQualityCategoryId":
 		fallthrough
 	case "HasRTBAsiaVideoPageQualityCategoryId":
@@ -256,10 +245,6 @@ func (e *DimensionalBiddingDimensions) UnmarshalJSON(data []byte) error {
 	case "HasGeofenceThirdPartyDataAndBrand":
 		fallthrough
 	case "HasPreBidContextualCategoryId":
-		fallthrough
-	case "HasMiaozhenPageQualityCategoryId":
-		fallthrough
-	case "HasMiaozhenVideoPageQualityCategoryId":
 		fallthrough
 	case "HasTencentPageQualityCategoryId":
 		fallthrough

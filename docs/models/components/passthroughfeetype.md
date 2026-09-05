@@ -24,3 +24,4 @@ value := components.PassThroughFeeTypeNone
 | `PassThroughFeeTypeRateCpm`                            | RateCPM                                                |
 | `PassThroughFeeTypeRateCpc`                            | RateCPC                                                |
 | `PassThroughFeeTypeCustomPmpPartnerDataCostPercentage` | CustomPmpPartnerDataCostPercentage                     |
+| `PassThroughFeeTypeMediaDataFeeFeaturesCostPercentage` | MediaDataFeeFeaturesCostPercentage                     |
