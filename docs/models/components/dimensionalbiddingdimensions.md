@@ -19,7 +19,6 @@ value := components.DimensionalBiddingDimensionsUnknownDimension
 | `DimensionalBiddingDimensionsHasAdFormatID`                             | HasAdFormatId                                                           |
 | `DimensionalBiddingDimensionsHasDomainFragmentID`                       | HasDomainFragmentId                                                     |
 | `DimensionalBiddingDimensionsHasUniversalCategoryTaxonomyID`            | HasUniversalCategoryTaxonomyId                                          |
-| `DimensionalBiddingDimensionsHasPlacementPositionRelativeToFoldID`      | HasPlacementPositionRelativeToFoldId                                    |
 | `DimensionalBiddingDimensionsHasAdvertiserTargetingDataID`              | HasAdvertiserTargetingDataId                                            |
 | `DimensionalBiddingDimensionsHasBrowserID`                              | HasBrowserId                                                            |
 | `DimensionalBiddingDimensionsHasCarrierID`                              | HasCarrierId                                                            |
@@ -69,8 +68,6 @@ value := components.DimensionalBiddingDimensionsUnknownDimension
 | `DimensionalBiddingDimensionsHasPeer39ViewabilityCategoryID`            | HasPeer39ViewabilityCategoryId                                          |
 | `DimensionalBiddingDimensionsHasVideoCompletionRateScoreRange`          | HasVideoCompletionRateScoreRange                                        |
 | `DimensionalBiddingDimensionsHasInternetConnectionTypeID`               | HasInternetConnectionTypeId                                             |
-| `DimensionalBiddingDimensionsHasAdBugPageQualityCategoryID`             | HasAdBugPageQualityCategoryId                                           |
-| `DimensionalBiddingDimensionsHasAdBugVideoPageQualityCategoryID`        | HasAdBugVideoPageQualityCategoryId                                      |
 | `DimensionalBiddingDimensionsHasRtbAsiaPageQualityCategoryID`           | HasRTBAsiaPageQualityCategoryId                                         |
 | `DimensionalBiddingDimensionsHasRtbAsiaVideoPageQualityCategoryID`      | HasRTBAsiaVideoPageQualityCategoryId                                    |
 | `DimensionalBiddingDimensionsHasTtdContextualCategoryID`                | HasTTDContextualCategoryId                                              |
@@ -88,8 +85,6 @@ value := components.DimensionalBiddingDimensionsUnknownDimension
 | `DimensionalBiddingDimensionsHasDomainClassID`                          | HasDomainClassId                                                        |
 | `DimensionalBiddingDimensionsHasGeofenceThirdPartyDataAndBrand`         | HasGeofenceThirdPartyDataAndBrand                                       |
 | `DimensionalBiddingDimensionsHasPreBidContextualCategoryID`             | HasPreBidContextualCategoryId                                           |
-| `DimensionalBiddingDimensionsHasMiaozhenPageQualityCategoryID`          | HasMiaozhenPageQualityCategoryId                                        |
-| `DimensionalBiddingDimensionsHasMiaozhenVideoPageQualityCategoryID`     | HasMiaozhenVideoPageQualityCategoryId                                   |
 | `DimensionalBiddingDimensionsHasTencentPageQualityCategoryID`           | HasTencentPageQualityCategoryId                                         |
 | `DimensionalBiddingDimensionsHasContentGenre`                           | HasContentGenre                                                         |
 | `DimensionalBiddingDimensionsHasContentLivestream`                      | HasContentLivestream                                                    |
