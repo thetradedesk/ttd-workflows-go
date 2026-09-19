@@ -3,18 +3,18 @@
 package components
 
 type AdGroupWorkflowAudienceTargetingInput struct {
-	AudienceID                           *string `json:"audienceId,omitempty"`
-	AudienceAcceleratorExclusionsEnabled *bool   `json:"audienceAcceleratorExclusionsEnabled,omitempty"`
-	AudienceBoosterEnabled               *bool   `json:"audienceBoosterEnabled,omitempty"`
-	AudienceExcluderEnabled              *bool   `json:"audienceExcluderEnabled,omitempty"`
-	AudiencePredictorEnabled             *bool   `json:"audiencePredictorEnabled,omitempty"`
-	CrossDeviceVendorListForAudience     []int   `json:"crossDeviceVendorListForAudience,omitempty"`
-	RecencyExclusionWindowInMinutes      *int    `json:"recencyExclusionWindowInMinutes,omitempty"`
-	TargetTrackableUsersEnabled          *bool   `json:"targetTrackableUsersEnabled,omitempty"`
-	UseMcIDAsPrimary                     *bool   `json:"useMcIdAsPrimary,omitempty"`
+	AudienceID                           *StringWorkflowsOptional `json:"audienceId,omitempty"`
+	AudienceAcceleratorExclusionsEnabled *bool                    `json:"audienceAcceleratorExclusionsEnabled,omitempty"`
+	AudienceBoosterEnabled               *bool                    `json:"audienceBoosterEnabled,omitempty"`
+	AudienceExcluderEnabled              *bool                    `json:"audienceExcluderEnabled,omitempty"`
+	AudiencePredictorEnabled             *bool                    `json:"audiencePredictorEnabled,omitempty"`
+	CrossDeviceVendorListForAudience     []int                    `json:"crossDeviceVendorListForAudience,omitempty"`
+	RecencyExclusionWindowInMinutes      *int                     `json:"recencyExclusionWindowInMinutes,omitempty"`
+	TargetTrackableUsersEnabled          *bool                    `json:"targetTrackableUsersEnabled,omitempty"`
+	UseMcIDAsPrimary                     *bool                    `json:"useMcIdAsPrimary,omitempty"`
 }
 
-func (a *AdGroupWorkflowAudienceTargetingInput) GetAudienceID() *string {
+func (a *AdGroupWorkflowAudienceTargetingInput) GetAudienceID() *StringWorkflowsOptional {
 	if a == nil {
 		return nil
 	}

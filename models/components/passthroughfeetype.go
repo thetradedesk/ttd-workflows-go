@@ -19,6 +19,7 @@ const (
 	PassThroughFeeTypeRateCpm                            PassThroughFeeType = "RateCPM"
 	PassThroughFeeTypeRateCpc                            PassThroughFeeType = "RateCPC"
 	PassThroughFeeTypeCustomPmpPartnerDataCostPercentage PassThroughFeeType = "CustomPmpPartnerDataCostPercentage"
+	PassThroughFeeTypeMediaDataFeeFeaturesCostPercentage PassThroughFeeType = "MediaDataFeeFeaturesCostPercentage"
 )
 
 func (e PassThroughFeeType) ToPointer() *PassThroughFeeType {
@@ -47,6 +48,8 @@ func (e *PassThroughFeeType) UnmarshalJSON(data []byte) error {
 	case "RateCPC":
 		fallthrough
 	case "CustomPmpPartnerDataCostPercentage":
+		fallthrough
+	case "MediaDataFeeFeaturesCostPercentage":
 		*e = PassThroughFeeType(v)
 		return nil
 	default:
