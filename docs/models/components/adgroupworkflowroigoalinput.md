@@ -17,3 +17,4 @@
 | `VcpmInAdvertiserCurrency`    | `*float64`                    | :heavy_minus_sign:            | N/A                           |
 | `CpcvInAdvertiserCurrency`    | `*float64`                    | :heavy_minus_sign:            | N/A                           |
 | `MiaozhenOTPInPercent`        | `*float64`                    | :heavy_minus_sign:            | N/A                           |
+| `NewBuyerTargetValue`         | `*int`                        | :heavy_minus_sign:            | N/A                           |
