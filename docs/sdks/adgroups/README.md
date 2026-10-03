@@ -49,7 +49,9 @@ func main() {
             BaseBidCPMInAdvertiserCurrency: ttdworkflows.Pointer[float64](3785.04),
             MaxBidCPMInAdvertiserCurrency: ttdworkflows.Pointer[float64](7447.3),
             AudienceTargeting: &components.AdGroupWorkflowAudienceTargetingInput{
-                AudienceID: ttdworkflows.Pointer("<id>"),
+                AudienceID: &components.StringWorkflowsOptional{
+                    Value: ttdworkflows.Pointer("<value>"),
+                },
                 AudienceAcceleratorExclusionsEnabled: ttdworkflows.Pointer(true),
                 AudienceBoosterEnabled: ttdworkflows.Pointer(true),
                 AudienceExcluderEnabled: ttdworkflows.Pointer(true),
@@ -74,6 +76,7 @@ func main() {
                 VcpmInAdvertiserCurrency: ttdworkflows.Pointer[float64](4649.53),
                 CpcvInAdvertiserCurrency: ttdworkflows.Pointer[float64](313.95),
                 MiaozhenOTPInPercent: ttdworkflows.Pointer[float64](4704.1),
+                NewBuyerTargetValue: ttdworkflows.Pointer[int](287261),
             },
             CreativeIds: nil,
             AssociatedBidLists: []components.AdGroupWorkflowAssociateBidListInput{
@@ -239,7 +242,9 @@ func main() {
             BaseBidCPMInAdvertiserCurrency: ttdworkflows.Pointer[float64](1710.9),
             MaxBidCPMInAdvertiserCurrency: ttdworkflows.Pointer[float64](1926.83),
             AudienceTargeting: &components.AdGroupWorkflowAudienceTargetingInput{
-                AudienceID: ttdworkflows.Pointer("<id>"),
+                AudienceID: &components.StringWorkflowsOptional{
+                    Value: ttdworkflows.Pointer("<value>"),
+                },
                 AudienceAcceleratorExclusionsEnabled: ttdworkflows.Pointer(false),
                 AudienceBoosterEnabled: ttdworkflows.Pointer(true),
                 AudienceExcluderEnabled: ttdworkflows.Pointer(true),
@@ -266,6 +271,7 @@ func main() {
                 VcpmInAdvertiserCurrency: ttdworkflows.Pointer[float64](1135.94),
                 CpcvInAdvertiserCurrency: ttdworkflows.Pointer[float64](6372.45),
                 MiaozhenOTPInPercent: ttdworkflows.Pointer[float64](8405.28),
+                NewBuyerTargetValue: nil,
             },
             CreativeIds: []string{
                 "<value 1>",
@@ -555,7 +561,9 @@ func main() {
                     BaseBidCPMInAdvertiserCurrency: ttdworkflows.Pointer[float64](188.02),
                     MaxBidCPMInAdvertiserCurrency: ttdworkflows.Pointer[float64](6077.98),
                     AudienceTargeting: &components.AdGroupWorkflowAudienceTargetingInput{
-                        AudienceID: ttdworkflows.Pointer("<id>"),
+                        AudienceID: &components.StringWorkflowsOptional{
+                            Value: ttdworkflows.Pointer("<value>"),
+                        },
                         AudienceAcceleratorExclusionsEnabled: ttdworkflows.Pointer(true),
                         AudienceBoosterEnabled: ttdworkflows.Pointer(true),
                         AudienceExcluderEnabled: ttdworkflows.Pointer(false),
@@ -580,6 +588,7 @@ func main() {
                         VcpmInAdvertiserCurrency: ttdworkflows.Pointer[float64](8251.2),
                         CpcvInAdvertiserCurrency: ttdworkflows.Pointer[float64](4502.77),
                         MiaozhenOTPInPercent: ttdworkflows.Pointer[float64](2362.43),
+                        NewBuyerTargetValue: ttdworkflows.Pointer[int](240391),
                     },
                     CreativeIds: []string{
                         "<value 1>",

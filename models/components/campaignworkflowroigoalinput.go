@@ -19,7 +19,7 @@ type CampaignWorkflowROIGoalInput struct {
 	CrossixAudienceQualityIndex               *bool    `json:"crossixAudienceQualityIndex,omitempty"`
 	IqviaAudienceQualityIndexAndCostPerTarget *bool    `json:"iqviaAudienceQualityIndexAndCostPerTarget,omitempty"`
 	CrossixCostPerTarget                      *bool    `json:"crossixCostPerTarget,omitempty"`
-	NewBuyerTargetValue                       *int     `json:"NewBuyerTargetValue,omitempty"`
+	NewBuyerTargetValue                       *int     `json:"newBuyerTargetValue,omitempty"`
 }
 
 func (c *CampaignWorkflowROIGoalInput) GetMaximizeReach() *bool {
