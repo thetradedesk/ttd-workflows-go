@@ -3,21 +3,22 @@
 package components
 
 type AdGroupCreateWorkflowPrimaryInput struct {
-	IsEnabled                               *bool                                  `json:"isEnabled,omitempty"`
-	Description                             *string                                `json:"description,omitempty"`
-	Budget                                  *AdGroupWorkflowBudgetInput            `json:"budget,omitempty"`
-	BaseBidCPMInAdvertiserCurrency          *float64                               `json:"baseBidCPMInAdvertiserCurrency,omitempty"`
-	MaxBidCPMInAdvertiserCurrency           *float64                               `json:"maxBidCPMInAdvertiserCurrency,omitempty"`
-	AudienceTargeting                       *AdGroupWorkflowAudienceTargetingInput `json:"audienceTargeting,omitempty"`
-	RoiGoal                                 *AdGroupWorkflowROIGoalInput           `json:"roiGoal,omitempty"`
-	CreativeIds                             []string                               `json:"creativeIds,omitempty"`
-	AssociatedBidLists                      []AdGroupWorkflowAssociateBidListInput `json:"associatedBidLists,omitempty"`
-	Name                                    *string                                `json:"name"`
-	Channel                                 AdGroupChannel                         `json:"channel"`
-	FunnelLocation                          AdGroupFunnelLocation                  `json:"funnelLocation"`
-	MarketType                              *MarketTypeInput                       `json:"marketType,omitempty"`
-	ProgrammaticGuaranteedPrivateContractID *string                                `json:"programmaticGuaranteedPrivateContractId,omitempty"`
-	IncludeDefaultsFromCampaign             *bool                                  `json:"includeDefaultsFromCampaign,omitempty"`
+	IsEnabled                               *bool                                    `json:"isEnabled,omitempty"`
+	Description                             *string                                  `json:"description,omitempty"`
+	Budget                                  *AdGroupWorkflowBudgetInput              `json:"budget,omitempty"`
+	BaseBidCPMInAdvertiserCurrency          *float64                                 `json:"baseBidCPMInAdvertiserCurrency,omitempty"`
+	MaxBidCPMInAdvertiserCurrency           *float64                                 `json:"maxBidCPMInAdvertiserCurrency,omitempty"`
+	AudienceTargeting                       *AdGroupWorkflowAudienceTargetingInput   `json:"audienceTargeting,omitempty"`
+	RoiGoal                                 *AdGroupWorkflowROIGoalInput             `json:"roiGoal,omitempty"`
+	CreativeIds                             []string                                 `json:"creativeIds,omitempty"`
+	AssociatedBidLists                      []AdGroupWorkflowAssociateBidListInput   `json:"associatedBidLists,omitempty"`
+	OwnedBidLists                           []AdGroupCreateWorkflowOwnedBidListInput `json:"ownedBidLists,omitempty"`
+	Name                                    *string                                  `json:"name"`
+	Channel                                 AdGroupChannel                           `json:"channel"`
+	FunnelLocation                          AdGroupFunnelLocation                    `json:"funnelLocation"`
+	MarketType                              *MarketTypeInput                         `json:"marketType,omitempty"`
+	ProgrammaticGuaranteedPrivateContractID *string                                  `json:"programmaticGuaranteedPrivateContractId,omitempty"`
+	IncludeDefaultsFromCampaign             *bool                                    `json:"includeDefaultsFromCampaign,omitempty"`
 }
 
 func (a *AdGroupCreateWorkflowPrimaryInput) GetIsEnabled() *bool {
@@ -81,6 +82,13 @@ func (a *AdGroupCreateWorkflowPrimaryInput) GetAssociatedBidLists() []AdGroupWor
 		return nil
 	}
 	return a.AssociatedBidLists
+}
+
+func (a *AdGroupCreateWorkflowPrimaryInput) GetOwnedBidLists() []AdGroupCreateWorkflowOwnedBidListInput {
+	if a == nil {
+		return nil
+	}
+	return a.OwnedBidLists
 }
 
 func (a *AdGroupCreateWorkflowPrimaryInput) GetName() *string {
