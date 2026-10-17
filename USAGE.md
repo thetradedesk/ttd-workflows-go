@@ -31,7 +31,9 @@ func main() {
 			BaseBidCPMInAdvertiserCurrency: ttdworkflows.Pointer[float64](3785.04),
 			MaxBidCPMInAdvertiserCurrency:  ttdworkflows.Pointer[float64](7447.3),
 			AudienceTargeting: &components.AdGroupWorkflowAudienceTargetingInput{
-				AudienceID:                           ttdworkflows.Pointer("<id>"),
+				AudienceID: &components.StringWorkflowsOptional{
+					Value: ttdworkflows.Pointer("<value>"),
+				},
 				AudienceAcceleratorExclusionsEnabled: ttdworkflows.Pointer(true),
 				AudienceBoosterEnabled:               ttdworkflows.Pointer(true),
 				AudienceExcluderEnabled:              ttdworkflows.Pointer(true),
@@ -56,12 +58,33 @@ func main() {
 				VcpmInAdvertiserCurrency:    ttdworkflows.Pointer[float64](4649.53),
 				CpcvInAdvertiserCurrency:    ttdworkflows.Pointer[float64](313.95),
 				MiaozhenOTPInPercent:        ttdworkflows.Pointer[float64](4704.1),
+				NewBuyerTargetValue:         ttdworkflows.Pointer[int](287261),
 			},
 			CreativeIds: nil,
 			AssociatedBidLists: []components.AdGroupWorkflowAssociateBidListInput{
 				components.AdGroupWorkflowAssociateBidListInput{
 					BidListID:             "<id>",
 					IsEnabled:             ttdworkflows.Pointer(false),
+					IsDefaultForDimension: ttdworkflows.Pointer(true),
+				},
+			},
+			OwnedBidLists: []components.AdGroupCreateWorkflowOwnedBidListInput{
+				components.AdGroupCreateWorkflowOwnedBidListInput{
+					Name:           ttdworkflows.Pointer("<value>"),
+					AdjustmentType: components.BidListAdjustmentTypeFractionalExclusion.ToPointer(),
+					ResolutionType: components.MultipleMatchResolutionTypeSingleMatchOnly.ToPointer(),
+					Dimensions: []components.BidListDimension{
+						components.BidListDimensionHasVideoMutedStateID,
+					},
+					BidLines:                 nil,
+					Source:                   components.BidListSourceSystemAutoForCommitmentTargeting.ToPointer(),
+					IsAvailableForLibraryUse: ttdworkflows.Pointer(true),
+					AssociateBehavior:        components.BidListAssociateBehaviorAssociate.ToPointer(),
+					DimensionConfig: &components.BidListDimensionOptionsInput{
+						Geo: &components.GeoBidListOptionsInput{
+							LocationContextType: components.LocationContextTypeInputRealtime.ToPointer(),
+						},
+					},
 					IsDefaultForDimension: ttdworkflows.Pointer(true),
 				},
 			},
