@@ -10,8 +10,10 @@ type AdGroupUpdateWorkflowPrimaryInput struct {
 	MaxBidCPMInAdvertiserCurrency  *float64                               `json:"maxBidCPMInAdvertiserCurrency,omitempty"`
 	AudienceTargeting              *AdGroupWorkflowAudienceTargetingInput `json:"audienceTargeting,omitempty"`
 	RoiGoal                        *AdGroupWorkflowROIGoalInput           `json:"roiGoal,omitempty"`
-	CreativeIds                    []string                               `json:"creativeIds,omitempty"`
 	AssociatedBidLists             []AdGroupWorkflowAssociateBidListInput `json:"associatedBidLists,omitempty"`
+	CreativeIds                    []string                               `json:"creativeIds,omitempty"`
+	CreativeIdsToAdd               []string                               `json:"creativeIdsToAdd,omitempty"`
+	CreativeIdsToRemove            []string                               `json:"creativeIdsToRemove,omitempty"`
 	Name                           *string                                `json:"name,omitempty"`
 	Channel                        *AdGroupChannel                        `json:"channel,omitempty"`
 	FunnelLocation                 *AdGroupFunnelLocation                 `json:"funnelLocation,omitempty"`
@@ -67,6 +69,13 @@ func (a *AdGroupUpdateWorkflowPrimaryInput) GetRoiGoal() *AdGroupWorkflowROIGoal
 	return a.RoiGoal
 }
 
+func (a *AdGroupUpdateWorkflowPrimaryInput) GetAssociatedBidLists() []AdGroupWorkflowAssociateBidListInput {
+	if a == nil {
+		return nil
+	}
+	return a.AssociatedBidLists
+}
+
 func (a *AdGroupUpdateWorkflowPrimaryInput) GetCreativeIds() []string {
 	if a == nil {
 		return nil
@@ -74,11 +83,18 @@ func (a *AdGroupUpdateWorkflowPrimaryInput) GetCreativeIds() []string {
 	return a.CreativeIds
 }
 
-func (a *AdGroupUpdateWorkflowPrimaryInput) GetAssociatedBidLists() []AdGroupWorkflowAssociateBidListInput {
+func (a *AdGroupUpdateWorkflowPrimaryInput) GetCreativeIdsToAdd() []string {
 	if a == nil {
 		return nil
 	}
-	return a.AssociatedBidLists
+	return a.CreativeIdsToAdd
+}
+
+func (a *AdGroupUpdateWorkflowPrimaryInput) GetCreativeIdsToRemove() []string {
+	if a == nil {
+		return nil
+	}
+	return a.CreativeIdsToRemove
 }
 
 func (a *AdGroupUpdateWorkflowPrimaryInput) GetName() *string {

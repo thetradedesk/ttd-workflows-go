@@ -83,7 +83,8 @@ func main() {
                 CrossixAudienceQualityIndex: ttdworkflows.Pointer(true),
                 IqviaAudienceQualityIndexAndCostPerTarget: ttdworkflows.Pointer(false),
                 CrossixCostPerTarget: ttdworkflows.Pointer(true),
-                NewBuyerTargetValue: nil,
+                PharmaOptimization: ttdworkflows.Pointer(true),
+                NewBuyerTargetValue: ttdworkflows.Pointer[int](960101),
             },
             TertiaryGoal: &components.CampaignWorkflowROIGoalInput{
                 MaximizeReach: ttdworkflows.Pointer(false),
@@ -102,7 +103,8 @@ func main() {
                 CrossixAudienceQualityIndex: ttdworkflows.Pointer(false),
                 IqviaAudienceQualityIndexAndCostPerTarget: nil,
                 CrossixCostPerTarget: ttdworkflows.Pointer(false),
-                NewBuyerTargetValue: ttdworkflows.Pointer[int](960101),
+                PharmaOptimization: ttdworkflows.Pointer(false),
+                NewBuyerTargetValue: ttdworkflows.Pointer[int](412835),
             },
             AdvertiserID: "<id>",
             Name: "<value>",
@@ -128,7 +130,8 @@ func main() {
                 CrossixAudienceQualityIndex: ttdworkflows.Pointer(true),
                 IqviaAudienceQualityIndexAndCostPerTarget: ttdworkflows.Pointer(true),
                 CrossixCostPerTarget: ttdworkflows.Pointer(false),
-                NewBuyerTargetValue: ttdworkflows.Pointer[int](412835),
+                PharmaOptimization: ttdworkflows.Pointer(true),
+                NewBuyerTargetValue: ttdworkflows.Pointer[int](743337),
             },
             StartDateInUtc: nil,
             Budget: &components.CampaignCreateWorkflowBudgetInput{
@@ -162,6 +165,7 @@ func main() {
                     IsActive: ttdworkflows.Pointer(true),
                 },
             },
+            PharmaOptimizationGoalSettings: nil,
         },
         AdvancedInput: &components.CampaignCreateWorkflowAdvancedInput{
             PurchaseOrderNumber: nil,
@@ -176,6 +180,13 @@ func main() {
                 },
             },
             IncludeDefaultsFromAdvertiser: ttdworkflows.Pointer(false),
+            AssociatedBidLists: []components.CampaignWorkflowAssociateBidListInput{
+                components.CampaignWorkflowAssociateBidListInput{
+                    BidListID: "<id>",
+                    IsEnabled: ttdworkflows.Pointer(true),
+                    IsCampaignDefault: ttdworkflows.Pointer(true),
+                },
+            },
             PassThroughFeeCard: &components.CampaignCreateWorkflowPassThroughFeeCardInput{
                 StartDateUtc: types.MustNewTimeFromString("2023-03-18T04:39:08.387Z"),
                 PassThroughFees: []components.CampaignCreatePassThroughFeesInput{
@@ -211,7 +222,9 @@ func main() {
                     BaseBidCPMInAdvertiserCurrency: ttdworkflows.Pointer[float64](1136.89),
                     MaxBidCPMInAdvertiserCurrency: ttdworkflows.Pointer[float64](6950.27),
                     AudienceTargeting: &components.AdGroupWorkflowAudienceTargetingInput{
-                        AudienceID: ttdworkflows.Pointer("<id>"),
+                        AudienceID: &components.StringWorkflowsOptional{
+                            Value: ttdworkflows.Pointer("<value>"),
+                        },
                         AudienceAcceleratorExclusionsEnabled: ttdworkflows.Pointer(false),
                         AudienceBoosterEnabled: ttdworkflows.Pointer(true),
                         AudienceExcluderEnabled: ttdworkflows.Pointer(false),
@@ -237,9 +250,7 @@ func main() {
                         VcpmInAdvertiserCurrency: ttdworkflows.Pointer[float64](7123.95),
                         CpcvInAdvertiserCurrency: ttdworkflows.Pointer[float64](6233.72),
                         MiaozhenOTPInPercent: ttdworkflows.Pointer[float64](8437.22),
-                    },
-                    CreativeIds: []string{
-                        "<value 1>",
+                        NewBuyerTargetValue: ttdworkflows.Pointer[int](607060),
                     },
                     AssociatedBidLists: []components.AdGroupWorkflowAssociateBidListInput{
                         components.AdGroupWorkflowAssociateBidListInput{
@@ -248,6 +259,10 @@ func main() {
                             IsDefaultForDimension: ttdworkflows.Pointer(false),
                         },
                     },
+                    CreativeIds: []string{
+                        "<value 1>",
+                    },
+                    OwnedBidLists: nil,
                     Name: ttdworkflows.Pointer("<value>"),
                     Channel: components.AdGroupChannelNativeVideo,
                     FunnelLocation: components.AdGroupFunnelLocationNone,
@@ -425,7 +440,8 @@ func main() {
                 CrossixAudienceQualityIndex: ttdworkflows.Pointer(true),
                 IqviaAudienceQualityIndexAndCostPerTarget: ttdworkflows.Pointer(true),
                 CrossixCostPerTarget: ttdworkflows.Pointer(true),
-                NewBuyerTargetValue: ttdworkflows.Pointer[int](869267),
+                PharmaOptimization: ttdworkflows.Pointer(false),
+                NewBuyerTargetValue: ttdworkflows.Pointer[int](287698),
             },
             TertiaryGoal: &components.CampaignWorkflowROIGoalInput{
                 MaximizeReach: ttdworkflows.Pointer(true),
@@ -444,7 +460,8 @@ func main() {
                 CrossixAudienceQualityIndex: ttdworkflows.Pointer(false),
                 IqviaAudienceQualityIndexAndCostPerTarget: nil,
                 CrossixCostPerTarget: ttdworkflows.Pointer(false),
-                NewBuyerTargetValue: ttdworkflows.Pointer[int](113952),
+                PharmaOptimization: ttdworkflows.Pointer(true),
+                NewBuyerTargetValue: ttdworkflows.Pointer[int](651746),
             },
             Name: ttdworkflows.Pointer("<value>"),
             PrimaryChannel: components.CampaignChannelTypeDisplay.ToPointer(),
@@ -465,11 +482,23 @@ func main() {
                 CrossixAudienceQualityIndex: ttdworkflows.Pointer(true),
                 IqviaAudienceQualityIndexAndCostPerTarget: ttdworkflows.Pointer(true),
                 CrossixCostPerTarget: ttdworkflows.Pointer(true),
-                NewBuyerTargetValue: ttdworkflows.Pointer[int](723722),
+                PharmaOptimization: ttdworkflows.Pointer(true),
+                NewBuyerTargetValue: ttdworkflows.Pointer[int](776250),
             },
             StartDateInUtc: types.MustNewTimeFromString("2024-02-29T10:31:50.069Z"),
             Budget: &components.CampaignUpdateWorkflowBudgetInput{
                 PacingMode: components.CampaignPacingModePaceAsSoonAsPossible,
+            },
+            PharmaOptimizationGoalSettingUpdates: []components.CampaignWorkflowPharmaOptimizationGoalSettingInput{
+                components.CampaignWorkflowPharmaOptimizationGoalSettingInput{
+                    GoalPriority: components.GoalPriorityInputTertiary,
+                    MetricWeights: []components.CampaignWorkflowPharmaOptimizationGoalMetricWeightInput{
+                        components.CampaignWorkflowPharmaOptimizationGoalMetricWeightInput{
+                            MetricType: components.PharmaOptimizationGoalMetricTypeInputIqviaCostPerTarget,
+                            Weight: 8554.35,
+                        },
+                    },
+                },
             },
         },
         AdvancedInput: &components.CampaignUpdateWorkflowAdvancedInput{
@@ -579,7 +608,8 @@ func main() {
                         CrossixAudienceQualityIndex: ttdworkflows.Pointer(false),
                         IqviaAudienceQualityIndexAndCostPerTarget: ttdworkflows.Pointer(false),
                         CrossixCostPerTarget: nil,
-                        NewBuyerTargetValue: ttdworkflows.Pointer[int](38368),
+                        PharmaOptimization: ttdworkflows.Pointer(false),
+                        NewBuyerTargetValue: nil,
                     },
                     TertiaryGoal: &components.CampaignWorkflowROIGoalInput{
                         MaximizeReach: ttdworkflows.Pointer(false),
@@ -598,7 +628,8 @@ func main() {
                         CrossixAudienceQualityIndex: ttdworkflows.Pointer(false),
                         IqviaAudienceQualityIndexAndCostPerTarget: ttdworkflows.Pointer(false),
                         CrossixCostPerTarget: ttdworkflows.Pointer(true),
-                        NewBuyerTargetValue: ttdworkflows.Pointer[int](373225),
+                        PharmaOptimization: ttdworkflows.Pointer(true),
+                        NewBuyerTargetValue: ttdworkflows.Pointer[int](966290),
                     },
                     AdvertiserID: "<id>",
                     Name: "<value>",
@@ -625,7 +656,8 @@ func main() {
                         CrossixAudienceQualityIndex: nil,
                         IqviaAudienceQualityIndexAndCostPerTarget: ttdworkflows.Pointer(false),
                         CrossixCostPerTarget: ttdworkflows.Pointer(true),
-                        NewBuyerTargetValue: ttdworkflows.Pointer[int](355878),
+                        PharmaOptimization: ttdworkflows.Pointer(true),
+                        NewBuyerTargetValue: ttdworkflows.Pointer[int](240701),
                     },
                     StartDateInUtc: types.MustNewTimeFromString("2025-09-26T21:06:42.946Z"),
                     Budget: &components.CampaignCreateWorkflowBudgetInput{
@@ -664,6 +696,17 @@ func main() {
                             IsActive: ttdworkflows.Pointer(true),
                         },
                     },
+                    PharmaOptimizationGoalSettings: []components.CampaignWorkflowPharmaOptimizationGoalSettingInput{
+                        components.CampaignWorkflowPharmaOptimizationGoalSettingInput{
+                            GoalPriority: components.GoalPriorityInputPrimary,
+                            MetricWeights: []components.CampaignWorkflowPharmaOptimizationGoalMetricWeightInput{
+                                components.CampaignWorkflowPharmaOptimizationGoalMetricWeightInput{
+                                    MetricType: components.PharmaOptimizationGoalMetricTypeInputCrossixCostPerTarget,
+                                    Weight: 6297.84,
+                                },
+                            },
+                        },
+                    },
                 },
                 AdvancedInput: &components.CampaignCreateWorkflowAdvancedInput{
                     PurchaseOrderNumber: ttdworkflows.Pointer("<value>"),
@@ -678,6 +721,13 @@ func main() {
                         },
                     },
                     IncludeDefaultsFromAdvertiser: ttdworkflows.Pointer(false),
+                    AssociatedBidLists: []components.CampaignWorkflowAssociateBidListInput{
+                        components.CampaignWorkflowAssociateBidListInput{
+                            BidListID: "<id>",
+                            IsEnabled: ttdworkflows.Pointer(false),
+                            IsCampaignDefault: ttdworkflows.Pointer(false),
+                        },
+                    },
                     PassThroughFeeCard: &components.CampaignCreateWorkflowPassThroughFeeCardInput{
                         StartDateUtc: types.MustNewTimeFromString("2024-07-24T11:58:59.190Z"),
                         PassThroughFees: []components.CampaignCreatePassThroughFeesInput{
@@ -713,7 +763,9 @@ func main() {
                             BaseBidCPMInAdvertiserCurrency: ttdworkflows.Pointer[float64](694.78),
                             MaxBidCPMInAdvertiserCurrency: ttdworkflows.Pointer[float64](6084.4),
                             AudienceTargeting: &components.AdGroupWorkflowAudienceTargetingInput{
-                                AudienceID: ttdworkflows.Pointer("<id>"),
+                                AudienceID: &components.StringWorkflowsOptional{
+                                    Value: ttdworkflows.Pointer("<value>"),
+                                },
                                 AudienceAcceleratorExclusionsEnabled: ttdworkflows.Pointer(true),
                                 AudienceBoosterEnabled: ttdworkflows.Pointer(false),
                                 AudienceExcluderEnabled: ttdworkflows.Pointer(true),
@@ -739,16 +791,160 @@ func main() {
                                 VcpmInAdvertiserCurrency: ttdworkflows.Pointer[float64](8383.69),
                                 CpcvInAdvertiserCurrency: ttdworkflows.Pointer[float64](4755.8),
                                 MiaozhenOTPInPercent: ttdworkflows.Pointer[float64](4575.86),
-                            },
-                            CreativeIds: []string{
-                                "<value 1>",
-                                "<value 2>",
+                                NewBuyerTargetValue: ttdworkflows.Pointer[int](332478),
                             },
                             AssociatedBidLists: []components.AdGroupWorkflowAssociateBidListInput{
                                 components.AdGroupWorkflowAssociateBidListInput{
                                     BidListID: "<id>",
                                     IsEnabled: ttdworkflows.Pointer(true),
                                     IsDefaultForDimension: ttdworkflows.Pointer(false),
+                                },
+                            },
+                            CreativeIds: []string{
+                                "<value 1>",
+                                "<value 2>",
+                            },
+                            OwnedBidLists: []components.AdGroupCreateWorkflowOwnedBidListInput{
+                                components.AdGroupCreateWorkflowOwnedBidListInput{
+                                    Name: ttdworkflows.Pointer("<value>"),
+                                    AdjustmentType: components.BidListAdjustmentTypeOptimized.ToPointer(),
+                                    ResolutionType: components.MultipleMatchResolutionTypeApplyAverageAdjustment.ToPointer(),
+                                    Dimensions: []components.BidListDimension{
+                                        components.BidListDimensionHasContentTransparencyID,
+                                    },
+                                    BidLines: []components.BidLineCreateInput{
+                                        components.BidLineCreateInput{
+                                            AdFormatID: ttdworkflows.Pointer("<id>"),
+                                            DomainFragment: ttdworkflows.Pointer("<value>"),
+                                            UniversalCategoryTaxonomyID: nil,
+                                            Browser: components.BrowserBaidu.ToPointer(),
+                                            BrowserID: components.BrowserInputBaidu.ToPointer(),
+                                            CarrierID: ttdworkflows.Pointer("<id>"),
+                                            DeviceModelID: ttdworkflows.Pointer[int](453757),
+                                            DeviceType: components.DeviceTypeRoku.ToPointer(),
+                                            GeoSegmentID: ttdworkflows.Pointer("<id>"),
+                                            HourOfWeek: nil,
+                                            LanguageID: ttdworkflows.Pointer("<id>"),
+                                            OsName: ttdworkflows.Pointer("<value>"),
+                                            PrivateContractID: ttdworkflows.Pointer("<id>"),
+                                            RecencyWindowInMinutes: &components.Int32Range{
+                                                Min: ttdworkflows.Pointer[int](372289),
+                                                Max: ttdworkflows.Pointer[int](511755),
+                                            },
+                                            RenderingContext: components.RenderingContextOther.ToPointer(),
+                                            SupplyVendorID: ttdworkflows.Pointer("<id>"),
+                                            TemperatureBucketInCelsius: &components.DecimalRange{
+                                                Min: ttdworkflows.Pointer[float64](5497.84),
+                                                Max: ttdworkflows.Pointer[float64](8737.14),
+                                            },
+                                            AdsTxtSellerType: components.AdsTxtSellerTypeDirect.ToPointer(),
+                                            VideoMutedState: components.VideoMutedStateInfrequentlyAutoMuted.ToPointer(),
+                                            VideoPlaybackType: components.VideoPlaybackTypeStandalone.ToPointer(),
+                                            VideoPlayerSize: components.VideoPlayerSizeUnknown.ToPointer(),
+                                            VideoQuality: components.VideoQualityUnknown.ToPointer(),
+                                            VideoSkippability: components.VideoSkippabilityUnknown.ToPointer(),
+                                            FactualProximityTarget: &components.FactualProximityTargetInput{
+                                                TargetingCodeID: ttdworkflows.Pointer[int](824090),
+                                                DesignID: ttdworkflows.Pointer[int](283028),
+                                            },
+                                            ImpressionPlacementValue: ttdworkflows.Pointer("<value>"),
+                                            VideoTruthScoreRange: &components.DecimalRange{
+                                                Min: ttdworkflows.Pointer[float64](2863.84),
+                                                Max: nil,
+                                            },
+                                            VideoViewabilityScoreRange: &components.DecimalRange{
+                                                Min: ttdworkflows.Pointer[float64](9309.03),
+                                                Max: ttdworkflows.Pointer[float64](1528.38),
+                                            },
+                                            DisplayViewabilityScoreRange: &components.DecimalRange{
+                                                Min: ttdworkflows.Pointer[float64](3111.96),
+                                                Max: ttdworkflows.Pointer[float64](2687.86),
+                                            },
+                                            Peer39LanguageID: ttdworkflows.Pointer("<id>"),
+                                            DoubleVerifyBotAvoidanceCategory: components.DoubleVerifyBotAvoidanceFraudNoAds.ToPointer(),
+                                            ContextualAppCategoryID: ttdworkflows.Pointer("<id>"),
+                                            PublisherID: ttdworkflows.Pointer("<id>"),
+                                            IntegralViewabilityCategoryID: ttdworkflows.Pointer("<id>"),
+                                            IntegralViewabilityCategory: components.IntegralViewabilityInputInView60.ToPointer(),
+                                            IntegralVideoViewabilityCategoryID: ttdworkflows.Pointer("<id>"),
+                                            IntegralVideoViewabilityCategory: components.IntegralVideoViewabilityInputInView40.ToPointer(),
+                                            DoubleVerifyViewabilityCategory: components.DoubleVerifyDisplayViewabilityTop70.ToPointer(),
+                                            DoubleVerifyVideoViewabilityCategory: components.DoubleVerifyVideoViewabilityViewability30.ToPointer(),
+                                            Peer39ViewabilityCategoryID: nil,
+                                            Peer39ViewabilityCategory: components.Peer39ViewabilityInputTop60.ToPointer(),
+                                            VideoCompletionRateScoreRange: &components.DecimalRange{
+                                                Min: ttdworkflows.Pointer[float64](5205.29),
+                                                Max: ttdworkflows.Pointer[float64](2577.86),
+                                            },
+                                            InternetConnectionInput: components.InternetConnectionTypeInputCellularNetwork3G.ToPointer(),
+                                            InternetConnectionTypeID: components.InternetConnectionTypeInputCellularNetwork4G.ToPointer(),
+                                            InternetConnection: components.InternetConnectionTypeCellularNetwork4G.ToPointer(),
+                                            RtbAsiaPageQualityCategory: components.RTBAsiaViewabilityBlockModerateAndHighRisk.ToPointer(),
+                                            RtbAsiaVideoPageQualityCategory: components.RTBAsiaViewabilityBlockModerateAndHighRisk.ToPointer(),
+                                            SupplyPathOptimizationListID: ttdworkflows.Pointer[int](301092),
+                                            MarketType: components.MarketTypeBidListPmpNotSpecified.ToPointer(),
+                                            WeatherCondition: components.WeatherConditionTornado.ToPointer(),
+                                            FrequencyAdjustment: &components.FrequencyAdjustmentInput{
+                                                CounterID: ttdworkflows.Pointer("<id>"),
+                                                TimesShown: &components.Int32Range{
+                                                    Min: ttdworkflows.Pointer[int](970005),
+                                                    Max: nil,
+                                                },
+                                            },
+                                            SellerDomain: ttdworkflows.Pointer("<value>"),
+                                            DigitalOutOfHomeVenueTypeID: ttdworkflows.Pointer("<id>"),
+                                            NativePlacementType: components.NativePlacementTypeUnknown.ToPointer(),
+                                            NativeContextType: components.NativeContextTypeSellingProducts.ToPointer(),
+                                            IdiosyncraticSegment: components.IdiosyncraticSegmentLightTvViewers2.ToPointer(),
+                                            TencentPageQualityCategory: components.TencentPageQualityInputBlockModerateAndHighRisk.ToPointer(),
+                                            DomainClassID: ttdworkflows.Pointer[int](905935),
+                                            GeofenceThirdPartyDataAndBrand: &components.GeofenceThirdPartyDataAndBrandInput{
+                                                DataID: ttdworkflows.Pointer[int64](72267),
+                                                BrandID: ttdworkflows.Pointer("<id>"),
+                                            },
+                                            GenreID: ttdworkflows.Pointer("<id>"),
+                                            Livestream: components.LivestreamNotLive.ToPointer(),
+                                            ProductionQuality: components.ProductionQualityUnknown.ToPointer(),
+                                            ProductionQualityID: components.ProductionQualityInputProsumer.ToPointer(),
+                                            ContentRatingID: ttdworkflows.Pointer("<id>"),
+                                            ContentDuration: components.ContentDurationBetween60And75Minutes.ToPointer(),
+                                            QualityScoreRange: &components.DecimalRange{
+                                                Min: ttdworkflows.Pointer[float64](3212.21),
+                                                Max: ttdworkflows.Pointer[float64](2351.1),
+                                            },
+                                            AtmosphericCondition: components.AtmosphericConditionMedium.ToPointer(),
+                                            MarketplaceID: ttdworkflows.Pointer("<id>"),
+                                            AudienceReachPercentageTier: components.AudienceReachPercentageTierTier2.ToPointer(),
+                                            ContentTransparency: components.ContentTransparencyNonTransparent.ToPointer(),
+                                            FullReferrerURL: components.FullReferrerURLUnknown.ToPointer(),
+                                            LikelyRefreshRate: components.LikelyRefreshRateOver60.ToPointer(),
+                                            Rewarded: components.RewardedNotRewarded.ToPointer(),
+                                            FeedID: nil,
+                                            LiveEventID: ttdworkflows.Pointer("<id>"),
+                                            LiveEventTypeID: nil,
+                                            ExtendedZipCodeGroupSegmentThirdPartyDataID: ttdworkflows.Pointer[int64](13172),
+                                            ContentLanguageID: ttdworkflows.Pointer("<id>"),
+                                            AdToContentRatioRange: &components.DecimalRange{
+                                                Min: ttdworkflows.Pointer[float64](455.79),
+                                                Max: nil,
+                                            },
+                                            AdsInViewRange: &components.DecimalRange{
+                                                Min: ttdworkflows.Pointer[float64](7599.16),
+                                                Max: ttdworkflows.Pointer[float64](3074.04),
+                                            },
+                                            BidAdjustment: ttdworkflows.Pointer[float64](1179.12),
+                                            VolumeControlPriority: components.VolumeControlPriorityTwo.ToPointer(),
+                                            MaxBid: ttdworkflows.Pointer[float64](7434.14),
+                                        },
+                                    },
+                                    Source: components.BidListSourceSystemAutoForEndeavorTargeting.ToPointer(),
+                                    AssociateBehavior: components.BidListAssociateBehaviorDoNotAssociate.ToPointer(),
+                                    DimensionConfig: &components.BidListDimensionOptionsInput{
+                                        Geo: &components.GeoBidListOptionsInput{
+                                            LocationContextType: components.LocationContextTypeInputRealtime.ToPointer(),
+                                        },
+                                    },
+                                    IsDefaultForDimension: ttdworkflows.Pointer(true),
                                 },
                             },
                             Name: ttdworkflows.Pointer("<value>"),
@@ -939,7 +1135,8 @@ func main() {
                         CrossixAudienceQualityIndex: nil,
                         IqviaAudienceQualityIndexAndCostPerTarget: ttdworkflows.Pointer(false),
                         CrossixCostPerTarget: ttdworkflows.Pointer(true),
-                        NewBuyerTargetValue: ttdworkflows.Pointer[int](178803),
+                        PharmaOptimization: ttdworkflows.Pointer(false),
+                        NewBuyerTargetValue: ttdworkflows.Pointer[int](201033),
                     },
                     TertiaryGoal: &components.CampaignWorkflowROIGoalInput{
                         MaximizeReach: ttdworkflows.Pointer(false),
@@ -958,7 +1155,8 @@ func main() {
                         CrossixAudienceQualityIndex: ttdworkflows.Pointer(false),
                         IqviaAudienceQualityIndexAndCostPerTarget: ttdworkflows.Pointer(false),
                         CrossixCostPerTarget: ttdworkflows.Pointer(true),
-                        NewBuyerTargetValue: ttdworkflows.Pointer[int](784776),
+                        PharmaOptimization: ttdworkflows.Pointer(false),
+                        NewBuyerTargetValue: ttdworkflows.Pointer[int](83180),
                     },
                     Name: ttdworkflows.Pointer("<value>"),
                     PrimaryChannel: components.CampaignChannelTypeNone.ToPointer(),
@@ -979,11 +1177,18 @@ func main() {
                         CrossixAudienceQualityIndex: ttdworkflows.Pointer(false),
                         IqviaAudienceQualityIndexAndCostPerTarget: ttdworkflows.Pointer(true),
                         CrossixCostPerTarget: ttdworkflows.Pointer(true),
-                        NewBuyerTargetValue: ttdworkflows.Pointer[int](785673),
+                        PharmaOptimization: nil,
+                        NewBuyerTargetValue: ttdworkflows.Pointer[int](554651),
                     },
                     StartDateInUtc: types.MustNewTimeFromString("2023-01-13T23:06:05.083Z"),
                     Budget: &components.CampaignUpdateWorkflowBudgetInput{
                         PacingMode: components.CampaignPacingModePaceAsSoonAsPossible,
+                    },
+                    PharmaOptimizationGoalSettingUpdates: []components.CampaignWorkflowPharmaOptimizationGoalSettingInput{
+                        components.CampaignWorkflowPharmaOptimizationGoalSettingInput{
+                            GoalPriority: components.GoalPriorityInputTertiary,
+                            MetricWeights: []components.CampaignWorkflowPharmaOptimizationGoalMetricWeightInput{},
+                        },
                     },
                 },
                 AdvancedInput: &components.CampaignUpdateWorkflowAdvancedInput{
