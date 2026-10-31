@@ -119,3 +119,13 @@ Based on:
 - [go v0.13.2] .
 ### Releases
 - [Go v0.13.2] https://github.com/thetradedesk/ttd-workflows-go/releases/tag/v0.13.2 - .
+
+## 2026-10-31 00:23:26
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.805.0 (2.954.8) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [go v0.14.0] .
+### Releases
+- [Go v0.14.0] https://github.com/thetradedesk/ttd-workflows-go/releases/tag/v0.14.0 - .

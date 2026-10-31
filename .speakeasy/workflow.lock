@@ -1,9 +1,9 @@
-speakeasyVersion: 1.761.9
+speakeasyVersion: 1.805.0
 sources:
     Workflows API:
         sourceNamespace: workflows-api
-        sourceRevisionDigest: sha256:ca9f352f8d4b84c1878e6da0ecba88c244469ed681ead1433c1b5e3ec61542e8
-        sourceBlobDigest: sha256:41ef329568aa8770908b9d44d59fd89e7afdc8cbea1d2e8bf1db6e991f78480f
+        sourceRevisionDigest: sha256:a242b8737d10eaaa7fedebd5edf9658f88aafe5aec87b733dad5293cccd73003
+        sourceBlobDigest: sha256:05d1512029e704f3d0ea0671e6e16068634eb27b55f3dd2ed8d8e5a438252f75
         tags:
             - latest
             - v1
@@ -17,10 +17,10 @@ targets:
     ttd-workflows:
         source: Workflows API
         sourceNamespace: workflows-api
-        sourceRevisionDigest: sha256:ca9f352f8d4b84c1878e6da0ecba88c244469ed681ead1433c1b5e3ec61542e8
-        sourceBlobDigest: sha256:41ef329568aa8770908b9d44d59fd89e7afdc8cbea1d2e8bf1db6e991f78480f
+        sourceRevisionDigest: sha256:a242b8737d10eaaa7fedebd5edf9658f88aafe5aec87b733dad5293cccd73003
+        sourceBlobDigest: sha256:05d1512029e704f3d0ea0671e6e16068634eb27b55f3dd2ed8d8e5a438252f75
         codeSamplesNamespace: workflows-api-go-code-samples
-        codeSamplesRevisionDigest: sha256:3ee8039e0dcc14fab887aef52822bb44d4ae9ab7be524c14d8569c37d2d81546
+        codeSamplesRevisionDigest: sha256:217f6de6e44cc19bfcf591c5016f9bf1f91657169dea9d2225fb97b5891c0ff5
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest

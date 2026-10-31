@@ -8,25 +8,26 @@ import (
 )
 
 type CampaignUpdateWorkflowPrimaryInput struct {
-	Description                        *string                                                  `json:"description,omitempty"`
-	CampaignGroupID                    *int64                                                   `json:"campaignGroupId,omitempty"`
-	TimeZone                           *string                                                  `json:"timeZone,omitempty"`
-	CustomCPAClickWeight               *float64                                                 `json:"customCPAClickWeight,omitempty"`
-	CustomCPAViewthroughWeight         *float64                                                 `json:"customCPAViewthroughWeight,omitempty"`
-	CustomCPAType                      *CustomCPAType                                           `json:"customCPAType,omitempty"`
-	CustomRoasType                     *CustomROASType                                          `json:"customRoasType,omitempty"`
-	ImpressionsOnlyBudgetingCpm        *float64                                                 `json:"impressionsOnlyBudgetingCpm,omitempty"`
-	EndDateInUtc                       *time.Time                                               `json:"endDateInUtc,omitempty"`
-	SeedID                             *string                                                  `json:"seedId,omitempty"`
-	CampaignConversionReportingColumns []CampaignWorkflowCampaignConversionReportingColumnInput `json:"campaignConversionReportingColumns,omitempty"`
-	IsManagedByTTD                     *bool                                                    `json:"isManagedByTTD,omitempty"`
-	SecondaryGoal                      *CampaignWorkflowROIGoalInput                            `json:"secondaryGoal,omitempty"`
-	TertiaryGoal                       *CampaignWorkflowROIGoalInput                            `json:"tertiaryGoal,omitempty"`
-	Name                               *string                                                  `json:"name,omitempty"`
-	PrimaryChannel                     *CampaignChannelType                                     `json:"primaryChannel,omitempty"`
-	PrimaryGoal                        *CampaignWorkflowROIGoalInput                            `json:"primaryGoal,omitempty"`
-	StartDateInUtc                     *time.Time                                               `json:"startDateInUtc,omitempty"`
-	Budget                             *CampaignUpdateWorkflowBudgetInput                       `json:"budget,omitempty"`
+	Description                          *string                                                  `json:"description,omitempty"`
+	CampaignGroupID                      *int64                                                   `json:"campaignGroupId,omitempty"`
+	TimeZone                             *string                                                  `json:"timeZone,omitempty"`
+	CustomCPAClickWeight                 *float64                                                 `json:"customCPAClickWeight,omitempty"`
+	CustomCPAViewthroughWeight           *float64                                                 `json:"customCPAViewthroughWeight,omitempty"`
+	CustomCPAType                        *CustomCPAType                                           `json:"customCPAType,omitempty"`
+	CustomRoasType                       *CustomROASType                                          `json:"customRoasType,omitempty"`
+	ImpressionsOnlyBudgetingCpm          *float64                                                 `json:"impressionsOnlyBudgetingCpm,omitempty"`
+	EndDateInUtc                         *time.Time                                               `json:"endDateInUtc,omitempty"`
+	SeedID                               *string                                                  `json:"seedId,omitempty"`
+	CampaignConversionReportingColumns   []CampaignWorkflowCampaignConversionReportingColumnInput `json:"campaignConversionReportingColumns,omitempty"`
+	IsManagedByTTD                       *bool                                                    `json:"isManagedByTTD,omitempty"`
+	SecondaryGoal                        *CampaignWorkflowROIGoalInput                            `json:"secondaryGoal,omitempty"`
+	TertiaryGoal                         *CampaignWorkflowROIGoalInput                            `json:"tertiaryGoal,omitempty"`
+	Name                                 *string                                                  `json:"name,omitempty"`
+	PrimaryChannel                       *CampaignChannelType                                     `json:"primaryChannel,omitempty"`
+	PrimaryGoal                          *CampaignWorkflowROIGoalInput                            `json:"primaryGoal,omitempty"`
+	StartDateInUtc                       *time.Time                                               `json:"startDateInUtc,omitempty"`
+	Budget                               *CampaignUpdateWorkflowBudgetInput                       `json:"budget,omitempty"`
+	PharmaOptimizationGoalSettingUpdates []CampaignWorkflowPharmaOptimizationGoalSettingInput     `json:"pharmaOptimizationGoalSettingUpdates,omitempty"`
 }
 
 func (c CampaignUpdateWorkflowPrimaryInput) MarshalJSON() ([]byte, error) {
@@ -171,4 +172,11 @@ func (c *CampaignUpdateWorkflowPrimaryInput) GetBudget() *CampaignUpdateWorkflow
 		return nil
 	}
 	return c.Budget
+}
+
+func (c *CampaignUpdateWorkflowPrimaryInput) GetPharmaOptimizationGoalSettingUpdates() []CampaignWorkflowPharmaOptimizationGoalSettingInput {
+	if c == nil {
+		return nil
+	}
+	return c.PharmaOptimizationGoalSettingUpdates
 }
