@@ -4,7 +4,7 @@ package components
 
 type AdGroupBudget struct {
 	AllocationType                  AllocationType `json:"allocationType"`
-	BudgetInAdvertiserCurrency      float64        `json:"budgetInAdvertiserCurrency"`
+	BudgetInAdvertiserCurrency      *float64       `json:"budgetInAdvertiserCurrency"`
 	BudgetInImpressions             *int64         `json:"budgetInImpressions,omitempty"`
 	DailyTargetInAdvertiserCurrency *float64       `json:"dailyTargetInAdvertiserCurrency,omitempty"`
 	DailyTargetInImpressions        *int64         `json:"dailyTargetInImpressions,omitempty"`
@@ -17,9 +17,9 @@ func (a *AdGroupBudget) GetAllocationType() AllocationType {
 	return a.AllocationType
 }
 
-func (a *AdGroupBudget) GetBudgetInAdvertiserCurrency() float64 {
+func (a *AdGroupBudget) GetBudgetInAdvertiserCurrency() *float64 {
 	if a == nil {
-		return 0.0
+		return nil
 	}
 	return a.BudgetInAdvertiserCurrency
 }
