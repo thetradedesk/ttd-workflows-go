@@ -1,0 +1,10 @@
+# KokaiCampaignRetailBrandSettingsInput
+
+
+## Fields
+
+| Field                                                                                               | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `BrandIds`                                                                                          | []`int64`                                                                                           | :heavy_minus_sign:                                                                                  | N/A                                                                                                 |
+| `OptInRetailSeedRecommendation`                                                                     | [*components.BooleanNullableOptionalInput](../../models/components/booleannullableoptionalinput.md) | :heavy_minus_sign:                                                                                  | N/A                                                                                                 |
+| `OtherBrandNames`                                                                                   | []`string`                                                                                          | :heavy_minus_sign:                                                                                  | N/A                                                                                                 |
