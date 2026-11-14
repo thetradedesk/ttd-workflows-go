@@ -15,6 +15,7 @@ type AdGroupROIGoal struct {
 	VcpmInAdvertiserCurrency    *float64 `json:"vcpmInAdvertiserCurrency,omitempty"`
 	CpcvInAdvertiserCurrency    *float64 `json:"cpcvInAdvertiserCurrency,omitempty"`
 	MiaozhenOTPInPercent        *float64 `json:"miaozhenOTPInPercent,omitempty"`
+	NewBuyerTargetValue         *int     `json:"newBuyerTargetValue,omitempty"`
 }
 
 func (a *AdGroupROIGoal) GetMaximizeReach() *bool {
@@ -99,4 +100,11 @@ func (a *AdGroupROIGoal) GetMiaozhenOTPInPercent() *float64 {
 		return nil
 	}
 	return a.MiaozhenOTPInPercent
+}
+
+func (a *AdGroupROIGoal) GetNewBuyerTargetValue() *int {
+	if a == nil {
+		return nil
+	}
+	return a.NewBuyerTargetValue
 }

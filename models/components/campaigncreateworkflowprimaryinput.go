@@ -30,6 +30,8 @@ type CampaignCreateWorkflowPrimaryInput struct {
 	StartDateInUtc                     *time.Time                                               `json:"startDateInUtc,omitempty"`
 	Budget                             *CampaignCreateWorkflowBudgetInput                       `json:"budget,omitempty"`
 	CampaignIncrementalReachSetting    *CampaignCreateWorkflowIncrementalReachCampaignSetting   `json:"campaignIncrementalReachSetting,omitempty"`
+	PharmaOptimizationGoalSettings     []CampaignWorkflowPharmaOptimizationGoalSettingInput     `json:"pharmaOptimizationGoalSettings,omitempty"`
+	CampaignRetailBrandSettings        *KokaiCampaignRetailBrandSettingsInput                   `json:"campaignRetailBrandSettings,omitempty"`
 }
 
 func (c CampaignCreateWorkflowPrimaryInput) MarshalJSON() ([]byte, error) {
@@ -195,4 +197,18 @@ func (c *CampaignCreateWorkflowPrimaryInput) GetCampaignIncrementalReachSetting(
 		return nil
 	}
 	return c.CampaignIncrementalReachSetting
+}
+
+func (c *CampaignCreateWorkflowPrimaryInput) GetPharmaOptimizationGoalSettings() []CampaignWorkflowPharmaOptimizationGoalSettingInput {
+	if c == nil {
+		return nil
+	}
+	return c.PharmaOptimizationGoalSettings
+}
+
+func (c *CampaignCreateWorkflowPrimaryInput) GetCampaignRetailBrandSettings() *KokaiCampaignRetailBrandSettingsInput {
+	if c == nil {
+		return nil
+	}
+	return c.CampaignRetailBrandSettings
 }
