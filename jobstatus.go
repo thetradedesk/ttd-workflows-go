@@ -239,7 +239,7 @@ func (s *JobStatus) GetGraphQlBulkJobStatus(ctx context.Context, id string, opts
 
 			var out apierrors.ProblemDetailsError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, apierrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = components.HTTPMetadata{
@@ -493,7 +493,7 @@ func (s *JobStatus) Get(ctx context.Context, id int64, opts ...operations.Option
 
 			var out apierrors.ProblemDetailsError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, apierrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = components.HTTPMetadata{
