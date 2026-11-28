@@ -19,6 +19,16 @@ const (
 func (e RestAPIMethodType) ToPointer() *RestAPIMethodType {
 	return &e
 }
+
+// RestAPIMethodTypeValues returns every known RestAPIMethodType value in schema order.
+func RestAPIMethodTypeValues() []RestAPIMethodType {
+	return []RestAPIMethodType{
+		RestAPIMethodTypePost,
+		RestAPIMethodTypePut,
+		RestAPIMethodTypeGet,
+		RestAPIMethodTypeDelete,
+	}
+}
 func (e *RestAPIMethodType) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

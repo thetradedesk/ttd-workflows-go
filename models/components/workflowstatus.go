@@ -20,6 +20,17 @@ const (
 func (e WorkflowStatus) ToPointer() *WorkflowStatus {
 	return &e
 }
+
+// WorkflowStatusValues returns every known WorkflowStatus value in schema order.
+func WorkflowStatusValues() []WorkflowStatus {
+	return []WorkflowStatus{
+		WorkflowStatusInProgress,
+		WorkflowStatusFailure,
+		WorkflowStatusSuccess,
+		WorkflowStatusPartialSuccess,
+		WorkflowStatusResultsExpired,
+	}
+}
 func (e *WorkflowStatus) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

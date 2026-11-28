@@ -18,6 +18,15 @@ const (
 func (e MarketType) ToPointer() *MarketType {
 	return &e
 }
+
+// MarketTypeValues returns every known MarketType value in schema order.
+func MarketTypeValues() []MarketType {
+	return []MarketType{
+		MarketTypeOpenMarket,
+		MarketTypePrivateMarketOnly,
+		MarketTypeMarketplace,
+	}
+}
 func (e *MarketType) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

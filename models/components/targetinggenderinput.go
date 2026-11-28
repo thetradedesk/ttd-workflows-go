@@ -18,6 +18,15 @@ const (
 func (e TargetingGenderInput) ToPointer() *TargetingGenderInput {
 	return &e
 }
+
+// TargetingGenderInputValues returns every known TargetingGenderInput value in schema order.
+func TargetingGenderInputValues() []TargetingGenderInput {
+	return []TargetingGenderInput{
+		TargetingGenderInputMale,
+		TargetingGenderInputFemale,
+		TargetingGenderInputBoth,
+	}
+}
 func (e *TargetingGenderInput) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

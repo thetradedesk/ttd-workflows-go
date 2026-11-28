@@ -23,6 +23,20 @@ const (
 func (e CampaignChannelType) ToPointer() *CampaignChannelType {
 	return &e
 }
+
+// CampaignChannelTypeValues returns every known CampaignChannelType value in schema order.
+func CampaignChannelTypeValues() []CampaignChannelType {
+	return []CampaignChannelType{
+		CampaignChannelTypeNone,
+		CampaignChannelTypeDisplay,
+		CampaignChannelTypeVideo,
+		CampaignChannelTypeAudio,
+		CampaignChannelTypeTv,
+		CampaignChannelTypeNativeDisplay,
+		CampaignChannelTypeNativeVideo,
+		CampaignChannelTypeDooh,
+	}
+}
 func (e *CampaignChannelType) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

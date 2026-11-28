@@ -21,6 +21,18 @@ const (
 func (e BulkJobStatus) ToPointer() *BulkJobStatus {
 	return &e
 }
+
+// BulkJobStatusValues returns every known BulkJobStatus value in schema order.
+func BulkJobStatusValues() []BulkJobStatus {
+	return []BulkJobStatus{
+		BulkJobStatusQueued,
+		BulkJobStatusInProgress,
+		BulkJobStatusPartialSuccess,
+		BulkJobStatusFailure,
+		BulkJobStatusSuccess,
+		BulkJobStatusCancelled,
+	}
+}
 func (e *BulkJobStatus) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

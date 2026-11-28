@@ -14,7 +14,6 @@ const (
 	DimensionalBiddingDimensionsHasAdFormatID                             DimensionalBiddingDimensions = "HasAdFormatId"
 	DimensionalBiddingDimensionsHasDomainFragmentID                       DimensionalBiddingDimensions = "HasDomainFragmentId"
 	DimensionalBiddingDimensionsHasUniversalCategoryTaxonomyID            DimensionalBiddingDimensions = "HasUniversalCategoryTaxonomyId"
-	DimensionalBiddingDimensionsHasPlacementPositionRelativeToFoldID      DimensionalBiddingDimensions = "HasPlacementPositionRelativeToFoldId"
 	DimensionalBiddingDimensionsHasAdvertiserTargetingDataID              DimensionalBiddingDimensions = "HasAdvertiserTargetingDataId"
 	DimensionalBiddingDimensionsHasBrowserID                              DimensionalBiddingDimensions = "HasBrowserId"
 	DimensionalBiddingDimensionsHasCarrierID                              DimensionalBiddingDimensions = "HasCarrierId"
@@ -64,8 +63,6 @@ const (
 	DimensionalBiddingDimensionsHasPeer39ViewabilityCategoryID            DimensionalBiddingDimensions = "HasPeer39ViewabilityCategoryId"
 	DimensionalBiddingDimensionsHasVideoCompletionRateScoreRange          DimensionalBiddingDimensions = "HasVideoCompletionRateScoreRange"
 	DimensionalBiddingDimensionsHasInternetConnectionTypeID               DimensionalBiddingDimensions = "HasInternetConnectionTypeId"
-	DimensionalBiddingDimensionsHasAdBugPageQualityCategoryID             DimensionalBiddingDimensions = "HasAdBugPageQualityCategoryId"
-	DimensionalBiddingDimensionsHasAdBugVideoPageQualityCategoryID        DimensionalBiddingDimensions = "HasAdBugVideoPageQualityCategoryId"
 	DimensionalBiddingDimensionsHasRtbAsiaPageQualityCategoryID           DimensionalBiddingDimensions = "HasRTBAsiaPageQualityCategoryId"
 	DimensionalBiddingDimensionsHasRtbAsiaVideoPageQualityCategoryID      DimensionalBiddingDimensions = "HasRTBAsiaVideoPageQualityCategoryId"
 	DimensionalBiddingDimensionsHasTtdContextualCategoryID                DimensionalBiddingDimensions = "HasTTDContextualCategoryId"
@@ -83,8 +80,6 @@ const (
 	DimensionalBiddingDimensionsHasDomainClassID                          DimensionalBiddingDimensions = "HasDomainClassId"
 	DimensionalBiddingDimensionsHasGeofenceThirdPartyDataAndBrand         DimensionalBiddingDimensions = "HasGeofenceThirdPartyDataAndBrand"
 	DimensionalBiddingDimensionsHasPreBidContextualCategoryID             DimensionalBiddingDimensions = "HasPreBidContextualCategoryId"
-	DimensionalBiddingDimensionsHasMiaozhenPageQualityCategoryID          DimensionalBiddingDimensions = "HasMiaozhenPageQualityCategoryId"
-	DimensionalBiddingDimensionsHasMiaozhenVideoPageQualityCategoryID     DimensionalBiddingDimensions = "HasMiaozhenVideoPageQualityCategoryId"
 	DimensionalBiddingDimensionsHasTencentPageQualityCategoryID           DimensionalBiddingDimensions = "HasTencentPageQualityCategoryId"
 	DimensionalBiddingDimensionsHasContentGenre                           DimensionalBiddingDimensions = "HasContentGenre"
 	DimensionalBiddingDimensionsHasContentLivestream                      DimensionalBiddingDimensions = "HasContentLivestream"
@@ -105,6 +100,97 @@ const (
 func (e DimensionalBiddingDimensions) ToPointer() *DimensionalBiddingDimensions {
 	return &e
 }
+
+// DimensionalBiddingDimensionsValues returns every known DimensionalBiddingDimensions value in schema order.
+func DimensionalBiddingDimensionsValues() []DimensionalBiddingDimensions {
+	return []DimensionalBiddingDimensions{
+		DimensionalBiddingDimensionsUnknownDimension,
+		DimensionalBiddingDimensionsHasAdFormatID,
+		DimensionalBiddingDimensionsHasDomainFragmentID,
+		DimensionalBiddingDimensionsHasUniversalCategoryTaxonomyID,
+		DimensionalBiddingDimensionsHasAdvertiserTargetingDataID,
+		DimensionalBiddingDimensionsHasBrowserID,
+		DimensionalBiddingDimensionsHasCarrierID,
+		DimensionalBiddingDimensionsHasDeviceModelID,
+		DimensionalBiddingDimensionsHasDeviceTypeID,
+		DimensionalBiddingDimensionsHasGeoSegmentID,
+		DimensionalBiddingDimensionsHasHourOfWeek,
+		DimensionalBiddingDimensionsHasLanguageID,
+		DimensionalBiddingDimensionsHasOsID,
+		DimensionalBiddingDimensionsHasPrivateContractID,
+		DimensionalBiddingDimensionsHasRecencyWindowInMinutes,
+		DimensionalBiddingDimensionsHasRenderingContextID,
+		DimensionalBiddingDimensionsHasFactualGeostoreTargetingDataID,
+		DimensionalBiddingDimensionsHasSupplyVendorID,
+		DimensionalBiddingDimensionsHasTemperatureBucketInCelsius,
+		DimensionalBiddingDimensionsHasThirdPartyData,
+		DimensionalBiddingDimensionsHasAdsTxtSellerTypeID,
+		DimensionalBiddingDimensionsHasVideoMutedStateID,
+		DimensionalBiddingDimensionsHasVideoPlaybackTypeID,
+		DimensionalBiddingDimensionsHasVideoPlayerSizeID,
+		DimensionalBiddingDimensionsHasVideoQualityID,
+		DimensionalBiddingDimensionsHasVideoSkippabilityID,
+		DimensionalBiddingDimensionsHasFactualProximityDataID,
+		DimensionalBiddingDimensionsHasImpressionPlacementID,
+		DimensionalBiddingDimensionsHasVideoTruthScoreRange,
+		DimensionalBiddingDimensionsHasVideoViewabilityScoreRange,
+		DimensionalBiddingDimensionsHasDisplayViewabilityScoreRange,
+		DimensionalBiddingDimensionsHasPeer39LanguageID,
+		DimensionalBiddingDimensionsHasIntegralContextualCategoryID,
+		DimensionalBiddingDimensionsHasPeer39ContextualCategoryID,
+		DimensionalBiddingDimensionsHasDoubleVerifyContextualCategoryID,
+		DimensionalBiddingDimensionsHasIntegralBrandSafetyCategoryID,
+		DimensionalBiddingDimensionsHasIntegralVideoBrandSafetyCategoryID,
+		DimensionalBiddingDimensionsHasPeer39BrandSafetyCategoryID,
+		DimensionalBiddingDimensionsHasDoubleVerifyBrandSafetyCategoryID,
+		DimensionalBiddingDimensionsHasIntegralPageQualityCategoryID,
+		DimensionalBiddingDimensionsHasIntegralVideoPageQualityCategoryID,
+		DimensionalBiddingDimensionsHasPeer39PageQualityCategoryID,
+		DimensionalBiddingDimensionsHasDoubleVerifyBotAvoidanceCategoryID,
+		DimensionalBiddingDimensionsHasContextualAppCategoryID,
+		DimensionalBiddingDimensionsHasPublisherID,
+		DimensionalBiddingDimensionsHasIntegralViewabilityCategoryID,
+		DimensionalBiddingDimensionsHasIntegralVideoViewabilityCategoryID,
+		DimensionalBiddingDimensionsHasDoubleVerifyViewabilityCategoryID,
+		DimensionalBiddingDimensionsHasDoubleVerifyVideoViewabilityCategoryID,
+		DimensionalBiddingDimensionsHasFrequencyAdjustmentID,
+		DimensionalBiddingDimensionsHasPeer39ViewabilityCategoryID,
+		DimensionalBiddingDimensionsHasVideoCompletionRateScoreRange,
+		DimensionalBiddingDimensionsHasInternetConnectionTypeID,
+		DimensionalBiddingDimensionsHasRtbAsiaPageQualityCategoryID,
+		DimensionalBiddingDimensionsHasRtbAsiaVideoPageQualityCategoryID,
+		DimensionalBiddingDimensionsHasTtdContextualCategoryID,
+		DimensionalBiddingDimensionsHasSupplyPathOptimizationListID,
+		DimensionalBiddingDimensionsHasMarketTypeID,
+		DimensionalBiddingDimensionsHasContextualSupplyVendorGenreID,
+		DimensionalBiddingDimensionsHasContextualSupplyVendorCategoryID,
+		DimensionalBiddingDimensionsHasWeatherConditionID,
+		DimensionalBiddingDimensionsHasFrequencyV2AdjustmentID,
+		DimensionalBiddingDimensionsHasSemasioContextualCategoryID,
+		DimensionalBiddingDimensionsHasSellerID,
+		DimensionalBiddingDimensionsHasDigitalOutOfHomeVenueTypeID,
+		DimensionalBiddingDimensionsHasNativePlacementTypeID,
+		DimensionalBiddingDimensionsHasTtdNativeContextTypeID,
+		DimensionalBiddingDimensionsHasDomainClassID,
+		DimensionalBiddingDimensionsHasGeofenceThirdPartyDataAndBrand,
+		DimensionalBiddingDimensionsHasPreBidContextualCategoryID,
+		DimensionalBiddingDimensionsHasTencentPageQualityCategoryID,
+		DimensionalBiddingDimensionsHasContentGenre,
+		DimensionalBiddingDimensionsHasContentLivestream,
+		DimensionalBiddingDimensionsHasContentProductionQuality,
+		DimensionalBiddingDimensionsHasContentRating,
+		DimensionalBiddingDimensionsHasContentDuration,
+		DimensionalBiddingDimensionsHasTvQualityIndexRange,
+		DimensionalBiddingDimensionsHasAtmosphericCondition,
+		DimensionalBiddingDimensionsHasMarketplaceID,
+		DimensionalBiddingDimensionsHasAudienceReachPercentageTierID,
+		DimensionalBiddingDimensionsHasAdLoadCategory,
+		DimensionalBiddingDimensionsHasFullReferrerURL,
+		DimensionalBiddingDimensionsHasLikelyRefreshRate,
+		DimensionalBiddingDimensionsHasContentTransparency,
+		DimensionalBiddingDimensionsHasIdiosyncraticSegmentID,
+	}
+}
 func (e *DimensionalBiddingDimensions) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
@@ -118,8 +204,6 @@ func (e *DimensionalBiddingDimensions) UnmarshalJSON(data []byte) error {
 	case "HasDomainFragmentId":
 		fallthrough
 	case "HasUniversalCategoryTaxonomyId":
-		fallthrough
-	case "HasPlacementPositionRelativeToFoldId":
 		fallthrough
 	case "HasAdvertiserTargetingDataId":
 		fallthrough
@@ -219,10 +303,6 @@ func (e *DimensionalBiddingDimensions) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "HasInternetConnectionTypeId":
 		fallthrough
-	case "HasAdBugPageQualityCategoryId":
-		fallthrough
-	case "HasAdBugVideoPageQualityCategoryId":
-		fallthrough
 	case "HasRTBAsiaPageQualityCategoryId":
 		fallthrough
 	case "HasRTBAsiaVideoPageQualityCategoryId":
@@ -256,10 +336,6 @@ func (e *DimensionalBiddingDimensions) UnmarshalJSON(data []byte) error {
 	case "HasGeofenceThirdPartyDataAndBrand":
 		fallthrough
 	case "HasPreBidContextualCategoryId":
-		fallthrough
-	case "HasMiaozhenPageQualityCategoryId":
-		fallthrough
-	case "HasMiaozhenVideoPageQualityCategoryId":
 		fallthrough
 	case "HasTencentPageQualityCategoryId":
 		fallthrough

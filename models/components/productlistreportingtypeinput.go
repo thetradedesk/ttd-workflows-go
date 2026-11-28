@@ -17,6 +17,14 @@ const (
 func (e ProductListReportingTypeInput) ToPointer() *ProductListReportingTypeInput {
 	return &e
 }
+
+// ProductListReportingTypeInputValues returns every known ProductListReportingTypeInput value in schema order.
+func ProductListReportingTypeInputValues() []ProductListReportingTypeInput {
+	return []ProductListReportingTypeInput{
+		ProductListReportingTypeInputFeatured,
+		ProductListReportingTypeInputHalo,
+	}
+}
 func (e *ProductListReportingTypeInput) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -18,6 +18,15 @@ const (
 func (e AllocationType) ToPointer() *AllocationType {
 	return &e
 }
+
+// AllocationTypeValues returns every known AllocationType value in schema order.
+func AllocationTypeValues() []AllocationType {
+	return []AllocationType{
+		AllocationTypeMinimum,
+		AllocationTypeFixed,
+		AllocationTypeMaximum,
+	}
+}
 func (e *AllocationType) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

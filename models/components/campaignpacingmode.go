@@ -19,6 +19,16 @@ const (
 func (e CampaignPacingMode) ToPointer() *CampaignPacingMode {
 	return &e
 }
+
+// CampaignPacingModeValues returns every known CampaignPacingMode value in schema order.
+func CampaignPacingModeValues() []CampaignPacingMode {
+	return []CampaignPacingMode{
+		CampaignPacingModePaceAhead,
+		CampaignPacingModePaceEvenly,
+		CampaignPacingModePaceToDailyCap,
+		CampaignPacingModePaceAsSoonAsPossible,
+	}
+}
 func (e *CampaignPacingMode) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

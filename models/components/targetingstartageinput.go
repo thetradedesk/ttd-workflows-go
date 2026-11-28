@@ -27,6 +27,24 @@ const (
 func (e TargetingStartAgeInput) ToPointer() *TargetingStartAgeInput {
 	return &e
 }
+
+// TargetingStartAgeInputValues returns every known TargetingStartAgeInput value in schema order.
+func TargetingStartAgeInputValues() []TargetingStartAgeInput {
+	return []TargetingStartAgeInput{
+		TargetingStartAgeInputTwo,
+		TargetingStartAgeInputThirteen,
+		TargetingStartAgeInputEighteen,
+		TargetingStartAgeInputTwentyOne,
+		TargetingStartAgeInputTwentyFive,
+		TargetingStartAgeInputThirty,
+		TargetingStartAgeInputThirtyFive,
+		TargetingStartAgeInputForty,
+		TargetingStartAgeInputFortyFive,
+		TargetingStartAgeInputFifty,
+		TargetingStartAgeInputFiftyFive,
+		TargetingStartAgeInputSixtyFive,
+	}
+}
 func (e *TargetingStartAgeInput) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

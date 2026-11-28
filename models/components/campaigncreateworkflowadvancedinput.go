@@ -6,6 +6,7 @@ type CampaignCreateWorkflowAdvancedInput struct {
 	PurchaseOrderNumber           *string                                        `json:"purchaseOrderNumber,omitempty"`
 	Flights                       []CampaignWorkflowFlightInput                  `json:"flights,omitempty"`
 	IncludeDefaultsFromAdvertiser *bool                                          `json:"includeDefaultsFromAdvertiser,omitempty"`
+	AssociatedBidLists            []CampaignWorkflowAssociateBidListInput        `json:"associatedBidLists,omitempty"`
 	PassThroughFeeCard            *CampaignCreateWorkflowPassThroughFeeCardInput `json:"passThroughFeeCard,omitempty"`
 	CallerSource                  *string                                        `json:"callerSource,omitempty"`
 	FrequencyConfigs              []FrequencyConfig                              `json:"frequencyConfigs,omitempty"`
@@ -30,6 +31,13 @@ func (c *CampaignCreateWorkflowAdvancedInput) GetIncludeDefaultsFromAdvertiser()
 		return nil
 	}
 	return c.IncludeDefaultsFromAdvertiser
+}
+
+func (c *CampaignCreateWorkflowAdvancedInput) GetAssociatedBidLists() []CampaignWorkflowAssociateBidListInput {
+	if c == nil {
+		return nil
+	}
+	return c.AssociatedBidLists
 }
 
 func (c *CampaignCreateWorkflowAdvancedInput) GetPassThroughFeeCard() *CampaignCreateWorkflowPassThroughFeeCardInput {

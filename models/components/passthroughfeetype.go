@@ -19,10 +19,31 @@ const (
 	PassThroughFeeTypeRateCpm                            PassThroughFeeType = "RateCPM"
 	PassThroughFeeTypeRateCpc                            PassThroughFeeType = "RateCPC"
 	PassThroughFeeTypeCustomPmpPartnerDataCostPercentage PassThroughFeeType = "CustomPmpPartnerDataCostPercentage"
+	PassThroughFeeTypeMediaDataFeeFeaturesCostPercentage PassThroughFeeType = "MediaDataFeeFeaturesCostPercentage"
+	PassThroughFeeTypeFlatFee                            PassThroughFeeType = "FlatFee"
+	PassThroughFeeTypeMediaPlusFeeFeaturesCostPercentage PassThroughFeeType = "MediaPlusFeeFeaturesCostPercentage"
 )
 
 func (e PassThroughFeeType) ToPointer() *PassThroughFeeType {
 	return &e
+}
+
+// PassThroughFeeTypeValues returns every known PassThroughFeeType value in schema order.
+func PassThroughFeeTypeValues() []PassThroughFeeType {
+	return []PassThroughFeeType{
+		PassThroughFeeTypeNone,
+		PassThroughFeeTypeMediaCostPercentage,
+		PassThroughFeeTypeDataCostPercentage,
+		PassThroughFeeTypeMediaPlusDataCostPercentage,
+		PassThroughFeeTypePartnerDataCostPercentage,
+		PassThroughFeeTypeFeeCpm,
+		PassThroughFeeTypeRateCpm,
+		PassThroughFeeTypeRateCpc,
+		PassThroughFeeTypeCustomPmpPartnerDataCostPercentage,
+		PassThroughFeeTypeMediaDataFeeFeaturesCostPercentage,
+		PassThroughFeeTypeFlatFee,
+		PassThroughFeeTypeMediaPlusFeeFeaturesCostPercentage,
+	}
 }
 func (e *PassThroughFeeType) UnmarshalJSON(data []byte) error {
 	var v string
@@ -47,6 +68,12 @@ func (e *PassThroughFeeType) UnmarshalJSON(data []byte) error {
 	case "RateCPC":
 		fallthrough
 	case "CustomPmpPartnerDataCostPercentage":
+		fallthrough
+	case "MediaDataFeeFeaturesCostPercentage":
+		fallthrough
+	case "FlatFee":
+		fallthrough
+	case "MediaPlusFeeFeaturesCostPercentage":
 		*e = PassThroughFeeType(v)
 		return nil
 	default:
