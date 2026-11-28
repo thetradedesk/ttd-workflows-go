@@ -19,6 +19,16 @@ const (
 func (e CustomROASType) ToPointer() *CustomROASType {
 	return &e
 }
+
+// CustomROASTypeValues returns every known CustomROASType value in schema order.
+func CustomROASTypeValues() []CustomROASType {
+	return []CustomROASType{
+		CustomROASTypeDisabled,
+		CustomROASTypePixelWeighting,
+		CustomROASTypeClickViewthroughWeighting,
+		CustomROASTypeCompositeWeighting,
+	}
+}
 func (e *CustomROASType) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

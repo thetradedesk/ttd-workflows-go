@@ -24,6 +24,21 @@ const (
 func (e AdGroupChannel) ToPointer() *AdGroupChannel {
 	return &e
 }
+
+// AdGroupChannelValues returns every known AdGroupChannel value in schema order.
+func AdGroupChannelValues() []AdGroupChannel {
+	return []AdGroupChannel{
+		AdGroupChannelOther,
+		AdGroupChannelDisplay,
+		AdGroupChannelVideo,
+		AdGroupChannelAudio,
+		AdGroupChannelNative,
+		AdGroupChannelNativeDisplay,
+		AdGroupChannelNativeVideo,
+		AdGroupChannelTv,
+		AdGroupChannelOutOfHome,
+	}
+}
 func (e *AdGroupChannel) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

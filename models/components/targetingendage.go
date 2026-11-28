@@ -26,6 +26,23 @@ const (
 func (e TargetingEndAge) ToPointer() *TargetingEndAge {
 	return &e
 }
+
+// TargetingEndAgeValues returns every known TargetingEndAge value in schema order.
+func TargetingEndAgeValues() []TargetingEndAge {
+	return []TargetingEndAge{
+		TargetingEndAgeSeventeen,
+		TargetingEndAgeTwenty,
+		TargetingEndAgeTwentyFour,
+		TargetingEndAgeTwentyNine,
+		TargetingEndAgeThirtyFour,
+		TargetingEndAgeThirtyNine,
+		TargetingEndAgeFortyFour,
+		TargetingEndAgeFortyNine,
+		TargetingEndAgeFiftyFour,
+		TargetingEndAgeSixtyFour,
+		TargetingEndAgeSixtyFourPlus,
+	}
+}
 func (e *TargetingEndAge) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

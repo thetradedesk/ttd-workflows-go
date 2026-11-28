@@ -239,7 +239,7 @@ func (s *AdGroups) Create(ctx context.Context, request *components.AdGroupCreate
 
 			var out apierrors.ProblemDetailsError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, apierrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = components.HTTPMetadata{
@@ -485,7 +485,7 @@ func (s *AdGroups) Update(ctx context.Context, request *components.AdGroupUpdate
 
 			var out apierrors.ProblemDetailsError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, apierrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = components.HTTPMetadata{
@@ -740,7 +740,7 @@ func (s *AdGroups) Archive(ctx context.Context, forceArchive *bool, requestBody 
 
 			var out apierrors.ProblemDetailsError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, apierrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = components.HTTPMetadata{
@@ -985,7 +985,7 @@ func (s *AdGroups) BulkCreate(ctx context.Context, request *components.AdGroupBu
 
 			var out apierrors.ProblemDetailsError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, apierrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = components.HTTPMetadata{
@@ -1235,7 +1235,7 @@ func (s *AdGroups) BulkUpdate(ctx context.Context, request *components.AdGroupBu
 
 			var out apierrors.ProblemDetailsError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, apierrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = components.HTTPMetadata{

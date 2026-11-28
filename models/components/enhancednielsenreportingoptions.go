@@ -18,6 +18,15 @@ const (
 func (e EnhancedNielsenReportingOptions) ToPointer() *EnhancedNielsenReportingOptions {
 	return &e
 }
+
+// EnhancedNielsenReportingOptionsValues returns every known EnhancedNielsenReportingOptions value in schema order.
+func EnhancedNielsenReportingOptionsValues() []EnhancedNielsenReportingOptions {
+	return []EnhancedNielsenReportingOptions{
+		EnhancedNielsenReportingOptionsNone,
+		EnhancedNielsenReportingOptionsAudience,
+		EnhancedNielsenReportingOptionsSite,
+	}
+}
 func (e *EnhancedNielsenReportingOptions) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

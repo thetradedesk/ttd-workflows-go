@@ -19,6 +19,7 @@ type AdGroupWorkflow struct {
 	RoiGoal                                    AdGroupROIGoal                    `json:"roiGoal"`
 	CreativeIds                                []string                          `json:"creativeIds"`
 	AssociatedBidLists                         []AdGroupAssociateBidList         `json:"associatedBidLists"`
+	OwnedBidLists                              []AdGroupOwnedBidList             `json:"ownedBidLists,omitempty"`
 	Flights                                    []AdGroupFlight                   `json:"flights"`
 	KoaOptimizationSettings                    *AdGroupKoaOptimizationSettings   `json:"koaOptimizationSettings,omitempty"`
 	ComscoreSettings                           AdGroupComscoreSettings           `json:"comscoreSettings"`
@@ -139,6 +140,13 @@ func (a *AdGroupWorkflow) GetAssociatedBidLists() []AdGroupAssociateBidList {
 		return nil
 	}
 	return a.AssociatedBidLists
+}
+
+func (a *AdGroupWorkflow) GetOwnedBidLists() []AdGroupOwnedBidList {
+	if a == nil {
+		return nil
+	}
+	return a.OwnedBidLists
 }
 
 func (a *AdGroupWorkflow) GetFlights() []AdGroupFlight {
